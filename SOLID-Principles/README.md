@@ -14,10 +14,10 @@ D = Dependency Inversion Principle
 
 ### Explanation with Examples and Quiz:
 
-- [Solid Principles CPP Guide](https://htmlpreview.github.io/?https://github.com/im-Rajat/SOLID-Principles/blob/main/html/solid_principles_cpp_guide.html)
-- [Solid Principles CPP Quiz](https://htmlpreview.github.io/?https://github.com/im-Rajat/SOLID-Principles/blob/main/html/solid_principles_cpp_quiz.html)
+- [Solid Principles CPP Guide](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/SOLID-Principles/html/solid_principles_cpp_guide.html)
+- [Solid Principles CPP Quiz](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/SOLID-Principles/html/solid_principles_cpp_quiz.html)
 
 
 #### References:
-- Quora, ChatGPT
+- Quora, AI
 - https://twitter.com/vikasrajputin/status/1593460494886576128
