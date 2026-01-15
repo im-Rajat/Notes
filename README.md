@@ -6,6 +6,7 @@ Welcome to my personal notes repository. Select a topic below to browse the note
 
 * **[CI/CD & Jenkins](https://im-rajat.github.io/Notes/CICD/)**
     * Pipelines, Jenkins setup, and automation.
+    * [CICD Basics](https://im-rajat.github.io/Notes/CICD/CICD-Basics/)
 * **[Docker](https://im-rajat.github.io/Notes/Docker/)**
     * Containerization basics, commands, and images.
 * **[Ethical Hacking](https://im-rajat.github.io/Notes/Ethical-Hacking/)**
