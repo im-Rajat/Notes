@@ -159,5 +159,5 @@ If ROE is good, also check Debt Amount. ROE can be increased using more Debt (Lo
 
 ## Websites/References:
 
-- **Trading vs Investing** : https://insider.finology.in/stock-market/trading-vs-investing
-- **Intraday Trading** : https://groww.in/p/intraday-trading
+- **Trading vs Investing** : <https://insider.finology.in/stock-market/trading-vs-investing>
+- **Intraday Trading** : <https://groww.in/p/intraday-trading>
