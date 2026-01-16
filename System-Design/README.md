@@ -1,7 +1,6 @@
 # System Design
 
-
-Following different courses to learn System Design
+[System Design for Beginners](https://im-rajat.github.io/Notes/System-Design/System-Design-For-Beginners)
 
 
 ### References

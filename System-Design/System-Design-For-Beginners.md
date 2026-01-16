@@ -667,9 +667,6 @@ Here are the four main types we use:
 
 ### **Caching Introduction**
 
-  
- 
-
 ---
 
 ## **References:**
