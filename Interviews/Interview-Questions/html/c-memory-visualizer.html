@@ -1,0 +1,670 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function q(b){var c=0;return function(){return c<b.length?{done:!1,value:b[c++]}:{done:!0}}}function t(b){var c=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(c)return c.call(b);if(typeof b.length=="number")return{next:q(b)};throw Error(String(b)+" is not an iterable or ArrayLike");}var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,c,g){if(b==Array.prototype||b==Object.prototype)return b;b[c]=g.value;return b};
+function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var g=b[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var w=v(this);function x(b,c){if(c)a:{var g=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var l=b[h];if(!(l in g))break a;g=g[l]}b=b[b.length-1];h=g[b];c=c(h);c!=h&&c!=null&&u(g,b,{configurable:!0,writable:!0,value:c})}}
+function y(){this.j=!1;this.g=null;this.u=void 0;this.h=1;this.v=this.l=0;this.i=null}function z(b){if(b.j)throw new TypeError("Generator is already running");b.j=!0}y.prototype.o=function(b){this.u=b};function A(b,c){b.i={I:c,J:!0};b.h=b.l||b.v}y.prototype.return=function(b){this.i={return:b};this.h=this.v};function B(b){this.g=new y;this.h=b}function E(b,c){z(b.g);var g=b.g.g;if(g)return F(b,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,b.g.return);b.g.return(c);return G(b)}
+function F(b,c,g,h){try{var l=c.call(b.g.g,g);if(!(l instanceof Object))throw new TypeError("Iterator result "+l+" is not an object");if(!l.done)return b.g.j=!1,l;var m=l.value}catch(f){return b.g.g=null,A(b.g,f),G(b)}b.g.g=null;h.call(b.g,m);return G(b)}function G(b){for(;b.g.h;)try{var c=b.h(b.g);if(c)return b.g.j=!1,{value:c.value,done:!1}}catch(g){b.g.u=void 0,A(b.g,g)}b.g.j=!1;if(b.g.i){c=b.g.i;b.g.i=null;if(c.J)throw c.I;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function H(b){this.next=function(c){z(b.g);b.g.g?c=F(b,b.g.g.next,c,b.g.o):(b.g.o(c),c=G(b));return c};this.throw=function(c){z(b.g);b.g.g?c=F(b,b.g.g["throw"],c,b.g.o):(A(b.g,c),c=G(b));return c};this.return=function(c){return E(b,c)};this[Symbol.iterator]=function(){return this}}function I(b){function c(h){return b.next(h)}function g(h){return b.throw(h)}return new Promise(function(h,l){function m(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(m,l)}m(b.next())})}
+x("Symbol",function(b){function c(m){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(m||"")+"_"+l++,m)}function g(m,f){this.g=m;u(this,"description",{configurable:!0,writable:!0,value:f})}if(b)return b;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(b){if(b)return b;b=Symbol("Symbol.iterator");u(Array.prototype,b,{configurable:!0,writable:!0,value:function(){return J(q(this))}});return b});function J(b){b={next:b};b[Symbol.iterator]=function(){return this};return b}
+x("Promise",function(b){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var a=this.j();try{f(a.resolve,a.reject)}catch(d){a.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(a){a(f)})}if(b)return b;g.prototype.h=function(f){if(this.g==null){this.g=[];var a=this;this.i(function(){a.l()})}this.g.push(f)};var l=w.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var a=0;a<f.length;++a){var d=
+f[a];f[a]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(a,k))}}var a=this,d=!1;return{resolve:f(this.D),reject:f(this.l)}};c.prototype.D=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.G(f);else{a:switch(typeof f){case "object":var a=f!=null;break a;case "function":a=!0;break a;default:a=!1}a?this.C(f):this.o(f)}};
+c.prototype.C=function(f){var a=void 0;try{a=f.then}catch(d){this.l(d);return}typeof a=="function"?this.H(a,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,a){if(this.h!=0)throw Error("Cannot settle("+f+", "+a+"): Promise already settled in state"+this.h);this.h=f;this.i=a;this.h===2&&this.F();this.K()};c.prototype.F=function(){var f=this;l(function(){if(f.B()){var a=w.console;typeof a!=="undefined"&&a.error(f.i)}},1)};c.prototype.B=
+function(){if(this.u)return!1;var f=w.CustomEvent,a=w.Event,d=w.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof a==="function"?f=new a("unhandledrejection",{cancelable:!0}):(f=w.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.K=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)m.h(this.g[f]);this.g=null}};var m=new g;c.prototype.G=
+function(f){var a=this.j();f.A(a.resolve,a.reject)};c.prototype.H=function(f,a){var d=this.j();try{f.call(a,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,a){function d(n,r){return typeof n=="function"?function(C){try{e(n(C))}catch(D){k(D)}}:r}var e,k,p=new c(function(n,r){e=n;k=r});this.A(d(f,e),d(a,k));return p};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.A=function(f,a){function d(){switch(e.h){case 1:f(e.i);break;case 2:a(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?m.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(a,d){d(f)})};c.race=function(f){return new c(function(a,d){for(var e=t(f),k=e.next();!k.done;k=e.next())h(k.value).A(a,d)})};c.all=function(f){var a=t(f),d=a.next();return d.done?h([]):new c(function(e,k){function p(C){return function(D){n[C]=D;r--;r==0&&e(n)}}var n=[],r=0;do n.push(void 0),r++,h(d.value).A(p(n.length-1),k),d=a.next();while(!d.done)})};return c});
+function K(b,c){return Object.prototype.hasOwnProperty.call(b,c)}x("Object.is",function(b){return b?b:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(b){return b?b:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var m=h[g];if(m===c||Object.is(m,c))return!0}return!1}});
+x("String.prototype.includes",function(b){return b?b:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(b){function c(d){this.g=(a+=Math.random()+1).toString();if(d){d=t(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!K(d,f)){var e=new g;u(d,f,{value:e})}}function m(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!b||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new b([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(p){return!1}}())return b;var f="$jscomp_hidden_"+Math.random();m("freeze");m("preventExtensions");m("seal");var a=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!K(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&K(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&K(d,
+f)&&K(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&K(d,f)&&K(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(b){function c(){var a={};return a.m=a.next=a.head=a}function g(a,d){var e=a[1];return J(function(){if(e){for(;e.head!=a[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(a,d){var e=d&&typeof d;e=="object"||e=="function"?m.has(d)?e=m.get(d):(e=""+ ++f,m.set(d,e)):e="p_"+d;var k=a[0][e];if(k&&K(a[0],e))for(a=0;a<k.length;a++){var p=k[a];if(d!==d&&p.key!==p.key||d===p.key)return{id:e,list:k,index:a,entry:p}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(a){this[0]={};this[1]=c();this.size=0;if(a){a=t(a);for(var d;!(d=a.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var a=Object.seal({x:4}),d=new b(t([[a,"s"]]));if(d.get(a)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=a||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(p){return!1}}())return b;var m=new WeakMap;l.prototype.set=function(a,d){a=a===0?0:a;var e=h(this,a);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:a,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(a){a=h(this,a);return a.entry&&a.list?(a.list.splice(a.index,1),a.list.length||delete this[0][a.id],a.entry.m.next=a.entry.next,
+a.entry.next.m=a.entry.m,a.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(a){return!!h(this,a).entry};l.prototype.get=function(a){return(a=h(this,a).entry)&&a.value};l.prototype.entries=function(){return g(this,function(a){return[a.key,a.value]})};l.prototype.keys=function(){return g(this,function(a){return a.key})};l.prototype.values=function(){return g(this,function(a){return a.value})};l.prototype.forEach=
+function(a,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,a.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(b){function c(g){this.g=new Map;if(g){g=t(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new b(t([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),m=l.next();if(m.done||m.value[0]!=g||m.value[1]!=g)return!1;m=l.next();return m.done||m.value[0]==g||m.value[0].x!=4||
+m.value[1]!=m.value[0]?!1:l.next().done}catch(f){return!1}}())return b;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(m){return g.call(h,m,m,l)})};return c});(function(){function b(){return m?Promise.resolve(m):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(a){if(!a.ok)throw Error("HTTP error! status: "+a.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return a.json()}).then(function(a){if(!Array.isArray(a))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return m=a}).catch(function(a){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",a);f=null;throw a;})}function c(a){var d,e,k,p;return I(new H(new B(function(n){switch(n.h){case 1:d=(a.textContent||"").trim();if(!d||a.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return n.return();e=window.getComputedStyle(a);if(e.display==="none"||e.visibility==="hidden")return n.return();
+n.l=2;var r=b();n.h=4;return{value:r};case 4:k=n.u;n.h=3;n.l=0;break;case 2:return n.l=0,n.i=null,console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),n.return();case 3:(p=k.includes(d))?a.classList.contains("js-replaced-missing-icon")&&a.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&a.classList.contains("js-replaced-missing-icon")||(a.textContent="radio_button_unchecked",a.classList.add("js-replaced-missing-icon")),n.h=0}})))}
+function g(a){a=a===void 0?document.body:a;a.querySelectorAll(l).forEach(function(d){c(d)})}function h(){b().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(a){var d=new Set;a=t(a);for(var e=a.next();!e.done;e=a.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(p){p.nodeType===Node.ELEMENT_NODE&&(p.matches(l)&&d.add(p),p.querySelectorAll(l).forEach(function(n){d.add(n)}))});else if(e.type===
+"attributes"&&e.attributeName==="class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(p){c(p)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(a){console.error("IconChecker: Font loading error. Scanning icons anyway.",
+a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(a){return"."+a}).join(","),m=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>C Storage Classes &amp; Memory Layout - By Rajat Kumar</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+        /* Animation Classes */
+        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .memory-block { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .memory-block:hover { transform: scale(1.02); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        
+        .code-line-active { background-color: #fef3c7; border-left: 4px solid #f59e0b; }
+        
+        /* Memory Segment Arrows */
+        .arrow-down { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid #ef4444; margin: 0 auto; }
+        .arrow-up { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 8px solid #3b82f6; margin: 0 auto; }
+        
+        /* Tooltip styling adjustment */
+        .tooltip-trigger:hover::after {
+            content: attr(data-tip);
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 10px;
+            background: #1e293b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            z-index: 50;
+            font-size: 0.75rem;
+            pointer-events: none;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-6{bottom:1.5rem}.bottom-full{bottom:100%}.left-1\/2{left:50%}.right-0{right:0px}.right-2{right:0.5rem}.right-6{right:1.5rem}.top-0{top:0px}.top-2{top:0.5rem}.top-full{top:100%}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.-mb-1{margin-bottom:-0.25rem}.-mt-1{margin-top:-0.25rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-20{margin-bottom:5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mr-3{margin-right:0.75rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-8{height:2rem}.h-\[600px\]{height:600px}.h-full{height:100%}.h-4{height:1rem}.min-h-\[100px\]{min-height:100px}.min-h-\[120px\]{min-height:120px}.min-h-\[400px\]{min-height:400px}.min-h-\[80px\]{min-height:80px}.w-full{width:100%}.max-w-0{max-width:0px}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-help{cursor:help}.cursor-default{cursor:default}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-8{gap:2rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.whitespace-pre{white-space:pre}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-bl{border-bottom-left-radius:0.25rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-l-4{border-left-width:4px}.border-dashed{border-style:dashed}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-blue-300{--tw-border-opacity:1;border-color:rgb(147 197 253 / var(--tw-border-opacity, 1))}.border-green-200{--tw-border-opacity:1;border-color:rgb(187 247 208 / var(--tw-border-opacity, 1))}.border-green-300{--tw-border-opacity:1;border-color:rgb(134 239 172 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-orange-300{--tw-border-opacity:1;border-color:rgb(253 186 116 / var(--tw-border-opacity, 1))}.border-purple-300{--tw-border-opacity:1;border-color:rgb(216 180 254 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.bg-\[\#0077b5\]{--tw-bg-opacity:1;background-color:rgb(0 119 181 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-900\/30{background-color:rgb(113 63 18 / 0.3)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-400{--tw-gradient-from:#60a5fa var(--tw-gradient-from-position);--tw-gradient-to:rgb(96 165 250 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-emerald-400{--tw-gradient-to:#34d399 var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.pb-1{padding-bottom:0.25rem}.pb-2{padding-bottom:0.5rem}.pl-4{padding-left:1rem}.pl-8{padding-left:2rem}.pt-1{padding-top:0.25rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-loose{line-height:2}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-800{--tw-text-opacity:1;color:rgb(153 27 27 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.opacity-20{opacity:0.2}.opacity-50{opacity:0.5}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-200{transition-duration:200ms}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-\[\#006396\]:hover{--tw-bg-opacity:1;background-color:rgb(0 99 150 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-200:hover{--tw-bg-opacity:1;background-color:rgb(191 219 254 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-green-200:hover{--tw-bg-opacity:1;background-color:rgb(187 247 208 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:bg-orange-200:hover{--tw-bg-opacity:1;background-color:rgb(254 215 170 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-200:hover{--tw-bg-opacity:1;background-color:rgb(233 213 255 / var(--tw-bg-opacity, 1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:ml-2{margin-left:0.5rem}.group:hover .group-hover\:max-w-xs{max-width:20rem}.data-\[active\=true\]\:border-transparent[data-active="true"]{border-color:transparent}.data-\[active\=true\]\:bg-blue-600[data-active="true"]{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.data-\[active\=true\]\:text-white[data-active="true"]{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 1024px){.lg\:flex-row{flex-direction:row}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="bg-slate-50 text-slate-800 relative">
+<!-- Hero Section -->
+<div class="relative bg-slate-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+        <!-- Persistent Image URL -->
+        <img alt="Circuit Background" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=1920&amp;q=80">
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+            C Memory Layout &amp; Storage Classes
+        </h1>
+        <p class="text-lg md:text-xl text-slate-300 max-w-2xl mb-8">
+            Master the low-level mechanics of C. Visualize how variables live, die, and where they reside in your computer's RAM.
+        </p>
+        <div class="flex gap-4">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition shadow-lg flex items-center gap-2" onclick="document.getElementById('memory-sim').scrollIntoView({behavior: 'smooth'})">
+                <span class="material-symbols-outlined">memory</span> Open Visualizer
+            </button>
+            <button class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition shadow-lg flex items-center gap-2" onclick="document.getElementById('storage-classes').scrollIntoView({behavior: 'smooth'})">
+                <span class="material-symbols-outlined">library_books</span> Storage Classes
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Direct Answer / Concept Overview -->
+<div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">The Big Picture</h2>
+            <p class="text-lg text-slate-600 mb-4 leading-relaxed">
+                When you run a C program, the operating system assigns a block of RAM to it. This memory is strictly organized into <strong>segments</strong>. Understanding this layout is crucial for debugging segmentation faults, memory leaks, and understanding variable lifetimes.
+            </p>
+            <ul class="space-y-4 mt-6">
+                <li class="flex items-start">
+                    <span class="material-symbols-outlined text-green-600 mr-3 mt-1">check_circle</span>
+                    <div>
+                        <strong class="text-slate-900">Storage Classes</strong> define <em>where</em> a variable is stored (Stack, Heap, Data) and <em>how long</em> it survives.
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="material-symbols-outlined text-green-600 mr-3 mt-1">check_circle</span>
+                    <div>
+                        <strong class="text-slate-900">Stack vs. Heap</strong> is the most critical distinction. The Stack is automatic and organized; the Heap is manual and flexible (but dangerous).
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Memory Hierarchy Graphic -->
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+            <h3 class="font-bold text-slate-800 mb-4 border-b pb-2">Memory Segment Hierarchy</h3>
+            <div class="space-y-2 font-mono text-sm">
+                <div class="flex justify-between items-center p-2 bg-red-100 text-red-800 rounded">
+                    <span>High Address</span>
+                    <span>0xFFFFFFFF</span>
+                </div>
+                <div class="p-3 bg-orange-100 border-2 border-orange-300 rounded text-center relative group cursor-help transition hover:bg-orange-200">
+                    <span class="font-bold block">STACK</span>
+                    <span class="text-xs text-orange-600">Local variables, Function calls</span>
+                    <div class="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1"><div class="arrow-down"></div></div>
+                </div>
+                <div class="h-16 flex items-center justify-center text-slate-400 italic bg-slate-50 border border-dashed border-slate-300 rounded">
+                    Free Memory (Gap)
+                </div>
+                <div class="p-3 bg-blue-100 border-2 border-blue-300 rounded text-center relative group cursor-help transition hover:bg-blue-200">
+                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-1"><div class="arrow-up"></div></div>
+                    <span class="font-bold block">HEAP</span>
+                    <span class="text-xs text-blue-600">Dynamic (malloc/free)</span>
+                </div>
+                <div class="p-2 bg-green-100 border-2 border-green-300 rounded text-center group cursor-help transition hover:bg-green-200">
+                    <span class="font-bold block">BSS &amp; DATA</span>
+                    <span class="text-xs text-green-700">Globals &amp; Statics</span>
+                </div>
+                <div class="p-2 bg-purple-100 border-2 border-purple-300 rounded text-center group cursor-help transition hover:bg-purple-200">
+                    <span class="font-bold block">TEXT (Code)</span>
+                    <span class="text-xs text-purple-700">Instructions (Read-Only)</span>
+                </div>
+                <div class="flex justify-between items-center p-2 bg-slate-200 text-slate-600 rounded">
+                    <span>Low Address</span>
+                    <span>0x00000000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Interactive Simulator Section -->
+<div class="bg-slate-100 py-16" id="memory-sim">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">Interactive Demo</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">Code Execution &amp; Memory Visualizer</h2>
+            <p class="text-slate-600 mt-2">Step through a C program to see how memory is allocated in real-time.</p>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Code Panel -->
+            <div class="flex-1 bg-slate-900 rounded-xl shadow-2xl overflow-hidden flex flex-col h-[600px]">
+                <div class="bg-slate-800 px-4 py-2 flex justify-between items-center border-b border-slate-700 shrink-0">
+                    <span class="text-slate-300 font-mono text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-base">code</span> main.c
+                    </span>
+                    <div class="flex gap-2">
+                        <button class="text-xs bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded transition flex items-center" id="reset-btn">
+                            <span class="material-symbols-outlined text-sm mr-1">restart_alt</span> Reset
+                        </button>
+                        <button class="text-xs bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded transition flex items-center" id="step-btn">
+                            Step <span class="material-symbols-outlined text-sm ml-1">fast_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4 font-mono text-sm text-blue-100 overflow-auto flex-grow leading-loose" id="code-container"><div id="line-0" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">#include <stdio.h></stdio.h></div><div id="line-1" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">#include <stdlib.h></stdlib.h></div><div class="h-4"></div><div id="line-3" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="Global initialized variable -&gt; DATA Segment">int global_var = 42;</div><div id="line-4" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="Global uninitialized variable -&gt; BSS Segment">int global_uninit;</div><div class="h-4"></div><div id="line-6" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">void func() {</div><div id="line-7" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="Static var -&gt; DATA/BSS (Persists!)">    static int s_count = 0;</div><div id="line-8" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="Local var -&gt; Stack Frame (func)">    int local_a = 10;</div><div id="line-9" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">    s_count++;</div><div id="line-10" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">}</div><div class="h-4"></div><div id="line-12" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">int main() {</div><div id="line-13" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="Pointer local var -&gt; Stack Frame (main)">    int *ptr;</div><div id="line-14" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="malloc -&gt; Allocates in HEAP">    ptr = malloc(sizeof(int));</div><div id="line-15" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">    *ptr = 99;</div><div id="line-16" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">    func();</div><div id="line-17" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="free() -&gt; Removes from HEAP">    free(ptr);</div><div id="line-18" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">    return 0;</div><div id="line-19" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="">}</div></div>
+                <div class="bg-slate-800 p-3 text-xs font-mono border-t border-slate-700 shrink-0 h-16 overflow-hidden text-yellow-400" id="console-output">&gt; Simulation reset. Ready to start.</div>
+            </div>
+            
+            <!-- Memory Visualizer Panel -->
+            <div class="flex-1 bg-white rounded-xl shadow-2xl p-6 border border-slate-200 flex flex-col relative h-[600px] overflow-hidden">
+                <h3 class="font-bold text-slate-700 mb-4 text-center border-b pb-2">RAM Snapshot</h3>
+                
+                <!-- Fixed Segments Container -->
+                <div class="flex-grow relative flex flex-col justify-between">
+                    
+                    <!-- Stack (Top) -->
+                    <div class="min-h-[120px] bg-orange-50 border-2 border-orange-200 border-dashed rounded flex flex-col items-center justify-start p-2 gap-2 shadow-inner transition-all duration-300 overflow-y-auto" id="stack-segment"><span class="text-[10px] font-bold text-orange-800 w-full text-center border-b border-orange-200 pb-1 sticky top-0 bg-orange-50">STACK (Local Vars)</span></div>
+                    
+                    <!-- Free Space / Direction Indicators -->
+                    <div class="flex flex-col items-center justify-center py-4 opacity-50">
+                        <span class="text-xs text-slate-400 mb-1">Stack Grows Down ↓</span>
+                        <div class="h-8 border-l-2 border-dashed border-slate-300"></div>
+                        <span class="text-xs text-slate-400 mt-1">↑ Heap Grows Up</span>
+                    </div>
+
+                    <!-- Heap (Middle-Bottom) -->
+                    <div class="min-h-[100px] bg-blue-50 border-2 border-blue-200 border-dashed rounded flex flex-col-reverse items-center p-2 gap-1 shadow-inner transition-all duration-300 overflow-y-auto" id="heap-segment"><span class="text-[10px] font-bold text-blue-800 w-full text-center border-t border-blue-200 pt-1 mt-1 sticky bottom-0 bg-blue-50">HEAP (Dynamic Memory)</span></div>
+
+                    <!-- Data/BSS (Bottom) -->
+                    <div class="mt-4 min-h-[80px] bg-green-50 border-2 border-green-200 border-dashed rounded flex flex-col items-center justify-start p-2 gap-1 shadow-inner transition-all duration-300 overflow-y-auto" id="data-segment"><span class="text-[10px] font-bold text-green-800 w-full text-center border-b border-green-200 pb-1 mb-1 sticky top-0 bg-green-50">DATA / BSS (Globals &amp; Statics)</span></div>
+                    
+                    <!-- Text Segment (Fixed Footer of Memory) -->
+                    <div class="mt-2 h-8 bg-purple-100 border border-purple-300 rounded flex items-center justify-center text-xs font-bold text-purple-800 shadow-sm">
+                        TEXT SEGMENT (Code)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Storage Classes Detailed Tabs -->
+<div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 mb-20" id="storage-classes">
+    <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Deep Dive: Storage Classes</h2>
+    
+    <!-- Tab Navigation -->
+    <div class="flex flex-wrap justify-center gap-2 mb-8">
+        <button class="tab-btn active px-6 py-2 rounded-full border font-semibold hover:bg-slate-100 transition data-[active=true]:bg-blue-600 data-[active=true]:text-white data-[active=true]:border-transparent bg-blue-600 text-white border-transparent" data-tab="auto" onclick="switchTab('auto')" data-active="true">auto</button>
+        <button class="tab-btn px-6 py-2 rounded-full border border-slate-300 font-semibold text-slate-600 hover:bg-slate-100 transition data-[active=true]:bg-blue-600 data-[active=true]:text-white data-[active=true]:border-transparent bg-white" data-tab="register" onclick="switchTab('register')" data-active="false">register</button>
+        <button class="tab-btn px-6 py-2 rounded-full border border-slate-300 font-semibold text-slate-600 hover:bg-slate-100 transition data-[active=true]:bg-blue-600 data-[active=true]:text-white data-[active=true]:border-transparent bg-white" data-tab="static" onclick="switchTab('static')" data-active="false">static</button>
+        <button class="tab-btn px-6 py-2 rounded-full border border-slate-300 font-semibold text-slate-600 hover:bg-slate-100 transition data-[active=true]:bg-blue-600 data-[active=true]:text-white data-[active=true]:border-transparent bg-white" data-tab="extern" onclick="switchTab('extern')" data-active="false">extern</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden min-h-[400px]">
+        <!-- Auto Content -->
+        <div class="tab-content p-8 block fade-in" id="tab-auto">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-blue-600">autorenew</span> The Default: <code class="bg-slate-100 px-2 rounded">auto</code>
+                    </h3>
+                    <p class="text-slate-600 mb-6">
+                        This is the default for all variables declared inside a block. You rarely type the keyword <code>auto</code> explicitly. They are born when execution enters the block and die when it leaves.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Location</span>
+                            <div class="font-bold text-slate-700">Stack</div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Scope</span>
+                            <div class="font-bold text-slate-700">Local (Block)</div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Lifetime</span>
+                            <div class="font-bold text-slate-700">Function Call</div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Default Value</span>
+                            <div class="font-bold text-red-600">Garbage</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 bg-slate-900 rounded-lg p-4 font-mono text-sm text-blue-100 relative group">
+                    <div class="absolute top-2 right-2 text-xs text-slate-500">hover lines for info</div>
+                    <div class="space-y-1">
+                        <div class="hover:bg-slate-800 p-1 rounded cursor-help tooltip-trigger" data-tip="Start of function block">void myFunction() {</div>
+                        <div class="hover:bg-slate-800 p-1 rounded cursor-help tooltip-trigger pl-4" data-tip="Default storage class. Created on Stack.">auto int x = 10;</div>
+                        <div class="hover:bg-slate-800 p-1 rounded cursor-help tooltip-trigger pl-4" data-tip="Contains random garbage value until set!">int y;</div>
+                        <div class="hover:bg-slate-800 p-1 rounded cursor-help tooltip-trigger pl-4" data-tip="Only visible inside this loop block.">if (x &gt; 5) {</div>
+                        <div class="hover:bg-slate-800 p-1 rounded cursor-help tooltip-trigger pl-8" data-tip="New 'z' created on Stack. Shadows outer.">int z = 5;</div>
+                        <div class="hover:bg-slate-800 p-1 rounded cursor-help tooltip-trigger pl-4" data-tip="'z' is destroyed here.">}</div>
+                        <div class="hover:bg-slate-800 p-1 rounded cursor-help tooltip-trigger" data-tip="'x' and 'y' are destroyed.">}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Content -->
+        <div class="tab-content p-8 hidden" id="tab-register">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-orange-600">speed</span> The Speedster: <code class="bg-slate-100 px-2 rounded">register</code>
+                    </h3>
+                    <p class="text-slate-600 mb-6">
+                        A hint to the compiler to store the variable in a <strong>CPU Register</strong> instead of RAM for ultra-fast access. Modern compilers often ignore this and optimize automatically. 
+                        <br><br>
+                        <em class="text-red-500 text-sm font-semibold">Constraint: You cannot get the address (&amp;) of a register variable!</em>
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Location</span>
+                            <div class="font-bold text-slate-700">CPU Register</div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Scope</span>
+                            <div class="font-bold text-slate-700">Local (Block)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 bg-slate-900 rounded-lg p-4 font-mono text-sm text-blue-100">
+                    <div class="space-y-1">
+                        <div class="p-1">void heavyCalculation() {</div>
+                        <div class="bg-yellow-900/30 p-1 pl-4 rounded border-l-2 border-yellow-500">register int i;</div>
+                        <div class="p-1 pl-4">for(i = 0; i &lt; 10000; i++) { ... }</div>
+                        <div class="p-1 pl-4 mt-4 text-red-400">// ERROR: Cannot take address</div>
+                        <div class="p-1 pl-4 text-red-400">int *ptr = &amp;i // Compile Error!</div>
+                        <div class="p-1">}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Static Content -->
+        <div class="tab-content p-8 hidden" id="tab-static">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-purple-600">save</span> The Preserver: <code class="bg-slate-100 px-2 rounded">static</code>
+                    </h3>
+                    <p class="text-slate-600 mb-4">
+                        <strong>Local Static:</strong> Retains its value between function calls. Initialized only once. <br>
+                        <strong>Global Static:</strong> Limits visibility to the <em>current file only</em> (Internal Linkage).
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Location</span>
+                            <div class="font-bold text-slate-700">Data / BSS</div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Lifetime</span>
+                            <div class="font-bold text-green-600">Entire Program</div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Default Value</span>
+                            <div class="font-bold text-green-600">Zero (0)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 bg-slate-900 rounded-lg p-4 font-mono text-sm text-blue-100 flex flex-col justify-between">
+                    <div class="space-y-1 mb-4">
+                        <div class="p-1">void counter() {</div>
+                        <div class="p-1 pl-4 text-purple-300">static int count = 0; // Init once!</div>
+                        <div class="p-1 pl-4">count++;</div>
+                        <div class="p-1 pl-4">printf("%d ", count);</div>
+                        <div class="p-1">}</div>
+                        <div class="p-1 mt-2">int main() {</div>
+                        <div class="p-1 pl-4">counter(); // Output: 1</div>
+                        <div class="p-1 pl-4">counter(); // Output: 2</div>
+                        <div class="p-1 pl-4">counter(); // Output: 3</div>
+                        <div class="p-1">}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extern Content -->
+        <div class="tab-content p-8 hidden" id="tab-extern">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-indigo-600">public</span> The Networker: <code class="bg-slate-100 px-2 rounded">extern</code>
+                    </h3>
+                    <p class="text-slate-600 mb-4">
+                        Tells the compiler: "This variable exists, but it's defined in another file." Used for sharing globals across multiple C files.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Location</span>
+                            <div class="font-bold text-slate-700">Data / BSS</div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border">
+                            <span class="text-xs uppercase text-slate-400 font-bold">Scope</span>
+                            <div class="font-bold text-slate-700">Global (Program)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 space-y-4">
+                    <div class="bg-slate-900 rounded-lg p-3 font-mono text-sm text-blue-100 relative">
+                        <div class="absolute top-0 right-0 bg-slate-700 px-2 text-xs rounded-bl">file1.c</div>
+                        <div class="p-1">int sharedVar = 42; // Definition</div>
+                    </div>
+                    <div class="bg-slate-900 rounded-lg p-3 font-mono text-sm text-blue-100 relative">
+                        <div class="absolute top-0 right-0 bg-slate-700 px-2 text-xs rounded-bl">file2.c</div>
+                        <div class="p-1 text-indigo-300">extern int sharedVar; // Declaration</div>
+                        <div class="p-1">void printIt() {</div>
+                        <div class="p-1 pl-4">printf("%d", sharedVar); // Uses file1's var</div>
+                        <div class="p-1">}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Attribution / Footer -->
+<div class="bg-slate-800 text-slate-300 py-8 border-t border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+            <p class="font-semibold text-lg text-white">Created by Rajat Kumar</p>
+        </div>
+        <div>
+            <a class="flex items-center gap-2 bg-[#0077b5] hover:bg-[#006396] text-white px-4 py-2 rounded transition shadow-md" href="https://www.linkedin.com/in/imRajat/" target="_blank">
+                <span class="font-bold">in</span> Connect on LinkedIn
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Download Floating Button -->
+<button class="fixed bottom-6 right-6 bg-slate-900 hover:bg-slate-800 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 z-50 flex items-center justify-center group border border-slate-700" onclick="downloadPage()" title="Download as HTML">
+    <span class="material-symbols-outlined text-2xl">download</span>
+    <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap text-sm font-semibold">Download Offline</span>
+</button>
+
+<!-- Scripts -->
+<script>
+        /* -------------------------------------------------------------------------- */
+        /*                               TAB LOGIC                                    */
+        /* -------------------------------------------------------------------------- */
+        function switchTab(tabId) {
+            // Update buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                if(btn.dataset.tab === tabId) {
+                    btn.setAttribute('data-active', 'true');
+                    btn.classList.add('bg-blue-600', 'text-white', 'border-transparent');
+                    btn.classList.remove('bg-white', 'text-slate-600', 'border-slate-300');
+                } else {
+                    btn.setAttribute('data-active', 'false');
+                    btn.classList.remove('bg-blue-600', 'text-white', 'border-transparent');
+                    btn.classList.add('bg-white', 'text-slate-600', 'border-slate-300');
+                }
+            });
+
+            // Update content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+                if(content.id === `tab-${tabId}`) {
+                    content.classList.remove('hidden');
+                    content.classList.add('fade-in');
+                }
+            });
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /*                           MEMORY VISUALIZER LOGIC                          */
+        /* -------------------------------------------------------------------------- */
+        
+        const codeLines = [
+            { id: 1, text: "#include <stdio.h>", type: 'comment' },
+            { id: 2, text: "#include <stdlib.h>", type: 'comment' },
+            { id: 3, text: "", type: 'spacer' },
+            { id: 4, text: "int global_var = 42;", type: 'data', desc: "Global initialized variable -> DATA Segment" },
+            { id: 5, text: "int global_uninit;", type: 'bss', desc: "Global uninitialized variable -> BSS Segment" },
+            { id: 6, text: "", type: 'spacer' },
+            { id: 7, text: "void func() {", type: 'func_start' },
+            { id: 8, text: "    static int s_count = 0;", type: 'static', desc: "Static var -> DATA/BSS (Persists!)" },
+            { id: 9, text: "    int local_a = 10;", type: 'stack_var', desc: "Local var -> Stack Frame (func)" },
+            { id: 10, text: "    s_count++;", type: 'action' },
+            { id: 11, text: "}", type: 'func_end' },
+            { id: 12, text: "", type: 'spacer' },
+            { id: 13, text: "int main() {", type: 'main_start' },
+            { id: 14, text: "    int *ptr;", type: 'stack_var', desc: "Pointer local var -> Stack Frame (main)" },
+            { id: 15, text: "    ptr = malloc(sizeof(int));", type: 'heap', desc: "malloc -> Allocates in HEAP" },
+            { id: 16, text: "    *ptr = 99;", type: 'action' },
+            { id: 17, text: "    func();", type: 'call_func' },
+            { id: 18, text: "    free(ptr);", type: 'free_heap', desc: "free() -> Removes from HEAP" },
+            { id: 19, text: "    return 0;", type: 'return' },
+            { id: 20, text: "}", type: 'end' }
+        ];
+
+        let currentStep = 0;
+        const codeContainer = document.getElementById('code-container');
+        const consoleOutput = document.getElementById('console-output');
+        const stackContainer = document.getElementById('stack-segment');
+        const heapContainer = document.getElementById('heap-segment');
+        const dataContainer = document.getElementById('data-segment');
+
+        function renderCode() {
+            codeContainer.innerHTML = codeLines.map((line, index) => {
+                if(line.type === 'spacer') return `<div class="h-4"></div>`;
+                return `<div id="line-${index}" class="px-2 py-0.5 rounded transition-colors duration-200 border-l-4 border-transparent text-xs md:text-sm whitespace-pre font-medium hover:bg-slate-800 cursor-default" title="${line.desc || ''}">${line.text}</div>`;
+            }).join('');
+        }
+
+        function log(msg) {
+            consoleOutput.textContent = "> " + msg;
+            consoleOutput.classList.remove('text-yellow-400');
+            void consoleOutput.offsetWidth; // trigger reflow
+            consoleOutput.classList.add('text-yellow-400');
+        }
+
+        function createMemoryBlock(id, text, colorClass, container) {
+            const div = document.createElement('div');
+            div.id = id;
+            div.className = `w-full p-2 rounded text-xs font-mono text-center shadow-sm border mb-1 memory-block fade-in ${colorClass}`;
+            div.textContent = text;
+            container.appendChild(div);
+            return div;
+        }
+
+        function stepSimulation() {
+            if (currentStep >= codeLines.length) return;
+
+            // Highlight line
+            document.querySelectorAll('#code-container > div').forEach(d => {
+                d.classList.remove('code-line-active');
+                d.classList.add('opacity-70');
+            });
+            const activeEl = document.getElementById(`line-${currentStep}`);
+            if(activeEl) {
+                activeEl.classList.add('code-line-active');
+                activeEl.classList.remove('opacity-70');
+                activeEl.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+
+            const line = codeLines[currentStep];
+
+            switch(line.type) {
+                case 'data':
+                    createMemoryBlock('mem-global-var', 'global_var = 42', 'bg-green-200 border-green-400 text-green-900', dataContainer);
+                    log("Initialized global variable added to DATA segment.");
+                    break;
+                case 'bss':
+                    createMemoryBlock('mem-global-uninit', 'global_uninit = 0', 'bg-green-100 border-green-300 text-green-800', dataContainer);
+                    log("Uninitialized global added to BSS (auto-zeroed).");
+                    break;
+                case 'main_start':
+                    const mainFrame = document.createElement('div');
+                    mainFrame.id = 'frame-main';
+                    mainFrame.className = 'w-full bg-orange-100 border-2 border-orange-400 rounded p-2 mb-1 fade-in';
+                    mainFrame.innerHTML = '<div class="font-bold text-orange-800 border-b border-orange-300 mb-1 text-xs">Stack Frame: main()</div><div id="vars-main" class="space-y-1"></div>';
+                    stackContainer.appendChild(mainFrame);
+                    log("main() called. Stack frame pushed.");
+                    break;
+                case 'stack_var':
+                    const parentId = currentStep < 13 ? 'vars-func' : 'vars-main';
+                    const container = document.getElementById(parentId);
+                    if(container) {
+                        const varName = line.text.trim().split(' ')[1].replace(';', '').replace('=','');
+                        const val = line.text.includes('=') ? line.text.split('=')[1].replace(';', '') : '?';
+                        const div = document.createElement('div');
+                        div.className = 'bg-white border border-orange-200 p-1 text-xs rounded text-center';
+                        div.textContent = `${varName} = ${val}`;
+                        container.appendChild(div);
+                        log(`Local variable allocated on Stack.`);
+                    }
+                    break;
+                case 'heap':
+                    createMemoryBlock('mem-heap-1', '0x5A2F (malloc 4 bytes)', 'bg-blue-200 border-blue-400 text-blue-900', heapContainer);
+                    log("malloc() requested 4 bytes. Allocated on HEAP.");
+                    break;
+                case 'func_start':
+                    const funcFrame = document.createElement('div');
+                    funcFrame.id = 'frame-func';
+                    funcFrame.className = 'w-full bg-orange-100 border-2 border-orange-400 rounded p-2 mb-1 fade-in';
+                    funcFrame.innerHTML = '<div class="font-bold text-orange-800 border-b border-orange-300 mb-1 text-xs">Stack Frame: func()</div><div id="vars-func" class="space-y-1"></div>';
+                    stackContainer.appendChild(funcFrame); 
+                    log("func() called. New Stack Frame pushed.");
+                    break;
+                case 'static':
+                    if(!document.getElementById('mem-static-s')) {
+                        createMemoryBlock('mem-static-s', 'static s_count = 0', 'bg-green-200 border-green-400 text-green-900', dataContainer);
+                        log("Static variable 's_count' initialized in DATA (once).");
+                    } else {
+                        log("Static variable 's_count' already exists. Skipping init.");
+                    }
+                    break;
+                case 'action':
+                     if(line.text.includes('s_count++')) {
+                         const el = document.getElementById('mem-static-s');
+                         if(el) {
+                             el.textContent = "static s_count = 1";
+                             el.classList.add('bg-yellow-200');
+                             setTimeout(() => el.classList.remove('bg-yellow-200'), 500);
+                             log("Static variable incremented. Value persists!");
+                         }
+                     }
+                     break;
+                case 'func_end':
+                    const fFrame = document.getElementById('frame-func');
+                    if(fFrame) {
+                        fFrame.classList.add('opacity-0', 'transform', 'translate-x-10');
+                        setTimeout(() => fFrame.remove(), 300);
+                        log("func() returned. Stack Frame popped. Local vars gone.");
+                    }
+                    break;
+                case 'free_heap':
+                    const hBlock = document.getElementById('mem-heap-1');
+                    if(hBlock) {
+                        hBlock.style.backgroundColor = '#fee2e2';
+                        hBlock.textContent = "Freed Memory";
+                        setTimeout(() => hBlock.remove(), 800);
+                        log("free(ptr) called. Heap memory released.");
+                    }
+                    break;
+                case 'return':
+                     const mFrame = document.getElementById('frame-main');
+                    if(mFrame) {
+                        mFrame.classList.add('opacity-0');
+                        setTimeout(() => mFrame.remove(), 300);
+                        log("Program finished. Main returned.");
+                    }
+                    break;
+            }
+
+            currentStep++;
+            if(currentStep >= codeLines.length) {
+                document.getElementById('step-btn').disabled = true;
+                document.getElementById('step-btn').classList.add('opacity-50');
+            }
+        }
+
+        function resetSim() {
+            currentStep = 0;
+            // Force reset inner HTML to ensure clean slate even if downloaded mid-sim
+            stackContainer.innerHTML = '<span class="text-[10px] font-bold text-orange-800 w-full text-center border-b border-orange-200 pb-1 sticky top-0 bg-orange-50">STACK (Local Vars)</span>';
+            heapContainer.innerHTML = '<span class="text-[10px] font-bold text-blue-800 w-full text-center border-t border-blue-200 pt-1 mt-1 sticky bottom-0 bg-blue-50">HEAP (Dynamic Memory)</span>';
+            dataContainer.innerHTML = '<span class="text-[10px] font-bold text-green-800 w-full text-center border-b border-green-200 pb-1 mb-1 sticky top-0 bg-green-50">DATA / BSS (Globals & Statics)</span>';
+            
+            document.getElementById('step-btn').disabled = false;
+            document.getElementById('step-btn').classList.remove('opacity-50');
+            renderCode();
+            log("Simulation reset. Ready to start.");
+        }
+
+        function downloadPage() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'c-memory-visualizer-rajat.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        document.getElementById('step-btn').addEventListener('click', stepSimulation);
+        document.getElementById('reset-btn').addEventListener('click', resetSim);
+
+        // Initialize on load to ensure clean state
+        window.addEventListener('DOMContentLoaded', () => {
+            resetSim();
+            // Activate first tab
+            switchTab('auto');
+        });
+
+    </script>
+
+
+</body></html>

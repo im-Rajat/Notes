@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function q(b){var c=0;return function(){return c<b.length?{done:!1,value:b[c++]}:{done:!0}}}function t(b){var c=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(c)return c.call(b);if(typeof b.length=="number")return{next:q(b)};throw Error(String(b)+" is not an iterable or ArrayLike");}var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,c,g){if(b==Array.prototype||b==Object.prototype)return b;b[c]=g.value;return b};
+function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var g=b[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var w=v(this);function x(b,c){if(c)a:{var g=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var l=b[h];if(!(l in g))break a;g=g[l]}b=b[b.length-1];h=g[b];c=c(h);c!=h&&c!=null&&u(g,b,{configurable:!0,writable:!0,value:c})}}
+function y(){this.j=!1;this.g=null;this.u=void 0;this.h=1;this.v=this.l=0;this.i=null}function z(b){if(b.j)throw new TypeError("Generator is already running");b.j=!0}y.prototype.o=function(b){this.u=b};function A(b,c){b.i={I:c,J:!0};b.h=b.l||b.v}y.prototype.return=function(b){this.i={return:b};this.h=this.v};function B(b){this.g=new y;this.h=b}function E(b,c){z(b.g);var g=b.g.g;if(g)return F(b,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,b.g.return);b.g.return(c);return G(b)}
+function F(b,c,g,h){try{var l=c.call(b.g.g,g);if(!(l instanceof Object))throw new TypeError("Iterator result "+l+" is not an object");if(!l.done)return b.g.j=!1,l;var m=l.value}catch(f){return b.g.g=null,A(b.g,f),G(b)}b.g.g=null;h.call(b.g,m);return G(b)}function G(b){for(;b.g.h;)try{var c=b.h(b.g);if(c)return b.g.j=!1,{value:c.value,done:!1}}catch(g){b.g.u=void 0,A(b.g,g)}b.g.j=!1;if(b.g.i){c=b.g.i;b.g.i=null;if(c.J)throw c.I;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function H(b){this.next=function(c){z(b.g);b.g.g?c=F(b,b.g.g.next,c,b.g.o):(b.g.o(c),c=G(b));return c};this.throw=function(c){z(b.g);b.g.g?c=F(b,b.g.g["throw"],c,b.g.o):(A(b.g,c),c=G(b));return c};this.return=function(c){return E(b,c)};this[Symbol.iterator]=function(){return this}}function I(b){function c(h){return b.next(h)}function g(h){return b.throw(h)}return new Promise(function(h,l){function m(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(m,l)}m(b.next())})}
+x("Symbol",function(b){function c(m){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(m||"")+"_"+l++,m)}function g(m,f){this.g=m;u(this,"description",{configurable:!0,writable:!0,value:f})}if(b)return b;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(b){if(b)return b;b=Symbol("Symbol.iterator");u(Array.prototype,b,{configurable:!0,writable:!0,value:function(){return J(q(this))}});return b});function J(b){b={next:b};b[Symbol.iterator]=function(){return this};return b}
+x("Promise",function(b){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var a=this.j();try{f(a.resolve,a.reject)}catch(d){a.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(a){a(f)})}if(b)return b;g.prototype.h=function(f){if(this.g==null){this.g=[];var a=this;this.i(function(){a.l()})}this.g.push(f)};var l=w.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var a=0;a<f.length;++a){var d=
+f[a];f[a]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(a,k))}}var a=this,d=!1;return{resolve:f(this.D),reject:f(this.l)}};c.prototype.D=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.G(f);else{a:switch(typeof f){case "object":var a=f!=null;break a;case "function":a=!0;break a;default:a=!1}a?this.C(f):this.o(f)}};
+c.prototype.C=function(f){var a=void 0;try{a=f.then}catch(d){this.l(d);return}typeof a=="function"?this.H(a,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,a){if(this.h!=0)throw Error("Cannot settle("+f+", "+a+"): Promise already settled in state"+this.h);this.h=f;this.i=a;this.h===2&&this.F();this.K()};c.prototype.F=function(){var f=this;l(function(){if(f.B()){var a=w.console;typeof a!=="undefined"&&a.error(f.i)}},1)};c.prototype.B=
+function(){if(this.u)return!1;var f=w.CustomEvent,a=w.Event,d=w.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof a==="function"?f=new a("unhandledrejection",{cancelable:!0}):(f=w.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.K=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)m.h(this.g[f]);this.g=null}};var m=new g;c.prototype.G=
+function(f){var a=this.j();f.A(a.resolve,a.reject)};c.prototype.H=function(f,a){var d=this.j();try{f.call(a,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,a){function d(n,r){return typeof n=="function"?function(C){try{e(n(C))}catch(D){k(D)}}:r}var e,k,p=new c(function(n,r){e=n;k=r});this.A(d(f,e),d(a,k));return p};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.A=function(f,a){function d(){switch(e.h){case 1:f(e.i);break;case 2:a(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?m.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(a,d){d(f)})};c.race=function(f){return new c(function(a,d){for(var e=t(f),k=e.next();!k.done;k=e.next())h(k.value).A(a,d)})};c.all=function(f){var a=t(f),d=a.next();return d.done?h([]):new c(function(e,k){function p(C){return function(D){n[C]=D;r--;r==0&&e(n)}}var n=[],r=0;do n.push(void 0),r++,h(d.value).A(p(n.length-1),k),d=a.next();while(!d.done)})};return c});
+function K(b,c){return Object.prototype.hasOwnProperty.call(b,c)}x("Object.is",function(b){return b?b:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(b){return b?b:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var m=h[g];if(m===c||Object.is(m,c))return!0}return!1}});
+x("String.prototype.includes",function(b){return b?b:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(b){function c(d){this.g=(a+=Math.random()+1).toString();if(d){d=t(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!K(d,f)){var e=new g;u(d,f,{value:e})}}function m(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!b||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new b([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(p){return!1}}())return b;var f="$jscomp_hidden_"+Math.random();m("freeze");m("preventExtensions");m("seal");var a=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!K(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&K(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&K(d,
+f)&&K(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&K(d,f)&&K(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(b){function c(){var a={};return a.m=a.next=a.head=a}function g(a,d){var e=a[1];return J(function(){if(e){for(;e.head!=a[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(a,d){var e=d&&typeof d;e=="object"||e=="function"?m.has(d)?e=m.get(d):(e=""+ ++f,m.set(d,e)):e="p_"+d;var k=a[0][e];if(k&&K(a[0],e))for(a=0;a<k.length;a++){var p=k[a];if(d!==d&&p.key!==p.key||d===p.key)return{id:e,list:k,index:a,entry:p}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(a){this[0]={};this[1]=c();this.size=0;if(a){a=t(a);for(var d;!(d=a.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var a=Object.seal({x:4}),d=new b(t([[a,"s"]]));if(d.get(a)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=a||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(p){return!1}}())return b;var m=new WeakMap;l.prototype.set=function(a,d){a=a===0?0:a;var e=h(this,a);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:a,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(a){a=h(this,a);return a.entry&&a.list?(a.list.splice(a.index,1),a.list.length||delete this[0][a.id],a.entry.m.next=a.entry.next,
+a.entry.next.m=a.entry.m,a.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(a){return!!h(this,a).entry};l.prototype.get=function(a){return(a=h(this,a).entry)&&a.value};l.prototype.entries=function(){return g(this,function(a){return[a.key,a.value]})};l.prototype.keys=function(){return g(this,function(a){return a.key})};l.prototype.values=function(){return g(this,function(a){return a.value})};l.prototype.forEach=
+function(a,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,a.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(b){function c(g){this.g=new Map;if(g){g=t(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new b(t([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),m=l.next();if(m.done||m.value[0]!=g||m.value[1]!=g)return!1;m=l.next();return m.done||m.value[0]==g||m.value[0].x!=4||
+m.value[1]!=m.value[0]?!1:l.next().done}catch(f){return!1}}())return b;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(m){return g.call(h,m,m,l)})};return c});(function(){function b(){return m?Promise.resolve(m):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(a){if(!a.ok)throw Error("HTTP error! status: "+a.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return a.json()}).then(function(a){if(!Array.isArray(a))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return m=a}).catch(function(a){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",a);f=null;throw a;})}function c(a){var d,e,k,p;return I(new H(new B(function(n){switch(n.h){case 1:d=(a.textContent||"").trim();if(!d||a.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return n.return();e=window.getComputedStyle(a);if(e.display==="none"||e.visibility==="hidden")return n.return();
+n.l=2;var r=b();n.h=4;return{value:r};case 4:k=n.u;n.h=3;n.l=0;break;case 2:return n.l=0,n.i=null,console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),n.return();case 3:(p=k.includes(d))?a.classList.contains("js-replaced-missing-icon")&&a.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&a.classList.contains("js-replaced-missing-icon")||(a.textContent="radio_button_unchecked",a.classList.add("js-replaced-missing-icon")),n.h=0}})))}
+function g(a){a=a===void 0?document.body:a;a.querySelectorAll(l).forEach(function(d){c(d)})}function h(){b().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(a){var d=new Set;a=t(a);for(var e=a.next();!e.done;e=a.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(p){p.nodeType===Node.ELEMENT_NODE&&(p.matches(l)&&d.add(p),p.querySelectorAll(l).forEach(function(n){d.add(n)}))});else if(e.type===
+"attributes"&&e.attributeName==="class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(p){c(p)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(a){console.error("IconChecker: Font loading error. Scanning icons anyway.",
+a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(a){return"."+a}).join(","),m=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+</script>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>CDN Latency Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .packet {
+            offset-path: path('M 0 0 L 0 0'); /* Dynamic */
+            offset-distance: 0%;
+            animation: none;
+        }
+        @keyframes travel {
+            0% { offset-distance: 0%; }
+            100% { offset-distance: 100%; }
+        }
+        .blinking-cursor::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        .map-marker {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .map-marker:hover {
+            transform: scale(1.2) translateY(-5px);
+            filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+        }
+        /* Floating Export Button Animation */
+        .export-btn:hover .icon-download {
+            transform: translateY(2px);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-left-12{left:-3rem}.-right-2{right:-0.5rem}.-top-2{top:-0.5rem}.bottom-0{bottom:0px}.bottom-6{bottom:1.5rem}.bottom-full{bottom:100%}.left-0{left:0px}.left-\[30\%\]{left:30%}.left-\[68\%\]{left:68%}.left-\[70\%\]{left:70%}.right-0{right:0px}.right-6{right:1.5rem}.top-0{top:0px}.top-\[35\%\]{top:35%}.top-\[65\%\]{top:65%}.top-\[70\%\]{top:70%}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.float-right{float:right}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-\[800px\]{height:800px}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-1{width:0.25rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.flex-grow{flex-grow:1}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-90{--tw-scale-x:.9;--tw-scale-y:.9;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}.cursor-help{cursor:help}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-24 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(6rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(6rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-gray-800 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(31 41 55 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-blue-500\/20{border-color:rgb(59 130 246 / 0.2)}.border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1))}.border-gray-900{--tw-border-opacity:1;border-color:rgb(17 24 39 / var(--tw-border-opacity, 1))}.border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-l-blue-500{--tw-border-opacity:1;border-left-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-400{--tw-bg-opacity:1;background-color:rgb(96 165 250 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-500\/10{background-color:rgb(59 130 246 / 0.1)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-blue-900\/30{background-color:rgb(30 58 138 / 0.3)}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-gray-900\/50{background-color:rgb(17 24 39 / 0.5)}.bg-gray-900\/90{background-color:rgb(17 24 39 / 0.9)}.bg-gray-900\/95{background-color:rgb(17 24 39 / 0.95)}.bg-gray-950{--tw-bg-opacity:1;background-color:rgb(3 7 18 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-green-900\/30{background-color:rgb(20 83 45 / 0.3)}.bg-purple-900\/30{background-color:rgb(88 28 135 / 0.3)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(59 130 246 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gray-950\/80{--tw-gradient-from:rgb(3 7 18 / 0.8) var(--tw-gradient-from-position);--tw-gradient-to:rgb(3 7 18 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-white{--tw-gradient-from:#fff var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-gray-950\/90{--tw-gradient-to:rgb(3 7 18 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(3 7 18 / 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-gray-400{--tw-gradient-to:#9ca3af var(--tw-gradient-to-position)}.to-gray-950{--tw-gradient-to:#030712 var(--tw-gradient-to-position)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-16{padding-bottom:4rem}.pb-2{padding-bottom:0.5rem}.pr-1{padding-right:0.25rem}.pt-1{padding-top:0.25rem}.pt-32{padding-top:8rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.opacity-0{opacity:0}.opacity-20{opacity:0.2}.opacity-30{opacity:0.3}.opacity-50{opacity:0.5}.opacity-75{opacity:0.75}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_20px_rgba\(37\2c 99\2c 235\2c 0\.3\)\]{--tw-shadow:0 0 20px rgba(37,99,235,0.3);--tw-shadow-colored:0 0 20px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_30px_rgba\(239\2c 68\2c 68\2c 0\.3\)\]{--tw-shadow:0 0 30px rgba(239,68,68,0.3);--tw-shadow-colored:0 0 30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_30px_rgba\(34\2c 197\2c 94\2c 0\.3\)\]{--tw-shadow:0 0 30px rgba(34,197,94,0.3);--tw-shadow-colored:0 0 30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-blue-500\/20{--tw-ring-color:rgb(59 130 246 / 0.2)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.selection\:bg-blue-500 *::selection{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-blue-500::selection{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-blue-500\/50:hover{border-color:rgb(59 130 246 / 0.5)}.hover\:border-green-500\/50:hover{border-color:rgb(34 197 94 / 0.5)}.hover\:border-purple-500\/50:hover{border-color:rgb(168 85 247 / 0.5)}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-900\/50:hover{background-color:rgb(30 58 138 / 0.5)}.hover\:bg-gray-800:hover{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.hover\:from-blue-500:hover{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(59 130 246 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-indigo-500:hover{--tw-gradient-to:#6366f1 var(--tw-gradient-to-position)}.hover\:text-blue-400:hover{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}.peer:checked ~ .peer-checked\:border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94 / var(--tw-border-opacity, 1))}.peer:checked ~ .peer-checked\:border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.peer:checked ~ .peer-checked\:bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.peer:checked ~ .peer-checked\:bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:block{display:block}.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:text-7xl{font-size:4.5rem;line-height:1}}@media (min-width: 1024px){.lg\:col-span-1{grid-column:span 1 / span 1}.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:h-\[600px\]{height:600px}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="bg-gray-950 text-gray-100 min-h-screen selection:bg-blue-500 selection:text-white">
+
+<!-- Navbar -->
+<nav class="border-b border-gray-800 bg-gray-900/50 backdrop-blur fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-blue-500">public</span>
+                <span class="font-bold text-xl tracking-tight">LatencyLabs</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a class="hover:text-blue-400 transition-colors" href="#simulator">Simulator</a>
+                <a class="hover:text-blue-400 transition-colors" href="#concepts">How it Works</a>
+                <a class="hover:text-blue-400 transition-colors" href="#deep-dive">Deep Dive</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="relative pt-32 pb-16 overflow-hidden">
+    <!-- Abstract Background Image (Unsplash) -->
+    <div class="absolute inset-0 z-0 opacity-20">
+        <img alt="Network Background" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=2072&amp;auto=format&amp;fit=crop">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/90 to-gray-950"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm mb-6">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Interview Question Solved
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+            The Answer is <span class="text-blue-500">CDN</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Why does a user in Australia experience 600ms latency while a user in India sees 80ms? 
+            It's physics. The solution is a <strong>Content Delivery Network</strong>.
+        </p>
+        <a class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-[0_0_20px_rgba(37,99,235,0.3)]" href="#simulator">
+            <span class="material-symbols-outlined">play_circle</span>
+            Launch Simulator
+        </a>
+    </div>
+</div>
+
+<!-- Simulator Section -->
+<div class="max-w-7xl mx-auto px-4 py-12" id="simulator">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[800px] lg:h-[600px]">
+        
+        <!-- Controls Panel -->
+        <div class="lg:col-span-1 glass-panel rounded-2xl p-6 flex flex-col border-l-4 border-l-blue-500">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined text-gray-400">tune</span> Configuration
+            </h2>
+            
+            <div class="space-y-6 flex-grow">
+                <!-- Scenario Toggle -->
+                <div class="space-y-3">
+                    <label class="text-sm font-medium text-gray-400 uppercase tracking-wider">Architecture Mode</label>
+                    <div class="grid grid-cols-2 gap-2 p-1 bg-gray-900 rounded-lg border border-gray-800">
+                        <button class="px-4 py-2 rounded-md text-sm font-medium transition-all bg-blue-600 text-white shadow-lg" id="mode-origin" onclick="setMode('origin')">
+                            Direct to Origin
+                        </button>
+                        <button class="px-4 py-2 rounded-md text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-gray-800" id="mode-cdn" onclick="setMode('cdn')">
+                            CDN Enabled
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cache State (Only visible in CDN mode) -->
+                <div class="space-y-3 transition-opacity duration-300 opacity-50 pointer-events-none" id="cache-control" style="opacity: 0; pointer-events: none;">
+                    <label class="text-sm font-medium text-gray-400 uppercase tracking-wider">Request Type</label>
+                    <div class="flex items-center gap-4">
+                        <label class="flex items-center gap-2 cursor-pointer group">
+                            <div class="relative flex items-center">
+                                <input class="peer sr-only" name="cache-state" onchange="updateCacheState()" type="radio" value="miss">
+                                <div class="w-5 h-5 border-2 border-gray-600 rounded-full peer-checked:border-orange-500 peer-checked:bg-orange-500 transition-all"></div>
+                            </div>
+                            <span class="text-gray-300 group-hover:text-white">First Visit (Miss)</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer group">
+                            <div class="relative flex items-center">
+                                <input checked="" class="peer sr-only" name="cache-state" onchange="updateCacheState()" type="radio" value="hit">
+                                <div class="w-5 h-5 border-2 border-gray-600 rounded-full peer-checked:border-green-500 peer-checked:bg-green-500 transition-all"></div>
+                            </div>
+                            <span class="text-gray-300 group-hover:text-white">Repeat (Hit)</span>
+                        </label>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2" id="cache-desc">Simulates a user visiting for the second time. Content is served from the edge.</p>
+                </div>
+
+                <!-- Action Button -->
+                <div class="pt-4">
+                    <button class="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95" id="run-sim-btn" onclick="runSimulation()">
+                        <span class="material-symbols-outlined">send</span>
+                        Send Request
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live Metrics -->
+            <div class="mt-6 pt-6 border-t border-gray-800">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-900/50 p-3 rounded-lg">
+                        <div class="text-xs text-gray-500 mb-1">Latency (RTT)</div>
+                        <div class="text-2xl font-bold text-white mono" id="metric-time">0 <span class="text-sm text-gray-500">ms</span></div>
+                    </div>
+                    <div class="bg-gray-900/50 p-3 rounded-lg">
+                        <div class="text-xs text-gray-500 mb-1">Distance</div>
+                        <div class="text-2xl font-bold text-white mono" id="metric-distance">0 <span class="text-sm text-gray-500">km</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visualization Area -->
+        <div class="lg:col-span-2 relative glass-panel rounded-2xl overflow-hidden shadow-2xl bg-black">
+            <!-- Map Background (Unsplash) -->
+            <div class="absolute inset-0 bg-gray-900">
+                 <img alt="Map Region" class="w-full h-full object-cover opacity-30" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&amp;w=1748&amp;auto=format&amp;fit=crop">
+            </div>
+
+            <!-- Canvas Layer for Lines -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none z-10" id="network-svg">
+                <defs>
+                    <!-- Sydney to Delhi -->
+                    <path d="M 750 450 Q 550 400 350 250" fill="none" id="path-origin" stroke="transparent"></path>
+                    <!-- Sydney to Sydney Edge -->
+                    <path d="M 750 450 L 730 430" fill="none" id="path-edge" stroke="transparent"></path>
+                </defs>
+                
+                <!-- Visible Connection Lines -->
+                <path class="opacity-30" d="M 750 450 Q 550 400 350 250" fill="none" id="line-origin" stroke="#ef4444" stroke-dasharray="10 10" stroke-width="2"></path>
+                <path class="opacity-0" d="M 750 450 L 730 430" fill="none" id="line-edge" stroke="#22c55e" stroke-width="2"></path>
+                
+                <!-- The Packet -->
+                <circle class="opacity-0" fill="#60a5fa" id="packet" r="6">
+                    <animateMotion dur="0s" fill="freeze" id="anim-motion" repeatCount="1"></animateMotion>
+                </circle>
+            </svg>
+
+            <!-- UI Overlay Elements (Nodes) -->
+            <div class="absolute inset-0 z-20 p-8">
+                <!-- India Origin Node -->
+                <div class="absolute left-[30%] top-[35%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-help" id="node-origin">
+                    <div class="w-16 h-16 bg-gray-900 rounded-full border-2 border-red-500 flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.3)] z-10 relative">
+                        <span class="material-symbols-outlined text-red-500 text-3xl">dns</span>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center text-[10px] font-bold border-2 border-gray-900">IN</div>
+                    </div>
+                    <div class="mt-3 bg-gray-900/90 px-3 py-1 rounded text-xs font-mono border border-gray-700 text-center">
+                        <div class="text-red-400 font-bold">ORIGIN SERVER</div>
+                        <div class="text-gray-500">Delhi, India</div>
+                    </div>
+                     <div class="absolute bottom-full mb-2 w-48 bg-gray-800 text-xs text-gray-300 p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-gray-700">
+                        The main database and backend logic reside here. All data starts here.
+                    </div>
+                </div>
+
+                <!-- Australia User Node -->
+                <div class="absolute left-[70%] top-[70%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10" id="node-user">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-lg ring-4 ring-blue-500/20 animate-pulse-slow">
+                        <span class="material-symbols-outlined text-white text-2xl">person</span>
+                    </div>
+                    <div class="mt-3 bg-gray-900/90 px-3 py-1 rounded text-xs font-mono border border-gray-700 text-center">
+                        <div class="text-blue-400 font-bold">USER</div>
+                        <div class="text-gray-500">Sydney, AU</div>
+                    </div>
+                </div>
+
+                <!-- Australia CDN Node -->
+                <div class="absolute left-[68%] top-[65%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center opacity-0 transition-all duration-500 scale-90" id="node-cdn-server">
+                    <div class="w-14 h-14 bg-gray-900 rounded-full border-2 border-green-500 flex items-center justify-center shadow-[0_0_30px_rgba(34,197,94,0.3)] z-10">
+                        <span class="material-symbols-outlined text-green-500 text-2xl">cloud_sync</span>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-[10px] font-bold border-2 border-gray-900">AU</div>
+                    </div>
+                    <div class="mt-3 bg-gray-900/90 px-3 py-1 rounded text-xs font-mono border border-gray-700 text-center">
+                        <div class="text-green-400 font-bold">EDGE NODE</div>
+                        <div class="text-gray-500">Sydney PoP</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Console Output -->
+            <div class="absolute bottom-0 left-0 right-0 bg-gray-900/95 border-t border-gray-800 h-48 font-mono text-xs p-4 overflow-y-auto z-30 shadow-2xl">
+                <div class="flex items-center justify-between mb-2 text-gray-500 uppercase tracking-widest text-[10px]">
+                    <span>Network Logs</span>
+                    <button class="hover:text-white transition-colors" onclick="clearLogs()">Clear</button>
+                </div>
+                <div class="space-y-1" id="console-logs">
+                    <div class="text-gray-500">&gt; System Ready. Select a mode to begin analysis...</div>
+                <div><span class="text-gray-600">[23:57:13]</span> <span class="text-gray-300">Switched to ORIGIN mode.</span></div></div>
+                <div class="mt-2 text-blue-500 blinking-cursor">&gt;</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Educational Content -->
+<div class="max-w-4xl mx-auto px-4 py-16 space-y-24">
+    <!-- Concept 1: The Problem -->
+    <section class="relative" id="concepts">
+        <div class="absolute -left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-transparent hidden md:block"></div>
+        <h2 class="text-3xl font-bold mb-8">Why is it slow?</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4 text-gray-400 leading-relaxed">
+                <p>
+                    <strong class="text-white">The Speed of Light:</strong> Even light takes time to travel. The distance between Sydney and Delhi is approximately <span class="text-blue-400">10,400 km</span>. In fiber optic cables, light travels slower than in a vacuum (~200,000 km/s).
+                </p>
+                <p>
+                    <strong class="text-white">Network Hops:</strong> The internet isn't a direct wire. Your data jumps through dozens of routers, switches, and sub-sea cables. Each "hop" adds processing delay.
+                </p>
+                <p>
+                    <strong class="text-white">Round Trip Time (RTT):</strong> To load a page, you send a request (1 trip) and get a response (2 trips). <br>
+                    10,000km x 2 + processing ≈ <span class="text-red-400">600ms</span>.
+                </p>
+            </div>
+            <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                <div class="flex items-center justify-between mb-4 border-b border-gray-700 pb-2">
+                    <span class="text-sm font-mono text-gray-400">traceroute delhi-server</span>
+                </div>
+                <div class="font-mono text-xs space-y-1 text-gray-500">
+                    <div>1  192.168.1.1 (Local) <span class="float-right text-green-500">2ms</span></div>
+                    <div>2  10.20.14.1 (ISP Sydney) <span class="float-right text-green-500">12ms</span></div>
+                    <div>3  ... (Pacific Ocean Cable) ... <span class="float-right text-yellow-500">145ms</span></div>
+                    <div>4  singapore-ix.net <span class="float-right text-yellow-500">160ms</span></div>
+                    <div>5  chennai-gateway.in <span class="float-right text-red-500">220ms</span></div>
+                    <div>6  delhi-datacenter.in <span class="float-right text-red-500">285ms</span></div>
+                    <div class="text-white mt-2 border-t border-gray-700 pt-1">Total One-Way: ~285ms</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept 2: The Solution -->
+    <section id="deep-dive">
+        <h2 class="text-3xl font-bold mb-8">How CDN Fixes It</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-colors group">
+                <div class="w-12 h-12 bg-blue-900/30 text-blue-400 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">dataset</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Caching</h3>
+                <p class="text-sm text-gray-400">
+                    The CDN stores copies of "static" files (images, CSS, JS) on servers all over the world.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-green-500/50 transition-colors group">
+                <div class="w-12 h-12 bg-green-900/30 text-green-400 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">hub</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Edge Locations (PoPs)</h3>
+                <p class="text-sm text-gray-400">
+                    Points of Presence (PoPs) are data centers located near users. Sydney has its own PoP.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors group">
+                <div class="w-12 h-12 bg-purple-900/30 text-purple-400 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">bolt</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">The "Hit"</h3>
+                <p class="text-sm text-gray-400">
+                    If the content is in the Sydney PoP (Cache Hit), the request travels 10km instead of 10,000km.
+                </p>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="mt-12 overflow-hidden rounded-xl border border-gray-800">
+            <table class="w-full text-left text-sm text-gray-400">
+                <thead class="bg-gray-900 text-gray-200 uppercase font-medium">
+                    <tr>
+                        <th class="px-6 py-4">Metric</th>
+                        <th class="px-6 py-4">Without CDN</th>
+                        <th class="px-6 py-4 text-blue-400">With CDN</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-800 bg-gray-900/50">
+                    <tr>
+                        <td class="px-6 py-4 font-medium text-white">Latency (RTT)</td>
+                        <td class="px-6 py-4 text-red-400">~600ms</td>
+                        <td class="px-6 py-4 text-green-400">~80ms</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-medium text-white">Hop Count</td>
+                        <td class="px-6 py-4">20+ Hops</td>
+                        <td class="px-6 py-4">2-5 Hops</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-medium text-white">Reliability</td>
+                        <td class="px-6 py-4">Vulnerable to sea cable cuts</td>
+                        <td class="px-6 py-4">Highly Redundant</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer class="border-t border-gray-800 bg-gray-900 py-12 mt-12">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="flex flex-col items-center justify-center gap-4">
+            <p class="text-gray-400 text-sm">Built by <span class="text-white font-semibold">Rajat Kumar</span></p>
+            <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-900/30 text-blue-400 rounded-full hover:bg-blue-900/50 transition-colors text-sm font-medium">
+                <span class="text-lg">in</span> Connect on LinkedIn
+            </a>
+            <p class="text-gray-600 text-xs mt-4">© 2026 LatencyLabs.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Export Button -->
+
+
+<script>
+    // State
+    let mode = 'origin'; // 'origin' or 'cdn'
+    let cacheState = 'hit'; // 'miss' or 'hit'
+    let isRunning = false;
+    
+    // DOM Elements
+    const els = {
+        btnOrigin: document.getElementById('mode-origin'),
+        btnCdn: document.getElementById('mode-cdn'),
+        cacheControl: document.getElementById('cache-control'),
+        cacheDesc: document.getElementById('cache-desc'),
+        nodeCdn: document.getElementById('node-cdn-server'),
+        nodeOrigin: document.getElementById('node-origin'),
+        nodeUser: document.getElementById('node-user'),
+        lineOrigin: document.getElementById('line-origin'),
+        lineEdge: document.getElementById('line-edge'),
+        packet: document.getElementById('packet'),
+        logs: document.getElementById('console-logs'),
+        metricTime: document.getElementById('metric-time'),
+        metricDist: document.getElementById('metric-distance'),
+        runBtn: document.getElementById('run-sim-btn')
+    };
+
+    function setMode(newMode) {
+        if(isRunning) return;
+        mode = newMode;
+        
+        // Update UI Buttons
+        if (mode === 'origin') {
+            els.btnOrigin.classList.replace('text-gray-400', 'text-white');
+            els.btnOrigin.classList.replace('bg-gray-800', 'bg-blue-600');
+            els.btnOrigin.classList.add('shadow-lg');
+            
+            els.btnCdn.classList.replace('text-white', 'text-gray-400');
+            els.btnCdn.classList.replace('bg-blue-600', 'bg-gray-800');
+            els.btnCdn.classList.remove('bg-blue-600', 'shadow-lg');
+            els.btnCdn.classList.add('hover:bg-gray-800');
+
+            els.cacheControl.style.opacity = '0';
+            els.cacheControl.style.pointerEvents = 'none';
+            
+            els.nodeCdn.classList.add('opacity-0', 'scale-90');
+            els.lineEdge.classList.add('opacity-0');
+            els.lineOrigin.classList.replace('opacity-10', 'opacity-30'); 
+        } else {
+            els.btnCdn.classList.replace('text-gray-400', 'text-white');
+            els.btnCdn.classList.add('bg-blue-600', 'shadow-lg');
+            els.btnCdn.classList.remove('bg-gray-800', 'hover:bg-gray-800');
+            
+            els.btnOrigin.classList.replace('text-white', 'text-gray-400');
+            els.btnOrigin.classList.replace('bg-blue-600', 'bg-gray-800');
+            els.btnOrigin.classList.remove('shadow-lg');
+
+            els.cacheControl.style.opacity = '1';
+            els.cacheControl.style.pointerEvents = 'auto';
+            
+            els.nodeCdn.classList.remove('opacity-0', 'scale-90');
+            els.lineEdge.classList.remove('opacity-0');
+            els.lineOrigin.classList.replace('opacity-30', 'opacity-10');
+        }
+        log(`Switched to ${mode.toUpperCase()} mode.`);
+        resetMetrics();
+    }
+
+    function updateCacheState() {
+        const inputs = document.getElementsByName('cache-state');
+        for(let i of inputs) {
+            if(i.checked) cacheState = i.value;
+        }
+        if (cacheState === 'miss') {
+            els.cacheDesc.textContent = "First visit. CDN doesn't have the file yet. Must fetch from Origin.";
+            els.lineOrigin.classList.replace('opacity-10', 'opacity-30');
+        } else {
+            els.cacheDesc.textContent = "Subsequent visit. CDN serves file directly from Edge cache.";
+            els.lineOrigin.classList.replace('opacity-30', 'opacity-10');
+        }
+    }
+
+    function log(msg, type = 'info') {
+        const div = document.createElement('div');
+        const time = new Date().toLocaleTimeString('en-US', {hour12: false, hour: "numeric", minute: "numeric", second: "numeric"});
+        div.innerHTML = `<span class="text-gray-600">[${time}]</span> <span class="${type === 'success' ? 'text-green-400' : type === 'error' ? 'text-red-400' : 'text-gray-300'}">${msg}</span>`;
+        els.logs.appendChild(div);
+        els.logs.scrollTop = els.logs.scrollHeight;
+    }
+
+    function clearLogs() {
+        els.logs.innerHTML = '<div class="text-gray-500">> Logs cleared.</div>';
+    }
+
+    function resetMetrics() {
+        els.metricTime.innerHTML = `0 <span class="text-sm text-gray-500">ms</span>`;
+        els.metricDist.innerHTML = `0 <span class="text-sm text-gray-500">km</span>`;
+    }
+
+    function runSimulation() {
+        if (isRunning) return;
+        isRunning = true;
+        els.runBtn.disabled = true;
+        els.runBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        clearLogs();
+        resetMetrics();
+
+        let steps = [];
+        let totalTime = 0;
+        let distance = 0;
+        let pathId = '';
+        let animDuration = 0; 
+        
+        if (mode === 'origin') {
+            pathId = '#path-origin';
+            totalTime = 580; 
+            distance = 10400;
+            animDuration = 2000; 
+            
+            steps = [
+                { t: 0, msg: "DNS Lookup: resolving 'my-site.com' to 203.0.113.1 (India)..." },
+                { t: 200, msg: "Request dispatched from Sydney..." },
+                { t: 1000, msg: "Routing: Singapore > Chennai > Delhi..." },
+                { t: 1800, msg: "Server Processing in Delhi..." },
+                { t: 2500, msg: "Sending Response back to Sydney..." },
+                { t: 4000, msg: "Response received!", type: 'success' }
+            ];
+        } else if (mode === 'cdn' && cacheState === 'miss') {
+            pathId = '#path-origin'; 
+            totalTime = 650; 
+            distance = 10400;
+            animDuration = 2200;
+
+            steps = [
+                { t: 0, msg: "DNS Lookup: resolving to nearest Edge Node..." },
+                { t: 200, msg: "Connecting to Sydney Edge Node..." },
+                { t: 500, msg: "CACHE MISS! Edge does not have file.", type: 'error' },
+                { t: 1000, msg: "Edge fetching from Origin (India)..." },
+                { t: 3000, msg: "Origin returning data to Edge..." },
+                { t: 4000, msg: "Edge caching content...", type: 'info' },
+                { t: 4200, msg: "Response delivered to User.", type: 'success' }
+            ];
+        } else {
+            pathId = '#path-edge';
+            totalTime = 40; 
+            distance = 15; 
+            animDuration = 400; 
+
+            steps = [
+                { t: 0, msg: "DNS Lookup: resolving to nearest Edge Node..." },
+                { t: 100, msg: "Connecting to Sydney Edge Node..." },
+                { t: 200, msg: "CACHE HIT! Serving from memory.", type: 'success' },
+                { t: 400, msg: "Response delivered.", type: 'success' }
+            ];
+        }
+
+        steps.forEach(step => {
+            setTimeout(() => log(step.msg, step.type), (step.t / 4000) * animDuration); 
+        });
+
+        const path = document.querySelector(pathId);
+        els.packet.style.offsetPath = `path('${path.getAttribute('d')}')`;
+        els.packet.style.opacity = '1';
+        els.packet.style.animation = 'none';
+        els.packet.offsetHeight; 
+        els.packet.style.animation = `travel ${animDuration/2}ms linear forwards`;
+
+        let startTime = Date.now();
+        let timerInterval = setInterval(() => {
+            let elapsed = Date.now() - startTime;
+            let simulatedMs = Math.floor((elapsed / animDuration) * totalTime * 2); 
+            if (simulatedMs >= totalTime) simulatedMs = totalTime;
+            els.metricTime.innerHTML = `${simulatedMs} <span class="text-sm text-gray-500">ms</span>`;
+            
+            let currentDist = Math.floor((simulatedMs / totalTime) * distance);
+            els.metricDist.innerHTML = `${currentDist.toLocaleString()} <span class="text-sm text-gray-500">km</span>`;
+        }, 30);
+
+        setTimeout(() => {
+            els.packet.style.animation = `travel ${animDuration/2}ms linear reverse forwards`;
+        }, animDuration/2);
+
+        setTimeout(() => {
+            clearInterval(timerInterval);
+            els.metricTime.innerHTML = `${totalTime} <span class="text-sm text-gray-500">ms</span>`;
+            els.metricDist.innerHTML = `${distance.toLocaleString()} <span class="text-sm text-gray-500">km</span>`;
+            isRunning = false;
+            els.runBtn.disabled = false;
+            els.runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            els.packet.style.opacity = '0';
+        }, animDuration);
+    }
+
+    function downloadHtml() {
+        // Clone the document to modify it for export without changing the current view
+        const docClone = document.documentElement.cloneNode(true);
+        
+        // Remove the export button from the clone (user doesn't need a button to download the page they just downloaded)
+        const exportBtn = docClone.querySelector('#export-btn');
+        if (exportBtn) {
+            exportBtn.remove();
+        }
+
+        // Create the blob and download link
+        const htmlContent = `<!DOCTYPE html>\n${docClone.outerHTML}`;
+        const blob = new Blob([htmlContent], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'cdn-latency-explorer.html';
+        document.body.appendChild(a);
+        a.click();
+        
+        // Cleanup
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    // Init
+    setMode('origin');
+</script>
+<!--
+    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+    "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1748&auto=format&fit=crop"
+-->
+
+
+</body></html>

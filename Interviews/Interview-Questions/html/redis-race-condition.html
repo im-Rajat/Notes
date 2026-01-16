@@ -1,0 +1,557 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function q(b){var c=0;return function(){return c<b.length?{done:!1,value:b[c++]}:{done:!0}}}function t(b){var c=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(c)return c.call(b);if(typeof b.length=="number")return{next:q(b)};throw Error(String(b)+" is not an iterable or ArrayLike");}var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,c,g){if(b==Array.prototype||b==Object.prototype)return b;b[c]=g.value;return b};
+function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var g=b[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var w=v(this);function x(b,c){if(c)a:{var g=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var l=b[h];if(!(l in g))break a;g=g[l]}b=b[b.length-1];h=g[b];c=c(h);c!=h&&c!=null&&u(g,b,{configurable:!0,writable:!0,value:c})}}
+function y(){this.j=!1;this.g=null;this.u=void 0;this.h=1;this.v=this.l=0;this.i=null}function z(b){if(b.j)throw new TypeError("Generator is already running");b.j=!0}y.prototype.o=function(b){this.u=b};function A(b,c){b.i={I:c,J:!0};b.h=b.l||b.v}y.prototype.return=function(b){this.i={return:b};this.h=this.v};function B(b){this.g=new y;this.h=b}function E(b,c){z(b.g);var g=b.g.g;if(g)return F(b,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,b.g.return);b.g.return(c);return G(b)}
+function F(b,c,g,h){try{var l=c.call(b.g.g,g);if(!(l instanceof Object))throw new TypeError("Iterator result "+l+" is not an object");if(!l.done)return b.g.j=!1,l;var m=l.value}catch(f){return b.g.g=null,A(b.g,f),G(b)}b.g.g=null;h.call(b.g,m);return G(b)}function G(b){for(;b.g.h;)try{var c=b.h(b.g);if(c)return b.g.j=!1,{value:c.value,done:!1}}catch(g){b.g.u=void 0,A(b.g,g)}b.g.j=!1;if(b.g.i){c=b.g.i;b.g.i=null;if(c.J)throw c.I;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function H(b){this.next=function(c){z(b.g);b.g.g?c=F(b,b.g.g.next,c,b.g.o):(b.g.o(c),c=G(b));return c};this.throw=function(c){z(b.g);b.g.g?c=F(b,b.g.g["throw"],c,b.g.o):(A(b.g,c),c=G(b));return c};this.return=function(c){return E(b,c)};this[Symbol.iterator]=function(){return this}}function I(b){function c(h){return b.next(h)}function g(h){return b.throw(h)}return new Promise(function(h,l){function m(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(m,l)}m(b.next())})}
+x("Symbol",function(b){function c(m){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(m||"")+"_"+l++,m)}function g(m,f){this.g=m;u(this,"description",{configurable:!0,writable:!0,value:f})}if(b)return b;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(b){if(b)return b;b=Symbol("Symbol.iterator");u(Array.prototype,b,{configurable:!0,writable:!0,value:function(){return J(q(this))}});return b});function J(b){b={next:b};b[Symbol.iterator]=function(){return this};return b}
+x("Promise",function(b){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var a=this.j();try{f(a.resolve,a.reject)}catch(d){a.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(a){a(f)})}if(b)return b;g.prototype.h=function(f){if(this.g==null){this.g=[];var a=this;this.i(function(){a.l()})}this.g.push(f)};var l=w.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var a=0;a<f.length;++a){var d=
+f[a];f[a]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(a,k))}}var a=this,d=!1;return{resolve:f(this.D),reject:f(this.l)}};c.prototype.D=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.G(f);else{a:switch(typeof f){case "object":var a=f!=null;break a;case "function":a=!0;break a;default:a=!1}a?this.C(f):this.o(f)}};
+c.prototype.C=function(f){var a=void 0;try{a=f.then}catch(d){this.l(d);return}typeof a=="function"?this.H(a,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,a){if(this.h!=0)throw Error("Cannot settle("+f+", "+a+"): Promise already settled in state"+this.h);this.h=f;this.i=a;this.h===2&&this.F();this.K()};c.prototype.F=function(){var f=this;l(function(){if(f.B()){var a=w.console;typeof a!=="undefined"&&a.error(f.i)}},1)};c.prototype.B=
+function(){if(this.u)return!1;var f=w.CustomEvent,a=w.Event,d=w.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof a==="function"?f=new a("unhandledrejection",{cancelable:!0}):(f=w.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.K=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)m.h(this.g[f]);this.g=null}};var m=new g;c.prototype.G=
+function(f){var a=this.j();f.A(a.resolve,a.reject)};c.prototype.H=function(f,a){var d=this.j();try{f.call(a,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,a){function d(n,r){return typeof n=="function"?function(C){try{e(n(C))}catch(D){k(D)}}:r}var e,k,p=new c(function(n,r){e=n;k=r});this.A(d(f,e),d(a,k));return p};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.A=function(f,a){function d(){switch(e.h){case 1:f(e.i);break;case 2:a(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?m.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(a,d){d(f)})};c.race=function(f){return new c(function(a,d){for(var e=t(f),k=e.next();!k.done;k=e.next())h(k.value).A(a,d)})};c.all=function(f){var a=t(f),d=a.next();return d.done?h([]):new c(function(e,k){function p(C){return function(D){n[C]=D;r--;r==0&&e(n)}}var n=[],r=0;do n.push(void 0),r++,h(d.value).A(p(n.length-1),k),d=a.next();while(!d.done)})};return c});
+function K(b,c){return Object.prototype.hasOwnProperty.call(b,c)}x("Object.is",function(b){return b?b:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(b){return b?b:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var m=h[g];if(m===c||Object.is(m,c))return!0}return!1}});
+x("String.prototype.includes",function(b){return b?b:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(b){function c(d){this.g=(a+=Math.random()+1).toString();if(d){d=t(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!K(d,f)){var e=new g;u(d,f,{value:e})}}function m(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!b||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new b([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(p){return!1}}())return b;var f="$jscomp_hidden_"+Math.random();m("freeze");m("preventExtensions");m("seal");var a=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!K(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&K(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&K(d,
+f)&&K(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&K(d,f)&&K(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(b){function c(){var a={};return a.m=a.next=a.head=a}function g(a,d){var e=a[1];return J(function(){if(e){for(;e.head!=a[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(a,d){var e=d&&typeof d;e=="object"||e=="function"?m.has(d)?e=m.get(d):(e=""+ ++f,m.set(d,e)):e="p_"+d;var k=a[0][e];if(k&&K(a[0],e))for(a=0;a<k.length;a++){var p=k[a];if(d!==d&&p.key!==p.key||d===p.key)return{id:e,list:k,index:a,entry:p}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(a){this[0]={};this[1]=c();this.size=0;if(a){a=t(a);for(var d;!(d=a.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var a=Object.seal({x:4}),d=new b(t([[a,"s"]]));if(d.get(a)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=a||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(p){return!1}}())return b;var m=new WeakMap;l.prototype.set=function(a,d){a=a===0?0:a;var e=h(this,a);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:a,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(a){a=h(this,a);return a.entry&&a.list?(a.list.splice(a.index,1),a.list.length||delete this[0][a.id],a.entry.m.next=a.entry.next,
+a.entry.next.m=a.entry.m,a.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(a){return!!h(this,a).entry};l.prototype.get=function(a){return(a=h(this,a).entry)&&a.value};l.prototype.entries=function(){return g(this,function(a){return[a.key,a.value]})};l.prototype.keys=function(){return g(this,function(a){return a.key})};l.prototype.values=function(){return g(this,function(a){return a.value})};l.prototype.forEach=
+function(a,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,a.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(b){function c(g){this.g=new Map;if(g){g=t(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new b(t([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),m=l.next();if(m.done||m.value[0]!=g||m.value[1]!=g)return!1;m=l.next();return m.done||m.value[0]==g||m.value[0].x!=4||
+m.value[1]!=m.value[0]?!1:l.next().done}catch(f){return!1}}())return b;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(m){return g.call(h,m,m,l)})};return c});(function(){function b(){return m?Promise.resolve(m):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(a){if(!a.ok)throw Error("HTTP error! status: "+a.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return a.json()}).then(function(a){if(!Array.isArray(a))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return m=a}).catch(function(a){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",a);f=null;throw a;})}function c(a){var d,e,k,p;return I(new H(new B(function(n){switch(n.h){case 1:d=(a.textContent||"").trim();if(!d||a.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return n.return();e=window.getComputedStyle(a);if(e.display==="none"||e.visibility==="hidden")return n.return();
+n.l=2;var r=b();n.h=4;return{value:r};case 4:k=n.u;n.h=3;n.l=0;break;case 2:return n.l=0,n.i=null,console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),n.return();case 3:(p=k.includes(d))?a.classList.contains("js-replaced-missing-icon")&&a.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&a.classList.contains("js-replaced-missing-icon")||(a.textContent="radio_button_unchecked",a.classList.add("js-replaced-missing-icon")),n.h=0}})))}
+function g(a){a=a===void 0?document.body:a;a.querySelectorAll(l).forEach(function(d){c(d)})}function h(){b().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(a){var d=new Set;a=t(a);for(var e=a.next();!e.done;e=a.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(p){p.nodeType===Node.ELEMENT_NODE&&(p.matches(l)&&d.add(p),p.querySelectorAll(l).forEach(function(n){d.add(n)}))});else if(e.type===
+"attributes"&&e.attributeName==="class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(p){c(p)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(a){console.error("IconChecker: Font loading error. Scanning icons anyway.",
+a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(a){return"."+a}).join(","),m=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+</script>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Redis Concurrency: Tie-Breaking Visualizer | Rajat Kumar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .mono { font-family: 'Fira Code', monospace; }
+        
+        /* Animation Classes */
+        .packet {
+            position: absolute;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 20;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        .pulse-ring::before {
+            content: '';
+            position: absolute;
+            left: -5px; top: -5px; right: -5px; bottom: -5px;
+            border-radius: 50%;
+            border: 2px solid currentColor;
+            animation: pulse-ring 1.5s infinite;
+        }
+
+        .server-process {
+            transition: all 0.2s;
+        }
+        .processing {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            border-color: #3b82f6;
+        }
+
+        .queue-item {
+            animation: slideInLeft 0.3s ease-out forwards;
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Scanline effect for terminal */
+        .terminal-bg {
+            background: #0f172a;
+            background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+        }
+
+        /* Floating Download Button */
+        .download-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.-top-3{top:-0.75rem}.bottom-20{bottom:5rem}.left-1\/2{left:50%}.left-10{left:2.5rem}.left-4{left:1rem}.left-\[550px\]{left:550px}.left-\[648px\]{left:648px}.right-20{right:5rem}.right-4{right:1rem}.top-0{top:0px}.top-1\/2{top:50%}.top-20{top:5rem}.top-4{top:1rem}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-3{margin-bottom:0.75rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-2{margin-top:0.5rem}.mt-auto{margin-top:auto}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.h-10{height:2.5rem}.h-16{height:4rem}.h-32{height:8rem}.h-4{height:1rem}.h-48{height:12rem}.h-\[600px\]{height:600px}.h-full{height:100%}.min-h-\[40px\]{min-height:40px}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-16{width:4rem}.w-24{width:6rem}.w-4{width:1rem}.w-48{width:12rem}.w-full{width:100%}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.flex-grow{flex-grow:1}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.select-none{-webkit-user-select:none;user-select:none}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.rounded-l-full{border-top-left-radius:9999px;border-bottom-left-radius:9999px}.rounded-r-xl{border-top-right-radius:0.75rem;border-bottom-right-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-red-100{--tw-border-opacity:1;border-color:rgb(254 226 226 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.bg-\[\#0077b5\]{--tw-bg-opacity:1;background-color:rgb(0 119 181 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-pink-100{--tw-bg-opacity:1;background-color:rgb(252 231 243 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.fill-current{fill:currentColor}.stroke-slate-200{stroke:#e2e8f0}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pr-2{padding-right:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-widest{letter-spacing:0.1em}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-pink-600{--tw-text-opacity:1;color:rgb(219 39 119 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.opacity-20{opacity:0.2}.opacity-5{opacity:0.05}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-green-900\/50{--tw-shadow-color:rgb(20 83 45 / 0.5);--tw-shadow:var(--tw-shadow-colored)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-100{--tw-ring-opacity:1;--tw-ring-color:rgb(224 231 255 / var(--tw-ring-opacity, 1))}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-\[\#006396\]:hover{--tw-bg-opacity:1;background-color:rgb(0 99 150 / var(--tw-bg-opacity, 1))}.hover\:bg-black:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.hover\:bg-green-500:hover{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-600:hover{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}@media (min-width: 1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="text-slate-800 flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-indigo-600 text-3xl">hub</span>
+                <div class="leading-tight">
+                    <h1 class="font-bold text-slate-900">Redis Architecture</h1>
+                    <p class="text-xs text-slate-500">Concurrency Visualizer</p>
+                </div>
+            </div>
+            <div class="flex gap-4 text-sm font-medium text-slate-600">
+                <a class="hover:text-indigo-600" href="#answer">The Short Answer</a>
+                <a class="text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full" href="#visualizer">Visual Lab</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Direct Answer Section -->
+    <section class="bg-white border-b border-slate-200" id="answer">
+        <div class="max-w-4xl mx-auto px-4 py-12">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-6">If they click at the <em>exact</em> same millisecond, who wins?</h2>
+            <div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-xl mb-8">
+                <p class="text-lg text-indigo-900 font-medium leading-relaxed">
+                    The winner is determined by <strong>serialization</strong>. Redis is single-threaded. It processes commands one by one from a queue.
+                </p>
+                <p class="mt-2 text-indigo-800">
+                    Even if two requests leave the users' devices at the exact same time, physical constraints (network routing, switch buffers, OS kernel interrupts) ensure they arrive at the Redis "door" in a single file line. Redis <strong>never</strong> executes two commands in parallel.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 text-sm">
+                <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm">
+                    <div class="flex items-center gap-2 mb-3 text-slate-900 font-bold">
+                        <span class="material-symbols-outlined text-blue-500">network_check</span>
+                        1. Network Arrival
+                    </div>
+                    <p class="text-slate-600">Packets travel over wires. Physics dictates they cannot occupy the exact same space on the wire/port. The OS network stack puts them in a receive buffer.</p>
+                </div>
+                <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm ring-2 ring-indigo-100">
+                    <div class="flex items-center gap-2 mb-3 text-indigo-700 font-bold">
+                        <span class="material-symbols-outlined">queue_music</span>
+                        2. The Queue (Critical)
+                    </div>
+                    <p class="text-slate-600">Redis reads from the OS buffer. The first readable command goes into the execution slot. The second must wait, even if it's just for 0.0001ms.</p>
+                </div>
+                <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm">
+                    <div class="flex items-center gap-2 mb-3 text-slate-900 font-bold">
+                        <span class="material-symbols-outlined text-green-500">lock</span>
+                        3. Atomic Execution
+                    </div>
+                    <p class="text-slate-600">Because they are processed sequentially, the first one executes <code>SET NX</code> and succeeds. By the time the second one runs, the key exists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Visualizer -->
+    <section class="py-12 bg-slate-50 flex-grow" id="visualizer">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-slate-900">The "Microsecond Showdown" Lab</h2>
+                <p class="text-slate-500">Visualize the single-threaded event loop in slow motion.</p>
+            </div>
+
+            <!-- Main Lab Container -->
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                <!-- Controls Header -->
+                <div class="bg-slate-900 p-4 border-b border-slate-700 flex flex-wrap justify-between items-center gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 text-white">
+                            <span class="material-symbols-outlined text-yellow-400">speed</span>
+                            <span class="font-mono text-sm">SIMULATION SPEED:</span>
+                        </div>
+                        <div class="flex bg-slate-800 rounded-lg p-1">
+                            <button class="px-3 py-1 text-xs font-bold rounded bg-indigo-500 text-white transition" id="spd-slow" onclick="setSpeed(2000)">SLOW (Analysis)</button>
+                            <button class="px-3 py-1 text-xs font-bold rounded text-slate-400 hover:text-white transition" id="spd-fast" onclick="setSpeed(500)">FAST (Real-time)</button>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold rounded flex items-center gap-2 transition" onclick="resetLab()">
+                            <span class="material-symbols-outlined text-base">restart_alt</span> RESET
+                        </button>
+                        <button class="px-6 py-2 bg-green-600 hover:bg-green-500 text-white text-sm font-bold rounded shadow-lg shadow-green-900/50 flex items-center gap-2 transition transform active:scale-95" id="start-btn" onclick="startRace()">
+                            <span class="material-symbols-outlined">play_arrow</span> LAUNCH REQUESTS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Visualization Canvas -->
+                <div class="relative h-[600px] bg-slate-50 overflow-hidden select-none" id="lab-canvas">
+                    <!-- Background Grid -->
+                    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#6366f1 1px, transparent 1px); background-size: 20px 20px;"></div>
+                    
+                    <!-- Labels -->
+                    <div class="absolute top-4 left-4 font-mono text-xs text-slate-400 uppercase tracking-widest">Client Layer</div>
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 font-mono text-xs text-slate-400 uppercase tracking-widest">Network / Kernel Buffer</div>
+                    <div class="absolute top-4 right-4 font-mono text-xs text-slate-400 uppercase tracking-widest">Redis Single Thread</div>
+
+                    <!-- USER A (Top Left) -->
+                    <div class="absolute top-20 left-10 w-48 z-10">
+                        <div class="bg-white p-3 rounded-lg shadow-sm border border-slate-200 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">A</div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-700">Alice</div>
+                                <div class="text-[10px] text-slate-400 font-mono">IP: 192.168.1.10</div>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-right">
+                            <div class="inline-block px-2 py-1 text-[10px] font-bold rounded bg-slate-200 text-slate-500 transition-colors" id="status-A">IDLE</div>
+                        </div>
+                    </div>
+
+                    <!-- USER B (Bottom Left) -->
+                    <div class="absolute bottom-20 left-10 w-48 z-10">
+                        <div class="bg-white p-3 rounded-lg shadow-sm border border-slate-200 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-bold">B</div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-700">Bob</div>
+                                <div class="text-[10px] text-slate-400 font-mono">IP: 192.168.1.15</div>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-right">
+                            <div class="inline-block px-2 py-1 text-[10px] font-bold rounded bg-slate-200 text-slate-500 transition-colors" id="status-B">IDLE</div>
+                        </div>
+                    </div>
+
+                    <!-- Packet Tracks -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none stroke-slate-200" style="z-index: 0;">
+                        <!-- Path A -->
+                        <path d="M 250 140 C 400 140, 400 300, 550 300" fill="none" stroke-dasharray="4 4" stroke-width="2"></path>
+                        <!-- Path B -->
+                        <path d="M 250 500 C 400 500, 400 300, 550 300" fill="none" stroke-dasharray="4 4" stroke-width="2"></path>
+                    </svg>
+
+                    <!-- THE QUEUE (Center) -->
+                    <div class="absolute top-1/2 left-[550px] -translate-y-1/2 transform">
+                        <div class="flex flex-col items-center">
+                            <div class="text-[10px] font-mono text-slate-400 mb-1">COMMAND QUEUE (FIFO)</div>
+                            <div class="w-24 h-32 bg-slate-800 rounded-lg border-2 border-slate-700 flex flex-col-reverse justify-start p-1 gap-1 overflow-hidden shadow-inner" id="redis-queue">
+                                <!-- Queue Items will appear here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONNECTING PIPE -->
+                    <div class="absolute top-1/2 left-[648px] -translate-y-1/2 w-16 h-4 bg-slate-300">
+                        <div class="w-full h-full bg-slate-800 opacity-20 animate-pulse"></div>
+                    </div>
+
+                    <!-- REDIS ENGINE (Right) -->
+                    <div class="absolute top-1/2 right-20 -translate-y-1/2 transform" id="redis-engine">
+                        <div class="server-process w-48 bg-white border-2 border-slate-300 rounded-xl p-4 shadow-lg flex flex-col items-center gap-3 relative">
+                            <!-- Port Badge -->
+                            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] px-2 py-0.5 rounded font-mono">PORT:6379</div>
+                            <!-- Logo/Icon (Online Source) -->
+                            <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center border-2 border-red-100">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="w-10 h-10">
+                            </div>
+                            <!-- Thread Visual -->
+                            <div class="w-full">
+                                <div class="text-[10px] text-center text-slate-500 font-bold mb-1">MAIN THREAD</div>
+                                <div class="h-10 bg-slate-100 rounded border border-slate-200 flex items-center justify-center overflow-hidden relative">
+                                    <div class="text-xs font-mono text-slate-400" id="thread-state">IDLE</div>
+                                </div>
+                            </div>
+                            <!-- Database State -->
+                            <div class="w-full pt-3 border-t border-slate-100">
+                                <div class="flex justify-between items-center text-xs mb-1">
+                                    <span class="font-bold text-slate-700">Memory Store</span>
+                                </div>
+                                <div class="bg-slate-50 p-2 rounded border border-slate-200 font-mono text-[10px] text-slate-400 min-h-[40px] flex items-center justify-center" id="db-state">
+                                    (Empty)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animated Elements Container -->
+                    <div class="absolute inset-0 pointer-events-none" id="anim-layer"></div>
+                </div>
+
+                <!-- Terminal / Logs -->
+                <div class="terminal-bg p-4 h-48 overflow-y-auto font-mono text-xs border-t border-slate-800" id="terminal">
+                    <div class="text-green-500 mb-1">redis-server --port 6379</div>
+                    <div class="text-slate-400 mb-1"># Server initialized</div>
+                    <div class="text-slate-400 mb-1"># Waiting for connections...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-gray-400 text-sm">
+                © 2024 System Design Series
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-300 font-medium">Created by Rajat Kumar</span>
+                <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="flex items-center gap-2 bg-[#0077b5] hover:bg-[#006396] px-4 py-2 rounded-md transition text-sm font-semibold">
+                    <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Download Button -->
+    <button onclick="downloadPage()" class="download-btn bg-gray-800 hover:bg-black text-white px-4 py-3 rounded-l-full shadow-xl flex items-center gap-2 border border-gray-700">
+        <span class="material-symbols-outlined">download</span>
+        <span class="text-sm font-medium pr-2">Download .html</span>
+    </button>
+
+    <script>
+        // --- Download Function ---
+        function downloadPage() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], {type: 'text/html'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'redis-race-condition-by-rajat.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // --- Visualizer Logic ---
+        let animSpeed = 2000; // ms for full sequence
+        const queueEl = document.getElementById('redis-queue');
+        const threadState = document.getElementById('thread-state');
+        const dbState = document.getElementById('db-state');
+        const terminal = document.getElementById('terminal');
+        const animLayer = document.getElementById('anim-layer');
+        const startBtn = document.getElementById('start-btn');
+        
+        let isRunning = false;
+
+        function log(msg, type='info') {
+            const div = document.createElement('div');
+            const ts = new Date().toISOString().split('T')[1].slice(0, -1);
+            
+            let color = 'text-slate-300';
+            if(type === 'cmd') color = 'text-yellow-400';
+            if(type === 'success') color = 'text-green-400';
+            if(type === 'error') color = 'text-red-400';
+            if(type === 'system') color = 'text-blue-400';
+
+            div.className = `${color} mb-1 opacity-0`; // Start invisible
+            div.innerHTML = `<span class="text-slate-600">[${ts}]</span> ${msg}`;
+            terminal.appendChild(div);
+            
+            // Fade in
+            requestAnimationFrame(() => div.classList.remove('opacity-0'));
+            div.style.transition = 'opacity 0.2s';
+            
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function setSpeed(ms) {
+            if(isRunning) return; // Prevent changing during run
+            animSpeed = ms;
+            
+            // Toggle active button UI
+            document.getElementById('spd-slow').className = ms === 2000 
+                ? "px-3 py-1 text-xs font-bold rounded bg-indigo-500 text-white transition" 
+                : "px-3 py-1 text-xs font-bold rounded text-slate-400 hover:text-white transition";
+                
+            document.getElementById('spd-fast').className = ms === 500 
+                ? "px-3 py-1 text-xs font-bold rounded bg-indigo-500 text-white transition" 
+                : "px-3 py-1 text-xs font-bold rounded text-slate-400 hover:text-white transition";
+        }
+
+        function resetLab() {
+            isRunning = false;
+            animLayer.innerHTML = '';
+            queueEl.innerHTML = '';
+            threadState.innerHTML = 'IDLE';
+            threadState.className = 'text-xs font-mono text-slate-400';
+            dbState.innerHTML = '(Empty)';
+            dbState.className = 'bg-slate-50 p-2 rounded border border-slate-200 font-mono text-[10px] text-slate-400 min-h-[40px] flex items-center justify-center';
+            
+            document.getElementById('status-A').textContent = 'IDLE';
+            document.getElementById('status-A').className = 'inline-block px-2 py-1 text-[10px] font-bold rounded bg-slate-200 text-slate-500 transition-colors';
+            document.getElementById('status-B').textContent = 'IDLE';
+            document.getElementById('status-B').className = 'inline-block px-2 py-1 text-[10px] font-bold rounded bg-slate-200 text-slate-500 transition-colors';
+            
+            terminal.innerHTML = '';
+            log('Lab reset. Ready for requests.', 'system');
+            startBtn.disabled = false;
+            startBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+
+        function createPacket(user, startX, startY) {
+            const el = document.createElement('div');
+            const color = user === 'A' ? 'bg-blue-500' : 'bg-pink-500';
+            el.className = `packet w-4 h-4 rounded-full ${color} shadow-lg pulse-ring flex items-center justify-center text-[8px] text-white font-bold`;
+            el.textContent = user;
+            el.style.left = startX + 'px';
+            el.style.top = startY + 'px';
+            animLayer.appendChild(el);
+            return el;
+        }
+
+        async function startRace() {
+            if(isRunning) return;
+            isRunning = true;
+            startBtn.disabled = true;
+            startBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            log('--- SIMULATION START ---', 'system');
+            log('Users A and B clicked "Book" simultaneously.', 'system');
+
+            document.getElementById('status-A').textContent = 'SENDING...';
+            document.getElementById('status-A').className = 'inline-block px-2 py-1 text-[10px] font-bold rounded bg-blue-100 text-blue-700 transition-colors';
+            
+            document.getElementById('status-B').textContent = 'SENDING...';
+            document.getElementById('status-B').className = 'inline-block px-2 py-1 text-[10px] font-bold rounded bg-pink-100 text-pink-700 transition-colors';
+
+            // 1. Create Packets
+            const packetA = createPacket('A', 290, 140); 
+            const packetB = createPacket('B', 290, 500);
+
+            // 2. Animate to Queue (Middle)
+            // Random winner
+            const winner = Math.random() > 0.5 ? 'A' : 'B';
+            const loser = winner === 'A' ? 'B' : 'A';
+            const pWin = winner === 'A' ? packetA : packetB;
+            const pLose = winner === 'A' ? packetB : packetA;
+
+            log(`Network race initiated.`, 'system');
+
+            // Movement Step 1: Fly to Queue
+            const travelTime = animSpeed * 0.4;
+            
+            pWin.style.transition = `all ${travelTime}ms ease-in`;
+            pLose.style.transition = `all ${travelTime}ms ease-in`;
+
+            const queueX = 550;
+            const queueY = 300;
+
+            requestAnimationFrame(() => {
+                pWin.style.left = queueX + 'px';
+                pWin.style.top = queueY + 'px';
+                
+                pLose.style.left = (queueX - 10) + 'px'; 
+                pLose.style.top = (queueY + 10) + 'px';
+            });
+
+            await new Promise(r => setTimeout(r, travelTime + 100));
+
+            // 3. Enter Queue
+            pWin.remove();
+            pLose.remove();
+
+            addToQueue(winner);
+            log(`Packet ${winner} reached socket buffer first.`);
+            
+            await new Promise(r => setTimeout(r, animSpeed * 0.1));
+            addToQueue(loser);
+            log(`Packet ${loser} reached socket buffer 2nd.`);
+
+            // 4. Process Queue
+            await processQueue(winner, loser);
+
+            isRunning = false;
+            startBtn.disabled = false;
+            startBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            startBtn.innerHTML = '<span class="material-symbols-outlined">refresh</span> RUN AGAIN';
+        }
+
+        function addToQueue(user) {
+            const item = document.createElement('div');
+            const color = user === 'A' ? 'bg-blue-600' : 'bg-pink-600';
+            item.className = `queue-item w-full h-8 rounded ${color} text-white flex items-center justify-between px-2 text-[10px] font-mono shadow-md mb-1`;
+            item.innerHTML = `<span>SET NX</span><span>User:${user}</span>`;
+            item.id = `q-item-${user}`;
+            queueEl.appendChild(item); 
+        }
+
+        async function processQueue(firstUser, secondUser) {
+            const processTime = animSpeed * 0.4;
+
+            // --- PROCESS 1 (Winner) ---
+            log(`EventLoop: Popping command from User ${firstUser}`, 'system');
+            const item1 = document.getElementById(`q-item-${firstUser}`);
+            
+            item1.style.opacity = '0.5';
+            
+            threadState.textContent = `SET seat:1 ${firstUser} NX`;
+            threadState.className = 'text-[10px] font-mono font-bold text-slate-800 bg-yellow-100 w-full h-full flex items-center justify-center';
+            document.getElementById('redis-engine').querySelector('.server-process').classList.add('processing');
+
+            log(`Redis: Executing SET seat:1 ${firstUser} NX`, 'cmd');
+            
+            await new Promise(r => setTimeout(r, processTime));
+            
+            // Success Result
+            threadState.textContent = "OK (1)";
+            threadState.className = "text-xs font-mono font-bold text-white bg-green-500 w-full h-full flex items-center justify-center";
+            
+            dbState.innerHTML = `<span class="text-indigo-600 font-bold">KEY: seat:1</span><br><span class="text-slate-500">VAL: ${firstUser}</span>`;
+            dbState.className = "bg-indigo-50 p-2 rounded border border-indigo-200 font-mono text-[10px] min-h-[40px] flex flex-col justify-center items-center w-full shadow-inner";
+            
+            log(`Redis: Key set successfully. User ${firstUser} acquires lock.`, 'success');
+            updateUserStatus(firstUser, 'SUCCESS', 'success');
+            
+            item1.remove(); 
+            document.getElementById('redis-engine').querySelector('.server-process').classList.remove('processing');
+
+            await new Promise(r => setTimeout(r, 500)); 
+
+            // --- PROCESS 2 (Loser) ---
+            log(`EventLoop: Popping command from User ${secondUser}`, 'system');
+            const item2 = document.getElementById(`q-item-${secondUser}`);
+            
+            item2.style.opacity = '0.5';
+            
+            threadState.textContent = `SET seat:1 ${secondUser} NX`;
+            threadState.className = 'text-[10px] font-mono font-bold text-slate-800 bg-yellow-100 w-full h-full flex items-center justify-center';
+            document.getElementById('redis-engine').querySelector('.server-process').classList.add('processing');
+
+            log(`Redis: Executing SET seat:1 ${secondUser} NX`, 'cmd');
+            
+            await new Promise(r => setTimeout(r, processTime));
+
+            // Fail Result
+            threadState.textContent = "NIL (0)";
+            threadState.className = "text-xs font-mono font-bold text-white bg-red-500 w-full h-full flex items-center justify-center";
+            
+            log(`Redis: Key already exists. User ${secondUser} denied.`, 'error');
+            updateUserStatus(secondUser, 'FAILED', 'error');
+
+            item2.remove();
+            document.getElementById('redis-engine').querySelector('.server-process').classList.remove('processing');
+            
+            await new Promise(r => setTimeout(r, 500));
+            threadState.textContent = "IDLE";
+            threadState.className = 'text-xs font-mono text-slate-400';
+        }
+
+        function updateUserStatus(user, text, type) {
+            const el = document.getElementById(`status-${user}`);
+            el.textContent = text;
+            if(type === 'success') {
+                el.className = 'inline-block px-2 py-1 text-[10px] font-bold rounded bg-green-100 text-green-700 shadow-sm border border-green-200';
+            } else {
+                el.className = 'inline-block px-2 py-1 text-[10px] font-bold rounded bg-red-100 text-red-700 shadow-sm border border-red-200';
+            }
+        }
+    </script>
+
+
+</body></html>
