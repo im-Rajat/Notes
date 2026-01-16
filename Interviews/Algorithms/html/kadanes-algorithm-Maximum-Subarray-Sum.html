@@ -1,0 +1,685 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function q(b){var c=0;return function(){return c<b.length?{done:!1,value:b[c++]}:{done:!0}}}function t(b){var c=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(c)return c.call(b);if(typeof b.length=="number")return{next:q(b)};throw Error(String(b)+" is not an iterable or ArrayLike");}var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,c,g){if(b==Array.prototype||b==Object.prototype)return b;b[c]=g.value;return b};
+function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var g=b[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var w=v(this);function x(b,c){if(c)a:{var g=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var l=b[h];if(!(l in g))break a;g=g[l]}b=b[b.length-1];h=g[b];c=c(h);c!=h&&c!=null&&u(g,b,{configurable:!0,writable:!0,value:c})}}
+function y(){this.j=!1;this.g=null;this.u=void 0;this.h=1;this.v=this.l=0;this.i=null}function z(b){if(b.j)throw new TypeError("Generator is already running");b.j=!0}y.prototype.o=function(b){this.u=b};function A(b,c){b.i={I:c,J:!0};b.h=b.l||b.v}y.prototype.return=function(b){this.i={return:b};this.h=this.v};function B(b){this.g=new y;this.h=b}function E(b,c){z(b.g);var g=b.g.g;if(g)return F(b,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,b.g.return);b.g.return(c);return G(b)}
+function F(b,c,g,h){try{var l=c.call(b.g.g,g);if(!(l instanceof Object))throw new TypeError("Iterator result "+l+" is not an object");if(!l.done)return b.g.j=!1,l;var m=l.value}catch(f){return b.g.g=null,A(b.g,f),G(b)}b.g.g=null;h.call(b.g,m);return G(b)}function G(b){for(;b.g.h;)try{var c=b.h(b.g);if(c)return b.g.j=!1,{value:c.value,done:!1}}catch(g){b.g.u=void 0,A(b.g,g)}b.g.j=!1;if(b.g.i){c=b.g.i;b.g.i=null;if(c.J)throw c.I;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function H(b){this.next=function(c){z(b.g);b.g.g?c=F(b,b.g.g.next,c,b.g.o):(b.g.o(c),c=G(b));return c};this.throw=function(c){z(b.g);b.g.g?c=F(b,b.g.g["throw"],c,b.g.o):(A(b.g,c),c=G(b));return c};this.return=function(c){return E(b,c)};this[Symbol.iterator]=function(){return this}}function I(b){function c(h){return b.next(h)}function g(h){return b.throw(h)}return new Promise(function(h,l){function m(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(m,l)}m(b.next())})}
+x("Symbol",function(b){function c(m){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(m||"")+"_"+l++,m)}function g(m,f){this.g=m;u(this,"description",{configurable:!0,writable:!0,value:f})}if(b)return b;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(b){if(b)return b;b=Symbol("Symbol.iterator");u(Array.prototype,b,{configurable:!0,writable:!0,value:function(){return J(q(this))}});return b});function J(b){b={next:b};b[Symbol.iterator]=function(){return this};return b}
+x("Promise",function(b){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var a=this.j();try{f(a.resolve,a.reject)}catch(d){a.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(a){a(f)})}if(b)return b;g.prototype.h=function(f){if(this.g==null){this.g=[];var a=this;this.i(function(){a.l()})}this.g.push(f)};var l=w.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var a=0;a<f.length;++a){var d=
+f[a];f[a]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(a,k))}}var a=this,d=!1;return{resolve:f(this.D),reject:f(this.l)}};c.prototype.D=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.G(f);else{a:switch(typeof f){case "object":var a=f!=null;break a;case "function":a=!0;break a;default:a=!1}a?this.C(f):this.o(f)}};
+c.prototype.C=function(f){var a=void 0;try{a=f.then}catch(d){this.l(d);return}typeof a=="function"?this.H(a,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,a){if(this.h!=0)throw Error("Cannot settle("+f+", "+a+"): Promise already settled in state"+this.h);this.h=f;this.i=a;this.h===2&&this.F();this.K()};c.prototype.F=function(){var f=this;l(function(){if(f.B()){var a=w.console;typeof a!=="undefined"&&a.error(f.i)}},1)};c.prototype.B=
+function(){if(this.u)return!1;var f=w.CustomEvent,a=w.Event,d=w.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof a==="function"?f=new a("unhandledrejection",{cancelable:!0}):(f=w.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.K=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)m.h(this.g[f]);this.g=null}};var m=new g;c.prototype.G=
+function(f){var a=this.j();f.A(a.resolve,a.reject)};c.prototype.H=function(f,a){var d=this.j();try{f.call(a,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,a){function d(n,r){return typeof n=="function"?function(C){try{e(n(C))}catch(D){k(D)}}:r}var e,k,p=new c(function(n,r){e=n;k=r});this.A(d(f,e),d(a,k));return p};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.A=function(f,a){function d(){switch(e.h){case 1:f(e.i);break;case 2:a(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?m.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(a,d){d(f)})};c.race=function(f){return new c(function(a,d){for(var e=t(f),k=e.next();!k.done;k=e.next())h(k.value).A(a,d)})};c.all=function(f){var a=t(f),d=a.next();return d.done?h([]):new c(function(e,k){function p(C){return function(D){n[C]=D;r--;r==0&&e(n)}}var n=[],r=0;do n.push(void 0),r++,h(d.value).A(p(n.length-1),k),d=a.next();while(!d.done)})};return c});
+function K(b,c){return Object.prototype.hasOwnProperty.call(b,c)}x("Object.is",function(b){return b?b:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(b){return b?b:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var m=h[g];if(m===c||Object.is(m,c))return!0}return!1}});
+x("String.prototype.includes",function(b){return b?b:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(b){function c(d){this.g=(a+=Math.random()+1).toString();if(d){d=t(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!K(d,f)){var e=new g;u(d,f,{value:e})}}function m(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!b||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new b([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(p){return!1}}())return b;var f="$jscomp_hidden_"+Math.random();m("freeze");m("preventExtensions");m("seal");var a=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!K(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&K(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&K(d,
+f)&&K(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&K(d,f)&&K(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(b){function c(){var a={};return a.m=a.next=a.head=a}function g(a,d){var e=a[1];return J(function(){if(e){for(;e.head!=a[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(a,d){var e=d&&typeof d;e=="object"||e=="function"?m.has(d)?e=m.get(d):(e=""+ ++f,m.set(d,e)):e="p_"+d;var k=a[0][e];if(k&&K(a[0],e))for(a=0;a<k.length;a++){var p=k[a];if(d!==d&&p.key!==p.key||d===p.key)return{id:e,list:k,index:a,entry:p}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(a){this[0]={};this[1]=c();this.size=0;if(a){a=t(a);for(var d;!(d=a.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var a=Object.seal({x:4}),d=new b(t([[a,"s"]]));if(d.get(a)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=a||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(p){return!1}}())return b;var m=new WeakMap;l.prototype.set=function(a,d){a=a===0?0:a;var e=h(this,a);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:a,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(a){a=h(this,a);return a.entry&&a.list?(a.list.splice(a.index,1),a.list.length||delete this[0][a.id],a.entry.m.next=a.entry.next,
+a.entry.next.m=a.entry.m,a.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(a){return!!h(this,a).entry};l.prototype.get=function(a){return(a=h(this,a).entry)&&a.value};l.prototype.entries=function(){return g(this,function(a){return[a.key,a.value]})};l.prototype.keys=function(){return g(this,function(a){return a.key})};l.prototype.values=function(){return g(this,function(a){return a.value})};l.prototype.forEach=
+function(a,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,a.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(b){function c(g){this.g=new Map;if(g){g=t(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new b(t([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),m=l.next();if(m.done||m.value[0]!=g||m.value[1]!=g)return!1;m=l.next();return m.done||m.value[0]==g||m.value[0].x!=4||
+m.value[1]!=m.value[0]?!1:l.next().done}catch(f){return!1}}())return b;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(m){return g.call(h,m,m,l)})};return c});(function(){function b(){return m?Promise.resolve(m):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(a){if(!a.ok)throw Error("HTTP error! status: "+a.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return a.json()}).then(function(a){if(!Array.isArray(a))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return m=a}).catch(function(a){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",a);f=null;throw a;})}function c(a){var d,e,k,p;return I(new H(new B(function(n){switch(n.h){case 1:d=(a.textContent||"").trim();if(!d||a.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return n.return();e=window.getComputedStyle(a);if(e.display==="none"||e.visibility==="hidden")return n.return();
+n.l=2;var r=b();n.h=4;return{value:r};case 4:k=n.u;n.h=3;n.l=0;break;case 2:return n.l=0,n.i=null,console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),n.return();case 3:(p=k.includes(d))?a.classList.contains("js-replaced-missing-icon")&&a.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&a.classList.contains("js-replaced-missing-icon")||(a.textContent="radio_button_unchecked",a.classList.add("js-replaced-missing-icon")),n.h=0}})))}
+function g(a){a=a===void 0?document.body:a;a.querySelectorAll(l).forEach(function(d){c(d)})}function h(){b().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(a){var d=new Set;a=t(a);for(var e=a.next();!e.done;e=a.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(p){p.nodeType===Node.ELEMENT_NODE&&(p.matches(l)&&d.add(p),p.querySelectorAll(l).forEach(function(n){d.add(n)}))});else if(e.type===
+"attributes"&&e.attributeName==="class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(p){c(p)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(a){console.error("IconChecker: Font loading error. Scanning icons anyway.",
+a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(a){return"."+a}).join(","),m=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Kadane's Algorithm: Interactive Explainer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #1e293b; }
+        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+        .array-box { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 10; }
+        
+        /* Highlighting Classes */
+        .bg-max-range { background-color: rgba(234, 179, 8, 0.25) !important; border-color: #eab308 !important; }
+        .bg-current-range { background-color: rgba(59, 130, 246, 0.2) !important; border-color: #60a5fa !important; }
+        .box-active { transform: scale(1.1); box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); z-index: 20; }
+
+        .code-line { transition: all 0.2s; border-left: 3px solid transparent; }
+        .code-line:hover { background-color: #334155; }
+        .code-active { background-color: #1e3a8a; border-left: 3px solid #60a5fa; padding-left: 8px; }
+
+        /* Dynamic Brackets */
+        .bracket {
+            position: absolute;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            pointer-events: none;
+            z-index: 20;
+        }
+        .bracket-label {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0f172a;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Credits & Buttons */
+        .credits-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(4px);
+            border: 1px solid #334155;
+            padding: 12px 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.875rem;
+            color: #94a3b8;
+            transition: all 0.3s;
+        }
+        .credits-fixed:hover {
+            border-color: #3b82f6;
+            color: #e2e8f0;
+            transform: translateY(-2px);
+        }
+        .credits-fixed a {
+            color: #60a5fa;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .download-btn-fixed {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 50;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-6{bottom:-1.5rem}.-top-6{top:-1.5rem}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-20{margin-bottom:5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.h-4{height:1rem}.h-6{height:1.5rem}.h-80{height:20rem}.h-full{height:100%}.h-12{height:3rem}.min-h-\[550px\]{min-height:550px}.min-h-\[80px\]{min-height:80px}.min-h-screen{min-height:100vh}.w-8{width:2rem}.w-full{width:100%}.w-12{width:3rem}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-16 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(4rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(4rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-b-xl{border-bottom-right-radius:0.75rem;border-bottom-left-radius:0.75rem}.rounded-r{border-top-right-radius:0.25rem;border-bottom-right-radius:0.25rem}.rounded-r-lg{border-top-right-radius:0.5rem;border-bottom-right-radius:0.5rem}.rounded-t-xl{border-top-left-radius:0.75rem;border-top-right-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-b-4{border-bottom-width:4px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-r-4{border-right-width:4px}.border-t{border-top-width:1px}.border-t-4{border-top-width:4px}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-blue-900\/50{border-color:rgb(30 58 138 / 0.5)}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.border-yellow-900\/50{border-color:rgb(113 63 18 / 0.5)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-700\/80{background-color:rgb(51 65 85 / 0.8)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/80{background-color:rgb(30 41 59 / 0.8)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/50{background-color:rgb(15 23 42 / 0.5)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.object-cover{object-fit:cover}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-12{padding-bottom:3rem}.pb-20{padding-bottom:5rem}.pl-4{padding-left:1rem}.pt-6{padding-top:1.5rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-200{--tw-text-opacity:1;color:rgb(254 240 138 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.opacity-30{opacity:0.3}.opacity-60{opacity:0.6}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-blue-900\/40{--tw-shadow-color:rgb(30 58 138 / 0.4);--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-900\/40{--tw-shadow-color:rgb(6 78 59 / 0.4);--tw-shadow:var(--tw-shadow-colored)}.drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800\/50:hover{background-color:rgb(30 41 59 / 0.5)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 768px){.md\:h-16{height:4rem}.md\:w-16{width:4rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:p-8{padding:2rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}}@media (min-width: 1280px){.xl\:w-\[450px\]{width:450px}.xl\:flex-row{flex-direction:row}.xl\:border-b-0{border-bottom-width:0px}.xl\:border-r{border-right-width:1px}}</style></head>
+<body class="min-h-screen flex flex-col relative pb-20">
+    <!-- Hero Section -->
+    <header class="relative w-full h-80 overflow-hidden flex items-center justify-center bg-slate-900 border-b border-slate-700">
+        <img alt="Algorithm Abstract Background" class="absolute inset-0 w-full h-full object-cover opacity-60" src="data:image/svg+xml;base64,IDxzdmcgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+IDxkZWZzPiA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSItMTAwJSIgeTE9IjAiIHgyPSIwIiB5Mj0iMCI+IDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzBmMTcyYSIvPiA8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iIzFZMjgzNyIvPiA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwZjE3MmEiLz4gPC9saW5lYXJHcmFkaWVudD4gPHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPiA8cGF0aCBkPSJNIDggMCBMIDAgMCAwIDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIwLjEiLz4gPC9wYXR0ZXJuPiA8L2RlZnM+IDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMGYxNzJhIi8+IDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ1cmwoI2dyaWQpIiBvcGFjaXR5PSIwLjMiLz4gPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9IjAuMiI+IDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InIiIHZhbHVlcz0iMzA7NDU7MzAiIGR1cj0iMTBzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPiA8L2NpcmNsZT4gPC9zdmc+">
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">
+                Kadane's Algorithm
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-200 font-light max-w-2xl mx-auto">
+                Visualize how we find the <span class="text-white font-semibold">Maximum Subarray</span> by dynamically adjusting our window.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8 space-y-16">
+        <!-- Interactive Visualizer -->
+        <section class="max-w-7xl mx-auto" id="visualizer">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="material-symbols-outlined text-blue-500 text-4xl">code_blocks</span>
+                    Window Visualizer
+                </h2>
+                <!-- Input Controls -->
+                <div class="flex gap-2">
+                    <select class="bg-slate-800 text-white text-sm px-4 py-2 rounded-lg border border-slate-600 focus:outline-none focus:border-blue-500 shadow-lg" id="preset-selector">
+                        <option value="default">Classic Example</option>
+                        <option value="negative">All Negative</option>
+                        <option value="mixed">Mixed Large</option>
+                        <option value="alternating">Alternating</option>
+                    </select>
+                    <button class="flex items-center gap-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition text-sm font-medium shadow-lg" id="reset-btn">
+                        <span class="material-symbols-outlined text-sm">restart_alt</span> Reset
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 rounded-3xl border border-slate-700 overflow-hidden shadow-2xl flex flex-col xl:flex-row">
+                <!-- Left: Visualization Area -->
+                <div class="flex-1 p-6 md:p-8 flex flex-col relative border-b xl:border-b-0 xl:border-r border-slate-700 min-h-[550px]">
+                    <!-- Dynamic Array Display -->
+                    <div class="flex-1 flex flex-col justify-center pt-8">
+                        <!-- Array Container (Relative for positioning brackets) -->
+                        <div class="relative w-full mb-20 mt-12 px-4" id="array-wrapper" style="min-height: 120px;">
+                            <!-- 1. Max Window Bracket (Top) -->
+                            <div class="bracket border-t-4 border-l-4 border-r-4 border-yellow-500 rounded-t-xl" id="bracket-max" style="opacity: 1; top: -50px; height: 35px; left: 127.111px; width: 64px;">
+                                <div class="bracket-label text-yellow-500 -top-6 border border-yellow-900/50">Max Window</div>
+                            </div>
+                            
+                            <!-- 2. Array Boxes -->
+                            <div class="flex flex-wrap justify-center gap-3 relative z-10" id="array-container"><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative bg-max-range" id="box-0">-2<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">0</div></div><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative" id="box-1">1<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">1</div></div><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative" id="box-2">-3<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">2</div></div><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative" id="box-3">4<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">3</div></div><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative" id="box-4">-1<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">4</div></div><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative" id="box-5">2<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">5</div></div><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative" id="box-6">1<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">6</div></div><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative" id="box-7">-5<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">7</div></div><div class="array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative" id="box-8">4<div class="absolute -bottom-6 text-[10px] text-slate-500 font-mono">8</div></div></div>
+                            
+                            <!-- 3. Current Window Bracket (Bottom) -->
+                            <div class="bracket border-b-4 border-l-4 border-r-4 border-blue-500 rounded-b-xl" id="bracket-current" style="opacity: 0; bottom: -50px; height: 35px;">
+                                <div class="bracket-label text-blue-400 -bottom-6 border border-blue-900/50">Current Window</div>
+                            </div>
+
+                            <!-- 4. Index Pointer (Arrow) -->
+                            <div class="absolute transition-all duration-300 flex flex-col items-center text-blue-400" id="pointer-arrow" style="opacity: 0; bottom: -85px; width: 40px; transform: translateX(-50%); z-index: 30;">
+                                <span class="material-symbols-outlined text-3xl font-bold drop-shadow-lg">arrow_upward</span>
+                                <span class="font-mono font-bold text-lg">i</span>
+                            </div>
+                        </div>
+
+                        <!-- Variable Monitor -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl mx-auto mt-8">
+                            <!-- Variable: current_sum -->
+                            <div class="bg-slate-800 p-4 rounded-xl border-l-4 border-blue-500 text-center relative shadow-lg">
+                                <span class="text-xs text-blue-400 uppercase tracking-wider font-semibold">Current Window Sum</span>
+                                <div class="text-4xl font-mono font-bold text-white mt-1 transition-all" id="display-current-sum">-2</div>
+                                <div class="text-[11px] text-slate-400 mt-2 h-4 font-mono" id="calc-detail"></div>
+                            </div>
+                            <!-- Variable: max_so_far -->
+                            <div class="bg-slate-800 p-4 rounded-xl border-l-4 border-yellow-500 text-center relative shadow-lg">
+                                <span class="text-xs text-yellow-500 uppercase tracking-wider font-bold">Global Max Sum</span>
+                                <div class="text-4xl font-mono font-bold text-yellow-400 mt-1 transition-all" id="display-max-sum">-2</div>
+                                <div class="text-[11px] text-slate-400 mt-2 h-4 font-mono" id="max-detail">Best so far</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls & Explanation -->
+                    <div class="mt-8">
+                        <!-- Step Explanation Box -->
+                        <div class="bg-slate-800/80 backdrop-blur-sm border-l-4 border-blue-500 p-5 rounded-r-lg shadow-lg mb-8 min-h-[80px] flex items-center">
+                            <div>
+                                <div class="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1" id="step-title">Initialization</div>
+                                <p class="text-slate-200 text-sm md:text-base leading-relaxed" id="explanation-text">Ready to start. We will initialize our trackers using the first element of the array.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Buttons -->
+                        <div class="flex justify-center gap-4">
+                            <button class="flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold shadow-lg shadow-blue-900/40 transition-all hover:scale-105 active:scale-95" id="step-btn">
+                                <span class="material-symbols-outlined">redo</span> Next Line
+                            </button>
+                            <button class="flex items-center gap-2 px-6 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold shadow-lg shadow-emerald-900/40 transition-all hover:scale-105 active:scale-95" id="play-btn"><span class="material-symbols-outlined">play_arrow</span> Auto</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Code Panel -->
+                <div class="xl:w-[450px] bg-slate-950 p-6 flex flex-col shadow-inner relative">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-slate-400 font-semibold text-sm uppercase tracking-wider flex items-center gap-2">
+                            <span class="material-symbols-outlined text-base">terminal</span> Source Code
+                        </h3>
+                        <span class="text-xs px-2 py-1 bg-slate-800 rounded text-slate-400">C++</span>
+                    </div>
+                    
+                    <div class="font-mono text-sm overflow-hidden flex-1 text-slate-400 space-y-1 select-none" id="code-block">
+                        <div class="code-line p-1.5 rounded code-active" data-line="1"><span class="text-purple-400">int</span> <span class="text-yellow-200">maxSubArray</span>(<span class="text-purple-400">vector</span>&lt;<span class="text-purple-400">int</span>&gt;&amp; nums) {</div>
+                        <div class="code-line p-1.5 rounded" data-line="2">   <span class="text-purple-400">int</span> current_sum = nums[0];</div>
+                        <div class="code-line p-1.5 rounded" data-line="3">   <span class="text-purple-400">int</span> max_so_far = nums[0];</div>
+                        <div class="code-line p-1.5 rounded opacity-30" data-line="4">   </div>
+                        <div class="code-line p-1.5 rounded" data-line="5">   <span class="text-purple-400">for</span> (<span class="text-purple-400">int</span> i = 1; i &lt; nums.<span class="text-blue-300">size</span>(); i++) {</div>
+                        <div class="code-line p-1.5 rounded" data-line="6">     <span class="text-slate-500">// Start new or extend?</span></div>
+                        <div class="code-line p-1.5 rounded" data-line="7">     current_sum = <span class="text-blue-300">max</span>(nums[i], current_sum + nums[i]);</div>
+                        <div class="code-line p-1.5 rounded opacity-30" data-line="8">   </div>
+                        <div class="code-line p-1.5 rounded" data-line="9">     <span class="text-slate-500">// Check global max</span></div>
+                        <div class="code-line p-1.5 rounded" data-line="10">    <span class="text-purple-400">if</span> (current_sum &gt; max_so_far) {</div>
+                        <div class="code-line p-1.5 rounded" data-line="11">       max_so_far = current_sum;</div>
+                        <div class="code-line p-1.5 rounded" data-line="12">    }</div>
+                        <div class="code-line p-1.5 rounded" data-line="13">   }</div>
+                        <div class="code-line p-1.5 rounded" data-line="14">   <span class="text-purple-400">return</span> max_so_far;</div>
+                        <div class="code-line p-1.5 rounded" data-line="15">}</div>
+                    </div>
+
+                    <!-- Complexity & Legend -->
+                    <div class="mt-6 pt-6 border-t border-slate-800 space-y-4">
+                        <!-- Complexity Analysis -->
+                        <div class="bg-slate-900/50 p-3 rounded-lg border border-slate-800">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Complexity Analysis</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div class="flex flex-col">
+                                    <span class="text-slate-400 text-xs">Time Complexity</span>
+                                    <span class="font-mono text-green-400">O(n)</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-slate-400 text-xs">Space Complexity</span>
+                                    <span class="font-mono text-green-400">O(1)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Legend -->
+                        <div class="grid grid-cols-1 gap-2 text-xs text-slate-400">
+                            <div class="flex items-center gap-3 p-2 rounded hover:bg-slate-800/50 transition">
+                                <div class="w-8 h-6 bg-current-range border border-blue-500 rounded flex items-center justify-center text-[10px] text-white">#</div>
+                                <span>Current Window Elements</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded hover:bg-slate-800/50 transition">
+                                <div class="w-8 h-6 bg-max-range border border-yellow-500 rounded flex items-center justify-center text-[10px] text-white">#</div>
+                                <span>Global Max Window Found</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logic Deep Dive Section -->
+        <section class="max-w-4xl mx-auto space-y-8 pb-12">
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 shadow-xl">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-yellow-400">psychology</span>
+                    Understanding the Logic
+                </h3>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    The beauty of Kadane's algorithm lies in its greedy decision at <strong class="text-blue-400 font-mono">Line 7</strong>. At each position <code class="font-mono text-blue-300">i</code>, we ask a simple question: 
+                    <br><em class="text-white block mt-2 border-l-2 border-blue-500 pl-4 py-1 bg-slate-900/50 rounded-r">"Is the number <code class="font-mono text-sm">nums[i]</code> itself larger than the sum we've been building plus <code class="font-mono text-sm">nums[i]</code>?"</em>
+                </p>
+                <ul class="mt-6 space-y-4 text-slate-300">
+                    <li class="flex gap-3">
+                        <span class="material-symbols-outlined text-green-400 shrink-0 mt-1">check_circle</span>
+                        <div>
+                            <strong class="text-white">If yes</strong>, the previous history is a burden (negative sum). We discard it and start a new subarray at <code class="font-mono text-blue-300">i</code>.
+                        </div>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="material-symbols-outlined text-red-400 shrink-0 mt-1">cancel</span>
+                        <div>
+                            <strong class="text-white">If no</strong>, the previous history contributes positively (or we are forced to take a small dip to reach a larger number later). We extend the subarray.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Credits / Footer -->
+    <div class="credits-fixed">
+        <span>Created by <strong>Rajat Kumar</strong></span>
+        <span class="text-slate-600">|</span>
+        <a href="https://www.linkedin.com/in/imRajat/" rel="noopener noreferrer" target="_blank">
+            <span class="flex items-center gap-1">
+                LinkedIn <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </span>
+        </a>
+    </div>
+
+    <!-- Download Option -->
+    <div class="download-btn-fixed">
+        <button class="flex items-center gap-2 px-3 py-2 bg-slate-700/80 hover:bg-slate-600 backdrop-blur-sm border border-slate-600 text-slate-300 rounded-lg text-xs transition-all shadow-lg hover:text-white hover:scale-105" onclick="downloadPage()">
+            <span class="material-symbols-outlined text-base">download</span>
+            Download .html
+        </button>
+    </div>
+
+    <!-- Interactive Script -->
+    <script>
+        // --- Data & State ---
+        const PRESETS = {
+            'default': [-2, 1, -3, 4, -1, 2, 1, -5, 4],
+            'negative': [-5, -2, -9, -1, -8],
+            'mixed': [5, 4, -1, 7, 8],
+            'alternating': [1, -1, 1, -1, 1, -1]
+        };
+
+        const STATES = {
+            INIT: 'INIT',
+            LOOP_CONDITION: 'LOOP_CONDITION',
+            CALC_CURRENT: 'CALC_CURRENT',
+            CHECK_GLOBAL: 'CHECK_GLOBAL',
+            UPDATE_GLOBAL: 'UPDATE_GLOBAL',
+            INCREMENT: 'INCREMENT',
+            FINISHED: 'FINISHED'
+        };
+
+        // State Variables
+        let array = [];
+        let state = STATES.INIT;
+        let i = 1;
+        let currentSum = 0;
+        let maxSoFar = 0;
+        let tempStart = 0;
+        let maxRange = { start: 0, end: 0 };
+        let currentRange = { start: 0, end: 0 };
+        
+        // Playback
+        let isPlaying = false;
+        let playInterval = null;
+
+        // DOM References
+        const dom = {
+            container: document.getElementById('array-container'),
+            wrapper: document.getElementById('array-wrapper'),
+            codeLines: document.querySelectorAll('.code-line'),
+            displayCurr: document.getElementById('display-current-sum'),
+            displayMax: document.getElementById('display-max-sum'),
+            calcDetail: document.getElementById('calc-detail'),
+            maxDetail: document.getElementById('max-detail'),
+            stepTitle: document.getElementById('step-title'),
+            explanation: document.getElementById('explanation-text'),
+            btnStep: document.getElementById('step-btn'),
+            btnPlay: document.getElementById('play-btn'),
+            
+            // Visual Elements
+            bracketMax: document.getElementById('bracket-max'),
+            bracketCurrent: document.getElementById('bracket-current'),
+            pointerArrow: document.getElementById('pointer-arrow')
+        };
+
+        // --- Core Logic ---
+
+        function init(presetKey = 'default') {
+            array = [...PRESETS[presetKey]];
+            resetState();
+            renderArray();
+            // Force layout update before calculating bracket positions
+            setTimeout(() => {
+                updateUI();
+                highlightLine([1]); 
+                setExplanation("Initialization", "Ready to start. We will initialize our trackers using the first element of the array.");
+            }, 50);
+        }
+
+        function resetState() {
+            state = STATES.INIT;
+            i = 1;
+            if (array.length > 0) {
+                currentSum = array[0];
+                maxSoFar = array[0];
+                currentRange = {start:0, end:0};
+                maxRange = {start:0, end:0};
+                tempStart = 0;
+            } else {
+                currentSum = 0; maxSoFar = 0;
+            }
+            isPlaying = false;
+            clearInterval(playInterval);
+            dom.btnPlay.innerHTML = '<span class="material-symbols-outlined">play_arrow</span> Auto';
+        }
+
+        // --- State Machine ---
+
+        function nextStep() {
+            dom.calcDetail.textContent = "";
+            dom.maxDetail.textContent = "";
+
+            switch (state) {
+                case STATES.INIT:
+                    // Line 2, 3: Init
+                    highlightLine([2, 3]);
+                    setExplanation("Initialization", `Set <code>current_sum</code> = ${array[0]} and <code>max_so_far</code> = ${array[0]}. The first element forms our initial window.`);
+                    state = STATES.LOOP_CONDITION;
+                    break;
+
+                case STATES.LOOP_CONDITION:
+                    // Line 5: Loop check
+                    highlightLine([5]);
+                    if (i < array.length) {
+                        setExplanation("Loop Condition", `Checking if index <code>i=${i}</code> is valid. Moving pointer to new element <strong>${array[i]}</strong>.`);
+                        state = STATES.CALC_CURRENT;
+                    } else {
+                        setExplanation("Loop Condition", `Index <code>i=${i}</code> reached end of array. Algorithm Complete.`);
+                        state = STATES.FINISHED;
+                    }
+                    break;
+
+                case STATES.CALC_CURRENT:
+                    // Line 7: Max(num, num+prev)
+                    highlightLine([7]);
+                    
+                    const num = array[i];
+                    const prevSum = currentSum;
+                    const extendedSum = prevSum + num;
+                    
+                    let decision = "";
+                    if (num > extendedSum) {
+                        currentSum = num;
+                        tempStart = i; // Reset start
+                        decision = "Start New Window";
+                        dom.calcDetail.innerHTML = `<span class='text-emerald-400'>Reset: ${num} > ${extendedSum}</span>`;
+                    } else {
+                        currentSum = extendedSum;
+                        // tempStart stays
+                        decision = "Extend Window";
+                        dom.calcDetail.innerHTML = `<span class='text-blue-400'>Extend: ${prevSum} + ${num} = ${currentSum}</span>`;
+                    }
+                    
+                    currentRange = { start: tempStart, end: i };
+                    setExplanation("Update Current Window", `Comparing <code>${num}</code> vs <code>${prevSum} + ${num}</code>. <br>Decision: <strong>${decision}</strong>.`);
+                    
+                    state = STATES.CHECK_GLOBAL;
+                    break;
+
+                case STATES.CHECK_GLOBAL:
+                    // Line 10: Check max
+                    highlightLine([10]);
+                    if (currentSum > maxSoFar) {
+                        setExplanation("Check Global Max", `Is <code>current_sum</code> (${currentSum}) > <code>max_so_far</code> (${maxSoFar})? <span class="text-green-400 font-bold">Yes! New Record.</span>`);
+                        state = STATES.UPDATE_GLOBAL;
+                    } else {
+                        setExplanation("Check Global Max", `Is <code>current_sum</code> (${currentSum}) > <code>max_so_far</code> (${maxSoFar})? <span class="text-slate-400">No.</span>`);
+                        state = STATES.INCREMENT;
+                    }
+                    break;
+
+                case STATES.UPDATE_GLOBAL:
+                    // Line 11: Update max
+                    highlightLine([11]);
+                    maxSoFar = currentSum;
+                    maxRange = { ...currentRange };
+                    dom.maxDetail.innerHTML = "<span class='text-yellow-400'>New Record!</span>";
+                    playTone('C5', '8n');
+                    
+                    setExplanation("Update Max", `Updating <code>max_so_far</code> to new record: <strong>${maxSoFar}</strong>.`);
+                    state = STATES.INCREMENT;
+                    break;
+
+                case STATES.INCREMENT:
+                    // Line 13: End loop
+                    highlightLine([13]);
+                    i++;
+                    setExplanation("Next Iteration", "Moving to next element...");
+                    state = STATES.LOOP_CONDITION;
+                    break;
+
+                case STATES.FINISHED:
+                    // Line 14: Return
+                    highlightLine([14]);
+                    setExplanation("Complete", `Algorithm finished. The Maximum Subarray Sum is <strong>${maxSoFar}</strong>.`);
+                    stopAutoPlay();
+                    break;
+            }
+
+            updateUI();
+        }
+
+        // --- UI Rendering ---
+
+        function renderArray() {
+            dom.container.innerHTML = '';
+            array.forEach((num, idx) => {
+                const box = document.createElement('div');
+                box.className = `array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative transition-transform`;
+                box.textContent = num;
+                box.id = `box-${idx}`;
+                
+                // Index Label
+                const idxLabel = document.createElement('div');
+                idxLabel.className = "absolute -bottom-6 text-[10px] text-slate-500 font-mono";
+                idxLabel.textContent = idx;
+                box.appendChild(idxLabel);
+
+                dom.container.appendChild(box);
+            });
+        }
+
+        function updateUI() {
+            // Update Text
+            dom.displayCurr.textContent = currentSum;
+            dom.displayMax.textContent = maxSoFar;
+
+            // 1. Reset Styles
+            document.querySelectorAll('.array-box').forEach(b => {
+                // Reset to base state
+                b.className = `array-box w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-800 border-2 border-slate-600 rounded-lg text-lg font-bold relative`;
+            });
+
+            // 2. Highlight Max Range (Gold Background) - Precedence
+            if (maxRange.end !== undefined) {
+                 for(let k = maxRange.start; k <= maxRange.end; k++) {
+                    const box = document.getElementById(`box-${k}`);
+                    if(box) box.classList.add('bg-max-range');
+                }
+            }
+
+            // 3. Highlight Current Range (Blue Background) - Only if active
+            if (state !== STATES.INIT && state !== STATES.FINISHED) {
+                 for(let k = currentRange.start; k <= currentRange.end; k++) {
+                    const box = document.getElementById(`box-${k}`);
+                    if(box) {
+                        box.classList.add('bg-current-range');
+                    }
+                }
+            }
+
+            // 4. Highlight Active Index (Scale & Glow)
+            if (state !== STATES.INIT && state !== STATES.FINISHED && i < array.length) {
+                const targetBox = document.getElementById(`box-${i}`);
+                if (targetBox) {
+                    targetBox.classList.add('box-active'); // Adds scale and glow
+                    
+                    // Arrow positioning
+                    const rect = targetBox.getBoundingClientRect();
+                    const containerRect = dom.wrapper.getBoundingClientRect();
+                    const leftPos = rect.left - containerRect.left + (rect.width / 2);
+                    
+                    dom.pointerArrow.style.left = `${leftPos}px`;
+                    dom.pointerArrow.style.opacity = '1';
+                }
+            } else {
+                if (state === STATES.FINISHED) dom.pointerArrow.style.opacity = '0';
+            }
+
+            // 5. Position Brackets
+            drawBracket(dom.bracketCurrent, currentRange.start, currentRange.end, state !== STATES.INIT);
+            drawBracket(dom.bracketMax, maxRange.start, maxRange.end, true);
+        }
+
+        function drawBracket(element, startIndex, endIndex, isVisible) {
+            if (!isVisible || startIndex === undefined || endIndex === undefined) {
+                element.style.opacity = '0';
+                return;
+            }
+
+            const startBox = document.getElementById(`box-${startIndex}`);
+            const endBox = document.getElementById(`box-${endIndex}`);
+
+            if (startBox && endBox) {
+                const wrapperRect = dom.wrapper.getBoundingClientRect();
+                const startRect = startBox.getBoundingClientRect();
+                const endRect = endBox.getBoundingClientRect();
+
+                // Calculate relative positions
+                const left = startRect.left - wrapperRect.left;
+                const width = endRect.right - startRect.left;
+
+                element.style.left = `${left}px`;
+                element.style.width = `${width}px`;
+                element.style.opacity = '1';
+            }
+        }
+
+        function highlightLine(lineNums) {
+            dom.codeLines.forEach(l => l.classList.remove('code-active'));
+            lineNums.forEach(num => {
+                const line = document.querySelector(`.code-line[data-line="${num}"]`);
+                if (line) line.classList.add('code-active');
+            });
+        }
+
+        function setExplanation(title, text) {
+            dom.stepTitle.textContent = title;
+            dom.explanation.innerHTML = text;
+        }
+
+        // --- Interaction ---
+
+        dom.btnStep.addEventListener('click', () => {
+            stopAutoPlay();
+            nextStep();
+        });
+
+        dom.btnPlay.addEventListener('click', () => {
+            if (isPlaying) {
+                stopAutoPlay();
+            } else {
+                isPlaying = true;
+                dom.btnPlay.innerHTML = '<span class="material-symbols-outlined">pause</span> Pause';
+                playInterval = setInterval(nextStep, 1000); // 1s delay for clarity
+            }
+        });
+
+        document.getElementById('reset-btn').addEventListener('click', () => init(document.getElementById('preset-selector').value));
+        
+        document.getElementById('preset-selector').addEventListener('change', (e) => {
+            init(e.target.value);
+        });
+
+        function stopAutoPlay() {
+            isPlaying = false;
+            clearInterval(playInterval);
+            dom.btnPlay.innerHTML = '<span class="material-symbols-outlined">play_arrow</span> Auto';
+        }
+
+        function downloadPage() {
+            const html = document.documentElement.outerHTML;
+            const blob = new Blob([html], {type: 'text/html'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'kadanes-algorithm-explainer.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function playTone(note, duration) {
+            try {
+                if(Tone.context.state !== 'running') Tone.start();
+                const synth = new Tone.Synth().toDestination();
+                synth.volume.value = -10;
+                synth.triggerAttackRelease(note, duration);
+            } catch(e) {}
+        }
+
+        // Handle window resize for bracket positioning
+        window.addEventListener('resize', () => updateUI());
+
+        // Boot
+        init();
+
+    </script>
+
+</body></html>
