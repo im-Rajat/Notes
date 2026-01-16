@@ -1,0 +1,117 @@
+
+
+void my_stringCopy(char *dest, char *src) {
+
+	int i;
+	for (i = 0; src[i] != '\0'; i++) {
+
+		dest[i] = src[i];
+	}
+
+	dest[i + 1] = '\0';
+	
+	return;
+
+}
+
+
+1->2->3->4->5->null
+1->2->4->5->null;
+
+
+
+
+
+struct Node {
+
+	string name;
+	int rollnum;
+	struct Node* next;
+
+};
+
+struct Node* deleteStudent(struct Node* head, int roll_num) {
+
+	struct Node* temp = head;
+	struct Node* prev;
+
+	if (temp->rollnum == roll_num) {
+
+		head = temp->next;
+		return head;
+	}
+
+	while(temp != null) {	
+		if (temp->rollnum == roll_num) {
+			prev->next = temp->next;
+			return head;
+		
+		}
+		prev = temp;
+		temp = temp->next;
+	
+	}
+
+	cout<<"student don't exist"<<endl;
+	return head;
+
+}
+
+
+struct Node* insert(struct Node* head, string name, int rollno)
+{
+	struct Node *stu = (struct Node*)malloc(sizeof(struct Node));
+	stu->name = name;
+	stu->rollno = rollno;
+	stu->next = null;
+
+	if (head == null) {
+		
+		head = stu;
+	
+	
+	}
+	else {
+		stu->next = head;
+		head = stu;
+	}
+
+	return head;	
+}
+
+
+int main() {
+
+	int n;
+	cin>>n;
+
+	int i;
+
+	struct Node *head;
+	head = null;
+
+	for (i = 0; i < n; i++) {
+		string name;
+		int rollno;
+		cin>>name;
+		cin>>rollno;
+		head = insert(head, name, rollno);
+	}
+
+	head = delete(head, rollno);
+
+}
+	
+
+
+
+
+}
+
+
+
+
+
+
+
+

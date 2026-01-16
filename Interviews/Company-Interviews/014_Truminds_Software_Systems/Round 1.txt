@@ -1,0 +1,145 @@
+
+struct Node* deleteNode(struct Node* head, int n, int a) {
+
+	struct Node* curr = head;
+
+	int count = 0;
+
+	for (int i = 0; i < n; i++) {
+	
+		if (curr == null) {
+			cout<<"Error\n";
+			return head;
+		}
+		curr = curr->next;
+	}
+
+	struct Node* temp = curr;
+
+	for (int i = 0; i < a; i++) {
+		if (temp== null) {
+			cout<<"Error\n";
+			return head;
+		}
+		temp = temp->next;
+	}
+
+	
+	curr.next = temp;
+
+	return head;
+
+}
+
+
+
+
+
+
+class a {
+
+	public:
+
+		int *a;
+
+		a() {
+
+		int *b = new a;
+		}
+
+};
+
+class b:public a {
+	public :
+
+	void tempFunc() {};
+		
+
+
+
+}
+
+
+[ggg]
+
+[ggh
+
+int a = 5;
+
+int b = a;
+
+b = 7;
+
+
+int *b = &a;
+
+
+
+
+struct Node {
+	int data;
+	struct Node* left;
+	strcut Node* right;
+}
+
+
+strcut Node* insert(struct Node* root, int data) {
+
+	if (root == NULL) {
+
+	struct Node * node = new Node();
+	node->data = data;
+	node->left = NULL;
+	node->right = NULL;
+	return node;
+	}
+
+	
+	if (root->data > data) {
+		
+		root->left = insert(root->left, data);
+
+	}
+
+	else if (root->data < data) {
+
+		root->right = insert(root->right, data);
+	}
+
+
+	
+
+
+}
+
+
+
+a = 8;
+
+1001
+
+
+
+void reverse(int a) {
+
+	while (a > 0) {
+
+		if ( (a | 0) == 0) {
+			a = a | 1;
+		}
+		
+		else {
+			a = a & 0;
+		}
+
+		a = a>>1;
+
+	}
+
+
+
+}
+
+
+
+

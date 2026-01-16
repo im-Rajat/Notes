@@ -1,0 +1,19 @@
+// Installing dependencies of OPC-UA Library in C++
+
+
+sudo apt install libspdlog-dev
+
+sudo apt install build-essential libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev
+
+sudo apt -y install libboost-filesystem-dev
+
+
+
+// Important Link
+
+
+https://github.com/FreeOpcUa/freeopcua
+
+https://python-opcua.readthedocs.io/en/latest/client.html
+
+https://github.com/FreeOpcUa/python-opcua/tree/master/examples

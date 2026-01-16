@@ -1,0 +1,9 @@
+Given a file containing currency exchange rates
+USD INR 74.65
+EUR INR 88.29
+INR JPY 1.47
+INR KWD 0.004
+EUR JPY 130.23
+
+find the currency exchange rate of a given pair
+USD JPY

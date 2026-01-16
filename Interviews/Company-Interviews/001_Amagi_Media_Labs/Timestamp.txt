@@ -1,0 +1,70 @@
+// Timestamp Round 2 Problem
+
+double time[99999];
+Double loudness_level[99999];
+Int max_index = -1;
+
+Double average(double t, int l) {
+
+	max_index++;
+	Time[max_index] = t;
+	Loudness_level[max_index] = l
+
+Double start_t = 0
+	If (t - 5.0 > 0) {
+Start_t = t - 5;
+	}
+
+	Int count  = 0;
+	Int loudness = 0;
+
+	For (int i = max_index; i>=0; i--) {
+		If (start_t > time[i]) {
+			Loudness = loudness + loudness_level[i];
+count++;
+}
+Else {
+	break;
+}
+}
+
+Return loudness/count;
+
+}
+	
+	
+	
+
+	
+
+queue<double> time;
+queue<double> loudnedd_level; 
+Int max_index = -1;
+
+Int loudness = 0;
+Int count = 0;
+Int prev_index = 0;
+
+Double average(double t, int l) {
+
+	Max_index++;
+	time.push(t);
+	Loudness_level.push(l);
+
+Double start_t = 0
+	If (t - 5.0 > 0) {
+Start_t = t - 5;
+	}
+
+	Loudness = loudness + l;
+Count++;
+	While (time.front()< start_t) {
+		time.pop();
+Loudness = loudness  - loudness.front();;
+		loudness.pop();
+		count--;
+	}
+
+Return loudness/count;
+
+}
