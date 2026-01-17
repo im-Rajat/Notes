@@ -9,6 +9,7 @@
 - [Your page loads in 80 ms in india but 600 ms in australia. Same backend. Same code. What would you use to fix this?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/cdn-latency-explorer.html)
 - [How does BookMyShow make sure 2 people don't book the same seat at same time?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/bookmyshow-seat-booking.html)
     - [Also if both click at the exact same exact millisecond, who wins and get the seat?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/redis-race-condition.html)
+- [Explain how Netflix Hover work's](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/netflix-hover-explained.html)
 
 ## C/C++
 
