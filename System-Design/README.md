@@ -5,4 +5,4 @@
 
 ### References
 
-- System Design : https://www.youtube.com/playlist?list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX
+- [System Design Youtube Playlist](https://www.youtube.com/watch?v=xpDnVSmNFX0&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=1&ab_channel=GauravSen)
