@@ -56,22 +56,22 @@
 
 ## Topic wise Questiones based on Topics
 
-- Strings : https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
-- Dynamic Programming (DP) : https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions
-- Binary Search : https://leetcode.com/discuss/general-discussion/691825/Binary-Search-for-Beginners-Problems-or-Patterns-or-Sample-solutions
-- Greedy : https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions
-- Graph : https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions/
-- DP for Beginners [Problems | Patterns | Sample Solutions] : https://leetcode.com/discuss/general-discussion/662866/Dynamic-Programming-for-Practice-Problems-Patterns-and-Sample-Solutions
+- Strings : <https://leetcode.com/discuss/study-guide/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021>
+- Dynamic Programming (DP) : <https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions>
+- Binary Search : <https://leetcode.com/discuss/general-discussion/691825/Binary-Search-for-Beginners-Problems-or-Patterns-or-Sample-solutions>
+- Greedy : <https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions>
+- Graph : <https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions/>
+- DP for Beginners [Problems | Patterns | Sample Solutions] : <https://leetcode.com/discuss/general-discussion/662866/Dynamic-Programming-for-Practice-Problems-Patterns-and-Sample-Solutions>
 
 ## DSA/Coding :
 
-- Grind 75 Questions : https://www.techinterviewhandbook.org/grind75
-- Amazon Final Interview Questions : https://leetcode.com/discuss/interview-question/488887/Amazon-Final-Interview-Questions-or-SDE1
-- Blind 75, Grind 75, Grind 169, Neetcode 150 and SQL 45 : https://leetcode.com/discuss/general-discussion/3691891/Leetcode-Lists-for-Blind-75-Grind-75-Grind-169-Neetcode-150-and-SQL-45
-- Top 10 DS Interview Questions : https://www.crio.do/blog/data-structures-interview-questions/
-- DSA Beginner : https://github.com/SagarKumar04/December-2021-Beginner-DSA
-- A2Z DSA Sheet : https://github.com/ManishK4514/Strivers-A2Z-DSA-Sheet/tree/main
-- Low Level Design of Splitwise : https://leetcode.com/discuss/study-guide/2154270/low-level-design-of-splitwise
+- Grind 75 Questions : <https://www.techinterviewhandbook.org/grind75>
+- Amazon Final Interview Questions : <https://leetcode.com/discuss/interview-question/488887/Amazon-Final-Interview-Questions-or-SDE1>
+- Blind 75, Grind 75, Grind 169, Neetcode 150 and SQL 45 : <https://leetcode.com/discuss/general-discussion/3691891/Leetcode-Lists-for-Blind-75-Grind-75-Grind-169-Neetcode-150-and-SQL-45>
+- Top 10 DS Interview Questions : <https://www.crio.do/blog/data-structures-interview-questions/>
+- DSA Beginner : <https://github.com/SagarKumar04/December-2021-Beginner-DSA>
+- A2Z DSA Sheet : <https://github.com/ManishK4514/Strivers-A2Z-DSA-Sheet/tree/main>
+- Low Level Design of Splitwise : <https://leetcode.com/discuss/study-guide/2154270/low-level-design-of-splitwise>
 
 ## References
 
