@@ -247,6 +247,7 @@ for (int i = 0; i < 5; ++i) {
 
 ## Multidimensional Arrays
 
+{% raw %}
 ```c
 float x[3];
 float y;
