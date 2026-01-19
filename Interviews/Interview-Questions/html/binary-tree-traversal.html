@@ -1,0 +1,884 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function q(b){var c=0;return function(){return c<b.length?{done:!1,value:b[c++]}:{done:!0}}}function t(b){var c=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(c)return c.call(b);if(typeof b.length=="number")return{next:q(b)};throw Error(String(b)+" is not an iterable or ArrayLike");}var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,c,g){if(b==Array.prototype||b==Object.prototype)return b;b[c]=g.value;return b};
+function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var g=b[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var w=v(this);function x(b,c){if(c)a:{var g=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var l=b[h];if(!(l in g))break a;g=g[l]}b=b[b.length-1];h=g[b];c=c(h);c!=h&&c!=null&&u(g,b,{configurable:!0,writable:!0,value:c})}}
+function y(){this.j=!1;this.g=null;this.u=void 0;this.h=1;this.v=this.l=0;this.i=null}function z(b){if(b.j)throw new TypeError("Generator is already running");b.j=!0}y.prototype.o=function(b){this.u=b};function A(b,c){b.i={I:c,J:!0};b.h=b.l||b.v}y.prototype.return=function(b){this.i={return:b};this.h=this.v};function B(b){this.g=new y;this.h=b}function E(b,c){z(b.g);var g=b.g.g;if(g)return F(b,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,b.g.return);b.g.return(c);return G(b)}
+function F(b,c,g,h){try{var l=c.call(b.g.g,g);if(!(l instanceof Object))throw new TypeError("Iterator result "+l+" is not an object");if(!l.done)return b.g.j=!1,l;var m=l.value}catch(f){return b.g.g=null,A(b.g,f),G(b)}b.g.g=null;h.call(b.g,m);return G(b)}function G(b){for(;b.g.h;)try{var c=b.h(b.g);if(c)return b.g.j=!1,{value:c.value,done:!1}}catch(g){b.g.u=void 0,A(b.g,g)}b.g.j=!1;if(b.g.i){c=b.g.i;b.g.i=null;if(c.J)throw c.I;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function H(b){this.next=function(c){z(b.g);b.g.g?c=F(b,b.g.g.next,c,b.g.o):(b.g.o(c),c=G(b));return c};this.throw=function(c){z(b.g);b.g.g?c=F(b,b.g.g["throw"],c,b.g.o):(A(b.g,c),c=G(b));return c};this.return=function(c){return E(b,c)};this[Symbol.iterator]=function(){return this}}function I(b){function c(h){return b.next(h)}function g(h){return b.throw(h)}return new Promise(function(h,l){function m(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(m,l)}m(b.next())})}
+x("Symbol",function(b){function c(m){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(m||"")+"_"+l++,m)}function g(m,f){this.g=m;u(this,"description",{configurable:!0,writable:!0,value:f})}if(b)return b;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(b){if(b)return b;b=Symbol("Symbol.iterator");u(Array.prototype,b,{configurable:!0,writable:!0,value:function(){return J(q(this))}});return b});function J(b){b={next:b};b[Symbol.iterator]=function(){return this};return b}
+x("Promise",function(b){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var a=this.j();try{f(a.resolve,a.reject)}catch(d){a.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(a){a(f)})}if(b)return b;g.prototype.h=function(f){if(this.g==null){this.g=[];var a=this;this.i(function(){a.l()})}this.g.push(f)};var l=w.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var a=0;a<f.length;++a){var d=
+f[a];f[a]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(a,k))}}var a=this,d=!1;return{resolve:f(this.D),reject:f(this.l)}};c.prototype.D=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.G(f);else{a:switch(typeof f){case "object":var a=f!=null;break a;case "function":a=!0;break a;default:a=!1}a?this.C(f):this.o(f)}};
+c.prototype.C=function(f){var a=void 0;try{a=f.then}catch(d){this.l(d);return}typeof a=="function"?this.H(a,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,a){if(this.h!=0)throw Error("Cannot settle("+f+", "+a+"): Promise already settled in state"+this.h);this.h=f;this.i=a;this.h===2&&this.F();this.K()};c.prototype.F=function(){var f=this;l(function(){if(f.B()){var a=w.console;typeof a!=="undefined"&&a.error(f.i)}},1)};c.prototype.B=
+function(){if(this.u)return!1;var f=w.CustomEvent,a=w.Event,d=w.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof a==="function"?f=new a("unhandledrejection",{cancelable:!0}):(f=w.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.K=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)m.h(this.g[f]);this.g=null}};var m=new g;c.prototype.G=
+function(f){var a=this.j();f.A(a.resolve,a.reject)};c.prototype.H=function(f,a){var d=this.j();try{f.call(a,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,a){function d(n,r){return typeof n=="function"?function(C){try{e(n(C))}catch(D){k(D)}}:r}var e,k,p=new c(function(n,r){e=n;k=r});this.A(d(f,e),d(a,k));return p};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.A=function(f,a){function d(){switch(e.h){case 1:f(e.i);break;case 2:a(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?m.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(a,d){d(f)})};c.race=function(f){return new c(function(a,d){for(var e=t(f),k=e.next();!k.done;k=e.next())h(k.value).A(a,d)})};c.all=function(f){var a=t(f),d=a.next();return d.done?h([]):new c(function(e,k){function p(C){return function(D){n[C]=D;r--;r==0&&e(n)}}var n=[],r=0;do n.push(void 0),r++,h(d.value).A(p(n.length-1),k),d=a.next();while(!d.done)})};return c});
+function K(b,c){return Object.prototype.hasOwnProperty.call(b,c)}x("Object.is",function(b){return b?b:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(b){return b?b:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var m=h[g];if(m===c||Object.is(m,c))return!0}return!1}});
+x("String.prototype.includes",function(b){return b?b:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(b){function c(d){this.g=(a+=Math.random()+1).toString();if(d){d=t(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!K(d,f)){var e=new g;u(d,f,{value:e})}}function m(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!b||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new b([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(p){return!1}}())return b;var f="$jscomp_hidden_"+Math.random();m("freeze");m("preventExtensions");m("seal");var a=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!K(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&K(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&K(d,
+f)&&K(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&K(d,f)&&K(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(b){function c(){var a={};return a.m=a.next=a.head=a}function g(a,d){var e=a[1];return J(function(){if(e){for(;e.head!=a[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(a,d){var e=d&&typeof d;e=="object"||e=="function"?m.has(d)?e=m.get(d):(e=""+ ++f,m.set(d,e)):e="p_"+d;var k=a[0][e];if(k&&K(a[0],e))for(a=0;a<k.length;a++){var p=k[a];if(d!==d&&p.key!==p.key||d===p.key)return{id:e,list:k,index:a,entry:p}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(a){this[0]={};this[1]=c();this.size=0;if(a){a=t(a);for(var d;!(d=a.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var a=Object.seal({x:4}),d=new b(t([[a,"s"]]));if(d.get(a)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=a||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(p){return!1}}())return b;var m=new WeakMap;l.prototype.set=function(a,d){a=a===0?0:a;var e=h(this,a);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:a,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(a){a=h(this,a);return a.entry&&a.list?(a.list.splice(a.index,1),a.list.length||delete this[0][a.id],a.entry.m.next=a.entry.next,
+a.entry.next.m=a.entry.m,a.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(a){return!!h(this,a).entry};l.prototype.get=function(a){return(a=h(this,a).entry)&&a.value};l.prototype.entries=function(){return g(this,function(a){return[a.key,a.value]})};l.prototype.keys=function(){return g(this,function(a){return a.key})};l.prototype.values=function(){return g(this,function(a){return a.value})};l.prototype.forEach=
+function(a,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,a.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(b){function c(g){this.g=new Map;if(g){g=t(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new b(t([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),m=l.next();if(m.done||m.value[0]!=g||m.value[1]!=g)return!1;m=l.next();return m.done||m.value[0]==g||m.value[0].x!=4||
+m.value[1]!=m.value[0]?!1:l.next().done}catch(f){return!1}}())return b;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(m){return g.call(h,m,m,l)})};return c});(function(){function b(){return m?Promise.resolve(m):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(a){if(!a.ok)throw Error("HTTP error! status: "+a.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return a.json()}).then(function(a){if(!Array.isArray(a))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return m=a}).catch(function(a){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",a);f=null;throw a;})}function c(a){var d,e,k,p;return I(new H(new B(function(n){switch(n.h){case 1:d=(a.textContent||"").trim();if(!d||a.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return n.return();e=window.getComputedStyle(a);if(e.display==="none"||e.visibility==="hidden")return n.return();
+n.l=2;var r=b();n.h=4;return{value:r};case 4:k=n.u;n.h=3;n.l=0;break;case 2:return n.l=0,n.i=null,console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),n.return();case 3:(p=k.includes(d))?a.classList.contains("js-replaced-missing-icon")&&a.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&a.classList.contains("js-replaced-missing-icon")||(a.textContent="radio_button_unchecked",a.classList.add("js-replaced-missing-icon")),n.h=0}})))}
+function g(a){a=a===void 0?document.body:a;a.querySelectorAll(l).forEach(function(d){c(d)})}function h(){b().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(a){var d=new Set;a=t(a);for(var e=a.next();!e.done;e=a.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(p){p.nodeType===Node.ELEMENT_NODE&&(p.matches(l)&&d.add(p),p.querySelectorAll(l).forEach(function(n){d.add(n)}))});else if(e.type===
+"attributes"&&e.attributeName==="class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(p){c(p)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(a){console.error("IconChecker: Font loading error. Scanning icons anyway.",
+a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(a){return"."+a}).join(","),m=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Interactive Binary Tree Traversal</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet">
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        .node {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #c7c7c7; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+        
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        
+        .code-highlight-line {
+            background-color: rgba(59, 130, 246, 0.15);
+            border-left: 3px solid #2563eb;
+        }
+
+        .stack-item-enter {
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.left-0{left:0px}.right-0{right:0px}.top-4{top:1rem}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-2{margin-top:0.5rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:0.375rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-\[350px\]{height:350px}.h-\[650px\]{height:650px}.h-full{height:100%}.min-h-\[3rem\]{min-height:3rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-24{width:6rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.max-w-\[150px\]{max-width:150px}.max-w-\[200px\]{max-width:200px}.max-w-xl{max-width:36rem}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.whitespace-pre{white-space:pre}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-l-4{border-left-width:4px}.border-amber-600{--tw-border-opacity:1;border-color:rgb(217 119 6 / var(--tw-border-opacity, 1))}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216 / var(--tw-border-opacity, 1))}.border-green-700{--tw-border-opacity:1;border-color:rgb(21 128 61 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-400{--tw-border-opacity:1;border-color:rgb(148 163 184 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-blue-300{--tw-border-opacity:1;border-color:rgb(147 197 253 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-blue-900{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-950\/50{background-color:rgb(2 6 23 / 0.5)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.object-cover{object-fit:cover}.p-0{padding:0px}.p-0\.5{padding:0.125rem}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[16px\]{font-size:16px}.text-\[20px\]{font-size:20px}.text-\[24px\]{font-size:24px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.decoration-amber-500{-webkit-text-decoration-color:#f59e0b;text-decoration-color:#f59e0b}.decoration-blue-500{-webkit-text-decoration-color:#3b82f6;text-decoration-color:#3b82f6}.accent-blue-600{accent-color:#2563eb}.opacity-0{opacity:0}.opacity-40{opacity:0.4}.opacity-50{opacity:0.5}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-300:hover{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:text-blue-800:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-red-500:hover{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.hover\:text-slate-700:hover{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:mb-0{margin-bottom:0px}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col relative">
+<!-- Hero Section -->
+<header class="relative bg-slate-900 text-white overflow-hidden shrink-0">
+<div class="absolute inset-0 opacity-40">
+<img alt="Abstract Network Background" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&amp;w=2070&amp;auto=format&amp;fit=crop">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+<div class="mb-4 md:mb-0">
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Binary Tree Traversal</h1>
+<p class="mt-2 text-slate-300 max-w-xl">
+                Master <span class="text-blue-400 font-bold">Inorder</span>, <span class="text-purple-400 font-bold">Preorder</span>, and <span class="text-emerald-400 font-bold">Postorder</span> traversals using both <span class="text-white underline decoration-blue-500">Recursive</span> and <span class="text-white underline decoration-amber-500">Iterative</span> approaches.
+            </p>
+</div>
+<div class="flex space-x-4">
+<button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition shadow-lg flex items-center gap-2" onclick="scrollToDemo()">
+<span class="material-symbols-outlined">play_circle</span> Start Visualizer
+            </button>
+</div>
+</div>
+</header>
+<!-- Main Interactive Area -->
+<main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8" id="demo-area">
+<!-- Left Column: Visualization & Controls -->
+<div class="lg:col-span-7 flex flex-col space-y-4">
+<!-- Main Visualizer Card -->
+<div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden flex flex-col h-[650px] relative">
+<!-- Top Toolbar -->
+<div class="bg-slate-100 border-b border-slate-200 px-4 py-3 flex flex-wrap items-center justify-between gap-3 shrink-0 z-10">
+<!-- Method Toggle (Recursive vs Iterative) -->
+<div class="flex items-center bg-white rounded-lg p-1 border border-slate-300 shadow-sm">
+<button class="px-3 py-1.5 rounded text-xs font-bold transition flex items-center gap-1 bg-blue-100 text-blue-700 border-blue-300 shadow-inner" id="btn-method-recursive" onclick="setMethod('recursive')">
+<span class="material-symbols-outlined text-[16px]">function</span> Recursive
+                    </button>
+<button class="px-3 py-1.5 rounded text-xs font-bold transition flex items-center gap-1 text-slate-600 hover:bg-slate-50" id="btn-method-iterative" onclick="setMethod('iterative')">
+<span class="material-symbols-outlined text-[16px]">repeat</span> Iterative
+                    </button>
+</div>
+<!-- Traversal Selector -->
+<div class="flex items-center space-x-1 bg-white rounded-lg p-1 border border-slate-300 shadow-sm">
+<button class="px-3 py-1.5 rounded text-sm font-semibold transition bg-blue-600 text-white shadow-md" id="btn-pre" onclick="setTraversalMode('pre')">Pre</button>
+<button class="px-3 py-1.5 rounded text-sm font-semibold transition text-slate-700 hover:bg-slate-100" id="btn-in" onclick="setTraversalMode('in')">In</button>
+<button class="px-3 py-1.5 rounded text-sm font-semibold transition text-slate-700 hover:bg-slate-100" id="btn-post" onclick="setTraversalMode('post')">Post</button>
+</div>
+<!-- Mode Selector -->
+<div class="flex items-center gap-2">
+<div class="flex bg-slate-200 rounded p-0.5">
+<button class="px-3 py-1 rounded text-xs font-bold bg-white shadow text-blue-600 transition" id="mode-watch" onclick="setInteractionMode('watch')">Watch</button>
+<button class="px-3 py-1 rounded text-xs font-bold text-slate-500 hover:text-slate-700 transition" id="mode-practice" onclick="setInteractionMode('practice')">Practice</button>
+</div>
+</div>
+</div>
+<!-- Playback Controls -->
+<div class="bg-white border-b border-slate-100 px-4 py-2 flex items-center justify-between gap-4 transition-all duration-300" id="playback-controls">
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center shadow transition-all active:scale-95" id="btn-play-pause" onclick="togglePlay()" title="Play/Pause"><span class="material-symbols-outlined text-[24px]">play_arrow</span></button>
+<button class="w-10 h-10 rounded-full bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 flex items-center justify-center shadow-sm transition-all active:scale-95" id="btn-step" onclick="stepForward()" title="Step Forward">
+<span class="material-symbols-outlined text-[24px]">skip_next</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white border border-slate-300 text-slate-500 hover:text-red-500 hover:bg-red-50 flex items-center justify-center shadow-sm transition-all ml-2" onclick="resetVisualizer()" title="Reset">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</button>
+</div>
+<!-- Speed Slider -->
+<div class="flex items-center gap-2 flex-grow max-w-[150px]">
+<span class="material-symbols-outlined text-slate-400 text-sm">speed</span>
+<input class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600" id="speed-slider" max="1500" min="100" type="range" value="800">
+</div>
+</div>
+<!-- Canvas Container -->
+<div class="relative w-full flex-grow bg-slate-50 overflow-hidden select-none flex" id="canvas-wrapper">
+<!-- Tree Visualization (Left Side of Canvas) -->
+<div class="relative flex-grow h-full" id="tree-container">
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="connections"><line x1="50%" y1="15%" x2="25%" y2="45%" stroke="#cbd5e1" stroke-width="3"></line><line x1="50%" y1="15%" x2="75%" y2="45%" stroke="#cbd5e1" stroke-width="3"></line><line x1="25%" y1="45%" x2="12.5%" y2="75%" stroke="#cbd5e1" stroke-width="3"></line><line x1="25%" y1="45%" x2="37.5%" y2="75%" stroke="#cbd5e1" stroke-width="3"></line><line x1="75%" y1="45%" x2="62.5%" y2="75%" stroke="#cbd5e1" stroke-width="3"></line><line x1="75%" y1="45%" x2="87.5%" y2="75%" stroke="#cbd5e1" stroke-width="3"></line></svg>
+<!-- Nodes injected here -->
+<div class="absolute top-4 left-0 right-0 text-center pointer-events-none opacity-0 transition-opacity duration-500 z-20" id="practice-feedback"></div>
+<div class="node-wrapper absolute flex items-center justify-center" style="left: 50%; top: 15%; width: 4rem; height: 4rem; transform: translate(-50%, -50%);">
+                <div id="node-4" class="node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110" onclick="handleNodeClick(4)">
+                    4
+                </div>
+            </div><div class="node-wrapper absolute flex items-center justify-center" style="left: 25%; top: 45%; width: 4rem; height: 4rem; transform: translate(-50%, -50%);">
+                <div id="node-2" class="node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110" onclick="handleNodeClick(2)">
+                    2
+                </div>
+            </div><div class="node-wrapper absolute flex items-center justify-center" style="left: 75%; top: 45%; width: 4rem; height: 4rem; transform: translate(-50%, -50%);">
+                <div id="node-6" class="node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110" onclick="handleNodeClick(6)">
+                    6
+                </div>
+            </div><div class="node-wrapper absolute flex items-center justify-center" style="left: 12.5%; top: 75%; width: 4rem; height: 4rem; transform: translate(-50%, -50%);">
+                <div id="node-1" class="node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110" onclick="handleNodeClick(1)">
+                    1
+                </div>
+            </div><div class="node-wrapper absolute flex items-center justify-center" style="left: 37.5%; top: 75%; width: 4rem; height: 4rem; transform: translate(-50%, -50%);">
+                <div id="node-3" class="node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110" onclick="handleNodeClick(3)">
+                    3
+                </div>
+            </div><div class="node-wrapper absolute flex items-center justify-center" style="left: 62.5%; top: 75%; width: 4rem; height: 4rem; transform: translate(-50%, -50%);">
+                <div id="node-5" class="node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110" onclick="handleNodeClick(5)">
+                    5
+                </div>
+            </div><div class="node-wrapper absolute flex items-center justify-center" style="left: 87.5%; top: 75%; width: 4rem; height: 4rem; transform: translate(-50%, -50%);">
+                <div id="node-7" class="node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110" onclick="handleNodeClick(7)">
+                    7
+                </div>
+            </div></div>
+<!-- Stack Visualization (Right Side of Canvas - Visible only for Iterative) -->
+<div class="w-24 bg-slate-100 border-l border-slate-200 h-full flex flex-col hidden transition-all duration-300" id="stack-panel">
+<div class="bg-slate-200 p-2 text-[10px] font-bold text-slate-500 uppercase text-center border-b border-slate-300">Stack</div>
+<div class="flex-grow p-2 flex flex-col-reverse gap-2 overflow-y-auto" id="stack-container"></div>
+</div>
+</div>
+<!-- Status Bar -->
+<div class="bg-white border-t border-slate-200 px-4 py-2 flex items-center justify-between text-xs text-slate-500 shrink-0 z-10">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-slate-200 border border-slate-400"></div> <span class="hidden sm:inline">Unvisited</span></div>
+<div class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-amber-400 border border-amber-600"></div> <span class="hidden sm:inline">Processing</span></div>
+<div class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-green-500 border border-green-700"></div> <span class="hidden sm:inline">Visited</span></div>
+</div>
+<div class="font-mono font-bold text-slate-700 truncate max-w-[200px]" id="status-text">Ready</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Info & Code -->
+<div class="lg:col-span-5 flex flex-col space-y-4">
+<!-- Output Log -->
+<div class="bg-slate-900 rounded-xl shadow-lg border border-slate-700 p-4 relative overflow-hidden">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-slate-200 text-sm font-bold uppercase tracking-wider">Traversal Output</h3>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-900 text-blue-200 border border-blue-700" id="output-badge">PRE</span>
+</div>
+<div class="font-mono text-lg text-emerald-400 min-h-[3rem] bg-slate-950/50 rounded p-2 overflow-x-auto whitespace-nowrap" id="output-log">[ ]</div>
+<div class="mt-2 text-xs text-slate-500 flex justify-between">
+<span>Sequence of visited nodes</span>
+<span id="progress-indicator">0/7</span>
+</div>
+</div>
+<!-- Algorithm Code View -->
+<div class="bg-white rounded-xl shadow-lg border border-slate-200 flex-grow flex flex-col overflow-hidden h-[350px]">
+<div class="bg-slate-50 border-b border-slate-200 px-4 py-2 flex items-center justify-between">
+<h3 class="font-bold text-slate-700 flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600">code</span>
+<span id="code-title">Recursive Logic</span>
+</h3>
+</div>
+<div class="p-0 overflow-y-auto flex-grow bg-slate-50 relative" id="code-container"><div id="code-line-0" class="px-4 py-1 font-mono text-sm text-slate-700 hover:bg-slate-100 transition-colors whitespace-pre border-l-4 border-transparent">function preorder(node) {</div><div id="code-line-1" class="px-4 py-1 font-mono text-sm text-slate-700 hover:bg-slate-100 transition-colors whitespace-pre border-l-4 border-transparent">  if (!node) return;</div><div id="code-line-2" class="px-4 py-1 font-mono text-sm text-slate-700 hover:bg-slate-100 transition-colors whitespace-pre border-l-4 border-transparent">  visit(node);          // 1. Root</div><div id="code-line-3" class="px-4 py-1 font-mono text-sm text-slate-700 hover:bg-slate-100 transition-colors whitespace-pre border-l-4 border-transparent">  preorder(node.left);  // 2. Left</div><div id="code-line-4" class="px-4 py-1 font-mono text-sm text-slate-700 hover:bg-slate-100 transition-colors whitespace-pre border-l-4 border-transparent">  preorder(node.right); // 3. Right</div><div id="code-line-5" class="px-4 py-1 font-mono text-sm text-slate-700 hover:bg-slate-100 transition-colors whitespace-pre border-l-4 border-transparent">}</div></div>
+</div>
+<!-- Explanation Card -->
+<div class="bg-blue-50 rounded-xl border border-blue-100 p-5">
+<h3 class="text-blue-900 font-bold mb-2 flex items-center gap-2" id="info-title"><span class="material-symbols-outlined">info</span> About Preorder</h3>
+<p class="text-blue-800 text-sm leading-relaxed mb-3" id="info-desc">Root → Left → Right</p>
+</div>
+</div>
+</main>
+<!-- Educational Content Section -->
+<section class="bg-white border-t border-slate-200 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Comparison &amp; Real-World Applications</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Preorder Card -->
+<div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+<div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-4">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Preorder (Root First)</h3>
+<div class="text-sm font-mono text-purple-600 bg-purple-50 inline-block px-2 py-1 rounded mb-4">Root → Left → Right</div>
+<p class="text-slate-600 text-sm mb-4">
+                We visit the node <em>before</em> we explore its children. It's like exploring a maze by always marking where you are before moving forward.
+            </p>
+<div class="border-t border-slate-200 pt-4">
+<h4 class="text-xs font-bold text-slate-400 uppercase mb-2">Real World Uses</h4>
+<ul class="text-sm text-slate-700 space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm mt-0.5">check_circle</span>
+<span><strong>Copying a Tree:</strong> Since you get the parent before children, you can create nodes in the correct order to clone structures.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Inorder Card -->
+<div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+<div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+<span class="material-symbols-outlined">sort</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Inorder (Root Middle)</h3>
+<div class="text-sm font-mono text-blue-600 bg-blue-50 inline-block px-2 py-1 rounded mb-4">Left → Root → Right</div>
+<p class="text-slate-600 text-sm mb-4">
+                We visit the node <em>between</em> the left and right children. This essentially flattens the tree from left to right.
+            </p>
+<div class="border-t border-slate-200 pt-4">
+<h4 class="text-xs font-bold text-slate-400 uppercase mb-2">Real World Uses</h4>
+<ul class="text-sm text-slate-700 space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm mt-0.5">check_circle</span>
+<span><strong>Sorting:</strong> On a Binary Search Tree (BST), Inorder traversal retrieves values in perfectly sorted ascending order.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Postorder Card -->
+<div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+<div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-4">
+<span class="material-symbols-outlined">delete_forever</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Postorder (Root Last)</h3>
+<div class="text-sm font-mono text-emerald-600 bg-emerald-50 inline-block px-2 py-1 rounded mb-4">Left → Right → Root</div>
+<p class="text-slate-600 text-sm mb-4">
+                We visit the node <em>after</em> exploring all its children. This is a "bottom-up" approach.
+            </p>
+<div class="border-t border-slate-200 pt-4">
+<h4 class="text-xs font-bold text-slate-400 uppercase mb-2">Real World Uses</h4>
+<ul class="text-sm text-slate-700 space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm mt-0.5">check_circle</span>
+<span><strong>Deleting a Tree:</strong> You must delete children before you delete the parent to avoid memory leaks.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-100 border-t border-slate-200 py-6">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 text-sm text-slate-600">
+<span>Created by <strong>Rajat Kumar</strong></span>
+<span class="text-slate-300">|</span>
+<a class="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition" href="https://www.linkedin.com/in/imRajat/" target="_blank">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                LinkedIn Profile
+            </a>
+</div>
+<button class="group flex items-center gap-2 px-3 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded text-xs font-semibold transition" onclick="downloadHTML()">
+<span class="material-symbols-outlined text-[16px]">download</span>
+            Download .html
+        </button>
+</div>
+</footer>
+<!-- Logic -->
+<script>
+    // --- Tree Data ---
+    const treeData = [
+        { id: 4, val: 4, x: 50, y: 15, left: 2, right: 6 },
+        { id: 2, val: 2, x: 25, y: 45, left: 1, right: 3 },
+        { id: 6, val: 6, x: 75, y: 45, left: 5, right: 7 },
+        { id: 1, val: 1, x: 12.5, y: 75, left: null, right: null },
+        { id: 3, val: 3, x: 37.5, y: 75, left: null, right: null },
+        { id: 5, val: 5, x: 62.5, y: 75, left: null, right: null },
+        { id: 7, val: 7, x: 87.5, y: 75, left: null, right: null }
+    ];
+
+    // --- State ---
+    const state = {
+        traversalType: 'pre', // 'pre', 'in', 'post'
+        method: 'recursive',  // 'recursive', 'iterative'
+        mode: 'watch',        // 'watch', 'practice'
+        
+        steps: [],
+        currentStepIndex: 0,
+        isPlaying: false,
+        playInterval: null,
+        speed: 800,
+        
+        visitedNodes: [],
+        practiceIndex: 0,
+        practiceCorrectSequence: [],
+        currentStack: [] // For visual updates
+    };
+
+    // --- DOM Refs ---
+    const els = {
+        container: document.getElementById('tree-container'),
+        svg: document.getElementById('connections'),
+        codeContainer: document.getElementById('code-container'),
+        outputLog: document.getElementById('output-log'),
+        outputBadge: document.getElementById('output-badge'),
+        progressIndicator: document.getElementById('progress-indicator'),
+        statusText: document.getElementById('status-text'),
+        practiceFeedback: document.getElementById('practice-feedback'),
+        playbackControls: document.getElementById('playback-controls'),
+        btnPlayPause: document.getElementById('btn-play-pause'),
+        stackPanel: document.getElementById('stack-panel'),
+        stackContainer: document.getElementById('stack-container')
+    };
+
+    // --- Algorithm Definitions ---
+    const algorithms = {
+        pre: {
+            title: "Preorder",
+            desc: "Root → Left → Right",
+            recursive: {
+                lines: [
+                    "function preorder(node) {",
+                    "  if (!node) return;",
+                    "  visit(node);          // 1. Root",
+                    "  preorder(node.left);  // 2. Left",
+                    "  preorder(node.right); // 3. Right",
+                    "}"
+                ],
+                generate: (rootId) => {
+                    const steps = [];
+                    function traverse(id) {
+                        if (!id) return;
+                        steps.push({ type: 'visit', id, line: 2, desc: `Visit ${val(id)}` });
+                        steps.push({ type: 'traverse', id, desc: `Go Left from ${val(id)}`, line: 3 });
+                        if(getNode(id).left) traverse(getNode(id).left);
+                        steps.push({ type: 'traverse', id, desc: `Go Right from ${val(id)}`, line: 4 });
+                        if(getNode(id).right) traverse(getNode(id).right);
+                    }
+                    traverse(rootId);
+                    steps.push({ type: 'finish', desc: "Done", line: 5 });
+                    return steps;
+                }
+            },
+            iterative: {
+                lines: [
+                    "function preorderIterative(root) {",
+                    "  const stack = [root];",
+                    "  while (stack.length > 0) {",
+                    "    const node = stack.pop();",
+                    "    visit(node);",
+                    "    if (node.right) stack.push(node.right);",
+                    "    if (node.left) stack.push(node.left);",
+                    "  }",
+                    "}"
+                ],
+                generate: (rootId) => {
+                    const steps = [];
+                    const stack = [rootId];
+                    steps.push({ type: 'stack', stack: [...stack], line: 1, desc: `Init Stack with Root ${val(rootId)}` });
+                    
+                    while (stack.length > 0) {
+                        steps.push({ type: 'check', line: 2, desc: "Stack not empty" });
+                        const id = stack.pop();
+                        steps.push({ type: 'stack', stack: [...stack], line: 3, desc: `Pop ${val(id)}` });
+                        
+                        steps.push({ type: 'visit', id, line: 4, desc: `Visit ${val(id)}` });
+                        
+                        const node = getNode(id);
+                        if (node.right) {
+                            stack.push(node.right);
+                            steps.push({ type: 'stack', stack: [...stack], line: 5, desc: `Push Right Child ${val(node.right)}` });
+                        }
+                        if (node.left) {
+                            stack.push(node.left);
+                            steps.push({ type: 'stack', stack: [...stack], line: 6, desc: `Push Left Child ${val(node.left)}` });
+                        }
+                    }
+                    steps.push({ type: 'finish', desc: "Stack empty, Done", line: 7 });
+                    return steps;
+                }
+            }
+        },
+        in: {
+            title: "Inorder",
+            desc: "Left → Root → Right",
+            recursive: {
+                lines: [
+                    "function inorder(node) {",
+                    "  if (!node) return;",
+                    "  inorder(node.left);   // 1. Left",
+                    "  visit(node);          // 2. Root",
+                    "  inorder(node.right);  // 3. Right",
+                    "}"
+                ],
+                generate: (rootId) => {
+                    const steps = [];
+                    function traverse(id) {
+                        if (!id) return;
+                        steps.push({ type: 'traverse', id, desc: `Go Left from ${val(id)}`, line: 2 });
+                        if(getNode(id).left) traverse(getNode(id).left);
+                        steps.push({ type: 'visit', id, line: 3, desc: `Visit ${val(id)}` });
+                        steps.push({ type: 'traverse', id, desc: `Go Right from ${val(id)}`, line: 4 });
+                        if(getNode(id).right) traverse(getNode(id).right);
+                    }
+                    traverse(rootId);
+                    steps.push({ type: 'finish', desc: "Done", line: 5 });
+                    return steps;
+                }
+            },
+            iterative: {
+                lines: [
+                    "function inorderIterative(root) {",
+                    "  const stack = [];",
+                    "  let curr = root;",
+                    "  while (curr || stack.length > 0) {",
+                    "    while (curr) {",
+                    "      stack.push(curr);",
+                    "      curr = curr.left;",
+                    "    }",
+                    "    curr = stack.pop();",
+                    "    visit(curr);",
+                    "    curr = curr.right;",
+                    "  }",
+                    "}"
+                ],
+                generate: (rootId) => {
+                    const steps = [];
+                    const stack = [];
+                    let curr = rootId;
+                    steps.push({ type: 'stack', stack: [], line: 1, desc: "Init Empty Stack" });
+                    
+                    while (curr || stack.length > 0) {
+                        steps.push({ type: 'check', line: 3, desc: "Check Loop" });
+                        while (curr) {
+                            stack.push(curr);
+                            steps.push({ type: 'stack', stack: [...stack], line: 5, desc: `Push ${val(curr)}` });
+                            const node = getNode(curr);
+                            curr = node.left;
+                            if (curr) steps.push({ type: 'traverse', id: curr, line: 6, desc: `Move to Left ${val(curr)}` });
+                            else steps.push({ type: 'traverse', id: node.id, line: 6, desc: "Left is null" });
+                        }
+                        
+                        curr = stack.pop();
+                        steps.push({ type: 'stack', stack: [...stack], line: 8, desc: `Pop ${val(curr)}` });
+                        
+                        steps.push({ type: 'visit', id: curr, line: 9, desc: `Visit ${val(curr)}` });
+                        
+                        const node = getNode(curr);
+                        curr = node.right;
+                        if (curr) steps.push({ type: 'traverse', id: curr, line: 10, desc: `Move to Right ${val(curr)}` });
+                        else steps.push({ type: 'check', line: 10, desc: "Right is null" });
+                    }
+                    steps.push({ type: 'finish', desc: "Done", line: 12 });
+                    return steps;
+                }
+            }
+        },
+        post: {
+            title: "Postorder",
+            desc: "Left → Right → Root",
+            recursive: {
+                lines: [
+                    "function postorder(node) {",
+                    "  if (!node) return;",
+                    "  postorder(node.left); // 1. Left",
+                    "  postorder(node.right);// 2. Right",
+                    "  visit(node);          // 3. Root",
+                    "}"
+                ],
+                generate: (rootId) => {
+                    const steps = [];
+                    function traverse(id) {
+                        if (!id) return;
+                        steps.push({ type: 'traverse', id, desc: `Go Left from ${val(id)}`, line: 2 });
+                        if(getNode(id).left) traverse(getNode(id).left);
+                        steps.push({ type: 'traverse', id, desc: `Go Right from ${val(id)}`, line: 3 });
+                        if(getNode(id).right) traverse(getNode(id).right);
+                        steps.push({ type: 'visit', id, line: 4, desc: `Visit ${val(id)}` });
+                    }
+                    traverse(rootId);
+                    steps.push({ type: 'finish', desc: "Done", line: 5 });
+                    return steps;
+                }
+            },
+            iterative: {
+                lines: [
+                    "function postorderIterative(root) {",
+                    "  const stack = [];",
+                    "  let curr = root, lastVisited = null;",
+                    "  while (curr || stack.length > 0) {",
+                    "    if (curr) {",
+                    "      stack.push(curr);",
+                    "      curr = curr.left;",
+                    "    } else {",
+                    "      let peek = stack[stack.length - 1];",
+                    "      if (peek.right && lastVisited !== peek.right) {",
+                    "        curr = peek.right;",
+                    "      } else {",
+                    "        visit(peek);",
+                    "        lastVisited = stack.pop();",
+                    "      }",
+                    "    }",
+                    "  }",
+                    "}"
+                ],
+                generate: (rootId) => {
+                    const steps = [];
+                    const stack = [];
+                    let curr = rootId;
+                    let lastVisited = null;
+                    
+                    while (curr || stack.length > 0) {
+                        steps.push({ type: 'check', line: 3, desc: "Loop Start" });
+                        if (curr) {
+                            stack.push(curr);
+                            steps.push({ type: 'stack', stack: [...stack], line: 5, desc: `Push ${val(curr)}` });
+                            curr = getNode(curr).left;
+                            steps.push({ type: 'traverse', id: curr || stack[stack.length-1], line: 6, desc: curr ? `Move Left to ${val(curr)}` : "Hit Leaf" });
+                        } else {
+                            let peekId = stack[stack.length - 1];
+                            let peekNode = getNode(peekId);
+                            steps.push({ type: 'check', line: 8, desc: `Check ${val(peekId)}` });
+                            
+                            if (peekNode.right && lastVisited !== peekNode.right) {
+                                curr = peekNode.right;
+                                steps.push({ type: 'traverse', id: curr, line: 10, desc: `Move Right to ${val(curr)}` });
+                            } else {
+                                steps.push({ type: 'visit', id: peekId, line: 12, desc: `Visit ${val(peekId)}` });
+                                lastVisited = stack.pop();
+                                steps.push({ type: 'stack', stack: [...stack], line: 13, desc: `Pop ${val(lastVisited)}` });
+                            }
+                        }
+                    }
+                    steps.push({ type: 'finish', desc: "Done", line: 16 });
+                    return steps;
+                }
+            }
+        }
+    };
+
+    // --- Helpers ---
+    function getNode(id) { return treeData.find(n => n.id === id); }
+    function val(id) { return getNode(id).val; }
+
+    // --- Renderers ---
+    function initTree() {
+        document.querySelectorAll('.node-wrapper').forEach(el => el.remove());
+        let svgContent = '';
+        treeData.forEach(node => {
+            if (node.left) {
+                const child = getNode(node.left);
+                svgContent += `<line x1="${node.x}%" y1="${node.y}%" x2="${child.x}%" y2="${child.y}%" stroke="#cbd5e1" stroke-width="3" />`;
+            }
+            if (node.right) {
+                const child = getNode(node.right);
+                svgContent += `<line x1="${node.x}%" y1="${node.y}%" x2="${child.x}%" y2="${child.y}%" stroke="#cbd5e1" stroke-width="3" />`;
+            }
+        });
+        els.svg.innerHTML = svgContent;
+        treeData.forEach(node => {
+            const el = document.createElement('div');
+            el.className = 'node-wrapper absolute flex items-center justify-center';
+            el.style.left = `${node.x}%`;
+            el.style.top = `${node.y}%`;
+            el.style.width = '4rem'; el.style.height = '4rem';
+            el.style.transform = 'translate(-50%, -50%)';
+            el.innerHTML = `
+                <div id="node-${node.id}" class="node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110" onclick="handleNodeClick(${node.id})">
+                    ${node.val}
+                </div>
+            `;
+            els.container.appendChild(el);
+        });
+    }
+
+    function renderCode() {
+        const algo = algorithms[state.traversalType][state.method];
+        const lines = algo.lines;
+        document.getElementById('code-title').innerText = `${state.method === 'recursive' ? 'Recursive' : 'Iterative'} Logic`;
+        els.codeContainer.innerHTML = lines.map((line, idx) => 
+            `<div id="code-line-${idx}" class="px-4 py-1 font-mono text-sm text-slate-700 hover:bg-slate-100 transition-colors whitespace-pre border-l-4 border-transparent">${line}</div>`
+        ).join('');
+    }
+
+    function updateStackUI(stack) {
+        els.stackContainer.innerHTML = '';
+        stack.forEach(id => {
+            const el = document.createElement('div');
+            el.className = 'w-full py-2 bg-indigo-100 text-indigo-700 font-bold border border-indigo-200 rounded text-center shadow-sm stack-item-enter';
+            el.innerText = val(id);
+            els.stackContainer.appendChild(el);
+        });
+    }
+
+    // --- Actions ---
+    function setMethod(method) {
+        state.method = method;
+        
+        // Toggle Method Buttons
+        const activeClass = "bg-blue-100 text-blue-700 border-blue-300 shadow-inner";
+        const inactiveClass = "text-slate-600 hover:bg-slate-50";
+        
+        document.getElementById('btn-method-recursive').className = `px-3 py-1.5 rounded text-xs font-bold transition flex items-center gap-1 ${method === 'recursive' ? activeClass : inactiveClass}`;
+        document.getElementById('btn-method-iterative').className = `px-3 py-1.5 rounded text-xs font-bold transition flex items-center gap-1 ${method === 'iterative' ? activeClass : inactiveClass}`;
+
+        // Toggle Stack Panel Visibility
+        if (method === 'iterative') {
+            els.stackPanel.classList.remove('hidden');
+        } else {
+            els.stackPanel.classList.add('hidden');
+        }
+
+        resetVisualizer();
+        renderCode();
+    }
+
+    function setTraversalMode(type) {
+        state.traversalType = type;
+        
+        ['pre', 'in', 'post'].forEach(m => {
+            const btn = document.getElementById(`btn-${m}`);
+            if (m === type) {
+                btn.className = "px-3 py-1.5 rounded text-sm font-semibold transition bg-blue-600 text-white shadow-md";
+            } else {
+                btn.className = "px-3 py-1.5 rounded text-sm font-semibold transition text-slate-700 hover:bg-slate-100";
+            }
+        });
+
+        const info = algorithms[type];
+        document.getElementById('info-title').innerHTML = `<span class="material-symbols-outlined">info</span> About ${info.title}`;
+        document.getElementById('info-desc').innerHTML = info.desc;
+        els.outputBadge.innerText = type.toUpperCase();
+        
+        resetVisualizer();
+        renderCode();
+    }
+
+    function setInteractionMode(mode) {
+        state.mode = mode;
+        const btnWatch = document.getElementById('mode-watch');
+        const btnPractice = document.getElementById('mode-practice');
+
+        if (mode === 'watch') {
+            btnWatch.className = "px-3 py-1 rounded text-xs font-bold bg-white shadow text-blue-600 transition";
+            btnPractice.className = "px-3 py-1 rounded text-xs font-bold text-slate-500 hover:text-slate-700 transition";
+            els.playbackControls.classList.remove('opacity-50', 'pointer-events-none');
+            els.statusText.innerText = "Ready to play";
+        } else {
+            btnPractice.className = "px-3 py-1 rounded text-xs font-bold bg-white shadow text-blue-600 transition";
+            btnWatch.className = "px-3 py-1 rounded text-xs font-bold text-slate-500 hover:text-slate-700 transition";
+            els.playbackControls.classList.add('opacity-50', 'pointer-events-none');
+            els.statusText.innerText = "Click nodes in correct order!";
+            pause(); 
+        }
+        resetVisualizer();
+    }
+
+    // --- Playback ---
+    function resetVisualizer() {
+        pause();
+        state.currentStepIndex = 0;
+        state.visitedNodes = [];
+        state.practiceIndex = 0;
+        state.currentStack = [];
+        updateStackUI([]);
+
+        // Generate steps
+        const algo = algorithms[state.traversalType][state.method];
+        state.steps = algo.generate(4); // Root 4
+        state.practiceCorrectSequence = state.steps.filter(s => s.type === 'visit').map(s => s.id);
+
+        els.outputLog.innerHTML = '[ ]';
+        els.progressIndicator.innerText = '0/7';
+        els.statusText.innerText = state.mode === 'watch' ? "Ready" : "Click the nodes!";
+        
+        document.querySelectorAll('.node').forEach(n => {
+            n.className = 'node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110';
+        });
+
+        document.querySelectorAll('[id^="code-line-"]').forEach(el => el.classList.remove('code-highlight-line'));
+        updatePlayButtonIcon();
+    }
+
+    function togglePlay() {
+        state.isPlaying ? pause() : play();
+    }
+
+    function play() {
+        if (state.currentStepIndex >= state.steps.length) resetVisualizer();
+        state.isPlaying = true;
+        updatePlayButtonIcon();
+        if (state.currentStepIndex === 0) stepForward();
+        state.playInterval = setInterval(() => {
+            if (state.currentStepIndex < state.steps.length) stepForward();
+            else pause();
+        }, state.speed);
+    }
+
+    function pause() {
+        state.isPlaying = false;
+        clearInterval(state.playInterval);
+        updatePlayButtonIcon();
+    }
+
+    function updatePlayButtonIcon() {
+        if (state.isPlaying) {
+            els.btnPlayPause.innerHTML = '<span class="material-symbols-outlined text-[24px]">pause</span>';
+            els.btnPlayPause.classList.add('bg-amber-500', 'hover:bg-amber-600');
+            els.btnPlayPause.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+        } else {
+            els.btnPlayPause.innerHTML = '<span class="material-symbols-outlined text-[24px]">play_arrow</span>';
+            els.btnPlayPause.classList.remove('bg-amber-500', 'hover:bg-amber-600');
+            els.btnPlayPause.classList.add('bg-blue-600', 'hover:bg-blue-700');
+        }
+    }
+
+    function stepForward() {
+        if (state.currentStepIndex >= state.steps.length) {
+            pause();
+            return;
+        }
+
+        const step = state.steps[state.currentStepIndex];
+
+        // 1. Reset transient styles
+        document.querySelectorAll('.node').forEach(n => {
+            if (!n.classList.contains('bg-green-500')) {
+                n.className = 'node w-12 h-12 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center text-lg font-bold shadow-md cursor-pointer z-10 hover:scale-110';
+            }
+        });
+        document.querySelectorAll('[id^="code-line-"]').forEach(el => el.classList.remove('code-highlight-line'));
+
+        // 2. Logic
+        if (step.line !== undefined) {
+            const lineEl = document.getElementById(`code-line-${step.line}`);
+            if (lineEl) {
+                lineEl.classList.add('code-highlight-line');
+                lineEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+        if (step.desc) els.statusText.innerText = step.desc;
+
+        if (step.type === 'stack' && step.stack) {
+            updateStackUI(step.stack);
+        }
+
+        if (step.id) {
+            const nodeEl = document.getElementById(`node-${step.id}`);
+            if (step.type === 'visit') {
+                nodeEl.className = 'node w-12 h-12 rounded-full bg-green-500 border-2 border-green-600 text-white flex items-center justify-center text-lg font-bold shadow-lg z-20 scale-110 transition-all glow-effect';
+                const currentText = els.outputLog.innerText === '[ ]' ? '' : els.outputLog.innerText.replace('[', '').replace(']', '');
+                const newSeq = currentText ? `${currentText}, ${val(step.id)}` : `${val(step.id)}`;
+                els.outputLog.innerHTML = `[ <span class="text-white font-bold">${newSeq}</span> ]`;
+                els.outputLog.scrollLeft = els.outputLog.scrollWidth;
+                state.visitedNodes.push(step.id);
+                els.progressIndicator.innerText = `${state.visitedNodes.length}/7`;
+            } else if (step.type === 'traverse' && !nodeEl.classList.contains('bg-green-500')) {
+                nodeEl.className = 'node w-12 h-12 rounded-full bg-amber-100 border-2 border-amber-500 text-amber-700 flex items-center justify-center text-lg font-bold shadow-lg z-20 scale-105 transition-all';
+            }
+        }
+
+        state.currentStepIndex++;
+    }
+
+    // --- Practice Mode ---
+    function handleNodeClick(id) {
+        if (state.mode !== 'practice') return;
+        if (state.visitedNodes.includes(id)) return;
+
+        const expectedId = state.practiceCorrectSequence[state.practiceIndex];
+        if (id === expectedId) {
+            state.practiceIndex++;
+            state.visitedNodes.push(id);
+            const nodeEl = document.getElementById(`node-${id}`);
+            nodeEl.className = 'node w-12 h-12 rounded-full bg-green-500 border-2 border-green-600 text-white flex items-center justify-center text-lg font-bold shadow-lg z-20 scale-110 transition-all glow-effect';
+            
+            const currentText = els.outputLog.innerText === '[ ]' ? '' : els.outputLog.innerText.replace('[', '').replace(']', '');
+            const newSeq = currentText ? `${currentText}, ${val(id)}` : `${val(id)}`;
+            els.outputLog.innerHTML = `[ <span class="text-white font-bold">${newSeq}</span> ]`;
+
+            if (state.practiceIndex === state.practiceCorrectSequence.length) {
+                showPracticeFeedback("Sequence Complete!", "success");
+                els.statusText.innerText = "Great Job!";
+            } else {
+                els.statusText.innerText = "Correct! Next?";
+            }
+        } else {
+            const nodeEl = document.getElementById(`node-${id}`);
+            nodeEl.classList.add('bg-red-500', 'text-white', 'animate-pulse');
+            setTimeout(() => nodeEl.classList.remove('bg-red-500', 'text-white', 'animate-pulse'), 500);
+            showPracticeFeedback("Wrong Node!", "error");
+        }
+    }
+
+    function showPracticeFeedback(msg, type) {
+        let bgClass = type === 'success' ? 'bg-green-600' : 'bg-red-600';
+        els.practiceFeedback.innerHTML = `<span class="px-4 py-2 rounded-full ${bgClass} text-white font-bold shadow-lg">${msg}</span>`;
+        els.practiceFeedback.style.opacity = '1';
+        if (state._feedbackTimeout) clearTimeout(state._feedbackTimeout);
+        state._feedbackTimeout = setTimeout(() => els.practiceFeedback.style.opacity = '0', 2000);
+    }
+
+    function downloadHTML() {
+        const clone = document.documentElement.cloneNode(true);
+        const htmlContent = clone.outerHTML;
+        const blob = new Blob([htmlContent], {type: 'text/html'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'binary_tree_viz.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    function scrollToDemo() {
+        document.getElementById('demo-area').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.getElementById('speed-slider').addEventListener('input', (e) => {
+        state.speed = 1600 - e.target.value;
+        if (state.isPlaying) {
+            clearInterval(state.playInterval);
+            play();
+        }
+    });
+
+    // Boot
+    initTree();
+    setTraversalMode('pre');
+    setMethod('recursive');
+    setInteractionMode('watch');
+</script>
+
+</body></html>
