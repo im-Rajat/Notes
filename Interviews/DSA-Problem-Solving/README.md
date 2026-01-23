@@ -2,7 +2,8 @@
 
 ## Patterns to Solve Leetcode Problem:
 
-- Two-Pointer Pattern
+- Two-Pointer
+- Prefix Sum
 - Sliding Window
     - **Purpose**: Solves problems like finding the largest substring without repeating characters, maximum sum subarray of size K, and largest substring with K distinct characters
     - **How it works**: Uses two pointers, left and right, to define a "window" within an array or string. The right pointer expands the window, and when a condition (e.g., repeating character) is met, the left pointer shrinks the window
@@ -17,13 +18,22 @@
 - Dynamic Programming
     - **Purpose**: A more thoughtful approach to exploring solutions compared to backtracking. It breaks down a problem into smaller subproblems and builds solutions from the bottom up.
     - **Example Problem**: Combination Sum. The video explains how knowing solutions to smaller subproblems (e.g., combinations for target sum - 1, target sum - 2) can help build the solution for the main target sum.
-- Subset Pattern
 - Modified Binary Search
+- Binary Tree Traversal
 - Binary Tree DFS (Depth-First Search) & Binary Tree BFS (Breadth-First Search)
     - **Purpose**: Both are used for graph traversal and are very similar.
     - **DFS**: Starts from a vertex and explores as far as possible along each branch before backtracking. Implemented using a stack
     - **BFS**: Explores neighboring vertices first before moving to deeper unvisited vertices. Implemented using a queue.
     - **Applications**: BFS is used to find the shortest path between two vertices. Dijkstra's algorithm is a related algorithm for shortest path. Topological Sort is closely related to DFS and is essential for coding interviews
+- Subset Pattern
+- Fast & Slow Pointers
+- LinkedList In-place Reversal
+- Monotonic Stack
+- Top ‘K’ Elements
+- Overlapping Intervals
+- Matrix Traversal
+
+<img src="https://i.postimg.cc/Nfcy85VH/RK-leetcode-15-patterns.jpg" alt="" width="500">
 
 ## Coding / Problem Solving Tricks
 
