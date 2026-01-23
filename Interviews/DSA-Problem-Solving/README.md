@@ -27,7 +27,7 @@
     - **Applications**: BFS is used to find the shortest path between two vertices. Dijkstra's algorithm is a related algorithm for shortest path. Topological Sort is closely related to DFS and is essential for coding interviews
 - Subset Pattern
 - Fast & Slow Pointers
-- LinkedList In-place Reversal
+- In-place Reversal
 - Monotonic Stack
 - Top ‘K’ Elements
 - Overlapping Intervals

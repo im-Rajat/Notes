@@ -15,6 +15,10 @@
 
 - [C Memory Layout & Storage Classes](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/c-memory-visualizer.html)
 
+## Operating Systems
+
+- [Process vs Thread](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Process-vs-Thread.html)
+
 ## Coding
 
 - [Traverse Binary Tree (preorder, inorder, postorder) using both Recursive and Iterative approaches](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/binary-tree-traversal.html)
