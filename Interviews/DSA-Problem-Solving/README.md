@@ -2,7 +2,7 @@
 
 ## Patterns to Solve Leetcode Problem:
 
-- Two-Pointer
+- Two Pointer
 - Prefix Sum
 - Sliding Window
     - **Purpose**: Solves problems like finding the largest substring without repeating characters, maximum sum subarray of size K, and largest substring with K distinct characters
