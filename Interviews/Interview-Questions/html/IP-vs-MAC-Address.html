@@ -1,0 +1,586 @@
+<html lang="en" class="scroll-smooth"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function l(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}function r(a){var c=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(c)return c.call(a);if(typeof a.length=="number")return{next:l(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var t=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,g){if(a==Array.prototype||a==Object.prototype)return a;a[c]=g.value;return a};
+function u(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var g=a[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var v=u(this);function x(a,c){if(c)a:{var g=v;a=a.split(".");for(var h=0;h<a.length-1;h++){var m=a[h];if(!(m in g))break a;g=g[m]}a=a[a.length-1];h=g[a];c=c(h);c!=h&&c!=null&&t(g,a,{configurable:!0,writable:!0,value:c})}}
+function y(a){if(!(a instanceof Object))throw new TypeError("Iterator result "+a+" is not an object");}function z(){this.o=!1;this.j=null;this.u=void 0;this.g=1;this.i=this.l=0;this.C=this.h=null}function A(a){if(a.o)throw new TypeError("Generator is already running");a.o=!0}z.prototype.v=function(a){this.u=a};function B(a,c){a.h={K:c,L:!0};a.g=a.l||a.i}z.prototype.N=function(){return this.g};z.prototype.getNextAddress=z.prototype.N;z.prototype.O=function(){return this.u};
+z.prototype.getYieldResult=z.prototype.O;z.prototype.return=function(a){this.h={return:a};this.g=this.i};z.prototype["return"]=z.prototype.return;z.prototype.P=function(a){this.h={B:a};this.g=this.i};z.prototype.jumpThroughFinallyBlocks=z.prototype.P;z.prototype.A=function(a,c){this.g=c;return{value:a}};z.prototype.yield=z.prototype.A;z.prototype.T=function(a,c){a=r(a);var g=a.next();y(g);if(g.done)this.u=g.value,this.g=c;else return this.j=a,this.A(g.value,c)};z.prototype.yieldAll=z.prototype.T;
+z.prototype.B=function(a){this.g=a};z.prototype.jumpTo=z.prototype.B;z.prototype.F=function(){this.g=0};z.prototype.jumpToEnd=z.prototype.F;z.prototype.H=function(a,c){this.l=a;c!=void 0&&(this.i=c)};z.prototype.setCatchFinallyBlocks=z.prototype.H;z.prototype.S=function(a){this.l=0;this.i=a||0};z.prototype.setFinallyBlock=z.prototype.S;z.prototype.G=function(a,c){this.g=a;this.l=c||0};z.prototype.leaveTryBlock=z.prototype.G;z.prototype.D=function(a){this.l=a||0;a=this.h.K;this.h=null;return a};
+z.prototype.enterCatchBlock=z.prototype.D;z.prototype.J=function(a,c,g){g?this.C[g]=this.h:this.C=[this.h];this.l=a||0;this.i=c||0};z.prototype.enterFinallyBlock=z.prototype.J;z.prototype.R=function(a,c){c=this.C.splice(c||0)[0];(c=this.h=this.h||c)?c.L?this.g=this.l||this.i:c.B!=void 0&&this.i<c.B?(this.g=c.B,this.h=null):this.g=this.i:this.g=a};z.prototype.leaveFinallyBlock=z.prototype.R;z.prototype.M=function(a){return new C(a)};z.prototype.forIn=z.prototype.M;
+function C(a){this.i=a;this.g=[];for(var c in a)this.g.push(c);this.g.reverse()}C.prototype.h=function(){for(;this.g.length>0;){var a=this.g.pop();if(a in this.i)return a}return null};C.prototype.getNext=C.prototype.h;function F(a){this.g=new z;this.h=a}function G(a,c){A(a.g);var g=a.g.j;if(g)return H(a,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return I(a)}
+function H(a,c,g,h){try{var m=c.call(a.g.j,g);y(m);if(!m.done)return a.g.o=!1,m;var n=m.value}catch(f){return a.g.j=null,B(a.g,f),I(a)}a.g.j=null;h.call(a.g,n);return I(a)}function I(a){for(;a.g.g;)try{var c=a.h(a.g);if(c)return a.g.o=!1,{value:c.value,done:!1}}catch(g){a.g.u=void 0,B(a.g,g)}a.g.o=!1;if(a.g.h){c=a.g.h;a.g.h=null;if(c.L)throw c.K;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){A(a.g);a.g.j?c=H(a,a.g.j.next,c,a.g.v):(a.g.v(c),c=I(a));return c};this.throw=function(c){A(a.g);a.g.j?c=H(a,a.g.j["throw"],c,a.g.v):(B(a.g,c),c=I(a));return c};this.return=function(c){return G(a,c)};this[Symbol.iterator]=function(){return this}}function K(a){function c(h){return a.next(h)}function g(h){return a.throw(h)}return new Promise(function(h,m){function n(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(n,m)}n(a.next())})}
+x("Symbol",function(a){function c(n){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(n||"")+"_"+m++,n)}function g(n,f){this.g=n;t(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",m=0;return c});
+x("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");t(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return L(l(this))}});return a});function L(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+x("Promise",function(a){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var b=this.j();try{f(b.resolve,b.reject)}catch(d){b.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(b){b(f)})}if(a)return a;g.prototype.h=function(f){if(this.g==null){this.g=[];var b=this;this.i(function(){b.l()})}this.g.push(f)};var m=v.setTimeout;g.prototype.i=function(f){m(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var b=0;b<f.length;++b){var d=
+f[b];f[b]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(b,k))}}var b=this,d=!1;return{resolve:f(this.F),reject:f(this.l)}};c.prototype.F=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.H(f);else{a:switch(typeof f){case "object":var b=f!=null;break a;case "function":b=!0;break a;default:b=!1}b?this.D(f):this.o(f)}};
+c.prototype.D=function(f){var b=void 0;try{b=f.then}catch(d){this.l(d);return}typeof b=="function"?this.J(b,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,b){if(this.h!=0)throw Error("Cannot settle("+f+", "+b+"): Promise already settled in state"+this.h);this.h=f;this.i=b;this.h===2&&this.G();this.C()};c.prototype.G=function(){var f=this;m(function(){if(f.A()){var b=v.console;typeof b!=="undefined"&&b.error(f.i)}},1)};c.prototype.A=
+function(){if(this.u)return!1;var f=v.CustomEvent,b=v.Event,d=v.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof b==="function"?f=new b("unhandledrejection",{cancelable:!0}):(f=v.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.C=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)n.h(this.g[f]);this.g=null}};var n=new g;c.prototype.H=
+function(f){var b=this.j();f.I(b.resolve,b.reject)};c.prototype.J=function(f,b){var d=this.j();try{f.call(b,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,b){function d(p,w){return typeof p=="function"?function(D){try{e(p(D))}catch(E){k(E)}}:w}var e,k,q=new c(function(p,w){e=p;k=w});this.I(d(f,e),d(b,k));return q};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.I=function(f,b){function d(){switch(e.h){case 1:f(e.i);break;case 2:b(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?n.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(b,d){d(f)})};c.race=function(f){return new c(function(b,d){for(var e=r(f),k=e.next();!k.done;k=e.next())h(k.value).I(b,d)})};c.all=function(f){var b=r(f),d=b.next();return d.done?h([]):new c(function(e,k){function q(D){return function(E){p[D]=E;w--;w==0&&e(p)}}var p=[],w=0;do p.push(void 0),w++,h(d.value).I(q(p.length-1),k),d=b.next();while(!d.done)})};return c});
+function M(a,c){return Object.prototype.hasOwnProperty.call(a,c)}x("Object.is",function(a){return a?a:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(a){return a?a:function(c,g){var h=this;h instanceof String&&(h=String(h));var m=h.length;g=g||0;for(g<0&&(g=Math.max(g+m,0));g<m;g++){var n=h[g];if(n===c||Object.is(n,c))return!0}return!1}});
+x("String.prototype.includes",function(a){return a?a:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(a){function c(d){this.g=(b+=Math.random()+1).toString();if(d){d=r(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function m(d){if(!M(d,f)){var e=new g;t(d,f,{value:e})}}function n(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&m(k);return e(k)})}if(function(){if(!a||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new a([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(q){return!1}}())return a;var f="$jscomp_hidden_"+Math.random();n("freeze");n("preventExtensions");n("seal");var b=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");m(d);if(!M(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&M(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&M(d,
+f)&&M(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&M(d,f)&&M(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(a){function c(){var b={};return b.m=b.next=b.head=b}function g(b,d){var e=b[1];return L(function(){if(e){for(;e.head!=b[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(b,d){var e=d&&typeof d;e=="object"||e=="function"?n.has(d)?e=n.get(d):(e=""+ ++f,n.set(d,e)):e="p_"+d;var k=b[0][e];if(k&&M(b[0],e))for(b=0;b<k.length;b++){var q=k[b];if(d!==d&&q.key!==q.key||d===q.key)return{id:e,list:k,index:b,entry:q}}return{id:e,
+list:k,index:-1,entry:void 0}}function m(b){this[0]={};this[1]=c();this.size=0;if(b){b=r(b);for(var d;!(d=b.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var b=Object.seal({x:4}),d=new a(r([[b,"s"]]));if(d.get(b)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=b||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(q){return!1}}())return a;var n=new WeakMap;m.prototype.set=function(b,d){b=b===0?0:b;var e=h(this,b);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:b,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};m.prototype.delete=function(b){b=h(this,b);return b.entry&&b.list?(b.list.splice(b.index,1),b.list.length||delete this[0][b.id],b.entry.m.next=b.entry.next,
+b.entry.next.m=b.entry.m,b.entry.head=null,this.size--,!0):!1};m.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};m.prototype.has=function(b){return!!h(this,b).entry};m.prototype.get=function(b){return(b=h(this,b).entry)&&b.value};m.prototype.entries=function(){return g(this,function(b){return[b.key,b.value]})};m.prototype.keys=function(){return g(this,function(b){return b.key})};m.prototype.values=function(){return g(this,function(b){return b.value})};m.prototype.forEach=
+function(b,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,b.call(d,k[1],k[0],this)};m.prototype[Symbol.iterator]=m.prototype.entries;var f=0;return m});
+x("Set",function(a){function c(g){this.g=new Map;if(g){g=r(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new a(r([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var m=h.entries(),n=m.next();if(n.done||n.value[0]!=g||n.value[1]!=g)return!1;n=m.next();return n.done||n.value[0]==g||n.value[0].x!=4||
+n.value[1]!=n.value[0]?!1:m.next().done}catch(f){return!1}}())return a;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var m=this;this.g.forEach(function(n){return g.call(h,n,n,m)})};return c});(function(){function a(){return n?Promise.resolve(n):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(b){if(!b.ok)throw Error("HTTP error! status: "+b.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return b.json()}).then(function(b){if(!Array.isArray(b))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return n=b}).catch(function(b){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",b);f=null;throw b;})}function c(b){var d,e,k,q;return K(new J(new F(function(p){switch(p.g){case 1:d=(b.textContent||"").trim();if(!d||b.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return p.return();e=window.getComputedStyle(b);if(e.display==="none"||e.visibility==="hidden")return p.return();
+p.H(2);return p.A(a(),4);case 4:k=p.u;p.G(3);break;case 2:return p.D(),console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),p.return();case 3:(q=k.includes(d))?b.classList.contains("js-replaced-missing-icon")&&b.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&b.classList.contains("js-replaced-missing-icon")||(b.textContent="radio_button_unchecked",b.classList.add("js-replaced-missing-icon")),p.F()}})))}function g(b){b=b===void 0?
+document.body:b;b.querySelectorAll(m).forEach(function(d){c(d)})}function h(){a().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(b){var d=new Set;b=r(b);for(var e=b.next();!e.done;e=b.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(q){q.nodeType===Node.ELEMENT_NODE&&(q.matches(m)&&d.add(q),q.querySelectorAll(m).forEach(function(p){d.add(p)}))});else if(e.type==="attributes"&&e.attributeName===
+"class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(m)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(m)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(q){c(q)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(b){console.error("IconChecker: Font loading error. Scanning icons anyway.",b);requestAnimationFrame(function(){g(document.body)})})}
+var m=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(b){return"."+b}).join(","),n=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP vs MAC Address | Notes by Rajat Kumar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Animation Classes */
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Packet Animation */
+        .packet-move-phase-1 { animation: movePhase1 3s linear forwards; }
+        .packet-move-phase-2 { animation: movePhase2 3s linear forwards; }
+
+        @keyframes movePhase1 {
+            0% { transform: translateX(50px); opacity: 1; }
+            45% { transform: translateX(280px); opacity: 1; }
+            50% { transform: translateX(280px); opacity: 0; }
+            100% { transform: translateX(280px); opacity: 0; }
+        }
+        
+        @keyframes movePhase2 {
+            0% { transform: translateX(320px); opacity: 0; }
+            50% { transform: translateX(320px); opacity: 0; }
+            55% { transform: translateX(320px); opacity: 1; }
+            100% { transform: translateX(550px); opacity: 1; }
+        }
+
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+    </style>
+    <!-- 
+    Image Credits:
+    "https://loremflickr.com/800/600/postman,letter"
+    "https://loremflickr.com/800/600/fingerprint,technology"
+    -->
+    <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "AIzaSyBB_SVKlC9CcEjDt1H01_B7Gjmb8FiIaGw",
+      v: "weekly",
+  });
+    </script>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-4{bottom:1rem}.left-0{left:0px}.left-4{left:1rem}.left-\[300px\]{left:300px}.left-\[50px\]{left:50px}.left-\[550px\]{left:550px}.left-\[80px\]{left:80px}.right-0{right:0px}.right-4{right:1rem}.top-0{top:0px}.top-4{top:1rem}.top-\[100px\]{top:100px}.top-\[165px\]{top:165px}.top-\[50px\]{top:50px}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.-ml-5{margin-left:-1.25rem}.-mt-2{margin-top:-0.5rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-2{height:0.5rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-\[30px\]{height:30px}.h-\[350px\]{height:350px}.h-full{height:100%}.w-1\/3{width:33.333333%}.w-1\/4{width:25%}.w-2{width:0.5rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-\[100px\]{width:100px}.w-\[140px\]{width:140px}.w-\[40px\]{width:40px}.w-\[90\%\]{width:90%}.w-full{width:100%}.w-px{width:1px}.min-w-\[700px\]{min-width:700px}.max-w-2xl{max-width:42rem}.max-w-5xl{max-width:64rem}.border-collapse{border-collapse:collapse}.select-none{-webkit-user-select:none;user-select:none}.scroll-mt-24{scroll-margin-top:6rem}.list-disc{list-style-type:disc}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-20 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-100 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.scroll-smooth{scroll-behavior:smooth}.whitespace-pre-line{white-space:pre-line}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.rounded-r-lg{border-top-right-radius:0.5rem;border-bottom-right-radius:0.5rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-indigo-400{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.border-yellow-400{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/50{background-color:rgb(30 41 59 / 0.5)}.bg-slate-800\/90{background-color:rgb(30 41 59 / 0.9)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-black\/60{--tw-gradient-from:rgb(0 0 0 / 0.6) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pl-5{padding-left:1.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[9px\]{font-size:9px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-green-200{--tw-text-opacity:1;color:rgb(187 247 208 / var(--tw-text-opacity, 1))}.text-green-300{--tw-text-opacity:1;color:rgb(134 239 172 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-orange-200{--tw-text-opacity:1;color:rgb(254 215 170 / var(--tw-text-opacity, 1))}.text-orange-400{--tw-text-opacity:1;color:rgb(251 146 60 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-100{opacity:1}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_15px_rgba\(99\2c 102\2c 241\2c 0\.5\)\]{--tw-shadow:0 0 15px rgba(99,102,241,0.5);--tw-shadow-colored:0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.selection\:bg-indigo-100 *::selection{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.selection\:text-indigo-800 *::selection{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.selection\:bg-indigo-100::selection{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.selection\:text-indigo-800::selection{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:text-indigo-600:hover{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:inline{display:inline}.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:p-8{padding:2rem}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-800">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-indigo-600 text-3xl">hub</span>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">RK Notes<span class="text-indigo-600"></span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#analogy" class="hover:text-indigo-600 transition-colors">Analogy</a>
+                    <a href="#deep-dive" class="hover:text-indigo-600 transition-colors">Deep Dive</a>
+                    <a href="#simulation" class="hover:text-indigo-600 transition-colors">Visual Simulation</a>
+                    <a href="#interview" class="hover:text-indigo-600 transition-colors">Interview Prep</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://github.com/im-Rajat/" target="_blank" class="text-slate-500 hover:text-slate-900 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="text-slate-500 hover:text-blue-700 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-semibold uppercase tracking-wide mb-6">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Networking Fundamentals
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-4">
+                IP Address <span class="text-indigo-600">vs</span> MAC Address
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+                The ultimate guide to understanding the difference between "where you are" and "who you are" in a network.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#analogy" class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-lg hover:bg-indigo-700 hover:shadow-xl transition-all flex items-center gap-2">
+                    Start Learning <span class="material-symbols-outlined text-sm">arrow_downward</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- 1. Analogy Section -->
+        <section id="analogy" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">The Real World Analogy</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Technical terms can be confusing. Let's break it down using something we all understand: mail and identity.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- IP Card -->
+                <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://miro.medium.com/0*Aw75jFfQ4-4boKq7.jpeg" alt="Postal Service" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">IP Address</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-indigo-600 bg-indigo-50 p-2 rounded-lg">home_pin</span>
+                            <span class="font-semibold text-slate-900">The "Postal Address"</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Just like your <strong>Home Address</strong> (e.g., 123 Main St, New York). It tells the world <em>where</em> you are located so mail can be routed to you. If you move to a new house, your address changes.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Used for long-distance routing.</li>
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Changes when you change networks.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MAC Card -->
+                <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://tecadmin.net/wp-content/uploads/2023/06/MAC-Address.png" alt="Fingerprint ID" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">MAC Address</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-purple-600 bg-purple-50 p-2 rounded-lg">fingerprint</span>
+                            <span class="font-semibold text-slate-900">The "Social Security Number"</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Like your <strong>Fingerprint</strong> or <strong>SSN</strong>. It identifies <em>who</em> you are physically. Even if you move to a new country (change IP), your fingerprint (MAC) stays the same*.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Used for local identification.</li>
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Physically burned into the device.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-center text-slate-400 mt-4">* Note: Modern devices can "randomize" MAC addresses for privacy, but the hardware MAC remains constant.</p>
+        </section>
+
+        <!-- 2. Technical Deep Dive (Table) -->
+        <section id="deep-dive" class="scroll-mt-24">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="px-6 py-8 border-b border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Technical Comparison</h2>
+                        <p class="text-slate-500 text-sm">The engineering details.</p>
+                    </div>
+                    <div class="flex bg-slate-100 p-1 rounded-lg">
+                        <button onclick="switchTab('simple')" id="btn-simple" class="px-4 py-1.5 text-sm font-medium rounded-md text-slate-500 hover:text-slate-900 transition-all">Simple</button>
+                        <button onclick="switchTab('detailed')" id="btn-detailed" class="px-4 py-1.5 text-sm font-medium rounded-md bg-white text-slate-900 shadow-sm transition-all">Detailed</button>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-600 text-sm uppercase tracking-wider">
+                                <th class="p-6 font-semibold w-1/4">Feature</th>
+                                <th class="p-6 font-semibold w-1/3 text-indigo-600">IP Address</th>
+                                <th class="p-6 font-semibold w-1/3 text-purple-600">MAC Address</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700 text-sm md:text-base" id="comparison-body">
+                <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="p-6 font-medium text-slate-900 border-b border-slate-100">Full Name</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">Internet Protocol Address (IPv4 or IPv6)</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">Media Access Control Address (Physical Address)</td>
+                </tr>
+            
+                <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="p-6 font-medium text-slate-900 border-b border-slate-100">Purpose</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">Logical addressing, routing packets across different networks (WAN/Internet).</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">Physical addressing, delivering frames within the same network segment (LAN).</td>
+                </tr>
+            
+                <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="p-6 font-medium text-slate-900 border-b border-slate-100">OSI Layer</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">Layer 3 (Network Layer) - Used by Routers.</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">Layer 2 (Data Link Layer) - Used by Switches/NICs.</td>
+                </tr>
+            
+                <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="p-6 font-medium text-slate-900 border-b border-slate-100">Length &amp; Format</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">IPv4: 32-bit (e.g., 192.168.1.1)
+IPv6: 128-bit (Hexadecimal)</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">48-bit Hexadecimal (6 pairs separated by colons or hyphens).</td>
+                </tr>
+            
+                <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="p-6 font-medium text-slate-900 border-b border-slate-100">Assigner</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">Assigned by ISP (Public) or Network Admin/DHCP Server (Private). Dynamic.</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">Burned in by Manufacturer (OUI). First 24 bits = Vendor ID.</td>
+                </tr>
+            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Interactive Simulation -->
+        <section id="simulation" class="scroll-mt-24">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-slate-900">How Data Travels</h2>
+                <p class="text-slate-600">Watch how addresses change (or don't) as data moves through a Router.</p>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-4 md:p-8 shadow-2xl relative overflow-hidden">
+                <!-- Controls -->
+                <div class="absolute top-4 right-4 z-10 flex gap-2">
+                    <button onclick="startSimulation()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors shadow-lg border border-indigo-400">
+                        <span class="material-symbols-outlined text-sm">play_arrow</span> Send Packet
+                    </button>
+                    <button onclick="resetSimulation()" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-slate-600">
+                        Reset
+                    </button>
+                </div>
+
+                <!-- SVG Canvas -->
+                <div class="w-full overflow-x-auto">
+                    <div class="min-w-[700px] h-[350px] relative select-none">
+                        
+                        <!-- Network Lines -->
+                        <svg class="absolute inset-0 w-full h-full" style="z-index: 0;">
+                            <!-- LAN 1 -->
+                            <line x1="100" y1="180" x2="350" y2="180" stroke="#475569" stroke-width="4"></line>
+                            <!-- LAN 2 -->
+                            <line x1="350" y1="180" x2="600" y2="180" stroke="#475569" stroke-width="4"></line>
+                            <!-- Vertical connections -->
+                            <line x1="100" y1="180" x2="100" y2="150" stroke="#475569" stroke-width="2"></line>
+                            <line x1="600" y1="180" x2="600" y2="150" stroke="#475569" stroke-width="2"></line>
+                        </svg>
+
+                        <!-- Devices -->
+                        <!-- Laptop -->
+                        <div class="absolute left-[50px] top-[50px] w-[100px] text-center z-10">
+                            <span class="material-symbols-outlined text-5xl text-blue-400">laptop_mac</span>
+                            <div class="text-xs text-blue-200 mt-1 font-bold">Laptop (Source)</div>
+                            <div class="text-[10px] text-slate-400 mono bg-slate-800/50 rounded px-1 mt-1">
+                                IP: 192.168.1.5<br>MAC: AA:AA
+                            </div>
+                        </div>
+
+                        <!-- Router -->
+                        <div class="absolute left-[300px] top-[100px] w-[100px] text-center z-10">
+                            <span class="material-symbols-outlined text-6xl text-orange-400">router</span>
+                            <div class="text-xs text-orange-200 font-bold -mt-2">Router</div>
+                            <div class="flex justify-between w-[140px] -ml-5 mt-2">
+                                <div class="text-[9px] text-slate-400 mono text-left">
+                                    In<br>IP: 192.168.1.1<br>MAC: BB:BB
+                                </div>
+                                <div class="text-[9px] text-slate-400 mono text-right">
+                                    Out<br>IP: 10.0.0.1<br>MAC: CC:CC
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Server -->
+                        <div class="absolute left-[550px] top-[50px] w-[100px] text-center z-10">
+                            <span class="material-symbols-outlined text-5xl text-green-400">dns</span>
+                            <div class="text-xs text-green-200 mt-1 font-bold">Server (Dest)</div>
+                            <div class="text-[10px] text-slate-400 mono bg-slate-800/50 rounded px-1 mt-1">
+                                IP: 10.0.0.9<br>MAC: DD:DD
+                            </div>
+                        </div>
+
+                        <!-- Packet -->
+                        <div id="packet" class="absolute left-[80px] top-[165px] w-[40px] h-[30px] bg-indigo-500 rounded border-2 border-white shadow-[0_0_15px_rgba(99,102,241,0.5)] z-20 flex items-center justify-center opacity-100">
+                            <span class="material-symbols-outlined text-white text-sm">mail</span>
+                        </div>
+
+                        <!-- Info Panel -->
+                        <div id="packet-info" class="absolute bottom-4 left-0 right-0 mx-auto w-[90%] bg-slate-800/90 backdrop-blur border border-slate-700 p-4 rounded-xl flex justify-around text-xs md:text-sm mono transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-slate-400 mb-1">Source IP</div>
+                                <div class="text-blue-300 font-bold">192.168.1.5</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-slate-400 mb-1">Dest IP</div>
+                                <div class="text-green-300 font-bold">10.0.0.9</div>
+                            </div>
+                            <div class="w-px bg-slate-600"></div>
+                            <div class="text-center">
+                                <div class="text-slate-400 mb-1">Source MAC</div>
+                                <div id="src-mac-display" class="text-purple-300 font-bold">AA:AA</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-slate-400 mb-1">Dest MAC</div>
+                                <div id="dst-mac-display" class="text-purple-300 font-bold">BB:BB</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Status Msg -->
+                        <div id="status-msg" class="absolute top-4 left-4 text-slate-400 text-sm font-mono italic">Ready to send...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 text-sm rounded-r-lg">
+                <strong>Key Takeaway:</strong> Notice how the <strong>IP Addresses</strong> stay the <em>same</em> the entire journey (End-to-End), but the <strong>MAC Addresses</strong> <em>change</em> at the Router (Hop-by-Hop). The router strips the old MAC header and adds a new one!
+            </div>
+        </section>
+
+        <!-- 4. Interview Corner -->
+        <section id="interview" class="scroll-mt-24">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900">Interview Corner</h2>
+                <p class="text-slate-600">Common questions asked in Networking interviews.</p>
+            </div>
+
+            <div class="space-y-4" id="accordion-container">
+                <!-- Q1 -->
+                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion('q1')" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-slate-800">Q1: Why do we need both IP and MAC addresses?</span>
+                        <span id="icon-q1" class="material-symbols-outlined text-slate-400 transition-transform" style="transform: rotate(180deg);">expand_more</span>
+                    </button>
+                    <div id="q1" class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-slate-600 leading-relaxed fade-in">
+                        <p class="mb-2">Think of it as layers:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><strong>IP (Layer 3)</strong> is for <strong>Routing</strong>. It helps routers find the best path across the global internet to the destination network.</li>
+                            <li><strong>MAC (Layer 2)</strong> is for <strong>Delivery</strong>. Once the packet arrives at the correct local network (LAN), the switch needs the MAC address to deliver it to the specific physical device cable/wifi card.</li>
+                        </ul>
+                        <p class="mt-2 text-sm text-slate-500"><em>Analogy:</em> The IP gets the letter to the correct building. The MAC gets it to the correct person in that building.</p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion('q2')" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-slate-800">Q2: What is ARP and how does it relate to this?</span>
+                        <span id="icon-q2" class="material-symbols-outlined text-slate-400 transition-transform" style="transform: rotate(180deg);">expand_more</span>
+                    </button>
+                    <div id="q2" class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-slate-600 leading-relaxed fade-in">
+                        <p class="mb-2"><strong>ARP (Address Resolution Protocol)</strong> is the bridge between Layer 3 (IP) and Layer 2 (MAC).</p>
+                        <p class="mb-2">When a device knows the destination IP but not the MAC, it shouts (broadcasts): <span class="font-mono text-indigo-600 bg-indigo-50 px-1 rounded">"Who has IP 192.168.1.5?"</span>.</p>
+                        <p>The device with that IP replies: <span class="font-mono text-purple-600 bg-purple-50 px-1 rounded">"I do! My MAC is AA:BB:CC..."</span>. The sender saves this in its ARP Cache.</p>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion('q3')" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span class="font-semibold text-slate-800">Q3: Can a MAC address be changed?</span>
+                        <span id="icon-q3" class="material-symbols-outlined text-slate-400 transition-transform" style="transform: rotate(180deg);">expand_more</span>
+                    </button>
+                    <div id="q3" class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-slate-600 leading-relaxed fade-in">
+                        <p class="mb-2"><strong>Physically? No.</strong> It is burned into the ROM of the Network Interface Card (NIC) by the manufacturer.</p>
+                        <p class="mb-2"><strong>Software-wise? Yes (Spoofing).</strong> You can instruct your OS to pretend to have a different MAC address in outgoing packets. This is often used for privacy (MAC Randomization on iOS/Android) or by hackers to bypass filters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-indigo-400">favorite</span>
+                <span class="text-lg">Curated by <span class="text-white font-bold">Rajat Kumar</span></span>
+            </div>
+            
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="flex items-center gap-2 hover:text-white transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/im-Rajat/" target="_blank" class="flex items-center gap-2 hover:text-white transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <p class="text-sm text-slate-500">© 2026 RK Notes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Download Button -->
+    
+
+    <!-- Application Logic -->
+    <script>
+        // --- 1. Comparison Table Logic ---
+        const tableData = [
+            {
+                feature: "Full Name",
+                simpleIP: "Internet Protocol Address",
+                detailedIP: "Internet Protocol Address (IPv4 or IPv6)",
+                simpleMAC: "Media Access Control Address",
+                detailedMAC: "Media Access Control Address (Physical Address)"
+            },
+            {
+                feature: "Purpose",
+                simpleIP: "Identifies connection to the network (Location).",
+                detailedIP: "Logical addressing, routing packets across different networks (WAN/Internet).",
+                simpleMAC: "Identifies the physical device (Identity).",
+                detailedMAC: "Physical addressing, delivering frames within the same network segment (LAN)."
+            },
+            {
+                feature: "OSI Layer",
+                simpleIP: "Layer 3 (Network)",
+                detailedIP: "Layer 3 (Network Layer) - Used by Routers.",
+                simpleMAC: "Layer 2 (Data Link)",
+                detailedMAC: "Layer 2 (Data Link Layer) - Used by Switches/NICs."
+            },
+            {
+                feature: "Length & Format",
+                simpleIP: "e.g., 192.168.1.1",
+                detailedIP: "IPv4: 32-bit (e.g., 192.168.1.1)\nIPv6: 128-bit (Hexadecimal)",
+                simpleMAC: "e.g., 00:1A:2B:3C:4D:5E",
+                detailedMAC: "48-bit Hexadecimal (6 pairs separated by colons or hyphens)."
+            },
+            {
+                feature: "Assigner",
+                simpleIP: "Network Admin / Router (DHCP)",
+                detailedIP: "Assigned by ISP (Public) or Network Admin/DHCP Server (Private). Dynamic.",
+                simpleMAC: "Device Manufacturer",
+                detailedMAC: "Burned in by Manufacturer (OUI). First 24 bits = Vendor ID."
+            }
+        ];
+
+        function switchTab(mode) {
+            const tbody = document.getElementById('comparison-body');
+            const btnSimple = document.getElementById('btn-simple');
+            const btnDetailed = document.getElementById('btn-detailed');
+
+            // Style Buttons
+            if (mode === 'simple') {
+                btnSimple.className = "px-4 py-1.5 text-sm font-medium rounded-md bg-white text-slate-900 shadow-sm transition-all";
+                btnDetailed.className = "px-4 py-1.5 text-sm font-medium rounded-md text-slate-500 hover:text-slate-900 transition-all";
+            } else {
+                btnDetailed.className = "px-4 py-1.5 text-sm font-medium rounded-md bg-white text-slate-900 shadow-sm transition-all";
+                btnSimple.className = "px-4 py-1.5 text-sm font-medium rounded-md text-slate-500 hover:text-slate-900 transition-all";
+            }
+
+            // Populate Table
+            tbody.innerHTML = tableData.map(row => `
+                <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="p-6 font-medium text-slate-900 border-b border-slate-100">${row.feature}</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">${mode === 'simple' ? row.simpleIP : row.detailedIP}</td>
+                    <td class="p-6 text-slate-600 border-b border-slate-100 whitespace-pre-line">${mode === 'simple' ? row.simpleMAC : row.detailedMAC}</td>
+                </tr>
+            `).join('');
+        }
+
+        // Initialize table
+        switchTab('simple');
+
+
+        // --- 2. Simulation Logic ---
+        const packet = document.getElementById('packet');
+        const srcMacDisplay = document.getElementById('src-mac-display');
+        const dstMacDisplay = document.getElementById('dst-mac-display');
+        const statusMsg = document.getElementById('status-msg');
+        let isAnimating = false;
+
+        function startSimulation() {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            // Reset
+            packet.classList.remove('packet-move-phase-1', 'packet-move-phase-2');
+            void packet.offsetWidth; // Trigger reflow
+
+            statusMsg.textContent = "Phase 1: Laptop to Router (Local Delivery)";
+            srcMacDisplay.textContent = "AA:AA"; // Laptop MAC
+            dstMacDisplay.textContent = "BB:BB"; // Router In MAC
+            
+            // Start Phase 1
+            packet.classList.add('packet-move-phase-1');
+
+            setTimeout(() => {
+                // Midpoint (Router Processing)
+                statusMsg.textContent = "Router: Stripping MAC header, creating new one...";
+                srcMacDisplay.textContent = "..."; 
+                dstMacDisplay.textContent = "...";
+                srcMacDisplay.classList.add('text-yellow-400');
+                dstMacDisplay.classList.add('text-yellow-400');
+            }, 1350);
+
+            setTimeout(() => {
+                // Start Phase 2
+                statusMsg.textContent = "Phase 2: Router to Server (New MAC Header)";
+                srcMacDisplay.classList.remove('text-yellow-400');
+                dstMacDisplay.classList.remove('text-yellow-400');
+                
+                srcMacDisplay.textContent = "CC:CC"; // Router Out MAC
+                dstMacDisplay.textContent = "DD:DD"; // Server MAC
+
+                packet.classList.add('packet-move-phase-2');
+            }, 1500);
+
+            setTimeout(() => {
+                statusMsg.textContent = "Delivered! IP stayed constant, MAC changed.";
+                isAnimating = false;
+            }, 3000);
+        }
+
+        function resetSimulation() {
+            packet.classList.remove('packet-move-phase-1', 'packet-move-phase-2');
+            statusMsg.textContent = "Ready to send...";
+            srcMacDisplay.textContent = "AA:AA";
+            dstMacDisplay.textContent = "BB:BB";
+            isAnimating = false;
+        }
+
+        // --- 3. Accordion Logic ---
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                el.classList.add('fade-in');
+            } else {
+                el.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }   
+    </script>
+
+
+</body></html>

@@ -20,7 +20,15 @@
 - [Process vs Thread](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Process-vs-Thread.html)
 - [Mutex vs Semaphore](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Mutex-vs-Semaphore.html)
 - [Main Memory vs Secondary Memory](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Main-vs-Secondary-Memory.html)
-- [Deadlock and it's conditions](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Deadlock-Explained.html)
+- [Deadlock and it's conditions](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Deadlock-and-its-Conditions.html)
+
+## Computer Networks
+
+- [TCP vs UDP](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/TCP-vs-UDP.html)
+- [What happens when you type google.com?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/What-happens-when-you-type-google.com.html)
+    - [How DNS works?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/How-DNS-works.html)
+- [IP Address vs MAC Address](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/IP-vs-MAC-Address.html)
+- [HTTP vs HTTPS](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/HTTP-vs-HTTPS.html)
 
 ## Coding
 

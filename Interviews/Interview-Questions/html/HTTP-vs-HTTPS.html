@@ -1,0 +1,611 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function l(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}function r(a){var c=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(c)return c.call(a);if(typeof a.length=="number")return{next:l(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var t=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,g){if(a==Array.prototype||a==Object.prototype)return a;a[c]=g.value;return a};
+function u(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var g=a[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var v=u(this);function x(a,c){if(c)a:{var g=v;a=a.split(".");for(var h=0;h<a.length-1;h++){var m=a[h];if(!(m in g))break a;g=g[m]}a=a[a.length-1];h=g[a];c=c(h);c!=h&&c!=null&&t(g,a,{configurable:!0,writable:!0,value:c})}}
+function y(a){if(!(a instanceof Object))throw new TypeError("Iterator result "+a+" is not an object");}function z(){this.o=!1;this.j=null;this.u=void 0;this.g=1;this.i=this.l=0;this.C=this.h=null}function A(a){if(a.o)throw new TypeError("Generator is already running");a.o=!0}z.prototype.v=function(a){this.u=a};function B(a,c){a.h={K:c,L:!0};a.g=a.l||a.i}z.prototype.N=function(){return this.g};z.prototype.getNextAddress=z.prototype.N;z.prototype.O=function(){return this.u};
+z.prototype.getYieldResult=z.prototype.O;z.prototype.return=function(a){this.h={return:a};this.g=this.i};z.prototype["return"]=z.prototype.return;z.prototype.P=function(a){this.h={B:a};this.g=this.i};z.prototype.jumpThroughFinallyBlocks=z.prototype.P;z.prototype.A=function(a,c){this.g=c;return{value:a}};z.prototype.yield=z.prototype.A;z.prototype.T=function(a,c){a=r(a);var g=a.next();y(g);if(g.done)this.u=g.value,this.g=c;else return this.j=a,this.A(g.value,c)};z.prototype.yieldAll=z.prototype.T;
+z.prototype.B=function(a){this.g=a};z.prototype.jumpTo=z.prototype.B;z.prototype.F=function(){this.g=0};z.prototype.jumpToEnd=z.prototype.F;z.prototype.H=function(a,c){this.l=a;c!=void 0&&(this.i=c)};z.prototype.setCatchFinallyBlocks=z.prototype.H;z.prototype.S=function(a){this.l=0;this.i=a||0};z.prototype.setFinallyBlock=z.prototype.S;z.prototype.G=function(a,c){this.g=a;this.l=c||0};z.prototype.leaveTryBlock=z.prototype.G;z.prototype.D=function(a){this.l=a||0;a=this.h.K;this.h=null;return a};
+z.prototype.enterCatchBlock=z.prototype.D;z.prototype.J=function(a,c,g){g?this.C[g]=this.h:this.C=[this.h];this.l=a||0;this.i=c||0};z.prototype.enterFinallyBlock=z.prototype.J;z.prototype.R=function(a,c){c=this.C.splice(c||0)[0];(c=this.h=this.h||c)?c.L?this.g=this.l||this.i:c.B!=void 0&&this.i<c.B?(this.g=c.B,this.h=null):this.g=this.i:this.g=a};z.prototype.leaveFinallyBlock=z.prototype.R;z.prototype.M=function(a){return new C(a)};z.prototype.forIn=z.prototype.M;
+function C(a){this.i=a;this.g=[];for(var c in a)this.g.push(c);this.g.reverse()}C.prototype.h=function(){for(;this.g.length>0;){var a=this.g.pop();if(a in this.i)return a}return null};C.prototype.getNext=C.prototype.h;function F(a){this.g=new z;this.h=a}function G(a,c){A(a.g);var g=a.g.j;if(g)return H(a,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return I(a)}
+function H(a,c,g,h){try{var m=c.call(a.g.j,g);y(m);if(!m.done)return a.g.o=!1,m;var n=m.value}catch(f){return a.g.j=null,B(a.g,f),I(a)}a.g.j=null;h.call(a.g,n);return I(a)}function I(a){for(;a.g.g;)try{var c=a.h(a.g);if(c)return a.g.o=!1,{value:c.value,done:!1}}catch(g){a.g.u=void 0,B(a.g,g)}a.g.o=!1;if(a.g.h){c=a.g.h;a.g.h=null;if(c.L)throw c.K;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){A(a.g);a.g.j?c=H(a,a.g.j.next,c,a.g.v):(a.g.v(c),c=I(a));return c};this.throw=function(c){A(a.g);a.g.j?c=H(a,a.g.j["throw"],c,a.g.v):(B(a.g,c),c=I(a));return c};this.return=function(c){return G(a,c)};this[Symbol.iterator]=function(){return this}}function K(a){function c(h){return a.next(h)}function g(h){return a.throw(h)}return new Promise(function(h,m){function n(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(n,m)}n(a.next())})}
+x("Symbol",function(a){function c(n){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(n||"")+"_"+m++,n)}function g(n,f){this.g=n;t(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",m=0;return c});
+x("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");t(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return L(l(this))}});return a});function L(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+x("Promise",function(a){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var b=this.j();try{f(b.resolve,b.reject)}catch(d){b.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(b){b(f)})}if(a)return a;g.prototype.h=function(f){if(this.g==null){this.g=[];var b=this;this.i(function(){b.l()})}this.g.push(f)};var m=v.setTimeout;g.prototype.i=function(f){m(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var b=0;b<f.length;++b){var d=
+f[b];f[b]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(b,k))}}var b=this,d=!1;return{resolve:f(this.F),reject:f(this.l)}};c.prototype.F=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.H(f);else{a:switch(typeof f){case "object":var b=f!=null;break a;case "function":b=!0;break a;default:b=!1}b?this.D(f):this.o(f)}};
+c.prototype.D=function(f){var b=void 0;try{b=f.then}catch(d){this.l(d);return}typeof b=="function"?this.J(b,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,b){if(this.h!=0)throw Error("Cannot settle("+f+", "+b+"): Promise already settled in state"+this.h);this.h=f;this.i=b;this.h===2&&this.G();this.C()};c.prototype.G=function(){var f=this;m(function(){if(f.A()){var b=v.console;typeof b!=="undefined"&&b.error(f.i)}},1)};c.prototype.A=
+function(){if(this.u)return!1;var f=v.CustomEvent,b=v.Event,d=v.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof b==="function"?f=new b("unhandledrejection",{cancelable:!0}):(f=v.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.C=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)n.h(this.g[f]);this.g=null}};var n=new g;c.prototype.H=
+function(f){var b=this.j();f.I(b.resolve,b.reject)};c.prototype.J=function(f,b){var d=this.j();try{f.call(b,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,b){function d(p,w){return typeof p=="function"?function(D){try{e(p(D))}catch(E){k(E)}}:w}var e,k,q=new c(function(p,w){e=p;k=w});this.I(d(f,e),d(b,k));return q};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.I=function(f,b){function d(){switch(e.h){case 1:f(e.i);break;case 2:b(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?n.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(b,d){d(f)})};c.race=function(f){return new c(function(b,d){for(var e=r(f),k=e.next();!k.done;k=e.next())h(k.value).I(b,d)})};c.all=function(f){var b=r(f),d=b.next();return d.done?h([]):new c(function(e,k){function q(D){return function(E){p[D]=E;w--;w==0&&e(p)}}var p=[],w=0;do p.push(void 0),w++,h(d.value).I(q(p.length-1),k),d=b.next();while(!d.done)})};return c});
+function M(a,c){return Object.prototype.hasOwnProperty.call(a,c)}x("Object.is",function(a){return a?a:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(a){return a?a:function(c,g){var h=this;h instanceof String&&(h=String(h));var m=h.length;g=g||0;for(g<0&&(g=Math.max(g+m,0));g<m;g++){var n=h[g];if(n===c||Object.is(n,c))return!0}return!1}});
+x("String.prototype.includes",function(a){return a?a:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(a){function c(d){this.g=(b+=Math.random()+1).toString();if(d){d=r(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function m(d){if(!M(d,f)){var e=new g;t(d,f,{value:e})}}function n(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&m(k);return e(k)})}if(function(){if(!a||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new a([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(q){return!1}}())return a;var f="$jscomp_hidden_"+Math.random();n("freeze");n("preventExtensions");n("seal");var b=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");m(d);if(!M(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&M(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&M(d,
+f)&&M(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&M(d,f)&&M(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(a){function c(){var b={};return b.m=b.next=b.head=b}function g(b,d){var e=b[1];return L(function(){if(e){for(;e.head!=b[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(b,d){var e=d&&typeof d;e=="object"||e=="function"?n.has(d)?e=n.get(d):(e=""+ ++f,n.set(d,e)):e="p_"+d;var k=b[0][e];if(k&&M(b[0],e))for(b=0;b<k.length;b++){var q=k[b];if(d!==d&&q.key!==q.key||d===q.key)return{id:e,list:k,index:b,entry:q}}return{id:e,
+list:k,index:-1,entry:void 0}}function m(b){this[0]={};this[1]=c();this.size=0;if(b){b=r(b);for(var d;!(d=b.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var b=Object.seal({x:4}),d=new a(r([[b,"s"]]));if(d.get(b)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=b||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(q){return!1}}())return a;var n=new WeakMap;m.prototype.set=function(b,d){b=b===0?0:b;var e=h(this,b);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:b,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};m.prototype.delete=function(b){b=h(this,b);return b.entry&&b.list?(b.list.splice(b.index,1),b.list.length||delete this[0][b.id],b.entry.m.next=b.entry.next,
+b.entry.next.m=b.entry.m,b.entry.head=null,this.size--,!0):!1};m.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};m.prototype.has=function(b){return!!h(this,b).entry};m.prototype.get=function(b){return(b=h(this,b).entry)&&b.value};m.prototype.entries=function(){return g(this,function(b){return[b.key,b.value]})};m.prototype.keys=function(){return g(this,function(b){return b.key})};m.prototype.values=function(){return g(this,function(b){return b.value})};m.prototype.forEach=
+function(b,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,b.call(d,k[1],k[0],this)};m.prototype[Symbol.iterator]=m.prototype.entries;var f=0;return m});
+x("Set",function(a){function c(g){this.g=new Map;if(g){g=r(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new a(r([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var m=h.entries(),n=m.next();if(n.done||n.value[0]!=g||n.value[1]!=g)return!1;n=m.next();return n.done||n.value[0]==g||n.value[0].x!=4||
+n.value[1]!=n.value[0]?!1:m.next().done}catch(f){return!1}}())return a;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var m=this;this.g.forEach(function(n){return g.call(h,n,n,m)})};return c});(function(){function a(){return n?Promise.resolve(n):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(b){if(!b.ok)throw Error("HTTP error! status: "+b.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return b.json()}).then(function(b){if(!Array.isArray(b))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return n=b}).catch(function(b){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",b);f=null;throw b;})}function c(b){var d,e,k,q;return K(new J(new F(function(p){switch(p.g){case 1:d=(b.textContent||"").trim();if(!d||b.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return p.return();e=window.getComputedStyle(b);if(e.display==="none"||e.visibility==="hidden")return p.return();
+p.H(2);return p.A(a(),4);case 4:k=p.u;p.G(3);break;case 2:return p.D(),console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),p.return();case 3:(q=k.includes(d))?b.classList.contains("js-replaced-missing-icon")&&b.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&b.classList.contains("js-replaced-missing-icon")||(b.textContent="radio_button_unchecked",b.classList.add("js-replaced-missing-icon")),p.F()}})))}function g(b){b=b===void 0?
+document.body:b;b.querySelectorAll(m).forEach(function(d){c(d)})}function h(){a().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(b){var d=new Set;b=r(b);for(var e=b.next();!e.done;e=b.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(q){q.nodeType===Node.ELEMENT_NODE&&(q.matches(m)&&d.add(q),q.querySelectorAll(m).forEach(function(p){d.add(p)}))});else if(e.type==="attributes"&&e.attributeName===
+"class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(m)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(m)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(q){c(q)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(b){console.error("IconChecker: Font loading error. Scanning icons anyway.",b);requestAnimationFrame(function(){g(document.body)})})}
+var m=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(b){return"."+b}).join(","),n=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP vs HTTPS - Technical Deep Dive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .packet-animation {
+            animation: travel 2s linear infinite;
+        }
+        @keyframes travel {
+            0% { transform: translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(300px); opacity: 0; }
+        }
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* Custom Scrollbar for interview section */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    </style>
+    <!-- 
+    Image Sources Plan:
+    1. Profile & Icons: Material Symbols (Google Fonts)
+    2. Diagrams: Inline SVG (Technical requirement)
+    -->
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.bottom-4{bottom:1rem}.left-1\/2{left:50%}.left-20{left:5rem}.left-28{left:7rem}.right-20{right:5rem}.right-4{right:1rem}.top-0{top:0px}.top-1\/2{top:50%}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-24{margin-bottom:6rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.h-1{height:0.25rem}.h-12{height:3rem}.h-16{height:4rem}.h-3{height:0.75rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-auto{height:auto}.w-12{width:3rem}.w-16{width:4rem}.w-3{width:0.75rem}.w-48{width:12rem}.w-6{width:1.5rem}.w-full{width:100%}.min-w-\[600px\]{min-width:600px}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-rotate-1{--tw-rotate:-1deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-1{--tw-rotate:1deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.list-disc{list-style-type:disc}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-red-100{--tw-border-opacity:1;border-color:rgb(254 226 226 / var(--tw-border-opacity, 1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202 / var(--tw-border-opacity, 1))}.border-red-900{--tw-border-opacity:1;border-color:rgb(127 29 29 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-red-300{--tw-border-opacity:1;border-color:rgb(252 165 165 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.fill-current{fill:currentColor}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-5{padding-left:1.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-purple-200{--tw-text-opacity:1;color:rgb(233 213 255 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-red-800{--tw-text-opacity:1;color:rgb(153 27 27 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.text-red-900{--tw-text-opacity:1;color:rgb(127 29 29 / var(--tw-text-opacity, 1))}.opacity-0{opacity:0}.opacity-80{opacity:0.8}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-blue-500\/50{--tw-shadow-color:rgb(59 130 246 / 0.5);--tw-shadow:var(--tw-shadow-colored)}.shadow-purple-600\/50{--tw-shadow-color:rgb(147 51 234 / 0.5);--tw-shadow:var(--tw-shadow-colored)}.shadow-red-600\/50{--tw-shadow-color:rgb(220 38 38 / 0.5);--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-red-500{--tw-ring-opacity:1;--tw-ring-color:rgb(239 68 68 / var(--tw-ring-opacity, 1))}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-0{transition-duration:0s}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-green-50:hover{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.hover\:text-blue-600:hover{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:flex-row{flex-direction:row}.sm\:px-20{padding-left:5rem;padding-right:5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-24{padding-top:6rem;padding-bottom:6rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width: 768px){.md\:order-1{order:1}.md\:order-2{order:2}.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:p-12{padding:3rem}}@media (min-width: 1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-blue-600 text-3xl">lock_open_right</span>
+                    <h1 class="font-bold text-xl tracking-tight text-slate-900">HTTP <span class="text-blue-600">vs</span> HTTPS</h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#simulation" class="text-slate-500 hover:text-blue-600 transition">Simulation</a>
+                    <a href="#deep-dive" class="text-slate-500 hover:text-blue-600 transition">Deep Dive</a>
+                    <a href="#interview" class="text-slate-500 hover:text-blue-600 transition">Interview Q&amp;A</a>
+                </div>
+                <div class="text-xs text-right text-slate-500">
+                    <p>Curated by <span class="font-bold text-slate-800">Rajat Kumar</span></p>
+                    <div class="flex gap-2 justify-end mt-1">
+                        <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="hover:text-blue-600 flex items-center gap-1">
+                            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/im-Rajat/" target="_blank" class="hover:text-black flex items-center gap-1">
+                            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 mb-6">
+                Why the <span class="text-green-600">"S"</span> matters.
+            </h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                An interactive exploration of how the web secures your data. From plain text postcards to armored encryption trucks.
+            </p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="#simulation" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition">Try the Simulator</a>
+                <a href="#interview" class="px-6 py-3 bg-white text-slate-700 border border-slate-300 font-semibold rounded-lg hover:bg-slate-50 transition">Interview Cheat Sheet</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Interactive Simulation -->
+    <section id="simulation" class="py-16 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="mb-10 text-center">
+                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold tracking-wide uppercase mb-2">Interactive Demo</span>
+                <h2 class="text-3xl font-bold text-slate-900">The Man in the Middle</h2>
+                <p class="mt-2 text-slate-600">Type a secret message below and see how it travels across the network.</p>
+            </div>
+
+            <!-- Simulator UI -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                <!-- Controls -->
+                <div class="p-6 bg-slate-100 border-b border-gray-200 flex flex-col sm:flex-row gap-4 items-center justify-between">
+                    <input type="text" id="userMessage" placeholder="Type a password (e.g. secret123)..." class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none w-full shadow-sm">
+                    <div class="flex items-center gap-3 bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
+                        <span class="text-sm font-semibold text-gray-500">Protocol:</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="setMode('http')" id="btn-http" class="px-3 py-1 rounded bg-red-100 text-red-700 text-sm font-bold border border-red-200 ring-2 ring-red-500">HTTP</button>
+                            <button onclick="setMode('https')" id="btn-https" class="px-3 py-1 rounded hover:bg-green-50 text-gray-600 text-sm font-bold border border-transparent transition">HTTPS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animation Area -->
+                <div class="relative h-64 bg-slate-900 overflow-hidden flex items-center justify-between px-10 sm:px-20">
+                    <!-- Client -->
+                    <div class="z-10 flex flex-col items-center gap-2 text-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/50">
+                            <span class="material-symbols-outlined text-white text-3xl">laptop_mac</span>
+                        </div>
+                        <span class="text-blue-200 font-mono text-xs">You (Client)</span>
+                    </div>
+
+                    <!-- Connection Line -->
+                    <div class="absolute top-1/2 left-20 right-20 h-1 bg-slate-700 -translate-y-1/2"></div>
+
+                    <!-- The Hacker -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg shadow-red-600/50 mb-2 border-2 border-slate-800">
+                            <span class="material-symbols-outlined text-white text-xl">person_off</span>
+                        </div>
+                        <div class="bg-black border border-red-900 p-2 rounded w-48 text-center">
+                            <p class="text-[10px] text-red-400 uppercase tracking-widest mb-1">Network Sniffer</p>
+                            <p id="hackerView" class="font-mono text-red-500 text-sm truncate font-bold animate-pulse">password123</p>
+                        </div>
+                    </div>
+
+                    <!-- Server -->
+                    <div class="z-10 flex flex-col items-center gap-2 text-center">
+                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center shadow-lg shadow-purple-600/50">
+                            <span class="material-symbols-outlined text-white text-3xl">dns</span>
+                        </div>
+                        <span class="text-purple-200 font-mono text-xs">Server</span>
+                    </div>
+
+                    <!-- Moving Packet -->
+                    <div id="packet" class="absolute top-1/2 -translate-y-1/2 transition-all duration-0 opacity-0 bg-red-100 text-red-900 border border-red-300 px-3 py-1 rounded shadow font-mono text-xs font-bold whitespace-nowrap z-30" style="left: calc(100% - 100px); opacity: 0; transition: left 2s linear, opacity 0.5s ease-in;">
+                        <span id="packetContent">password123</span>
+                    </div>
+                </div>
+
+                <!-- Explanation Footer -->
+                <div id="demo-explanation" class="p-6 bg-red-50 text-red-800 border-t border-red-100 transition-colors duration-300">
+                    <h3 class="font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined">warning</span>
+                        HTTP is Insecure
+                    </h3>
+                    <p class="text-sm mt-1">In HTTP, data is sent as <strong>Plain Text</strong>. Anyone connected to the same Wi-Fi network or router (the "Man in the Middle") can read your passwords, credit card numbers, and emails exactly as you typed them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Dive Content -->
+    <section id="deep-dive" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Technical Deep Dive</h2>
+
+            <!-- Card 1: HTTP -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                <div class="order-2 md:order-1">
+                    <div class="bg-orange-50 p-2 rounded-2xl rotate-1 shadow-lg w-full max-w-md mx-auto">
+                        <!-- Search result: Postcard -->
+                        <img src="https://miro.medium.com/0*-kouYhnN46Vz_XBW.png" alt="Postcard Analogy" class="rounded-xl w-full h-auto object-cover aspect-video shadow-inner">
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-2 italic">Analogy: Sending a postcard.</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-red-100 text-red-700 p-2 rounded-lg material-symbols-outlined">no_encryption</span>
+                        <h3 class="text-2xl font-bold text-slate-800">HTTP (HyperText Transfer Protocol)</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        HTTP is the foundation of data communication on the web. It is a request-response protocol in the client-server computing model.
+                    </p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-red-500 text-sm mt-1">close</span>
+                            <span><strong>No Encryption:</strong> Data travels in clear text.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-red-500 text-sm mt-1">close</span>
+                            <span><strong>Port 80:</strong> By default, HTTP uses port 80.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-blue-500 text-sm mt-1">info</span>
+                            <span><strong>Analogy:</strong> Like writing a message on a postcard. The mailman, the sorter, and your neighbor can all read it before it reaches the destination.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2: HTTPS -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-green-100 text-green-700 p-2 rounded-lg material-symbols-outlined">lock</span>
+                        <h3 class="text-2xl font-bold text-slate-800">HTTPS (HTTP Secure)</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        HTTPS is the secure version of HTTP. It adds a layer of encryption using <strong>TLS (Transport Layer Security)</strong>, formerly known as SSL.
+                    </p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-green-500 text-sm mt-1">check_circle</span>
+                            <span><strong>Encryption:</strong> Scrambles data so it's unreadable to interceptors.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-green-500 text-sm mt-1">check_circle</span>
+                            <span><strong>Integrity:</strong> Ensures data hasn't been tampered with during transit.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-green-500 text-sm mt-1">check_circle</span>
+                            <span><strong>Authentication:</strong> Verifies the website is who it claims to be (via Certificates).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-blue-500 text-sm mt-1">info</span>
+                            <span><strong>Analogy:</strong> Like sending a letter in a locked, steel briefcase inside an armored truck. Only the recipient has the key.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="bg-blue-50 p-2 rounded-2xl -rotate-1 shadow-lg w-full max-w-md mx-auto">
+                        <!-- Search result: Lock -->
+                        <img src="https://www.netrust.net/wp-content/uploads/2022/08/HTTP-HTTPS-SSL-Certificate-Unsecure-scaled-e1661731905954.jpg" alt="Security Analogy" class="rounded-xl w-full h-auto object-cover aspect-video shadow-inner">
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-2 italic">Analogy: An armored, locked transport.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: The TLS Handshake (Technical Diagram) -->
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+                <div class="max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <span class="material-symbols-outlined text-yellow-400">handshake</span>
+                        How It Works: The TLS Handshake
+                    </h3>
+                    <p class="text-gray-300 mb-8">
+                        Before any data is sent, the browser and server must agree on a secret code (encryption key). This happens in milliseconds.
+                    </p>
+
+                    <!-- Custom SVG Diagram for Memory/Stack Concept (Handshake) -->
+                    <div class="w-full overflow-x-auto">
+                        <svg viewBox="0 0 800 500" class="w-full min-w-[600px] h-auto font-mono text-sm" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Grid -->
+                            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#333" stroke-width="0.5"></path>
+                            </pattern>
+                            <rect width="800" height="500" fill="url(#grid)" opacity="0.2"></rect>
+
+                            <!-- Entities -->
+                            <g transform="translate(100, 50)">
+                                <circle cx="0" cy="0" r="30" fill="#3B82F6"></circle>
+                                <text x="0" y="45" text-anchor="middle" fill="#93C5FD" font-weight="bold">Client</text>
+                                <line x1="0" y1="60" x2="0" y2="400" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,5"></line>
+                            </g>
+                            
+                            <g transform="translate(700, 50)">
+                                <circle cx="0" cy="0" r="30" fill="#8B5CF6"></circle>
+                                <text x="0" y="45" text-anchor="middle" fill="#C4B5FD" font-weight="bold">Server</text>
+                                <line x1="0" y1="60" x2="0" y2="400" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="5,5"></line>
+                            </g>
+
+                            <!-- Step 1: Client Hello -->
+                            <g transform="translate(0, 100)">
+                                <path d="M 120 10 L 680 10" stroke="#fff" stroke-width="2" marker-end="url(#arrowhead)"></path>
+                                <rect x="250" y="-15" width="300" height="30" rx="5" fill="#1f2937" stroke="#4b5563"></rect>
+                                <text x="400" y="5" text-anchor="middle" fill="#fff">1. Client Hello (Cipher Suites)</text>
+                            </g>
+
+                            <!-- Step 2: Server Hello -->
+                            <g transform="translate(0, 160)">
+                                <path d="M 680 10 L 120 10" stroke="#fff" stroke-width="2" marker-end="url(#arrowhead)"></path>
+                                <rect x="250" y="-15" width="300" height="30" rx="5" fill="#1f2937" stroke="#4b5563"></rect>
+                                <text x="400" y="5" text-anchor="middle" fill="#fff">2. Server Hello + Certificate (Public Key)</text>
+                            </g>
+
+                            <!-- Step 3: Verification & Key Exchange -->
+                            <g transform="translate(0, 220)">
+                                <rect x="80" y="-10" width="160" height="40" rx="4" fill="#374151" stroke="#yellow"></rect>
+                                <text x="160" y="15" text-anchor="middle" fill="#fbbf24" font-size="10">Verifies Cert</text>
+                                
+                                <path d="M 120 40 L 680 40" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)"></path>
+                                <rect x="280" y="20" width="240" height="30" rx="5" fill="#1f2937" stroke="#fbbf24"></rect>
+                                <text x="400" y="40" text-anchor="middle" fill="#fbbf24">3. Send Pre-Master Secret (Encrypted)</text>
+                            </g>
+
+                            <!-- Step 4: Session Keys -->
+                            <g transform="translate(0, 320)">
+                                <rect x="300" y="0" width="200" height="40" rx="20" fill="#059669"></rect>
+                                <text x="400" y="25" text-anchor="middle" fill="white" font-weight="bold">Session Keys Created</text>
+                            </g>
+
+                            <!-- Step 5: Secure Data -->
+                            <g transform="translate(0, 390)">
+                                <rect x="120" y="-10" width="560" height="40" rx="5" fill="#064e3b" stroke="#059669" stroke-width="2"></rect>
+                                <text x="400" y="15" text-anchor="middle" fill="#34d399" font-weight="bold" letter-spacing="2">🔒 SECURE ENCRYPTED TUNNEL 🔒</text>
+                            </g>
+
+                            <!-- Definitions -->
+                            <defs>
+                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#fff"></polygon>
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interview Q&A Section -->
+    <section id="interview" class="py-16 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">For the Interview</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Technical Q&amp;A</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleAccordion('q1')">
+                        1. What is the main difference between HTTP and HTTPS regarding ports?
+                        <span class="material-symbols-outlined text-gray-400" id="icon-q1">expand_more</span>
+                    </button>
+                    <div id="q1" class="hidden px-6 py-4 border-t border-gray-100 bg-gray-50 text-slate-600">
+                        <p><strong>HTTP</strong> uses port <strong>80</strong> by default. <br><strong>HTTPS</strong> uses port <strong>443</strong> by default.</p>
+                        <p class="mt-2 text-sm"><em>Tip:</em> Mentioning port numbers shows specific technical knowledge.</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleAccordion('q2')">
+                        2. Explain the difference between Symmetric and Asymmetric encryption in HTTPS.
+                        <span class="material-symbols-outlined text-gray-400" id="icon-q2">expand_more</span>
+                    </button>
+                    <div id="q2" class="hidden px-6 py-4 border-t border-gray-100 bg-gray-50 text-slate-600">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Asymmetric Encryption (Public/Private Key):</strong> Used ONLY during the initial <em>Handshake</em>. It's slow but secure for exchanging the initial keys. The server shares its public key via certificate.</li>
+                            <li><strong>Symmetric Encryption (Session Key):</strong> Used for the actual data transfer after the handshake. It is much faster. Both client and server use the same key (generated during handshake) to encrypt/decrypt data.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleAccordion('q3')">
+                        3. What is an SSL/TLS Certificate and a CA?
+                        <span class="material-symbols-outlined text-gray-400" id="icon-q3">expand_more</span>
+                    </button>
+                    <div id="q3" class="hidden px-6 py-4 border-t border-gray-100 bg-gray-50 text-slate-600">
+                        <p>A <strong>Certificate</strong> is a digital file binding a cryptographic key to an organization’s details (like an ID card). It resides on the server.</p>
+                        <p class="mt-2">A <strong>CA (Certificate Authority)</strong> is a trusted third-party entity (like Let's Encrypt, DigiCert) that issues these certificates. Browsers come with a pre-installed list of trusted CAs. If the CA isn't trusted, the browser shows a "Not Secure" warning.</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-slate-800 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleAccordion('q4')">
+                        4. Is HTTPS slower than HTTP?
+                        <span class="material-symbols-outlined text-gray-400" id="icon-q4">expand_more</span>
+                    </button>
+                    <div id="q4" class="hidden px-6 py-4 border-t border-gray-100 bg-gray-50 text-slate-600">
+                        <p>Technically, <strong>yes</strong>, because of the initial handshake overhead (round trips) and the CPU load for encryption/decryption.</p>
+                        <p class="mt-2"><strong>However</strong>, with modern hardware, HTTP/2 (which requires HTTPS), and TLS 1.3 optimizations (0-RTT), the difference is negligible for users. Often, HTTPS sites are faster because they can utilize newer protocols like HTTP/2 and HTTP/3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex flex-col items-center justify-center gap-4 mb-6">
+                <div class="w-16 h-1 bg-blue-600 rounded-full"></div>
+                <h3 class="text-xl font-bold text-slate-900">Curated by Rajat Kumar</h3>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="text-slate-500 hover:text-blue-600 transition">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                    </a>
+                    <a href="https://github.com/im-Rajat/" target="_blank" class="text-slate-500 hover:text-black transition">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <p class="text-sm text-slate-400">© 2024 Educational Content. Images via LoremFlickr.</p>
+        </div>
+    </footer>
+
+    <!-- Download Button -->
+    <button onclick="downloadPage()" class="fixed bottom-4 right-4 bg-slate-800 text-white px-3 py-2 text-xs rounded shadow-lg hover:bg-slate-700 transition flex items-center gap-2 z-50 opacity-80 hover:opacity-100">
+        <span class="material-symbols-outlined text-sm">download</span>
+        Download .html
+    </button>
+
+    <!-- Application Logic -->
+    <script>
+        // State
+        let currentMode = 'http';
+        let packetInterval;
+        const packetEl = document.getElementById('packet');
+        const hackerViewEl = document.getElementById('hackerView');
+        const inputEl = document.getElementById('userMessage');
+        const explanationPanel = document.getElementById('demo-explanation');
+
+        // Mode Switching
+        function setMode(mode) {
+            currentMode = mode;
+            const btnHttp = document.getElementById('btn-http');
+            const btnHttps = document.getElementById('btn-https');
+
+            if (mode === 'http') {
+                btnHttp.className = "px-3 py-1 rounded bg-red-100 text-red-700 text-sm font-bold border border-red-200 ring-2 ring-red-500 transition-all";
+                btnHttps.className = "px-3 py-1 rounded hover:bg-green-50 text-gray-600 text-sm font-bold border border-transparent transition-all";
+                explanationPanel.className = "p-6 bg-red-50 text-red-800 border-t border-red-100 transition-colors duration-300";
+                explanationPanel.innerHTML = `
+                    <h3 class="font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined">warning</span>
+                        HTTP is Insecure
+                    </h3>
+                    <p class="text-sm mt-1">In HTTP, data is sent as <strong>Plain Text</strong>. Anyone connected to the same Wi-Fi network or router (the "Man in the Middle") can read your passwords, credit card numbers, and emails exactly as you typed them.</p>
+                `;
+            } else {
+                btnHttp.className = "px-3 py-1 rounded hover:bg-red-50 text-gray-600 text-sm font-bold border border-transparent transition-all";
+                btnHttps.className = "px-3 py-1 rounded bg-green-100 text-green-800 text-sm font-bold border border-green-200 ring-2 ring-green-500 transition-all";
+                explanationPanel.className = "p-6 bg-green-50 text-green-800 border-t border-green-100 transition-colors duration-300";
+                explanationPanel.innerHTML = `
+                    <h3 class="font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined">lock</span>
+                        HTTPS is Secure
+                    </h3>
+                    <p class="text-sm mt-1">In HTTPS, data is <strong>Encrypted</strong> before it leaves your device. The "Man in the Middle" only sees random garbage characters (Ciphertext). Only the server has the key to unlock the message.</p>
+                `;
+            }
+            // Trigger animation immediately on switch for feedback
+            restartAnimation();
+        }
+
+        // Animation Logic
+        function animatePacket() {
+            const message = inputEl.value || "password123";
+            let displayContent = "";
+            let hackerContent = "";
+
+            if (currentMode === 'http') {
+                // HTTP: Plain text
+                displayContent = message;
+                hackerContent = message;
+                packetEl.className = "absolute top-1/2 -translate-y-1/2 transition-all duration-0 opacity-0 bg-red-100 text-red-900 border border-red-300 px-3 py-1 rounded shadow font-mono text-xs font-bold whitespace-nowrap z-30";
+            } else {
+                // HTTPS: Encrypted text
+                displayContent = `<span class="material-symbols-outlined text-[10px] align-middle mr-1">lock</span>` + generateGarbage(8);
+                hackerContent = generateGarbage(message.length > 5 ? message.length : 10);
+                packetEl.className = "absolute top-1/2 -translate-y-1/2 transition-all duration-0 opacity-0 bg-green-100 text-green-900 border border-green-300 px-3 py-1 rounded shadow font-mono text-xs font-bold whitespace-nowrap z-30";
+            }
+
+            document.getElementById('packetContent').innerHTML = displayContent;
+
+            // Start Position
+            packetEl.style.left = '80px'; // Near client
+            packetEl.style.opacity = '1';
+            packetEl.style.transition = 'none';
+
+            // Reset Hacker View before packet reaches middle
+            hackerViewEl.textContent = "...";
+            hackerViewEl.className = "font-mono text-gray-500 text-sm truncate";
+
+            // Animate
+            setTimeout(() => {
+                packetEl.style.transition = 'left 2s linear, opacity 0.5s ease-in';
+                // Move across
+                // Get width of container to calculate end position dynamicallly? 
+                // Hardcoding simpler for this contained demo, or using calc
+                packetEl.style.left = 'calc(100% - 100px)'; // Near server
+                
+                // Hacker intercepts in the middle (approx 1s in)
+                setTimeout(() => {
+                    hackerViewEl.textContent = hackerContent;
+                    if(currentMode === 'http') {
+                         hackerViewEl.className = "font-mono text-red-500 text-sm truncate font-bold animate-pulse";
+                    } else {
+                         hackerViewEl.className = "font-mono text-green-500 text-sm truncate";
+                    }
+                }, 1000);
+
+                // End of animation
+                setTimeout(() => {
+                    packetEl.style.opacity = '0';
+                }, 1800);
+
+            }, 50);
+        }
+
+        function restartAnimation() {
+            clearInterval(packetInterval);
+            animatePacket();
+            packetInterval = setInterval(animatePacket, 2500); // Loop every 2.5s
+        }
+
+        function generateGarbage(length) {
+            const chars = "(!@#$%^&*?><;:[]{}|)";
+            let result = "";
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = 'expand_less';
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = 'expand_more';
+            }
+        }
+
+        // Download Self
+        function downloadPage() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], {type: 'text/html'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'http_vs_https_rajat_kumar.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            restartAnimation();
+            
+            // Listen for typing to update next packet immediately
+            inputEl.addEventListener('input', () => {
+                // Debounce slightly if needed, but for this loop it's fine.
+                // The next packet will pick up the new text.
+            });
+        });
+
+    </script>
+
+
+</body></html>

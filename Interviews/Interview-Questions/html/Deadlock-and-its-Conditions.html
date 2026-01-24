@@ -277,6 +277,106 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         </div>
     </section>
 
+    <!-- Deadlock Handling Strategies -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-200">
+                    <h3 class="text-2xl font-bold text-slate-800">Handling Deadlocks</h3>
+                    <p class="text-sm text-slate-500">How do Operating Systems deal with this mess?</p>
+                </div>
+                
+                <div class="flex border-b border-slate-200">
+                    <button onclick="switchTab('prevention')" id="btn-prevention" class="flex-1 py-4 text-sm font-semibold text-blue-600 border-b-2 border-blue-600 hover:bg-slate-50 transition-colors">Deadlock Prevention</button>
+                    <button onclick="switchTab('avoidance')" id="btn-avoidance" class="flex-1 py-4 text-sm font-medium text-slate-500 border-b-2 border-transparent hover:text-blue-600 hover:bg-slate-50 transition-colors">Deadlock Avoidance</button>
+                    <button onclick="switchTab('detection')" id="btn-detection" class="flex-1 py-4 text-sm font-medium text-slate-500 border-b-2 border-transparent hover:text-blue-600 hover:bg-slate-50 transition-colors">Detection &amp; Recovery</button>
+                </div>
+
+                <div class="p-8">
+                    <!-- Prevention Tab -->
+                    <div id="tab-prevention" class="tab-content active">
+                        <h4 class="text-xl font-bold mb-4 text-slate-800">Break one of the 4 conditions!</h4>
+                        <p class="text-slate-600 mb-6">If we can guarantee that at least one of the conditions cannot hold, deadlock is impossible.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
+                                <div>
+                                    <span class="font-bold text-slate-800">Eliminate Mutual Exclusion:</span> Make resources shareable (e.g., Read-only files).
+                                    <p class="text-xs text-slate-500 italic mt-1">Challenge: Some resources like printers cannot be shared.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
+                                <div>
+                                    <span class="font-bold text-slate-800">Eliminate Hold and Wait:</span> Process must request all resources at start.
+                                    <p class="text-xs text-slate-500 italic mt-1">Challenge: Low resource utilization; starvation possible.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
+                                <div>
+                                    <span class="font-bold text-slate-800">Eliminate Circular Wait:</span> Order resources numerically. Can only request higher #.
+                                    <p class="text-xs text-slate-500 italic mt-1">Commonly used in practical systems.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Avoidance Tab -->
+                    <div id="tab-avoidance" class="tab-content">
+                        <h4 class="text-xl font-bold mb-4 text-slate-800">The Banker's Algorithm</h4>
+                        <p class="text-slate-600 mb-6">The OS requires additional information about which resources a process will need. Before granting a request, the OS checks: <strong>"Will granting this put me in an Unsafe State?"</strong></p>
+                        
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 mb-4">
+                            <h5 class="font-bold text-amber-900">Safe State</h5>
+                            <p class="text-sm text-amber-800">A state is safe if the system can allocate resources to each process in some order and still avoid a deadlock.</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="bg-white p-4 border rounded shadow-sm">
+                                <h6 class="font-bold text-sm mb-2">Request Allowed</h6>
+                                <div class="h-2 w-full bg-slate-200 rounded overflow-hidden">
+                                    <div class="h-full bg-green-500 w-full"></div>
+                                </div>
+                                <p class="text-xs text-slate-500 mt-2">If system remains in SAFE state.</p>
+                            </div>
+                            <div class="bg-white p-4 border rounded shadow-sm">
+                                <h6 class="font-bold text-sm mb-2">Request Denied (Wait)</h6>
+                                <div class="h-2 w-full bg-slate-200 rounded overflow-hidden">
+                                    <div class="h-full bg-red-500 w-1/3"></div>
+                                </div>
+                                <p class="text-xs text-slate-500 mt-2">If system would enter UNSAFE state.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detection Tab -->
+                    <div id="tab-detection" class="tab-content">
+                        <h4 class="text-xl font-bold mb-4 text-slate-800">Let it break, then fix it.</h4>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h5 class="font-bold text-slate-800 mb-2">1. Detection</h5>
+                                <p class="text-slate-600 text-sm mb-4">
+                                    The OS periodically runs an algorithm (like looking for cycles in a Resource Allocation Graph) to see if a deadlock exists.
+                                </p>
+                                <div class="p-3 bg-slate-100 rounded border border-slate-200 text-xs font-mono">
+                                    Check_Cycle(Graph G) -&gt; Returns True/False
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-800 mb-2">2. Recovery</h5>
+                                <ul class="space-y-2 text-sm text-slate-600">
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-red-500 text-sm">cancel</span> <strong>Process Termination:</strong> Kill one or all deadlocked processes.</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-orange-500 text-sm">history</span> <strong>Rollback:</strong> Roll back a process to a safe checkpoint and restart.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Code Example -->
     <section id="code" class="py-16 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 opacity-100 translate-y-0">
@@ -432,6 +532,36 @@ std::mutex <span class="text-yellow-400">mutexB</span>;
     </button>
 
     <script>
+        // Tab Switching Logic for Handling Deadlocks Section
+        function switchTab(tabName) {
+            // Hide all content
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.remove('active');
+                setTimeout(() => {
+                    if(!el.classList.contains('active')) el.style.display = 'none';
+                }, 300); // match transition time
+            });
+
+            // Deactivate all buttons
+            document.querySelectorAll('button[id^="btn-"]').forEach(btn => {
+                btn.classList.remove('text-blue-600', 'border-blue-600');
+                btn.classList.add('text-slate-500', 'border-transparent');
+            });
+
+            // Show selected content
+            const content = document.getElementById(`tab-${tabName}`);
+            content.style.display = 'block';
+            // slight delay to allow display block to render before adding opacity class
+            requestAnimationFrame(() => {
+                content.classList.add('active');
+            });
+
+            // Activate button
+            const activeBtn = document.getElementById(`btn-${tabName}`);
+            activeBtn.classList.remove('text-slate-500', 'border-transparent');
+            activeBtn.classList.add('text-blue-600', 'border-blue-600');
+        }
+
         // Simple function to download the current page as an HTML file
         function downloadPage() {
             // Get the entire HTML content
