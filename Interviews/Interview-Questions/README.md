@@ -18,6 +18,7 @@
 ## Operating Systems
 
 - [Process vs Thread](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Process-vs-Thread.html)
+- [Mutex vs Semaphore](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Mutex-vs-Semaphore.html)
 
 ## Coding
 
