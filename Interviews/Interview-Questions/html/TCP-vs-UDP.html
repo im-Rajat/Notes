@@ -329,11 +329,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
 </div>
 </div>
 </footer>
-<!-- Fixed Download Button (Corner) -->
-<button class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-105 z-50 group flex items-center justify-center" onclick="downloadPage()" title="Download HTML">
-<span class="material-symbols-outlined text-2xl">download</span>
-<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap group-hover:ml-2 text-sm font-bold">Download Page</span>
-</button>
 <script>
         // --- Simulation Logic ---
         let currentMode = 'tcp';
@@ -485,20 +480,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             } else {
                 icon.style.transform = 'rotate(180deg)';
             }
-        }
-
-        // --- Download Logic ---
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'tcp-vs-udp-interactive-rajat-kumar.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
     </script>
 

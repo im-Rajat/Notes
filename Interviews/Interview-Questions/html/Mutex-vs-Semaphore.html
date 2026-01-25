@@ -447,13 +447,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         </div>
     </footer>
 
-    <!-- Download Button (Bottom Left) -->
-    <div class="fixed bottom-4 left-4 z-50">
-        <button onclick="downloadPage()" class="bg-white text-slate-900 px-4 py-2 rounded shadow-lg hover:bg-slate-200 transition text-xs font-bold flex items-center gap-2">
-            <span class="material-symbols-outlined text-base">download</span> Download .html
-        </button>
-    </div>
-
     <!-- Logic Script -->
     <script>
         // --- Simulation Logic ---
@@ -636,21 +629,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
 
         // Initial Render
         setMode('mutex');
-
-        // --- Download Feature ---
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'mutex_vs_semaphore_rajat.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            alert('File downloaded! The background images are now built-in code, so they will NEVER break.');
-        }
     </script>
 
 

@@ -746,13 +746,6 @@ function(){de()}):de()})();}).call(this);
 </div>
 </div>
 </section>
-<!-- Download FAB -->
-<div class="fixed bottom-6 right-6 z-50">
-<button class="bg-slate-900 hover:bg-slate-800 text-white p-4 rounded-full shadow-2xl flex items-center gap-2 transition hover:scale-105 active:scale-95 group" onclick="downloadPage()" title="Download this page">
-<span class="material-symbols-outlined">download</span>
-<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap text-sm font-bold">Download HTML</span>
-</button>
-</div>
 <!-- Footer -->
 <footer class="bg-white border-t border-slate-200 py-10">
 <div class="max-w-7xl mx-auto px-4 text-center">
@@ -853,20 +846,6 @@ function(){de()}):de()})();}).call(this);
                 content.classList.add('hidden');
                 icon.style.transform = 'rotate(0deg)';
             }
-        }
-
-        // Download Logic
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'main-vs-secondary-memory-curated-by-rajat.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
     </script>
 

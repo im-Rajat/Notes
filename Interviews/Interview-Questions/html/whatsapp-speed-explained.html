@@ -365,10 +365,6 @@ wb);O(IMG_SEARCH_ATTRIBUTION_MAP,Pd);O(IMG_GEN_REPLACE_MAP,fa.A);X();jf();h.A=0}
                 <span class="material-symbols-outlined text-green-500">sync_alt</span>
                 <span class="font-bold text-lg">SpeedExplain</span>
             </div>
-            <button onclick="downloadPage()" class="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors border border-slate-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                <span class="material-symbols-outlined text-sm">download</span>
-                <span>Download App as HTML</span>
-            </button>
         </div>
     </nav>
 
@@ -589,34 +585,6 @@ wb);O(IMG_SEARCH_ATTRIBUTION_MAP,Pd);O(IMG_GEN_REPLACE_MAP,fa.A);X();jf();h.A=0}
     </footer>
 
     <script>
-        // --- Download / Export Logic ---
-        function downloadPage() {
-            // Get the current HTML
-            const doc = document.documentElement.outerHTML;
-            const htmlContent = "<!DOCTYPE html>\n" + doc;
-            
-            // Create a blob and trigger download
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'whatsapp-speed-explained.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            
-            // Feedback
-            const btn = document.querySelector('button[onclick="downloadPage()"]');
-            const originalHTML = btn.innerHTML;
-            btn.innerHTML = `<span class="material-symbols-outlined text-sm">check</span> <span>Saved!</span>`;
-            btn.classList.add('bg-green-700', 'border-green-500');
-            setTimeout(() => {
-                btn.innerHTML = originalHTML;
-                btn.classList.remove('bg-green-700', 'border-green-500');
-            }, 2000);
-        }
-
         // --- Simulation Logic ---
         const typeBtn = document.getElementById('typeBtn');
         const packet = document.getElementById('packet');

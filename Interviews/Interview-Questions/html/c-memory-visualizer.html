@@ -424,12 +424,6 @@ a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons"
     </div>
 </div>
 
-<!-- Download Floating Button -->
-<button class="fixed bottom-6 right-6 bg-slate-900 hover:bg-slate-800 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 z-50 flex items-center justify-center group border border-slate-700" onclick="downloadPage()" title="Download as HTML">
-    <span class="material-symbols-outlined text-2xl">download</span>
-    <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap text-sm font-semibold">Download Offline</span>
-</button>
-
 <!-- Scripts -->
 <script>
         /* -------------------------------------------------------------------------- */
@@ -639,19 +633,6 @@ a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons"
             document.getElementById('step-btn').classList.remove('opacity-50');
             renderCode();
             log("Simulation reset. Ready to start.");
-        }
-
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'c-memory-visualizer-rajat.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
 
         document.getElementById('step-btn').addEventListener('click', stepSimulation);

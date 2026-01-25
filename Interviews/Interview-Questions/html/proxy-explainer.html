@@ -355,13 +355,6 @@ wb);O(IMG_SEARCH_ATTRIBUTION_MAP,Pd);O(IMG_GEN_REPLACE_MAP,fa.A);X();jf();h.A=0}
                 <span class="material-symbols-outlined text-blue-600 text-3xl">dns</span>
                 <h1 class="text-xl font-bold text-slate-900">Proxy<span class="text-blue-600">Explainer</span></h1>
             </div>
-            
-            <div class="flex items-center gap-4">
-                <button onclick="downloadHTML()" class="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium shadow-md">
-                    <span class="material-symbols-outlined text-[20px]">download</span>
-                    <span class="hidden sm:inline">Export Page</span>
-                </button>
-            </div>
         </div>
     </header>
 
@@ -762,19 +755,6 @@ wb);O(IMG_SEARCH_ATTRIBUTION_MAP,Pd);O(IMG_GEN_REPLACE_MAP,fa.A);X();jf();h.A=0}
                 animStatus.style.opacity = '0';
                 animStatus.innerText = "Sending Request...";
             }, 3000);
-        }
-
-        function downloadHTML() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'proxy-explainer-by-rajat.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
 
         // Initialize

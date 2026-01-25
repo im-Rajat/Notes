@@ -746,12 +746,6 @@ function(){de()}):de()})();}).call(this);
         </div>
     </footer>
 
-    <!-- Floating Download Button (Bottom Right) -->
-    <button onclick="downloadPage()" class="fixed bottom-6 right-6 bg-slate-800 hover:bg-slate-700 text-white p-3 rounded-full shadow-2xl transition-all hover:scale-110 z-50 group" title="Download Offline HTML">
-        <span class="material-symbols-outlined">download</span>
-        <span class="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-slate-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Download .html</span>
-    </button>
-
     <script>
         // --- Animation Logic ---
         
@@ -886,20 +880,6 @@ function(){de()}):de()})();}).call(this);
             }
         }
 
-        function downloadPage() {
-            // Get current HTML
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'dns-explained-rajat-kumar.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
     </script>
 
 

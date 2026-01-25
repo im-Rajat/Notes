@@ -29,6 +29,7 @@
     - [How DNS works?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/How-DNS-works.html)
 - [IP Address vs MAC Address](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/IP-vs-MAC-Address.html)
 - [HTTP vs HTTPS](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/HTTP-vs-HTTPS.html)
+- [Server Side Load Balancing](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Server-Side-Load-Balancing.html)
 
 ## Coding
 

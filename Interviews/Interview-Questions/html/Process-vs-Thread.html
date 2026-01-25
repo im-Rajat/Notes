@@ -336,12 +336,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         </div>
     </footer>
 
-    <!-- Floating Download Button -->
-    <button onclick="downloadPage()" class="floating-btn bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2 group border-2 border-white/20">
-        <span class="material-symbols-outlined group-hover:animate-bounce">download</span>
-        <span class="font-bold text-sm hidden group-hover:inline-block transition-all">Download HTML</span>
-    </button>
-
     <script>
         // State
         let currentMode = 'process';
@@ -562,38 +556,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             navigator.clipboard.writeText(text).then(() => {
                 alert("Answer copied to clipboard!");
             });
-        }
-
-        function downloadPage() {
-            // Logic to download the current state of the page as HTML
-            // 1. Clone the document to avoid modifying the active view (optional, but cleaner)
-            // But for simple attribute syncing, we can just sync and then grab outerHTML.
-            
-            // Sync current input states to attributes so they persist in the downloaded file
-            // (Only relevant if we had inputs, but good practice)
-            const inputs = document.querySelectorAll('input');
-            inputs.forEach(input => {
-                if(input.type === 'checkbox' || input.type === 'radio') {
-                    if(input.checked) input.setAttribute('checked', 'checked');
-                    else input.removeAttribute('checked');
-                } else {
-                    input.setAttribute('value', input.value);
-                }
-            });
-
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            const url = URL.createObjectURL(blob);
-            
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Process_vs_Thread_by_Rajat.html';
-            document.body.appendChild(a);
-            a.click();
-            
-            // Cleanup
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
 
         // Initialize

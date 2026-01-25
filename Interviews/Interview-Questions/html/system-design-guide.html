@@ -518,29 +518,7 @@ a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons"
 </div>
 </div>
 </div>
-<!-- Download Button (Bottom Right) -->
-<button class="fixed bottom-6 right-6 z-50 bg-slate-900 hover:bg-black text-white px-4 py-2 rounded-full shadow-2xl flex items-center gap-2 text-xs transition-all border border-slate-700 hover:scale-105" onclick="downloadHTML()" title="Download this page as a single HTML file">
-<span class="material-symbols-outlined text-sm">download</span>
-  Download .html
-</button>
 <script>
-    // --- Download Functionality ---
-    function downloadHTML() {
-      // Get the full HTML content
-      const htmlContent = document.documentElement.outerHTML;
-      // Create a blob
-      const blob = new Blob([htmlContent], { type: 'text/html' });
-      // Create a temporary link
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'System_Design_Guide.html';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-
     // --- SVGs as Strings for Modals ---
     // We define these as strings so we can inject them into the modal header dynamically
     const svgs = {

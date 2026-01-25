@@ -447,12 +447,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         </div>
     </footer>
 
-    <!-- Download Button -->
-    <button onclick="downloadPage()" class="fixed bottom-4 right-4 bg-slate-800 text-white px-3 py-2 text-xs rounded shadow-lg hover:bg-slate-700 transition flex items-center gap-2 z-50 opacity-80 hover:opacity-100">
-        <span class="material-symbols-outlined text-sm">download</span>
-        Download .html
-    </button>
-
     <!-- Application Logic -->
     <script>
         // State
@@ -578,20 +572,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
                 content.classList.add('hidden');
                 icon.textContent = 'expand_more';
             }
-        }
-
-        // Download Self
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'http_vs_https_rajat_kumar.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
 
         // Init

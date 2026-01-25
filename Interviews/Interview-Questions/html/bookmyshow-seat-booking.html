@@ -364,27 +364,8 @@ a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons"
     </div>
 </footer>
 
-<!-- Floating Download Button -->
-<button onclick="downloadPage()" class="download-btn bg-gray-800 hover:bg-black text-white px-4 py-3 rounded-l-full shadow-xl flex items-center gap-2 border border-gray-700">
-    <span class="material-symbols-outlined">download</span>
-    <span class="text-sm font-medium pr-2">Download .html</span>
-</button>
-
 <!-- JavaScript Application Logic -->
 <script>
-    // --- Download Functionality ---
-    function downloadPage() {
-        const htmlContent = document.documentElement.outerHTML;
-        const blob = new Blob([htmlContent], {type: 'text/html'});
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'bookmyshow-system-design-by-rajat.html';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
 
     // --- Simulation Logic ---
     const state = {

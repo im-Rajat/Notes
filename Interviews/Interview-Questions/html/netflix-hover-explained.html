@@ -443,34 +443,7 @@ a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons"
         <p class="text-gray-600 text-xs">Images sourced from Unsplash for demonstration purposes.</p>
     </footer>
 
-    <!-- Download Button (Bottom Right Corner) -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <button onclick="downloadPage()" class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 text-white px-3 py-2 rounded-lg shadow-lg text-xs font-medium transition-all group">
-            <span class="material-symbols-outlined text-[16px] group-hover:scale-110 transition-transform">download</span>
-            Download .html
-        </button>
-    </div>
-
     <script>
-        // Download Feature Logic
-        function downloadPage() {
-            // Get the full HTML content
-            const htmlContent = document.documentElement.outerHTML;
-            // Create a blob
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            // Create a temporary link
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'netflix-hover-explained.html';
-            // Trigger download
-            document.body.appendChild(a);
-            a.click();
-            // Cleanup
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             const timelineArea = document.getElementById('timeline-area');
             const tooltip = document.getElementById('preview-tooltip');

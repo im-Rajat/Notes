@@ -589,32 +589,6 @@ a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons"
         }, animDuration);
     }
 
-    function downloadHtml() {
-        // Clone the document to modify it for export without changing the current view
-        const docClone = document.documentElement.cloneNode(true);
-        
-        // Remove the export button from the clone (user doesn't need a button to download the page they just downloaded)
-        const exportBtn = docClone.querySelector('#export-btn');
-        if (exportBtn) {
-            exportBtn.remove();
-        }
-
-        // Create the blob and download link
-        const htmlContent = `<!DOCTYPE html>\n${docClone.outerHTML}`;
-        const blob = new Blob([htmlContent], { type: 'text/html' });
-        const url = URL.createObjectURL(blob);
-        
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'cdn-latency-explorer.html';
-        document.body.appendChild(a);
-        a.click();
-        
-        // Cleanup
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
-
     // Init
     setMode('origin');
 </script>

@@ -434,12 +434,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         </div>
     </footer>
 
-    <!-- Floating Download Button -->
-    <button onclick="downloadPage()" class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-500 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 group flex items-center gap-0 hover:gap-2 overflow-hidden" title="Download as HTML">
-        <span class="material-symbols-outlined">download</span>
-        <span class="max-w-0 group-hover:max-w-xs transition-all duration-300 text-sm whitespace-nowrap overflow-hidden">Download Page</span>
-    </button>
-
     <script>
         function switchMode(mode) {
             const storyView = document.getElementById('view-story');
@@ -463,19 +457,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
                 btnStory.classList.add('bg-slate-800', 'text-slate-300');
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'how-web-works-rajat.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
     </script>
 

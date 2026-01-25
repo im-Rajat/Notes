@@ -523,14 +523,6 @@ std::mutex <span class="text-yellow-400">mutexB</span>;
         </div>
     </footer>
 
-    <!-- Floating Download Button -->
-    <button onclick="downloadPage()" class="fixed bottom-6 right-6 bg-brand-600 hover:bg-brand-700 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 z-50 group" title="Download this page">
-        <span class="material-symbols-outlined">download</span>
-        <span class="absolute right-full mr-3 bg-slate-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">
-            Download .html
-        </span>
-    </button>
-
     <script>
         // Tab Switching Logic for Handling Deadlocks Section
         function switchTab(tabName) {
@@ -560,25 +552,6 @@ std::mutex <span class="text-yellow-400">mutexB</span>;
             const activeBtn = document.getElementById(`btn-${tabName}`);
             activeBtn.classList.remove('text-slate-500', 'border-transparent');
             activeBtn.classList.add('text-blue-600', 'border-blue-600');
-        }
-
-        // Simple function to download the current page as an HTML file
-        function downloadPage() {
-            // Get the entire HTML content
-            const htmlContent = document.documentElement.outerHTML;
-            
-            // Create a Blob object
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            
-            // Create a temporary link element
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'Deadlock_Explained_by_Rajat_Kumar.html';
-            
-            // Append to body, click, and remove
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
         }
 
         // Add smooth reveal animation on scroll
