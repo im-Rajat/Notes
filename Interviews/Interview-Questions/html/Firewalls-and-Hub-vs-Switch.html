@@ -1,0 +1,738 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function l(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}function r(a){var c=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(c)return c.call(a);if(typeof a.length=="number")return{next:l(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var t=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,g){if(a==Array.prototype||a==Object.prototype)return a;a[c]=g.value;return a};
+function u(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var g=a[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var v=u(this);function x(a,c){if(c)a:{var g=v;a=a.split(".");for(var h=0;h<a.length-1;h++){var m=a[h];if(!(m in g))break a;g=g[m]}a=a[a.length-1];h=g[a];c=c(h);c!=h&&c!=null&&t(g,a,{configurable:!0,writable:!0,value:c})}}
+function y(a){if(!(a instanceof Object))throw new TypeError("Iterator result "+a+" is not an object");}function z(){this.o=!1;this.j=null;this.u=void 0;this.g=1;this.i=this.l=0;this.C=this.h=null}function A(a){if(a.o)throw new TypeError("Generator is already running");a.o=!0}z.prototype.v=function(a){this.u=a};function B(a,c){a.h={K:c,L:!0};a.g=a.l||a.i}z.prototype.N=function(){return this.g};z.prototype.getNextAddress=z.prototype.N;z.prototype.O=function(){return this.u};
+z.prototype.getYieldResult=z.prototype.O;z.prototype.return=function(a){this.h={return:a};this.g=this.i};z.prototype["return"]=z.prototype.return;z.prototype.P=function(a){this.h={B:a};this.g=this.i};z.prototype.jumpThroughFinallyBlocks=z.prototype.P;z.prototype.A=function(a,c){this.g=c;return{value:a}};z.prototype.yield=z.prototype.A;z.prototype.T=function(a,c){a=r(a);var g=a.next();y(g);if(g.done)this.u=g.value,this.g=c;else return this.j=a,this.A(g.value,c)};z.prototype.yieldAll=z.prototype.T;
+z.prototype.B=function(a){this.g=a};z.prototype.jumpTo=z.prototype.B;z.prototype.F=function(){this.g=0};z.prototype.jumpToEnd=z.prototype.F;z.prototype.H=function(a,c){this.l=a;c!=void 0&&(this.i=c)};z.prototype.setCatchFinallyBlocks=z.prototype.H;z.prototype.S=function(a){this.l=0;this.i=a||0};z.prototype.setFinallyBlock=z.prototype.S;z.prototype.G=function(a,c){this.g=a;this.l=c||0};z.prototype.leaveTryBlock=z.prototype.G;z.prototype.D=function(a){this.l=a||0;a=this.h.K;this.h=null;return a};
+z.prototype.enterCatchBlock=z.prototype.D;z.prototype.J=function(a,c,g){g?this.C[g]=this.h:this.C=[this.h];this.l=a||0;this.i=c||0};z.prototype.enterFinallyBlock=z.prototype.J;z.prototype.R=function(a,c){c=this.C.splice(c||0)[0];(c=this.h=this.h||c)?c.L?this.g=this.l||this.i:c.B!=void 0&&this.i<c.B?(this.g=c.B,this.h=null):this.g=this.i:this.g=a};z.prototype.leaveFinallyBlock=z.prototype.R;z.prototype.M=function(a){return new C(a)};z.prototype.forIn=z.prototype.M;
+function C(a){this.i=a;this.g=[];for(var c in a)this.g.push(c);this.g.reverse()}C.prototype.h=function(){for(;this.g.length>0;){var a=this.g.pop();if(a in this.i)return a}return null};C.prototype.getNext=C.prototype.h;function F(a){this.g=new z;this.h=a}function G(a,c){A(a.g);var g=a.g.j;if(g)return H(a,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return I(a)}
+function H(a,c,g,h){try{var m=c.call(a.g.j,g);y(m);if(!m.done)return a.g.o=!1,m;var n=m.value}catch(f){return a.g.j=null,B(a.g,f),I(a)}a.g.j=null;h.call(a.g,n);return I(a)}function I(a){for(;a.g.g;)try{var c=a.h(a.g);if(c)return a.g.o=!1,{value:c.value,done:!1}}catch(g){a.g.u=void 0,B(a.g,g)}a.g.o=!1;if(a.g.h){c=a.g.h;a.g.h=null;if(c.L)throw c.K;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){A(a.g);a.g.j?c=H(a,a.g.j.next,c,a.g.v):(a.g.v(c),c=I(a));return c};this.throw=function(c){A(a.g);a.g.j?c=H(a,a.g.j["throw"],c,a.g.v):(B(a.g,c),c=I(a));return c};this.return=function(c){return G(a,c)};this[Symbol.iterator]=function(){return this}}function K(a){function c(h){return a.next(h)}function g(h){return a.throw(h)}return new Promise(function(h,m){function n(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(n,m)}n(a.next())})}
+x("Symbol",function(a){function c(n){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(n||"")+"_"+m++,n)}function g(n,f){this.g=n;t(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",m=0;return c});
+x("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");t(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return L(l(this))}});return a});function L(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+x("Promise",function(a){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var b=this.j();try{f(b.resolve,b.reject)}catch(d){b.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(b){b(f)})}if(a)return a;g.prototype.h=function(f){if(this.g==null){this.g=[];var b=this;this.i(function(){b.l()})}this.g.push(f)};var m=v.setTimeout;g.prototype.i=function(f){m(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var b=0;b<f.length;++b){var d=
+f[b];f[b]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(b,k))}}var b=this,d=!1;return{resolve:f(this.F),reject:f(this.l)}};c.prototype.F=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.H(f);else{a:switch(typeof f){case "object":var b=f!=null;break a;case "function":b=!0;break a;default:b=!1}b?this.D(f):this.o(f)}};
+c.prototype.D=function(f){var b=void 0;try{b=f.then}catch(d){this.l(d);return}typeof b=="function"?this.J(b,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,b){if(this.h!=0)throw Error("Cannot settle("+f+", "+b+"): Promise already settled in state"+this.h);this.h=f;this.i=b;this.h===2&&this.G();this.C()};c.prototype.G=function(){var f=this;m(function(){if(f.A()){var b=v.console;typeof b!=="undefined"&&b.error(f.i)}},1)};c.prototype.A=
+function(){if(this.u)return!1;var f=v.CustomEvent,b=v.Event,d=v.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof b==="function"?f=new b("unhandledrejection",{cancelable:!0}):(f=v.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.C=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)n.h(this.g[f]);this.g=null}};var n=new g;c.prototype.H=
+function(f){var b=this.j();f.I(b.resolve,b.reject)};c.prototype.J=function(f,b){var d=this.j();try{f.call(b,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,b){function d(p,w){return typeof p=="function"?function(D){try{e(p(D))}catch(E){k(E)}}:w}var e,k,q=new c(function(p,w){e=p;k=w});this.I(d(f,e),d(b,k));return q};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.I=function(f,b){function d(){switch(e.h){case 1:f(e.i);break;case 2:b(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?n.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(b,d){d(f)})};c.race=function(f){return new c(function(b,d){for(var e=r(f),k=e.next();!k.done;k=e.next())h(k.value).I(b,d)})};c.all=function(f){var b=r(f),d=b.next();return d.done?h([]):new c(function(e,k){function q(D){return function(E){p[D]=E;w--;w==0&&e(p)}}var p=[],w=0;do p.push(void 0),w++,h(d.value).I(q(p.length-1),k),d=b.next();while(!d.done)})};return c});
+function M(a,c){return Object.prototype.hasOwnProperty.call(a,c)}x("Object.is",function(a){return a?a:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(a){return a?a:function(c,g){var h=this;h instanceof String&&(h=String(h));var m=h.length;g=g||0;for(g<0&&(g=Math.max(g+m,0));g<m;g++){var n=h[g];if(n===c||Object.is(n,c))return!0}return!1}});
+x("String.prototype.includes",function(a){return a?a:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(a){function c(d){this.g=(b+=Math.random()+1).toString();if(d){d=r(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function m(d){if(!M(d,f)){var e=new g;t(d,f,{value:e})}}function n(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&m(k);return e(k)})}if(function(){if(!a||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new a([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(q){return!1}}())return a;var f="$jscomp_hidden_"+Math.random();n("freeze");n("preventExtensions");n("seal");var b=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");m(d);if(!M(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&M(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&M(d,
+f)&&M(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&M(d,f)&&M(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(a){function c(){var b={};return b.m=b.next=b.head=b}function g(b,d){var e=b[1];return L(function(){if(e){for(;e.head!=b[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(b,d){var e=d&&typeof d;e=="object"||e=="function"?n.has(d)?e=n.get(d):(e=""+ ++f,n.set(d,e)):e="p_"+d;var k=b[0][e];if(k&&M(b[0],e))for(b=0;b<k.length;b++){var q=k[b];if(d!==d&&q.key!==q.key||d===q.key)return{id:e,list:k,index:b,entry:q}}return{id:e,
+list:k,index:-1,entry:void 0}}function m(b){this[0]={};this[1]=c();this.size=0;if(b){b=r(b);for(var d;!(d=b.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var b=Object.seal({x:4}),d=new a(r([[b,"s"]]));if(d.get(b)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=b||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(q){return!1}}())return a;var n=new WeakMap;m.prototype.set=function(b,d){b=b===0?0:b;var e=h(this,b);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:b,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};m.prototype.delete=function(b){b=h(this,b);return b.entry&&b.list?(b.list.splice(b.index,1),b.list.length||delete this[0][b.id],b.entry.m.next=b.entry.next,
+b.entry.next.m=b.entry.m,b.entry.head=null,this.size--,!0):!1};m.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};m.prototype.has=function(b){return!!h(this,b).entry};m.prototype.get=function(b){return(b=h(this,b).entry)&&b.value};m.prototype.entries=function(){return g(this,function(b){return[b.key,b.value]})};m.prototype.keys=function(){return g(this,function(b){return b.key})};m.prototype.values=function(){return g(this,function(b){return b.value})};m.prototype.forEach=
+function(b,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,b.call(d,k[1],k[0],this)};m.prototype[Symbol.iterator]=m.prototype.entries;var f=0;return m});
+x("Set",function(a){function c(g){this.g=new Map;if(g){g=r(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new a(r([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var m=h.entries(),n=m.next();if(n.done||n.value[0]!=g||n.value[1]!=g)return!1;n=m.next();return n.done||n.value[0]==g||n.value[0].x!=4||
+n.value[1]!=n.value[0]?!1:m.next().done}catch(f){return!1}}())return a;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var m=this;this.g.forEach(function(n){return g.call(h,n,n,m)})};return c});(function(){function a(){return n?Promise.resolve(n):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(b){if(!b.ok)throw Error("HTTP error! status: "+b.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return b.json()}).then(function(b){if(!Array.isArray(b))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return n=b}).catch(function(b){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",b);f=null;throw b;})}function c(b){var d,e,k,q;return K(new J(new F(function(p){switch(p.g){case 1:d=(b.textContent||"").trim();if(!d||b.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return p.return();e=window.getComputedStyle(b);if(e.display==="none"||e.visibility==="hidden")return p.return();
+p.H(2);return p.A(a(),4);case 4:k=p.u;p.G(3);break;case 2:return p.D(),console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),p.return();case 3:(q=k.includes(d))?b.classList.contains("js-replaced-missing-icon")&&b.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&b.classList.contains("js-replaced-missing-icon")||(b.textContent="radio_button_unchecked",b.classList.add("js-replaced-missing-icon")),p.F()}})))}function g(b){b=b===void 0?
+document.body:b;b.querySelectorAll(m).forEach(function(d){c(d)})}function h(){a().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(b){var d=new Set;b=r(b);for(var e=b.next();!e.done;e=b.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(q){q.nodeType===Node.ELEMENT_NODE&&(q.matches(m)&&d.add(q),q.querySelectorAll(m).forEach(function(p){d.add(p)}))});else if(e.type==="attributes"&&e.attributeName===
+"class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(m)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(m)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(q){c(q)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(b){console.error("IconChecker: Font loading error. Scanning icons anyway.",b);requestAnimationFrame(function(){g(document.body)})})}
+var m=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(b){return"."+b}).join(","),n=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Network Fundamentals: Firewalls, Hubs &amp; Switches</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .tab-active { border-bottom: 2px solid #2563eb; color: #2563eb; font-weight: 600; }
+        .tab-inactive { color: #6b7280; }
+        .tab-inactive:hover { color: #1f2937; }
+        
+        /* Smooth fade for content switching */
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom Scrollbar for categorization sections */
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-left-2\.5{left:-0.625rem}.bottom-0{bottom:0px}.bottom-4{bottom:1rem}.left-0{left:0px}.right-0{right:0px}.right-4{right:1rem}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.col-span-1{grid-column:span 1 / span 1}.col-span-2{grid-column:span 2 / span 2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-3{margin-left:0.75rem}.ml-6{margin-left:1.5rem}.ml-auto{margin-left:auto}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-16{height:4rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-64{height:16rem}.h-80{height:20rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-16{width:4rem}.w-5{width:1.25rem}.w-full{width:100%}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-100 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-green-100{--tw-border-opacity:1;border-color:rgb(220 252 231 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-700{--tw-border-opacity:1;border-color:rgb(67 56 202 / var(--tw-border-opacity, 1))}.border-orange-100{--tw-border-opacity:1;border-color:rgb(255 237 213 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-yellow-400{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-indigo-800\/50{background-color:rgb(55 48 163 / 0.5)}.bg-indigo-900{--tw-bg-opacity:1;background-color:rgb(49 46 129 / var(--tw-bg-opacity, 1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-black\/80{--tw-gradient-from:rgb(0 0 0 / 0.8) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-2{padding-bottom:0.5rem}.pb-20{padding-bottom:5rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-green-300{--tw-text-opacity:1;color:rgb(134 239 172 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-green-900{--tw-text-opacity:1;color:rgb(20 83 45 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-orange-900{--tw-text-opacity:1;color:rgb(124 45 18 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.text-yellow-600{--tw-text-opacity:1;color:rgb(202 138 4 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.text-yellow-900{--tw-text-opacity:1;color:rgb(113 63 18 / var(--tw-text-opacity, 1))}.opacity-0{opacity:0}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-50{--tw-ring-opacity:1;--tw-ring-color:rgb(238 242 255 / var(--tw-ring-opacity, 1))}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-700{transition-duration:700ms}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-black:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.hover\:bg-green-50:hover{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.hover\:bg-green-500:hover{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:bg-red-500:hover{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.hover\:text-blue-800:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 768px){.md\:block{display:block}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}@media (min-width: 1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+<body class="bg-slate-50 text-slate-800 min-h-screen relative pb-20">
+<!-- Header & Curator Info -->
+<header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+<div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+<div>
+<h1 class="text-2xl font-bold text-slate-900 tracking-tight">Network Fundamentals <span class="text-blue-600">Deep Dive</span></h1>
+<p class="text-sm text-slate-500 mt-1">Technical concepts explained simply for interview prep</p>
+</div>
+<div class="flex flex-col items-end text-sm">
+<span class="text-slate-400 uppercase text-xs font-semibold tracking-wider mb-1">Curated by</span>
+<div class="flex items-center gap-3">
+<span class="font-bold text-slate-700">Rajat Kumar</span>
+<a class="flex items-center text-blue-600 hover:text-blue-800 transition-colors" href="https://www.linkedin.com/in/imRajat/" target="_blank" title="LinkedIn">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="flex items-center text-slate-800 hover:text-black transition-colors" href="https://github.com/im-Rajat/" target="_blank" title="GitHub">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Navigation Tabs -->
+<nav class="bg-white border-b border-slate-200">
+<div class="max-w-6xl mx-auto px-4 flex gap-8">
+<button class="py-4 text-sm font-medium transition-all tab-active flex items-center gap-2 cursor-pointer" id="tab-firewalls" onclick="switchTab('firewalls')">
+<span class="material-symbols-outlined text-lg">security</span> Firewalls
+            </button>
+<button class="py-4 text-sm font-medium transition-all tab-inactive flex items-center gap-2 cursor-pointer" id="tab-hub-switch" onclick="switchTab('hub-switch')">
+<span class="material-symbols-outlined text-lg">hub</span> Hub vs. Switch
+            </button>
+</div>
+</nav>
+<!-- Main Content Container -->
+<main class="max-w-6xl mx-auto px-4 py-8">
+<!-- ======================= FIREWALL SECTION ======================= -->
+<section class="fade-in space-y-12" id="content-firewalls">
+<!-- 1. Introduction & Analogy Block -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Left Column: Intro & Analogy -->
+    <div class="space-y-6">
+        <div>
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">Introduction to Firewalls</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-4">
+                A firewall is a network security system (hardware or software) that acts as the <strong>first line of defense</strong> between internal systems and external networks. It forces all traffic through a single checkpoint where it monitors and controls incoming and outgoing data based on predefined rules.
+            </p>
+        </div>
+        <!-- The Analogy Section -->
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-6">
+            <h3 class="flex items-center gap-2 text-blue-800 font-bold mb-4 text-lg">
+                <span class="material-symbols-outlined">lightbulb</span> Real World Analogy
+            </h3>
+            <p class="text-blue-900 mb-4 font-medium">
+                Think of a firewall as a <strong>Security Guard at a gated community or a club</strong>.
+            </p>
+            <ul class="space-y-3 text-blue-800 text-sm">
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-base mt-0.5 text-blue-600">check_circle</span>
+                    <span>The guard checks your <strong>ID</strong> (IP Address).</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-base mt-0.5 text-blue-600">check_circle</span>
+                    <span>They check if you are on the <strong>guest list</strong> (Allowed Ports/Protocols).</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-base mt-0.5 text-blue-600">check_circle</span>
+                    <span>If you look suspicious or carry weapons (<strong>Malware/Payload</strong>), they deny entry.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Right Column: Visual & Core Logic -->
+    <div class="space-y-6">
+        <!-- Analogy Visual -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+            <img alt="Security Guard Analogy" class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://media.geeksforgeeks.org/wp-content/uploads/20250805151242493838/network_firewall.webp">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <p class="text-white font-medium">Firewall in Computer Network</p>
+            </div>
+        </div>
+
+        <!-- Core Logic: 3 Decisions (Moved Here) -->
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+            <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-blue-600">traffic</span>
+                Core Logic: The 3 Decisions
+            </h3>
+            <div class="space-y-3">
+                <div class="flex items-center gap-3 p-2 rounded hover:bg-green-50 transition-colors group">
+                    <span class="bg-green-100 text-green-700 font-bold px-2 py-1 rounded text-xs uppercase w-16 text-center">Accept</span>
+                    <span class="text-sm text-slate-600">Allows the traffic to pass through.</span>
+                    <span class="material-symbols-outlined text-green-500 ml-auto opacity-0 group-hover:opacity-100">check</span>
+                </div>
+                <div class="flex items-center gap-3 p-2 rounded hover:bg-red-50 transition-colors group">
+                    <span class="bg-red-100 text-red-700 font-bold px-2 py-1 rounded text-xs uppercase w-16 text-center">Reject</span>
+                    <span class="text-sm text-slate-600">Blocks traffic &amp; sends an error response ("Access Denied").</span>
+                    <span class="material-symbols-outlined text-red-500 ml-auto opacity-0 group-hover:opacity-100">block</span>
+                </div>
+                <div class="flex items-center gap-3 p-2 rounded hover:bg-slate-100 transition-colors group">
+                    <span class="bg-slate-200 text-slate-700 font-bold px-2 py-1 rounded text-xs uppercase w-16 text-center">Drop</span>
+                    <span class="text-sm text-slate-600">Blocks silently without any response (Stealth Mode).</span>
+                    <span class="material-symbols-outlined text-slate-500 ml-auto opacity-0 group-hover:opacity-100">do_not_disturb_on</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Interactive Logic Simulator (Accept/Reject/Drop) -->
+<div class="bg-slate-900 rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+<div class="col-span-1">
+<h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-400">science</span> 
+                            Live Simulation
+                        </h3>
+<p class="text-slate-400 text-sm mb-6">Click a button to see how the firewall handles incoming packets based on different rules.</p>
+<div class="space-y-3">
+<button class="w-full py-2 px-4 bg-green-600 hover:bg-green-500 rounded font-semibold text-sm transition-all flex items-center justify-between" onclick="simulateFirewall('accept')">
+                                Simulate ACCEPT Rule <span class="material-symbols-outlined text-sm">play_arrow</span>
+</button>
+<button class="w-full py-2 px-4 bg-red-600 hover:bg-red-500 rounded font-semibold text-sm transition-all flex items-center justify-between" onclick="simulateFirewall('reject')">
+                                Simulate REJECT Rule <span class="material-symbols-outlined text-sm">back_hand</span>
+</button>
+<button class="w-full py-2 px-4 bg-slate-700 hover:bg-slate-600 rounded font-semibold text-sm transition-all flex items-center justify-between" onclick="simulateFirewall('drop')">
+                                Simulate DROP Rule <span class="material-symbols-outlined text-sm">cancel</span>
+</button>
+</div>
+</div>
+<!-- SVG Area -->
+<div class="col-span-2 bg-slate-800 rounded-xl p-4 h-64 flex items-center justify-center border border-slate-700 relative">
+<svg height="100%" id="firewall-sim" viewBox="0 0 600 200" width="100%">
+<!-- External World -->
+<text fill="#94a3b8" font-size="12" text-anchor="middle" x="50" y="30">Attacker/User</text>
+<rect fill="#334155" height="120" rx="4" width="60" x="20" y="40"></rect>
+<!-- Firewall Wall -->
+<rect fill="#ef4444" height="160" stroke="#b91c1c" stroke-width="2" width="40" x="280" y="20"></rect>
+<text fill="#ef4444" font-size="12" font-weight="bold" text-anchor="middle" x="300" y="195">FIREWALL</text>
+<!-- Internal Network -->
+<text fill="#94a3b8" font-size="12" text-anchor="middle" x="550" y="30">Internal Server</text>
+<rect fill="#3b82f6" height="120" opacity="0.5" rx="4" width="60" x="520" y="40"></rect>
+<!-- Dynamic Elements -->
+<circle cx="90" cy="100" fill="#fbbf24" id="fw-packet" opacity="0" r="8"></circle>
+<text fill="#fff" font-size="14" font-weight="bold" id="fw-status" text-anchor="middle" x="300" y="15"></text>
+<path d="" fill="none" id="fw-response" opacity="0" stroke="#ef4444" stroke-dasharray="5,5" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- 3. Importance & Working Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Importance -->
+<div>
+<h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-indigo-600">verified_user</span> 
+                        Why are Firewalls Essential?
+                    </h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-green-600 mt-1">lock</span>
+<div>
+<h4 class="font-bold text-slate-800 text-sm">Prevent Unauthorized Access</h4>
+<p class="text-slate-600 text-xs mt-1">Like a locked door, only trusted users are allowed in.</p>
+</div>
+</li>
+<li class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-red-600 mt-1">bug_report</span>
+<div>
+<h4 class="font-bold text-slate-800 text-sm">Block Malicious Traffic</h4>
+<p class="text-slate-600 text-xs mt-1">Stops viruses, phishing, and DoS attacks before they hit the system.</p>
+</div>
+</li>
+<li class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-blue-600 mt-1">admin_panel_settings</span>
+<div>
+<h4 class="font-bold text-slate-800 text-sm">Control Network Usage</h4>
+<p class="text-slate-600 text-xs mt-1">Enforces workplace restrictions (e.g., blocking social media) or parental controls.</p>
+</div>
+</li>
+<li class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-amber-600 mt-1">folder_shared</span>
+<div>
+<h4 class="font-bold text-slate-800 text-sm">Protect Sensitive Data</h4>
+<p class="text-slate-600 text-xs mt-1">Safeguards business and personal data from theft or accidental leaks.</p>
+</div>
+</li>
+<li class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-purple-600 mt-1">visibility</span>
+<div>
+<h4 class="font-bold text-slate-800 text-sm">Mitigate Insider Risks</h4>
+<p class="text-slate-600 text-xs mt-1">Detects suspicious data exfiltration attempts from inside the network.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Working -->
+<div class="space-y-6">
+<h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-indigo-600">settings</span> 
+                        How it Works
+                    </h3>
+<div class="bg-indigo-50 rounded-xl p-6 border border-indigo-100">
+<ol class="relative border-l-2 border-indigo-200 ml-3 space-y-8">
+<li class="ml-6">
+<span class="absolute -left-2.5 flex items-center justify-center w-5 h-5 bg-indigo-600 rounded-full ring-4 ring-indigo-50"></span>
+<h4 class="font-bold text-indigo-900 text-sm">1. Inspection</h4>
+<p class="text-xs text-indigo-800 mt-1">All data packets entering/leaving must pass through the firewall checkpoint.</p>
+</li>
+<li class="ml-6">
+<span class="absolute -left-2.5 flex items-center justify-center w-5 h-5 bg-indigo-600 rounded-full ring-4 ring-indigo-50"></span>
+<h4 class="font-bold text-indigo-900 text-sm">2. Rule Check</h4>
+<p class="text-xs text-indigo-800 mt-1">It compares the packet against organization's predefined security rules.</p>
+</li>
+<li class="ml-6">
+<span class="absolute -left-2.5 flex items-center justify-center w-5 h-5 bg-indigo-600 rounded-full ring-4 ring-indigo-50"></span>
+<h4 class="font-bold text-indigo-900 text-sm">3. Decision &amp; Logging</h4>
+<p class="text-xs text-indigo-800 mt-1">Matches are Allowed/Blocked. Suspicious activity is logged and alerts are sent.</p>
+</li>
+</ol>
+</div>
+<!-- Default Policy Alert -->
+<div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded shadow-sm">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-yellow-600">warning</span>
+<div>
+<h4 class="font-bold text-yellow-800 text-sm">The "Default Policy" Concept</h4>
+<p class="text-yellow-900 text-xs mt-1 leading-relaxed">
+                                    Since you can't write a rule for everything, a firewall needs a default action for unknown traffic.
+                                    <br><br>
+<strong>Best Practice:</strong> Set Default Policy to <span class="font-bold">DROP</span> or <span class="font-bold">REJECT</span>. Only explicitly allowed traffic gets in.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Types of Firewalls Grid -->
+<div>
+<h3 class="text-2xl font-bold text-slate-800 mb-6 pb-2 border-b border-slate-200">Types of Firewalls</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Type 1 -->
+<div class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+<div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mb-4 text-blue-600">
+<span class="material-symbols-outlined">router</span>
+</div>
+<h4 class="font-bold text-slate-800 mb-3">1. Network Placement</h4>
+<ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
+<li>Packet Filtering Firewall</li>
+<li>Stateful Inspection Firewall</li>
+<li>Proxy Firewall (App Level)</li>
+<li>Circuit-Level Gateway</li>
+<li>Web App Firewall (WAF)</li>
+<li class="font-semibold text-blue-600">Next-Gen Firewall (NGFW)</li>
+</ul>
+</div>
+<!-- Type 2 -->
+<div class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+<div class="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center mb-4 text-purple-600">
+<span class="material-symbols-outlined">devices</span>
+</div>
+<h4 class="font-bold text-slate-800 mb-3">2. Systems Protected</h4>
+<ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
+<li><strong>Network Firewall:</strong> Protects the entire network.</li>
+<li><strong>Host-Based Firewall:</strong> Installed on a single computer/server (e.g., Windows Firewall).</li>
+</ul>
+</div>
+<!-- Type 3 -->
+<div class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+<div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mb-4 text-green-600">
+<span class="material-symbols-outlined">filter_alt</span>
+</div>
+<h4 class="font-bold text-slate-800 mb-3">3. Data Filtering</h4>
+<ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
+<li>Perimeter Firewall</li>
+<li>Internal Firewall</li>
+<li>Distributed Firewall</li>
+</ul>
+</div>
+<!-- Type 4 -->
+<div class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+<div class="bg-orange-100 w-10 h-10 rounded-full flex items-center justify-center mb-4 text-orange-600">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<h4 class="font-bold text-slate-800 mb-3">4. Form Factors</h4>
+<ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
+<li><strong>Hardware:</strong> Physical appliance (e.g., Cisco ASA).</li>
+<li><strong>Software:</strong> Installed program (e.g., pfSense, ZoneAlarm).</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Interview Question Section (Existing + Tweaked) -->
+<div class="bg-indigo-900 text-white rounded-2xl p-8 shadow-xl">
+<div class="flex items-start gap-4">
+<div class="bg-indigo-700 p-3 rounded-lg hidden md:block">
+<span class="material-symbols-outlined text-3xl text-yellow-400">school</span>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold mb-2 text-yellow-400 uppercase tracking-wider text-xs">If asked by an interviewer:</h3>
+<h4 class="text-2xl font-semibold mb-6">"How does a firewall actually filter traffic?"</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-indigo-800/50 p-4 rounded-lg border border-indigo-700">
+<h5 class="font-bold mb-2 flex items-center gap-2"><span class="text-indigo-300">1.</span> Packet Filtering (Stateless)</h5>
+<p class="text-indigo-200 text-sm">Basic. Checks header (IP/Port) against rules. No memory of context.</p>
+</div>
+<div class="bg-indigo-800/50 p-4 rounded-lg border border-indigo-700">
+<h5 class="font-bold mb-2 flex items-center gap-2"><span class="text-indigo-300">2.</span> Stateful Inspection</h5>
+<p class="text-indigo-200 text-sm">Advanced. Remembers active connection states. If you requested data, the reply is automatically allowed.</p>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-indigo-700">
+<p class="text-sm text-indigo-300"><strong>Pro Answer Tip:</strong> Mention <em>Default Policy</em> (Drop/Reject) and <em>Next-Generation Firewalls (NGFW)</em> which inspect Layer 7 (Application) data to block specific apps like Facebook Games.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======================= HUB VS SWITCH SECTION (UNCHANGED) ======================= -->
+<section class="fade-in space-y-12 hidden" id="content-hub-switch">
+<!-- Intro & Analogy -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<div class="space-y-6">
+<div>
+<h2 class="text-3xl font-bold text-slate-800 mb-4">Hub vs. Switch</h2>
+<p class="text-lg text-slate-600 leading-relaxed">
+                            Both devices connect multiple computers (nodes) to create a network. The difference lies in their <strong>intelligence</strong>. A Hub is "dumb" and blindly broadcasts data. A Switch is "smart" and sends data only to the intended recipient.
+                        </p>
+</div>
+<div class="space-y-4">
+<!-- Hub Analogy -->
+<div class="bg-orange-50 border border-orange-100 rounded-xl p-5 flex gap-4">
+<img alt="Crowd" class="w-16 h-16 rounded-lg object-cover flex-shrink-0" src="https://loremflickr.com/100/100/crowd,shouting">
+<div>
+<h3 class="font-bold text-orange-800">Hub Analogy: The Shouting Match</h3>
+<p class="text-orange-900 text-sm mt-1">Imagine a room where to speak to Bob, you stand on a table and shout. <strong>Everyone hears you</strong>, but only Bob responds. This causes noise (collisions) and security issues.</p>
+</div>
+</div>
+<!-- Switch Analogy -->
+<div class="bg-green-50 border border-green-100 rounded-xl p-5 flex gap-4">
+<img alt="Phone" class="w-16 h-16 rounded-lg object-cover flex-shrink-0" src="https://loremflickr.com/100/100/telephone,call">
+<div>
+<h3 class="font-bold text-green-800">Switch Analogy: The Phone System</h3>
+<p class="text-green-900 text-sm mt-1">You dial Bob's direct number. A private line is established. <strong>No one else hears the conversation</strong>. It's efficient, private, and collision-free.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Simulator -->
+<div class="bg-slate-900 rounded-2xl p-6 shadow-lg text-white">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-lg">Packet Flow Simulator</h3>
+<div class="flex gap-2 bg-slate-800 p-1 rounded-lg">
+<button class="px-3 py-1 text-xs font-bold rounded bg-blue-600 text-white shadow" id="btn-hub" onclick="setMode('hub')">Hub Mode</button>
+<button class="px-3 py-1 text-xs font-bold rounded text-slate-400 hover:text-white" id="btn-switch" onclick="setMode('switch')">Switch Mode</button>
+</div>
+</div>
+<!-- SVG Simulator -->
+<div class="relative bg-slate-800 rounded-xl h-64 flex items-center justify-center overflow-hidden">
+<svg height="100%" id="network-sim" viewBox="0 0 400 250" width="100%">
+<!-- Nodes -->
+<g id="node-sender" transform="translate(180, 20)">
+<rect fill="#94a3b8" height="30" rx="4" width="40" x="-20" y="0"></rect>
+<text fill="#cbd5e1" font-size="10" text-anchor="middle" x="0" y="-10">Sender</text>
+</g>
+<!-- Central Device -->
+<g transform="translate(180, 110)">
+<rect fill="#fbbf24" height="30" id="device-box" rx="4" width="60" x="-30" y="-15"></rect>
+<text fill="#78350f" font-size="10" font-weight="bold" id="device-label" text-anchor="middle" x="0" y="5">HUB</text>
+</g>
+<!-- Receiver Nodes -->
+<g transform="translate(60, 200)">
+<rect fill="#94a3b8" height="30" rx="4" width="40" x="-20" y="0"></rect>
+<text fill="#cbd5e1" font-size="10" text-anchor="middle" x="0" y="45">Node A</text>
+</g>
+<g transform="translate(180, 200)">
+<rect fill="#22c55e" height="30" id="target-node" rx="4" stroke="#fff" stroke-width="0" width="40" x="-20" y="0"></rect>
+<text fill="#22c55e" font-size="10" font-weight="bold" text-anchor="middle" x="0" y="45">Target</text>
+</g>
+<g transform="translate(300, 200)">
+<rect fill="#94a3b8" height="30" rx="4" width="40" x="-20" y="0"></rect>
+<text fill="#cbd5e1" font-size="10" text-anchor="middle" x="0" y="45">Node C</text>
+</g>
+<!-- Lines -->
+<line stroke="#475569" stroke-width="2" x1="180" x2="180" y1="50" y2="95"></line> <!-- Sender to Device -->
+<line stroke="#475569" stroke-width="2" x1="160" x2="80" y1="130" y2="200"></line> <!-- Device to A -->
+<line stroke="#475569" stroke-width="2" x1="180" x2="180" y1="140" y2="200"></line> <!-- Device to Target -->
+<line stroke="#475569" stroke-width="2" x1="200" x2="280" y1="130" y2="200"></line> <!-- Device to C -->
+<!-- Packets (Animated via JS) -->
+<circle cx="180" cy="50" fill="#3b82f6" id="packet-main" opacity="0" r="6"></circle>
+<circle cx="165" cy="135" fill="#ef4444" id="packet-1" opacity="0" r="4"></circle>
+<circle cx="180" cy="140" fill="#22c55e" id="packet-2" opacity="0" r="4"></circle>
+<circle cx="195" cy="135" fill="#ef4444" id="packet-3" opacity="0" r="4"></circle>
+</svg>
+</div>
+<div class="mt-4 text-center">
+<button class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-bold transition-colors flex items-center gap-2 mx-auto" onclick="runSimulation()">
+<span class="material-symbols-outlined text-lg">play_arrow</span> Send Packet
+                         </button>
+<p class="text-xs text-slate-400 mt-2 h-4" id="sim-status">Click play to see how data flows</p>
+</div>
+</div>
+</div>
+<!-- Comparison Table -->
+<div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
+<table class="w-full text-left text-sm">
+<thead class="bg-slate-50 text-slate-700 uppercase font-bold text-xs">
+<tr>
+<th class="px-6 py-4">Feature</th>
+<th class="px-6 py-4 text-orange-600">Hub (Layer 1)</th>
+<th class="px-6 py-4 text-green-600">Switch (Layer 2)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-slate-50">
+<td class="px-6 py-4 font-semibold text-slate-800">Data Transmission</td>
+<td class="px-6 py-4">Broadcasts to <strong>ALL</strong> ports.</td>
+<td class="px-6 py-4">Unicasts to <strong>SPECIFIC</strong> port (using MAC address).</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="px-6 py-4 font-semibold text-slate-800">Duplex Mode</td>
+<td class="px-6 py-4"><strong>Half-Duplex</strong> (Send OR Receive, not both).</td>
+<td class="px-6 py-4"><strong>Full-Duplex</strong> (Send AND Receive simultaneously).</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="px-6 py-4 font-semibold text-slate-800">Bandwidth</td>
+<td class="px-6 py-4">Shared among all users (Slow).</td>
+<td class="px-6 py-4">Dedicated per port (Fast).</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="px-6 py-4 font-semibold text-slate-800">Intelligence</td>
+<td class="px-6 py-4">Dumb device. No storage.</td>
+<td class="px-6 py-4">Smart device. Stores MAC Address Table (CAM).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Interview Question Section -->
+<div class="bg-slate-800 text-white rounded-2xl p-8 shadow-xl">
+<div class="flex items-start gap-4">
+<div class="bg-slate-600 p-3 rounded-lg hidden md:block">
+<span class="material-symbols-outlined text-3xl text-green-400">psychology</span>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold mb-2 text-green-400 uppercase tracking-wider text-xs">If asked by an interviewer:</h3>
+<h4 class="text-2xl font-semibold mb-6">"Why would you choose a Switch over a Hub?"</h4>
+<div class="space-y-4">
+<p class="text-slate-300 text-sm leading-relaxed">
+                                "I would always choose a Switch because it operates at <strong>Layer 2 (Data Link Layer)</strong> and uses <strong>MAC addresses</strong> to intelligently direct traffic. This creates separate <strong>collision domains</strong> for each port, allowing for full-duplex communication and better security. A Hub, operating at Layer 1, is obsolete because it blindly broadcasts data, causing collisions and wasting bandwidth."
+                                </p>
+<div class="flex gap-2 flex-wrap">
+<span class="bg-slate-700 px-2 py-1 rounded text-xs text-green-300 font-mono">Collision Domains</span>
+<span class="bg-slate-700 px-2 py-1 rounded text-xs text-green-300 font-mono">Broadcast Domains</span>
+<span class="bg-slate-700 px-2 py-1 rounded text-xs text-green-300 font-mono">ASIC</span>
+<span class="bg-slate-700 px-2 py-1 rounded text-xs text-green-300 font-mono">MAC Table</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Download Button -->
+<button class="fixed bottom-4 right-4 bg-slate-900 hover:bg-black text-white px-4 py-2 rounded shadow-lg text-xs font-bold flex items-center gap-2 transition-all hover:-translate-y-1 z-50" onclick="downloadPage()">
+<span class="material-symbols-outlined text-sm">download</span> Download View
+    </button>
+<!-- JavaScript Logic -->
+<script>
+        let currentMode = 'hub';
+
+        // Tab Switching Logic
+        function switchTab(tabName) {
+            // Hide all sections
+            document.getElementById('content-firewalls').classList.add('hidden');
+            document.getElementById('content-hub-switch').classList.add('hidden');
+            
+            // Reset Tab Styles
+            document.getElementById('tab-firewalls').className = 'py-4 text-sm font-medium transition-all tab-inactive flex items-center gap-2 cursor-pointer';
+            document.getElementById('tab-hub-switch').className = 'py-4 text-sm font-medium transition-all tab-inactive flex items-center gap-2 cursor-pointer';
+
+            // Show Active
+            document.getElementById(`content-${tabName}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabName}`).className = 'py-4 text-sm font-medium transition-all tab-active flex items-center gap-2 cursor-pointer';
+        }
+
+        // ================= FIREWALL SIMULATION LOGIC =================
+        function simulateFirewall(action) {
+            const packet = document.getElementById('fw-packet');
+            const statusText = document.getElementById('fw-status');
+            const responsePath = document.getElementById('fw-response');
+            
+            // Reset
+            packet.setAttribute('cx', '90');
+            packet.setAttribute('opacity', '1');
+            packet.setAttribute('fill', '#fbbf24'); // Yellow (In transit)
+            responsePath.setAttribute('d', '');
+            responsePath.setAttribute('opacity', '0');
+            statusText.textContent = "Checking Rules...";
+            statusText.setAttribute('fill', '#fff');
+
+            let pos = 90;
+            const anim = setInterval(() => {
+                pos += 3;
+                packet.setAttribute('cx', pos);
+
+                // Hit Firewall Wall at x=280
+                if (pos >= 280) {
+                    clearInterval(anim);
+                    
+                    if (action === 'accept') {
+                        statusText.textContent = "Action: ACCEPT (Traffic Allowed)";
+                        statusText.setAttribute('fill', '#4ade80');
+                        packet.setAttribute('fill', '#4ade80'); // Green
+                        // Continue animation through wall
+                        const animPass = setInterval(() => {
+                            pos += 3;
+                            packet.setAttribute('cx', pos);
+                            if (pos >= 520) {
+                                clearInterval(animPass);
+                                statusText.textContent = "Data Reached Internal Server";
+                            }
+                        }, 10);
+                    } 
+                    else if (action === 'reject') {
+                        statusText.textContent = "Action: REJECT (Error Sent)";
+                        statusText.setAttribute('fill', '#f87171');
+                        packet.setAttribute('fill', '#f87171'); // Red
+                        // Bounce back error
+                        responsePath.setAttribute('d', `M 280 100 Q 180 150 90 100`);
+                        responsePath.setAttribute('opacity', '1');
+                        // Simple bounce animation logic could go here, but static path is fine for clarity
+                    } 
+                    else if (action === 'drop') {
+                        statusText.textContent = "Action: DROP (Silently Blocked)";
+                        statusText.setAttribute('fill', '#94a3b8');
+                        packet.setAttribute('opacity', '0'); // Disappear
+                    }
+                }
+            }, 10);
+        }
+
+        // ================= HUB VS SWITCH SIMULATION LOGIC =================
+        function setMode(mode) {
+            currentMode = mode;
+            const btnHub = document.getElementById('btn-hub');
+            const btnSwitch = document.getElementById('btn-switch');
+            const deviceBox = document.getElementById('device-box');
+            const deviceLabel = document.getElementById('device-label');
+
+            if (mode === 'hub') {
+                btnHub.className = "px-3 py-1 text-xs font-bold rounded bg-blue-600 text-white shadow";
+                btnSwitch.className = "px-3 py-1 text-xs font-bold rounded text-slate-400 hover:text-white";
+                deviceBox.setAttribute('fill', '#fbbf24'); // Amber for Hub
+                deviceLabel.textContent = "HUB";
+            } else {
+                btnSwitch.className = "px-3 py-1 text-xs font-bold rounded bg-green-600 text-white shadow";
+                btnHub.className = "px-3 py-1 text-xs font-bold rounded text-slate-400 hover:text-white";
+                deviceBox.setAttribute('fill', '#22c55e'); // Green for Switch
+                deviceLabel.textContent = "SWITCH";
+            }
+            document.getElementById('sim-status').textContent = `Mode set to ${mode.toUpperCase()}. Click Send Packet.`;
+        }
+
+        function runSimulation() {
+            const status = document.getElementById('sim-status');
+            const mainPacket = document.getElementById('packet-main');
+            const packet1 = document.getElementById('packet-1'); // Left
+            const packet2 = document.getElementById('packet-2'); // Middle (Target)
+            const packet3 = document.getElementById('packet-3'); // Right
+
+            // Reset
+            mainPacket.setAttribute('opacity', '1');
+            mainPacket.setAttribute('cx', '180');
+            mainPacket.setAttribute('cy', '50');
+            packet1.setAttribute('opacity', '0');
+            packet2.setAttribute('opacity', '0');
+            packet3.setAttribute('opacity', '0');
+
+            status.textContent = "Packet leaving Sender...";
+
+            // Step 1: Sender to Device
+            let pos = 50;
+            const anim1 = setInterval(() => {
+                pos += 2;
+                mainPacket.setAttribute('cy', pos);
+                if (pos >= 95) {
+                    clearInterval(anim1);
+                    mainPacket.setAttribute('opacity', '0'); // Enters device
+                    distributePackets();
+                }
+            }, 10);
+        }
+
+        function distributePackets() {
+            const status = document.getElementById('sim-status');
+            const packet1 = document.getElementById('packet-1');
+            const packet2 = document.getElementById('packet-2');
+            const packet3 = document.getElementById('packet-3');
+
+            // Set initial positions inside device
+            packet1.setAttribute('cx', '165'); packet1.setAttribute('cy', '135');
+            packet2.setAttribute('cx', '180'); packet2.setAttribute('cy', '140');
+            packet3.setAttribute('cx', '195'); packet3.setAttribute('cy', '135');
+
+            if (currentMode === 'hub') {
+                status.textContent = "HUB broadcasts to ALL ports!";
+                packet1.setAttribute('fill', '#ef4444'); // Red (Noise)
+                packet2.setAttribute('fill', '#22c55e'); // Green (Success)
+                packet3.setAttribute('fill', '#ef4444'); // Red (Noise)
+                
+                packet1.setAttribute('opacity', '1');
+                packet2.setAttribute('opacity', '1');
+                packet3.setAttribute('opacity', '1');
+
+                let progress = 0;
+                const anim2 = setInterval(() => {
+                    progress += 0.02;
+                    // Move Packet 1 (Left)
+                    packet1.setAttribute('cx', 165 - (85 * progress));
+                    packet1.setAttribute('cy', 135 + (65 * progress));
+                    
+                    // Move Packet 2 (Middle)
+                    packet2.setAttribute('cy', 140 + (60 * progress));
+
+                    // Move Packet 3 (Right)
+                    packet3.setAttribute('cx', 195 + (85 * progress));
+                    packet3.setAttribute('cy', 135 + (65 * progress));
+
+                    if (progress >= 1) {
+                        clearInterval(anim2);
+                        status.textContent = "Result: Collision risk high. Bandwidth wasted.";
+                    }
+                }, 10);
+
+            } else {
+                status.textContent = "SWITCH checks MAC table. Sends ONLY to Target.";
+                packet2.setAttribute('fill', '#22c55e');
+                packet2.setAttribute('opacity', '1');
+
+                let progress = 0;
+                const anim2 = setInterval(() => {
+                    progress += 0.02;
+                    packet2.setAttribute('cy', 140 + (60 * progress));
+
+                    if (progress >= 1) {
+                        clearInterval(anim2);
+                        status.textContent = "Result: Efficient. Secure. No collisions.";
+                    }
+                }, 10);
+            }
+        }
+
+        // Download Feature
+        function downloadPage() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'network-fundamentals-rajat.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+
+
+</body></html>

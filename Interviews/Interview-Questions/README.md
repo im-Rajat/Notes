@@ -27,10 +27,13 @@
 
 - [TCP vs UDP](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/TCP-vs-UDP.html)
 - [What happens when you type google.com?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/What-happens-when-you-type-google.com.html)
-    - [How DNS work? And what is Three Way Handshake](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/How-DNS-works-and-What-is-TCP-Three-Way-Handshake.html)
+    - [How DNS work? And what is Three Way Handshake?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/How-DNS-works-and-What-is-TCP-Three-Way-Handshake.html)
+- [Types of Network Delays](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Types-of-Network-Delayss.html)
 - [IP Address vs MAC Address](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/IP-vs-MAC-Address.html)
 - [HTTP vs HTTPS](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/HTTP-vs-HTTPS.html)
 - [IPv4 vs IPv6](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/IPv4-vs-IPv6.html)
+- [Subnetting](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Subnetting.html)
+- [Firewalls and Hub vs Switch](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Firewalls-and-Hub-vs-Switch.html)
 
 ## Coding
 
