@@ -696,14 +696,6 @@ function(){de()}):de()})();}).call(this);
 
     </main>
 
-    <!-- Download Button -->
-    <div class="fixed bottom-4 right-4 z-50">
-        <button onclick="downloadPage()" class="bg-slate-900 hover:bg-black text-white text-xs px-3 py-2 rounded shadow-lg flex items-center gap-2 transition-transform transform hover:-translate-y-1">
-            <span class="material-symbols-outlined text-sm">download</span>
-            Download .html
-        </button>
-    </div>
-
     <!-- Scripting -->
     <script>
         // State
@@ -831,23 +823,6 @@ function(){de()}):de()})();}).call(this);
             const activeTab = document.querySelector(`button[onclick="switchTab('${tabId}')"]`);
             activeTab.classList.add('tab-active', 'border-b-2', 'border-indigo-600');
             activeTab.classList.remove('text-slate-500');
-        }
-
-        // Download Logic
-        function downloadPage() {
-            // Clone the HTML logic is complex for interactions, 
-            // but downloading the source works best for a "Download .html" file that works offline.
-            const html = document.documentElement.outerHTML;
-            const blob = new Blob([html], {type: "text/html"});
-            const url = URL.createObjectURL(blob);
-            
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = "dbms_scaling_guide_rajat.html";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
 
         // Init
