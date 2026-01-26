@@ -35,6 +35,13 @@
 - [Subnetting](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Subnetting.html)
 - [Firewalls and Hub vs Switch](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Firewalls-and-Hub-vs-Switch.html)
 
+## DBMS
+
+- [ACID Properties](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/ACID-Properties.html)
+- [Vertical vs. Horizontal Scaling](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Vertical-vs-Horizontal-Scaling.html)
+- [Normalization vs Denormalization](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Normalization-vs-Denormalization.html)
+- [Indexing](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Indexing.html)
+
 ## Coding
 
 - [Traverse Binary Tree (preorder, inorder, postorder) using both Recursive and Iterative approaches](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/binary-tree-traversal.html)

@@ -1,0 +1,544 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function l(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}function r(a){var c=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(c)return c.call(a);if(typeof a.length=="number")return{next:l(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var t=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,g){if(a==Array.prototype||a==Object.prototype)return a;a[c]=g.value;return a};
+function u(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var g=a[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var v=u(this);function x(a,c){if(c)a:{var g=v;a=a.split(".");for(var h=0;h<a.length-1;h++){var m=a[h];if(!(m in g))break a;g=g[m]}a=a[a.length-1];h=g[a];c=c(h);c!=h&&c!=null&&t(g,a,{configurable:!0,writable:!0,value:c})}}
+function y(a){if(!(a instanceof Object))throw new TypeError("Iterator result "+a+" is not an object");}function z(){this.o=!1;this.j=null;this.u=void 0;this.g=1;this.i=this.l=0;this.C=this.h=null}function A(a){if(a.o)throw new TypeError("Generator is already running");a.o=!0}z.prototype.v=function(a){this.u=a};function B(a,c){a.h={K:c,L:!0};a.g=a.l||a.i}z.prototype.N=function(){return this.g};z.prototype.getNextAddress=z.prototype.N;z.prototype.O=function(){return this.u};
+z.prototype.getYieldResult=z.prototype.O;z.prototype.return=function(a){this.h={return:a};this.g=this.i};z.prototype["return"]=z.prototype.return;z.prototype.P=function(a){this.h={B:a};this.g=this.i};z.prototype.jumpThroughFinallyBlocks=z.prototype.P;z.prototype.A=function(a,c){this.g=c;return{value:a}};z.prototype.yield=z.prototype.A;z.prototype.T=function(a,c){a=r(a);var g=a.next();y(g);if(g.done)this.u=g.value,this.g=c;else return this.j=a,this.A(g.value,c)};z.prototype.yieldAll=z.prototype.T;
+z.prototype.B=function(a){this.g=a};z.prototype.jumpTo=z.prototype.B;z.prototype.F=function(){this.g=0};z.prototype.jumpToEnd=z.prototype.F;z.prototype.H=function(a,c){this.l=a;c!=void 0&&(this.i=c)};z.prototype.setCatchFinallyBlocks=z.prototype.H;z.prototype.S=function(a){this.l=0;this.i=a||0};z.prototype.setFinallyBlock=z.prototype.S;z.prototype.G=function(a,c){this.g=a;this.l=c||0};z.prototype.leaveTryBlock=z.prototype.G;z.prototype.D=function(a){this.l=a||0;a=this.h.K;this.h=null;return a};
+z.prototype.enterCatchBlock=z.prototype.D;z.prototype.J=function(a,c,g){g?this.C[g]=this.h:this.C=[this.h];this.l=a||0;this.i=c||0};z.prototype.enterFinallyBlock=z.prototype.J;z.prototype.R=function(a,c){c=this.C.splice(c||0)[0];(c=this.h=this.h||c)?c.L?this.g=this.l||this.i:c.B!=void 0&&this.i<c.B?(this.g=c.B,this.h=null):this.g=this.i:this.g=a};z.prototype.leaveFinallyBlock=z.prototype.R;z.prototype.M=function(a){return new C(a)};z.prototype.forIn=z.prototype.M;
+function C(a){this.i=a;this.g=[];for(var c in a)this.g.push(c);this.g.reverse()}C.prototype.h=function(){for(;this.g.length>0;){var a=this.g.pop();if(a in this.i)return a}return null};C.prototype.getNext=C.prototype.h;function F(a){this.g=new z;this.h=a}function G(a,c){A(a.g);var g=a.g.j;if(g)return H(a,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return I(a)}
+function H(a,c,g,h){try{var m=c.call(a.g.j,g);y(m);if(!m.done)return a.g.o=!1,m;var n=m.value}catch(f){return a.g.j=null,B(a.g,f),I(a)}a.g.j=null;h.call(a.g,n);return I(a)}function I(a){for(;a.g.g;)try{var c=a.h(a.g);if(c)return a.g.o=!1,{value:c.value,done:!1}}catch(g){a.g.u=void 0,B(a.g,g)}a.g.o=!1;if(a.g.h){c=a.g.h;a.g.h=null;if(c.L)throw c.K;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){A(a.g);a.g.j?c=H(a,a.g.j.next,c,a.g.v):(a.g.v(c),c=I(a));return c};this.throw=function(c){A(a.g);a.g.j?c=H(a,a.g.j["throw"],c,a.g.v):(B(a.g,c),c=I(a));return c};this.return=function(c){return G(a,c)};this[Symbol.iterator]=function(){return this}}function K(a){function c(h){return a.next(h)}function g(h){return a.throw(h)}return new Promise(function(h,m){function n(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(n,m)}n(a.next())})}
+x("Symbol",function(a){function c(n){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(n||"")+"_"+m++,n)}function g(n,f){this.g=n;t(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",m=0;return c});
+x("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");t(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return L(l(this))}});return a});function L(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+x("Promise",function(a){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var b=this.j();try{f(b.resolve,b.reject)}catch(d){b.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(b){b(f)})}if(a)return a;g.prototype.h=function(f){if(this.g==null){this.g=[];var b=this;this.i(function(){b.l()})}this.g.push(f)};var m=v.setTimeout;g.prototype.i=function(f){m(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var b=0;b<f.length;++b){var d=
+f[b];f[b]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(b,k))}}var b=this,d=!1;return{resolve:f(this.F),reject:f(this.l)}};c.prototype.F=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.H(f);else{a:switch(typeof f){case "object":var b=f!=null;break a;case "function":b=!0;break a;default:b=!1}b?this.D(f):this.o(f)}};
+c.prototype.D=function(f){var b=void 0;try{b=f.then}catch(d){this.l(d);return}typeof b=="function"?this.J(b,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,b){if(this.h!=0)throw Error("Cannot settle("+f+", "+b+"): Promise already settled in state"+this.h);this.h=f;this.i=b;this.h===2&&this.G();this.C()};c.prototype.G=function(){var f=this;m(function(){if(f.A()){var b=v.console;typeof b!=="undefined"&&b.error(f.i)}},1)};c.prototype.A=
+function(){if(this.u)return!1;var f=v.CustomEvent,b=v.Event,d=v.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof b==="function"?f=new b("unhandledrejection",{cancelable:!0}):(f=v.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.C=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)n.h(this.g[f]);this.g=null}};var n=new g;c.prototype.H=
+function(f){var b=this.j();f.I(b.resolve,b.reject)};c.prototype.J=function(f,b){var d=this.j();try{f.call(b,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,b){function d(p,w){return typeof p=="function"?function(D){try{e(p(D))}catch(E){k(E)}}:w}var e,k,q=new c(function(p,w){e=p;k=w});this.I(d(f,e),d(b,k));return q};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.I=function(f,b){function d(){switch(e.h){case 1:f(e.i);break;case 2:b(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?n.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(b,d){d(f)})};c.race=function(f){return new c(function(b,d){for(var e=r(f),k=e.next();!k.done;k=e.next())h(k.value).I(b,d)})};c.all=function(f){var b=r(f),d=b.next();return d.done?h([]):new c(function(e,k){function q(D){return function(E){p[D]=E;w--;w==0&&e(p)}}var p=[],w=0;do p.push(void 0),w++,h(d.value).I(q(p.length-1),k),d=b.next();while(!d.done)})};return c});
+function M(a,c){return Object.prototype.hasOwnProperty.call(a,c)}x("Object.is",function(a){return a?a:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(a){return a?a:function(c,g){var h=this;h instanceof String&&(h=String(h));var m=h.length;g=g||0;for(g<0&&(g=Math.max(g+m,0));g<m;g++){var n=h[g];if(n===c||Object.is(n,c))return!0}return!1}});
+x("String.prototype.includes",function(a){return a?a:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(a){function c(d){this.g=(b+=Math.random()+1).toString();if(d){d=r(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function m(d){if(!M(d,f)){var e=new g;t(d,f,{value:e})}}function n(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&m(k);return e(k)})}if(function(){if(!a||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new a([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(q){return!1}}())return a;var f="$jscomp_hidden_"+Math.random();n("freeze");n("preventExtensions");n("seal");var b=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");m(d);if(!M(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&M(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&M(d,
+f)&&M(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&M(d,f)&&M(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(a){function c(){var b={};return b.m=b.next=b.head=b}function g(b,d){var e=b[1];return L(function(){if(e){for(;e.head!=b[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(b,d){var e=d&&typeof d;e=="object"||e=="function"?n.has(d)?e=n.get(d):(e=""+ ++f,n.set(d,e)):e="p_"+d;var k=b[0][e];if(k&&M(b[0],e))for(b=0;b<k.length;b++){var q=k[b];if(d!==d&&q.key!==q.key||d===q.key)return{id:e,list:k,index:b,entry:q}}return{id:e,
+list:k,index:-1,entry:void 0}}function m(b){this[0]={};this[1]=c();this.size=0;if(b){b=r(b);for(var d;!(d=b.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var b=Object.seal({x:4}),d=new a(r([[b,"s"]]));if(d.get(b)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=b||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(q){return!1}}())return a;var n=new WeakMap;m.prototype.set=function(b,d){b=b===0?0:b;var e=h(this,b);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:b,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};m.prototype.delete=function(b){b=h(this,b);return b.entry&&b.list?(b.list.splice(b.index,1),b.list.length||delete this[0][b.id],b.entry.m.next=b.entry.next,
+b.entry.next.m=b.entry.m,b.entry.head=null,this.size--,!0):!1};m.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};m.prototype.has=function(b){return!!h(this,b).entry};m.prototype.get=function(b){return(b=h(this,b).entry)&&b.value};m.prototype.entries=function(){return g(this,function(b){return[b.key,b.value]})};m.prototype.keys=function(){return g(this,function(b){return b.key})};m.prototype.values=function(){return g(this,function(b){return b.value})};m.prototype.forEach=
+function(b,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,b.call(d,k[1],k[0],this)};m.prototype[Symbol.iterator]=m.prototype.entries;var f=0;return m});
+x("Set",function(a){function c(g){this.g=new Map;if(g){g=r(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new a(r([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var m=h.entries(),n=m.next();if(n.done||n.value[0]!=g||n.value[1]!=g)return!1;n=m.next();return n.done||n.value[0]==g||n.value[0].x!=4||
+n.value[1]!=n.value[0]?!1:m.next().done}catch(f){return!1}}())return a;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var m=this;this.g.forEach(function(n){return g.call(h,n,n,m)})};return c});(function(){function a(){return n?Promise.resolve(n):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(b){if(!b.ok)throw Error("HTTP error! status: "+b.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return b.json()}).then(function(b){if(!Array.isArray(b))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return n=b}).catch(function(b){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",b);f=null;throw b;})}function c(b){var d,e,k,q;return K(new J(new F(function(p){switch(p.g){case 1:d=(b.textContent||"").trim();if(!d||b.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return p.return();e=window.getComputedStyle(b);if(e.display==="none"||e.visibility==="hidden")return p.return();
+p.H(2);return p.A(a(),4);case 4:k=p.u;p.G(3);break;case 2:return p.D(),console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),p.return();case 3:(q=k.includes(d))?b.classList.contains("js-replaced-missing-icon")&&b.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&b.classList.contains("js-replaced-missing-icon")||(b.textContent="radio_button_unchecked",b.classList.add("js-replaced-missing-icon")),p.F()}})))}function g(b){b=b===void 0?
+document.body:b;b.querySelectorAll(m).forEach(function(d){c(d)})}function h(){a().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(b){var d=new Set;b=r(b);for(var e=b.next();!e.done;e=b.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(q){q.nodeType===Node.ELEMENT_NODE&&(q.matches(m)&&d.add(q),q.querySelectorAll(m).forEach(function(p){d.add(p)}))});else if(e.type==="attributes"&&e.attributeName===
+"class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(m)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(m)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(q){c(q)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(b){console.error("IconChecker: Font loading error. Scanning icons anyway.",b);requestAnimationFrame(function(){g(document.body)})})}
+var m=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(b){return"."+b}).join(","),n=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indexing in DBMS - Technical Deep Dive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    
+    <!-- Image Strategy: 
+         - Real Life Analogy: LoremFlickr 
+         - Technical Diagrams: Inline SVG
+    -->
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-block { font-family: 'Fira Code', monospace; }
+        
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+    </style>
+    
+    <!-- PRE-FETCHED IMAGES LIST 
+    "https://loremflickr.com/800/600/library,books"
+    "https://loremflickr.com/800/600/dictionary,page"
+    -->
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-4{bottom:1rem}.right-4{right:1rem}.top-0{top:0px}.top-4{top:1rem}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-5{height:1.25rem}.h-64{height:16rem}.h-8{height:2rem}.h-full{height:100%}.w-5{width:1.25rem}.w-8{width:2rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.scroll-mt-20{scroll-margin-top:5rem}.list-disc{list-style-type:disc}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-16 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(4rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(4rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-blue-600{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-red-600{--tw-border-opacity:1;border-color:rgb(220 38 38 / var(--tw-border-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-opacity-90{--tw-bg-opacity:0.9}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-black\/60{--tw-gradient-from:rgb(0 0 0 / 0.6) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pl-5{padding-left:1.25rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-50{opacity:0.5}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-700{transition-duration:700ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.hover\:text-blue-400:hover{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.hover\:text-blue-600:hover{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.group:hover .group-hover\:inline{display:inline}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:h-80{height:20rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:p-8{padding:2rem}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header / Hero Section -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-blue-600 text-3xl">database</span>
+                <h1 class="text-xl font-bold text-slate-900 tracking-tight">DBMS Indexing <span class="text-slate-400 font-normal">Masterclass</span></h1>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-600">
+                <a href="#concept" class="hover:text-blue-600 transition">Concept</a>
+                <a href="#simulation" class="hover:text-blue-600 transition">Simulation</a>
+                <a href="#types" class="hover:text-blue-600 transition">Clustered vs Non-Clustered</a>
+                <a href="#interview" class="hover:text-blue-600 transition">Interview Prep</a>
+            </nav>
+            <div class="flex items-center gap-3 text-xs sm:text-sm">
+                <span class="text-slate-500 hidden sm:inline">Curated by <span class="font-semibold text-slate-800">Rajat Kumar</span></span>
+                <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="text-blue-600 hover:text-blue-700 transition" title="LinkedIn">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                </a>
+                <a href="https://github.com/im-Rajat/" target="_blank" class="text-slate-800 hover:text-black transition" title="GitHub">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
+
+        <!-- Intro Section: The Analogy -->
+        <section id="concept" class="space-y-8">
+            <div class="text-center space-y-4">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold tracking-wide uppercase">Core Concept</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900">What is Indexing?</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Indexing is a data structure technique used to quickly locate and access the data in a database.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-orange-500">menu_book</span>
+                        The Real-World Analogy
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Imagine a textbook with 1,000 pages. You want to find the chapter on "Normalization".
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-red-100 text-red-600 rounded-full font-bold text-sm">❌</span>
+                            <div>
+                                <strong class="text-slate-900 block">Without Index (Full Table Scan)</strong>
+                                <span class="text-sm text-slate-500">You flip through every single page from 1 to 1000 until you find it. This is slow, O(N).</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-green-100 text-green-600 rounded-full font-bold text-sm">✅</span>
+                            <div>
+                                <strong class="text-slate-900 block">With Index (B-Tree Seek)</strong>
+                                <span class="text-sm text-slate-500">You go to the "Index" section at the back of the book. It's sorted alphabetically. You find "N", then "Normalization", which points to "Page 450". You go directly there. This is fast, O(log N).</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 md:h-80">
+                    <img src="https://loremflickr.com/800/600/library,books" alt="Library Books Analogy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <p class="text-white font-medium">A library without an index is just a pile of books.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Simulation Section -->
+        <section id="simulation" class="space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="text-3xl font-bold text-slate-900">Interactive Simulation: Scan vs. Seek</h2>
+            </div>
+            
+            <div class="bg-slate-900 text-white rounded-2xl p-1 md:p-8 shadow-2xl overflow-hidden relative">
+                <!-- Controls -->
+                <div class="absolute top-4 right-4 z-10 flex gap-2">
+                     <div class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-400 font-mono">ID to Find: 42</div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Scenario 1: Full Table Scan -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-red-400">Without Index (Full Scan)</h3>
+                            <span id="scan-timer" class="font-mono text-sm text-slate-400">Time: 2033ms</span>
+                        </div>
+                        <!-- SVG Visualization for Linear Scan -->
+                        <div class="bg-slate-800 rounded-lg p-4 h-64 overflow-hidden relative border border-slate-700">
+                            <svg id="scan-svg" width="100%" height="100%" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet"><rect x="20" y="20" width="35" height="25" fill="#475569" rx="3"></rect><text x="37.5" y="37" text-anchor="middle" font-size="10" fill="#94a3b8">0</text><rect x="65" y="20" width="35" height="25" fill="#475569" rx="3"></rect><text x="82.5" y="37" text-anchor="middle" font-size="10" fill="#94a3b8">1</text><rect x="110" y="20" width="35" height="25" fill="#475569" rx="3"></rect><text x="127.5" y="37" text-anchor="middle" font-size="10" fill="#94a3b8">2</text><rect x="155" y="20" width="35" height="25" fill="#475569" rx="3"></rect><text x="172.5" y="37" text-anchor="middle" font-size="10" fill="#94a3b8">3</text><rect x="200" y="20" width="35" height="25" fill="#475569" rx="3"></rect><text x="217.5" y="37" text-anchor="middle" font-size="10" fill="#94a3b8">4</text><rect x="245" y="20" width="35" height="25" fill="#475569" rx="3"></rect><text x="262.5" y="37" text-anchor="middle" font-size="10" fill="#94a3b8">5</text><rect x="290" y="20" width="35" height="25" fill="#475569" rx="3"></rect><text x="307.5" y="37" text-anchor="middle" font-size="10" fill="#94a3b8">6</text><rect x="335" y="20" width="35" height="25" fill="#475569" rx="3"></rect><text x="352.5" y="37" text-anchor="middle" font-size="10" fill="#94a3b8">7</text><rect x="20" y="55" width="35" height="25" fill="#475569" rx="3"></rect><text x="37.5" y="72" text-anchor="middle" font-size="10" fill="#94a3b8">8</text><rect x="65" y="55" width="35" height="25" fill="#475569" rx="3"></rect><text x="82.5" y="72" text-anchor="middle" font-size="10" fill="#94a3b8">9</text><rect x="110" y="55" width="35" height="25" fill="#475569" rx="3"></rect><text x="127.5" y="72" text-anchor="middle" font-size="10" fill="#94a3b8">10</text><rect x="155" y="55" width="35" height="25" fill="#475569" rx="3"></rect><text x="172.5" y="72" text-anchor="middle" font-size="10" fill="#94a3b8">11</text><rect x="200" y="55" width="35" height="25" fill="#475569" rx="3"></rect><text x="217.5" y="72" text-anchor="middle" font-size="10" fill="#94a3b8">12</text><rect x="245" y="55" width="35" height="25" fill="#475569" rx="3"></rect><text x="262.5" y="72" text-anchor="middle" font-size="10" fill="#94a3b8">13</text><rect x="290" y="55" width="35" height="25" fill="#475569" rx="3"></rect><text x="307.5" y="72" text-anchor="middle" font-size="10" fill="#94a3b8">14</text><rect x="335" y="55" width="35" height="25" fill="#475569" rx="3"></rect><text x="352.5" y="72" text-anchor="middle" font-size="10" fill="#94a3b8">15</text><rect x="20" y="90" width="35" height="25" fill="#475569" rx="3"></rect><text x="37.5" y="107" text-anchor="middle" font-size="10" fill="#94a3b8">16</text><rect x="65" y="90" width="35" height="25" fill="#475569" rx="3"></rect><text x="82.5" y="107" text-anchor="middle" font-size="10" fill="#94a3b8">17</text><rect x="110" y="90" width="35" height="25" fill="#475569" rx="3"></rect><text x="127.5" y="107" text-anchor="middle" font-size="10" fill="#94a3b8">18</text><rect x="155" y="90" width="35" height="25" fill="#475569" rx="3"></rect><text x="172.5" y="107" text-anchor="middle" font-size="10" fill="#94a3b8">19</text><rect x="200" y="90" width="35" height="25" fill="#475569" rx="3"></rect><text x="217.5" y="107" text-anchor="middle" font-size="10" fill="#94a3b8">20</text><rect x="245" y="90" width="35" height="25" fill="#475569" rx="3"></rect><text x="262.5" y="107" text-anchor="middle" font-size="10" fill="#94a3b8">21</text><rect x="290" y="90" width="35" height="25" fill="#475569" rx="3"></rect><text x="307.5" y="107" text-anchor="middle" font-size="10" fill="#94a3b8">22</text><rect x="335" y="90" width="35" height="25" fill="#475569" rx="3"></rect><text x="352.5" y="107" text-anchor="middle" font-size="10" fill="#94a3b8">23</text><rect x="20" y="125" width="35" height="25" fill="#475569" rx="3"></rect><text x="37.5" y="142" text-anchor="middle" font-size="10" fill="#94a3b8">24</text><rect x="65" y="125" width="35" height="25" fill="#475569" rx="3"></rect><text x="82.5" y="142" text-anchor="middle" font-size="10" fill="#94a3b8">25</text><rect x="110" y="125" width="35" height="25" fill="#475569" rx="3"></rect><text x="127.5" y="142" text-anchor="middle" font-size="10" fill="#94a3b8">26</text><rect x="155" y="125" width="35" height="25" fill="#475569" rx="3"></rect><text x="172.5" y="142" text-anchor="middle" font-size="10" fill="#94a3b8">27</text><rect x="200" y="125" width="35" height="25" fill="#475569" rx="3"></rect><text x="217.5" y="142" text-anchor="middle" font-size="10" fill="#94a3b8">28</text><rect x="245" y="125" width="35" height="25" fill="#475569" rx="3"></rect><text x="262.5" y="142" text-anchor="middle" font-size="10" fill="#94a3b8">29</text><rect x="290" y="125" width="35" height="25" fill="#475569" rx="3"></rect><text x="307.5" y="142" text-anchor="middle" font-size="10" fill="#94a3b8">30</text><rect x="335" y="125" width="35" height="25" fill="#475569" rx="3"></rect><text x="352.5" y="142" text-anchor="middle" font-size="10" fill="#94a3b8">31</text><rect x="20" y="160" width="35" height="25" fill="#475569" rx="3"></rect><text x="37.5" y="177" text-anchor="middle" font-size="10" fill="#94a3b8">32</text><rect x="65" y="160" width="35" height="25" fill="#475569" rx="3"></rect><text x="82.5" y="177" text-anchor="middle" font-size="10" fill="#94a3b8">33</text><rect x="110" y="160" width="35" height="25" fill="#475569" rx="3"></rect><text x="127.5" y="177" text-anchor="middle" font-size="10" fill="#94a3b8">34</text><rect x="155" y="160" width="35" height="25" fill="#22c55e" rx="3"></rect><text x="172.5" y="177" text-anchor="middle" font-size="10" fill="white" font-weight="bold">42</text><rect x="200" y="160" width="35" height="25" fill="#334155" rx="3"></rect><text x="217.5" y="177" text-anchor="middle" font-size="10" fill="#94a3b8">36</text><rect x="245" y="160" width="35" height="25" fill="#334155" rx="3"></rect><text x="262.5" y="177" text-anchor="middle" font-size="10" fill="#94a3b8">37</text><rect x="290" y="160" width="35" height="25" fill="#334155" rx="3"></rect><text x="307.5" y="177" text-anchor="middle" font-size="10" fill="#94a3b8">38</text><rect x="335" y="160" width="35" height="25" fill="#334155" rx="3"></rect><text x="352.5" y="177" text-anchor="middle" font-size="10" fill="#94a3b8">39</text></svg>
+                        </div>
+                        <button onclick="runScan()" id="btn-scan" class="w-full py-2 bg-slate-700 hover:bg-slate-600 rounded text-sm font-medium transition flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-lg">play_arrow</span> Run Full Scan
+                        </button>
+                    </div>
+
+                    <!-- Scenario 2: Index Seek -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-green-400">With Index (B-Tree Seek)</h3>
+                            <span id="seek-timer" class="font-mono text-sm text-slate-400">Time: 25ms</span>
+                        </div>
+                        <!-- SVG Visualization for Tree Seek -->
+                        <div class="bg-slate-800 rounded-lg p-4 h-64 overflow-hidden relative border border-slate-700">
+                            <svg id="seek-svg" width="100%" height="100%" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                                <!-- Tree Structure -->
+                                <g id="tree-root" transform="translate(180, 20)">
+                                    <rect x="0" y="0" width="40" height="30" fill="#475569" stroke="#94a3b8" rx="4"></rect>
+                                    <text x="20" y="20" text-anchor="middle" fill="white" font-size="12">50</text>
+                                </g>
+                                
+                                <!-- Level 1 -->
+                                <line x1="200" y1="50" x2="100" y2="80" stroke="#64748b" stroke-width="2"></line>
+                                <line x1="200" y1="50" x2="300" y2="80" stroke="#64748b" stroke-width="2"></line>
+
+                                <g id="tree-node-left" transform="translate(80, 80)">
+                                    <rect x="0" y="0" width="40" height="30" fill="#475569" stroke="#94a3b8" rx="4"></rect>
+                                    <text x="20" y="20" text-anchor="middle" fill="white" font-size="12">25</text>
+                                </g>
+                                <g id="tree-node-right" transform="translate(280, 80)">
+                                    <rect x="0" y="0" width="40" height="30" fill="#475569" stroke="#94a3b8" rx="4"></rect>
+                                    <text x="20" y="20" text-anchor="middle" fill="white" font-size="12">75</text>
+                                </g>
+
+                                <!-- Level 2 -->
+                                <line x1="100" y1="110" x2="60" y2="140" stroke="#64748b" stroke-width="2"></line>
+                                <line x1="100" y1="110" x2="140" y2="140" stroke="#64748b" stroke-width="2"></line>
+
+                                <g id="tree-leaf-1" transform="translate(40, 140)">
+                                    <rect x="0" y="0" width="40" height="30" fill="#475569" stroke="#94a3b8" rx="4"></rect>
+                                    <text x="20" y="20" text-anchor="middle" fill="white" font-size="12">12</text>
+                                </g>
+                                <g id="tree-leaf-2" transform="translate(120, 140)"> <!-- TARGET NODE -->
+                                    <rect x="0" y="0" width="40" height="30" fill="#22c55e" stroke="#94a3b8" rx="4"></rect>
+                                    <text x="20" y="20" text-anchor="middle" fill="white" font-size="12">42</text>
+                                </g>
+                            </svg>
+                        </div>
+                        <button onclick="runSeek()" id="btn-seek" class="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium transition flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-lg">rocket_launch</span> Run Index Seek
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-slate-500 text-center italic">
+                * Note how the scan checks every item, while the index jumps directly through the tree logic.
+            </p>
+        </section>
+
+        <!-- Technical Deep Dive -->
+        <section id="types" class="scroll-mt-20">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Clustered vs. Non-Clustered</h2>
+            
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="flex border-b border-slate-200">
+                    <button onclick="switchTab('clustered')" id="tab-clustered" class="flex-1 py-4 text-center font-medium text-blue-600 border-b-2 border-blue-600 bg-blue-50 transition-colors">Clustered Index</button>
+                    <button onclick="switchTab('non-clustered')" id="tab-non-clustered" class="flex-1 py-4 text-center font-medium text-slate-600 hover:bg-slate-50 transition-colors">Non-Clustered Index</button>
+                </div>
+                
+                <div class="p-8">
+                    <!-- Clustered Content -->
+                    <div id="content-clustered" class="lg:grid-cols-2 gap-8 items-center grid">
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-slate-900">The Dictionary</h3>
+                            <p class="text-slate-600">A Clustered Index determines the <strong>physical order</strong> of data in the table. Because the data can only be sorted in one way physically, there can be only <strong>one</strong> clustered index per table.</p>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex gap-2 items-start"><span class="text-blue-500 font-bold">•</span> The leaf nodes of the index contain the actual data pages.</li>
+                                <li class="flex gap-2 items-start"><span class="text-blue-500 font-bold">•</span> Faster for retrieving ranges of data (e.g., "Find all users registered between Jan and Mar").</li>
+                                <li class="flex gap-2 items-start"><span class="text-blue-500 font-bold">•</span> Usually the Primary Key by default.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 flex justify-center">
+                            <!-- SVG Diagram: Clustered -->
+                            <svg width="300" height="200" viewBox="0 0 300 200">
+                                <defs>
+                                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#64748b"></path>
+                                    </marker>
+                                </defs>
+                                <!-- Index Structure -->
+                                <rect x="100" y="10" width="100" height="30" fill="#dbeafe" stroke="#3b82f6" rx="4"></rect>
+                                <text x="150" y="30" text-anchor="middle" font-size="12" fill="#1e40af">Root Node</text>
+                                
+                                <line x1="150" y1="40" x2="100" y2="70" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"></line>
+                                <line x1="150" y1="40" x2="200" y2="70" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"></line>
+
+                                <!-- Data Pages (Sorted) -->
+                                <g transform="translate(50, 80)">
+                                    <rect x="0" y="0" width="200" height="100" fill="#f1f5f9" stroke="#cbd5e1" rx="4"></rect>
+                                    <text x="100" y="20" text-anchor="middle" font-size="10" fill="#475569" font-weight="bold">Actual Data Table (Sorted)</text>
+                                    <rect x="10" y="30" width="180" height="15" fill="white" stroke="#e2e8f0"></rect>
+                                    <text x="100" y="42" text-anchor="middle" font-size="10" fill="#334155">ID: 1 | Name: Alice</text>
+                                    <rect x="10" y="50" width="180" height="15" fill="white" stroke="#e2e8f0"></rect>
+                                    <text x="100" y="62" text-anchor="middle" font-size="10" fill="#334155">ID: 2 | Name: Bob</text>
+                                    <rect x="10" y="70" width="180" height="15" fill="white" stroke="#e2e8f0"></rect>
+                                    <text x="100" y="82" text-anchor="middle" font-size="10" fill="#334155">ID: 3 | Name: Charlie</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Non-Clustered Content (Hidden by Default) -->
+                    <div id="content-non-clustered" class="lg:grid-cols-2 gap-8 items-center hidden">
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-slate-900">The Textbook Index</h3>
+                            <p class="text-slate-600">A Non-Clustered Index is a separate structure from the data table. It stores the column value and a <strong>pointer</strong> (address) to the row containing that value.</p>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex gap-2 items-start"><span class="text-blue-500 font-bold">•</span> Data is stored in random order (Heap) or sorted by a different clustered index.</li>
+                                <li class="flex gap-2 items-start"><span class="text-blue-500 font-bold">•</span> You can have multiple non-clustered indexes per table.</li>
+                                <li class="flex gap-2 items-start"><span class="text-blue-500 font-bold">•</span> Slightly slower than clustered because of the extra "lookup" step (Pointer chasing).</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 flex justify-center">
+                            <!-- SVG Diagram: Non-Clustered -->
+                            <svg width="300" height="200" viewBox="0 0 300 200">
+                                <defs>
+                                    <marker id="arrow-nc" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#ef4444"></path>
+                                    </marker>
+                                </defs>
+                                
+                                <!-- The Index Structure -->
+                                <g transform="translate(10, 20)">
+                                    <rect x="0" y="0" width="100" height="160" fill="#fff1f2" stroke="#f43f5e" rx="4"></rect>
+                                    <text x="50" y="20" text-anchor="middle" font-size="12" fill="#be123c" font-weight="bold">Index</text>
+                                    
+                                    <text x="50" y="50" text-anchor="middle" font-size="10">"Alice"</text>
+                                    <line x1="80" y1="45" x2="140" y2="45" stroke="#f43f5e" stroke-width="1.5" marker-end="url(#arrow-nc)"></line>
+
+                                    <text x="50" y="90" text-anchor="middle" font-size="10">"Bob"</text>
+                                    <line x1="80" y1="85" x2="140" y2="100" stroke="#f43f5e" stroke-width="1.5" marker-end="url(#arrow-nc)"></line>
+                                </g>
+
+                                <!-- The Actual Table (Heap) -->
+                                <g transform="translate(150, 10)">
+                                    <rect x="0" y="0" width="140" height="160" fill="#f1f5f9" stroke="#cbd5e1" rx="4"></rect>
+                                    <text x="70" y="20" text-anchor="middle" font-size="12" fill="#475569" font-weight="bold">Data (Heap)</text>
+                                    
+                                    <rect x="10" y="35" width="120" height="20" fill="white" stroke="#e2e8f0"></rect>
+                                    <text x="70" y="50" text-anchor="middle" font-size="9" fill="#334155">Row 100: Alice...</text>
+
+                                    <rect x="10" y="90" width="120" height="20" fill="white" stroke="#e2e8f0"></rect>
+                                    <text x="70" y="105" text-anchor="middle" font-size="9" fill="#334155">Row 502: Bob...</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interview Corner -->
+        <section id="interview" class="space-y-6">
+             <div class="flex items-center gap-3 mb-6">
+                <div class="p-2 bg-purple-100 rounded-lg text-purple-600">
+                    <span class="material-symbols-outlined">school</span>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900">The Interviewer asks...</h2>
+            </div>
+
+            <div class="grid gap-4">
+                <!-- Q1 -->
+                <div class="border border-slate-200 rounded-xl bg-white overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-800 hover:bg-slate-50" onclick="toggleAccordion('ans1')">
+                        <span>"Can you explain the difference between Clustered and Non-Clustered Indexes?"</span>
+                        <span class="material-symbols-outlined text-slate-400">expand_more</span>
+                    </button>
+                    <div id="ans1" class="p-4 bg-slate-50 text-slate-600 border-t border-slate-100 text-sm leading-relaxed">
+                        <p><strong>Short Answer:</strong> A clustered index defines the <em>physical</em> order of data (like a dictionary), while a non-clustered index is a separate structure pointing to the data (like a book index).</p>
+                        <p class="mt-2"><strong>Key difference:</strong> You can only have <strong>one</strong> clustered index per table (since data can only be physically sorted one way), but <strong>multiple</strong> non-clustered indexes.</p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="border border-slate-200 rounded-xl bg-white overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-800 hover:bg-slate-50" onclick="toggleAccordion('ans2')">
+                        <span>"Are indexes always good? When should I NOT use one?"</span>
+                        <span class="material-symbols-outlined text-slate-400">expand_more</span>
+                    </button>
+                    <div id="ans2" class="p-4 bg-slate-50 text-slate-600 border-t border-slate-100 text-sm leading-relaxed">
+                        <p><strong>No!</strong> Indexes improve <em>Read</em> performance (SELECT) but degrade <em>Write</em> performance (INSERT, UPDATE, DELETE).</p>
+                        <p class="mt-2"><strong>Avoid when:</strong></p>
+                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                            <li>The table is very small (full scan is faster than index overhead).</li>
+                            <li>The table has frequent batch updates/inserts (index maintenance cost is high).</li>
+                            <li>The column has low cardinality (e.g., 'Gender' column with only 'M'/'F' - an index won't filter much).</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                 <!-- Q3 -->
+                 <div class="border border-slate-200 rounded-xl bg-white overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-800 hover:bg-slate-50" onclick="toggleAccordion('ans3')">
+                        <span>"What data structure is typically used for indexing?"</span>
+                        <span class="material-symbols-outlined text-slate-400">expand_more</span>
+                    </button>
+                    <div id="ans3" class="p-4 bg-slate-50 text-slate-600 border-t border-slate-100 text-sm leading-relaxed">
+                        <p>The most common structure is the <strong>B-Tree</strong> (or B+ Tree). It keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time (O(log n)). Hash indexes are also used but are only good for exact equality lookups, not ranges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <p class="mb-4">Curated with <span class="text-red-500">♥</span> by <span class="text-white font-semibold">Rajat Kumar</span></p>
+            <div class="flex justify-center gap-6">
+                <a href="https://www.linkedin.com/in/imRajat/" class="hover:text-blue-400 transition flex items-center gap-1">
+                    <span class="text-xs">LinkedIn</span>
+                </a>
+                <a href="https://github.com/im-Rajat/" class="hover:text-white transition flex items-center gap-1">
+                    <span class="text-xs">GitHub</span>
+                </a>
+            </div>
+            <p class="text-xs mt-6 opacity-50">© 2026 DBMS Educational Resources</p>
+        </div>
+    </footer>
+
+    <!-- Very Small Download Button -->
+    
+
+    <script>
+        // --- 1. SVG Generation & Simulation Logic ---
+
+        // Setup Scan SVG
+        const scanSvg = document.getElementById('scan-svg');
+        const totalBlocks = 40; // 5 rows of 8
+        const targetIndex = 35; // We want to find value at index 35 (visual position)
+        const scanRects = [];
+
+        function initScanSvg() {
+            scanSvg.innerHTML = '';
+            for(let i=0; i<totalBlocks; i++) {
+                const row = Math.floor(i/8);
+                const col = i % 8;
+                const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                rect.setAttribute("x", 20 + col * 45);
+                rect.setAttribute("y", 20 + row * 35);
+                rect.setAttribute("width", 35);
+                rect.setAttribute("height", 25);
+                rect.setAttribute("fill", "#334155"); // slate-700
+                rect.setAttribute("rx", 3);
+                
+                // Add text inside
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", 20 + col * 45 + 17.5);
+                text.setAttribute("y", 20 + row * 35 + 17);
+                text.setAttribute("text-anchor", "middle");
+                text.setAttribute("font-size", "10");
+                text.setAttribute("fill", "#94a3b8");
+                text.textContent = i; // random ID visual
+
+                if(i === targetIndex) {
+                    text.textContent = "42";
+                    text.setAttribute("font-weight", "bold");
+                    text.setAttribute("fill", "white");
+                }
+
+                scanSvg.appendChild(rect);
+                scanSvg.appendChild(text);
+                scanRects.push({rect, index: i});
+            }
+        }
+        initScanSvg();
+
+        async function runScan() {
+            // Reset colors
+            scanRects.forEach(o => o.rect.setAttribute("fill", "#334155"));
+            const timerEl = document.getElementById('scan-timer');
+            const btn = document.getElementById('btn-scan');
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+
+            let startTime = Date.now();
+            
+            for(let i=0; i<=targetIndex; i++) {
+                scanRects[i].rect.setAttribute("fill", "#eab308"); // Yellow check
+                timerEl.textContent = `Time: ${(Date.now() - startTime)}ms`;
+                await new Promise(r => setTimeout(r, 50)); // Slow delay for linear scan
+                
+                if(i !== targetIndex) {
+                    scanRects[i].rect.setAttribute("fill", "#475569"); // visited
+                } else {
+                    scanRects[i].rect.setAttribute("fill", "#22c55e"); // Found green
+                }
+            }
+            
+            btn.disabled = false;
+            btn.classList.remove('opacity-50');
+        }
+
+        // Seek Logic
+        async function runSeek() {
+            const timerEl = document.getElementById('seek-timer');
+            const btn = document.getElementById('btn-seek');
+            
+            // Reset visual state
+            const root = document.querySelector('#tree-root rect');
+            const left = document.querySelector('#tree-node-left rect');
+            const leaf = document.querySelector('#tree-leaf-2 rect'); // Target 42
+            
+            [root, left, leaf].forEach(el => el.setAttribute("fill", "#475569"));
+            
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+            
+            let startTime = Date.now();
+
+            // Step 1: Root
+            root.setAttribute("fill", "#eab308");
+            timerEl.textContent = `Time: 10ms`;
+            await new Promise(r => setTimeout(r, 400));
+            root.setAttribute("fill", "#475569"); // passed
+
+            // Step 2: Traverse Left (since 42 < 50)
+            left.setAttribute("fill", "#eab308");
+            timerEl.textContent = `Time: 20ms`;
+            await new Promise(r => setTimeout(r, 400));
+            left.setAttribute("fill", "#475569");
+
+            // Step 3: Hit Leaf
+            leaf.setAttribute("fill", "#22c55e"); // Found
+            timerEl.textContent = `Time: 25ms`;
+
+            btn.disabled = false;
+            btn.classList.remove('opacity-50');
+        }
+
+
+        // --- 2. Tab Logic ---
+        function switchTab(tabName) {
+            // Headers
+            document.getElementById('tab-clustered').className = tabName === 'clustered' 
+                ? "flex-1 py-4 text-center font-medium text-blue-600 border-b-2 border-blue-600 bg-blue-50 transition-colors"
+                : "flex-1 py-4 text-center font-medium text-slate-600 hover:bg-slate-50 transition-colors";
+            
+            document.getElementById('tab-non-clustered').className = tabName === 'non-clustered' 
+                ? "flex-1 py-4 text-center font-medium text-red-600 border-b-2 border-red-600 bg-red-50 transition-colors"
+                : "flex-1 py-4 text-center font-medium text-slate-600 hover:bg-slate-50 transition-colors";
+
+            // Content
+            document.getElementById('content-clustered').classList.toggle('hidden', tabName !== 'clustered');
+            document.getElementById('content-non-clustered').classList.toggle('hidden', tabName !== 'non-clustered');
+            document.getElementById('content-clustered').classList.toggle('grid', tabName === 'clustered');
+            document.getElementById('content-non-clustered').classList.toggle('grid', tabName === 'non-clustered');
+        }
+
+
+        // --- 3. Accordion Logic ---
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+    </script>
+
+
+</body></html>
