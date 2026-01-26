@@ -529,10 +529,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
 </div>
 </section>
 </main>
-<!-- Download Button -->
-<button class="fixed bottom-4 right-4 bg-slate-900 hover:bg-black text-white px-4 py-2 rounded shadow-lg text-xs font-bold flex items-center gap-2 transition-all hover:-translate-y-1 z-50" onclick="downloadPage()">
-<span class="material-symbols-outlined text-sm">download</span> Download View
-    </button>
 <!-- JavaScript Logic -->
 <script>
         let currentMode = 'hub';
@@ -717,20 +713,6 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
                     }
                 }, 10);
             }
-        }
-
-        // Download Feature
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'network-fundamentals-rajat.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
     </script>
 
