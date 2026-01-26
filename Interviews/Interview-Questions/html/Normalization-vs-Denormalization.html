@@ -837,16 +837,6 @@ function(){de()}):de()})();}).call(this);
         </main>
     </div>
 
-    <!-- Floating Download Button -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <button onclick="downloadPage()" class="group flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white p-4 rounded-full shadow-xl transition-all hover:scale-105 active:scale-95">
-            <span class="material-symbols-outlined">download</span>
-            <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap text-sm font-bold group-hover:pl-1 group-hover:pr-2">
-                Download Guide
-            </span>
-        </button>
-    </div>
-
     <!-- Scripting -->
     <script>
         // --- Navigation Logic ---
@@ -1087,19 +1077,6 @@ function(){de()}):de()})();}).call(this);
         function setMode(mode) {
             if (mode === 'norm') drawNormalized();
             else drawDenormalized();
-        }
-
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'normalization-vs-denormalization-guide.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
 
         // Init
