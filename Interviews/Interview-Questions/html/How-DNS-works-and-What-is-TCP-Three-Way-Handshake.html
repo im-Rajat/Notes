@@ -4,14 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Networking Fundamentals - DNS & TCP Handshake | Rajat Kumar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Using compiled Tailwind CSS for htmlpreview.github.io compatibility -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        /* Base styles with fallbacks */
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc; 
+            color: #1e293b;
+            margin: 0;
+            padding: 0;
+        }
         .font-mono { font-family: 'Fira Code', monospace; }
         html { scroll-behavior: smooth; }
+        
+        /* Tailwind v2 compatibility classes */
+        .bg-slate-50 { background-color: #f8fafc; }
+        .bg-slate-100 { background-color: #f1f5f9; }
+        .bg-slate-200 { background-color: #e2e8f0; }
+        .bg-slate-800 { background-color: #1e293b; }
+        .bg-slate-900 { background-color: #0f172a; }
+        .text-slate-300 { color: #cbd5e1; }
+        .text-slate-400 { color: #94a3b8; }
+        .text-slate-500 { color: #64748b; }
+        .text-slate-600 { color: #475569; }
+        .text-slate-700 { color: #334155; }
+        .text-slate-800 { color: #1e293b; }
+        .text-slate-900 { color: #0f172a; }
+        .border-slate-100 { border-color: #f1f5f9; }
+        .border-slate-200 { border-color: #e2e8f0; }
+        .border-slate-700 { border-color: #334155; }
+        .backdrop-blur { backdrop-filter: blur(8px); }
 
         /* DNS Animation Styles */
         @keyframes flowLine {
@@ -58,7 +85,7 @@
 <body class="bg-slate-50 text-slate-800">
 
     <!-- Navigation / Branding -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="sticky top-0 z-50 border-b border-slate-200" style="background-color: rgba(255,255,255,0.9); backdrop-filter: blur(8px);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-3">
@@ -390,7 +417,7 @@
             </section>
 
             <!-- Section 4: Interview Corner -->
-            <section class="bg-slate-900 rounded-2xl p-8 text-white relative overflow-hidden">
+            <section class="rounded-2xl p-8 text-white relative overflow-hidden" style="background-color: #0f172a;">
                 <div class="absolute top-0 right-0 p-8 opacity-10">
                     <svg width="200" height="200" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
                 </div>
@@ -486,7 +513,7 @@
                         </ul>
                     </div>
                     <div class="h-64 md:h-auto bg-slate-100 relative">
-                        <img src="https://loremflickr.com/800/600/business,handshake" alt="Business Handshake Analogy" class="w-full h-full object-cover">
+                        <img src="https://linuxhint.com/wp-content/uploads/2021/05/image2-3.png" alt="Business Handshake Analogy" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
                             <p class="text-white font-medium">Reliability starts with agreement.</p>
                         </div>
@@ -510,16 +537,16 @@
                 </div>
 
                 <!-- The Simulator Container -->
-                <div class="bg-slate-900 rounded-xl p-6 shadow-2xl border border-slate-700 overflow-hidden relative">
+                <div class="rounded-xl p-6 shadow-2xl border overflow-hidden relative" style="background-color: #0f172a; border-color: #334155;">
                     
                     <!-- Status Bar -->
                     <div class="absolute top-4 left-0 right-0 text-center z-10">
-                        <span id="tcpStatusText" class="inline-block bg-slate-800 text-blue-400 px-4 py-1 rounded-full text-sm font-mono border border-slate-700">Status: <span class="text-white">CLOSED</span></span>
+                        <span id="tcpStatusText" class="inline-block text-blue-400 px-4 py-1 rounded-full text-sm font-mono border" style="background-color: #1e293b; border-color: #334155;">Status: <span class="text-white">CLOSED</span></span>
                     </div>
 
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         <!-- SVG Area -->
-                        <div class="lg:col-span-2 bg-slate-800/50 rounded-lg border border-slate-700/50 p-4 h-[500px] relative">
+                        <div class="lg:col-span-2 rounded-lg border p-4 relative" style="background-color: rgba(30,41,59,0.5); border-color: rgba(51,65,85,0.5); height: 500px;">
                             <!-- Inline SVG Diagram -->
                             <svg viewBox="0 0 500 450" class="w-full h-full">
                                 <!-- Definitions for markers -->
