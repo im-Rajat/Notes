@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking Fundamentals - DNS & TCP Handshake | Rajat Kumar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        html { scroll-behavior: smooth; }
+
+        /* DNS Animation Styles */
+        @keyframes flowLine {
+            to { stroke-dashoffset: 0; }
+        }
+        .animate-flow {
+            stroke-dasharray: 20;
+            stroke-dashoffset: 40;
+            animation: flowLine 1s linear infinite;
+        }
+        .step-card {
+            transition: all 0.3s ease;
+        }
+        .step-card.active {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06);
+        }
+        .packet { transition: all 0.5s ease-in-out; }
+
+        /* TCP Animation Styles */
+        .tcp-packet { transition: all 1s ease-in-out; opacity: 0; }
+        .tcp-packet-moving { opacity: 1; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Tab Styles */
+        .tab-btn {
+            transition: all 0.3s ease;
+        }
+        .tab-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation / Branding -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-2 rounded-lg">
+                        <span class="material-symbols-outlined block">lan</span>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl tracking-tight text-slate-900">Networking Fundamentals</h1>
+                        <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">DNS & TCP Interactive Guide</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="text-right">
+                        <p class="text-xs text-slate-400 font-semibold uppercase">Curated by</p>
+                        <p class="text-sm font-bold text-slate-800">Rajat Kumar</p>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="p-2 text-slate-500 hover:text-[#0077b5] transition-colors rounded-full hover:bg-slate-100">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://github.com/im-Rajat/" target="_blank" class="p-2 text-slate-500 hover:text-black transition-colors rounded-full hover:bg-slate-100">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tab Navigation -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex space-x-4 border-b border-slate-200 pb-4">
+            <button onclick="switchTab('dns')" id="tab-dns" class="tab-btn active px-6 py-3 rounded-lg font-semibold text-slate-600 hover:bg-slate-100 flex items-center space-x-2">
+                <span class="material-symbols-outlined">dns</span>
+                <span>How DNS Works</span>
+            </button>
+            <button onclick="switchTab('tcp')" id="tab-tcp" class="tab-btn px-6 py-3 rounded-lg font-semibold text-slate-600 hover:bg-slate-100 flex items-center space-x-2">
+                <span class="material-symbols-outlined">network_check</span>
+                <span>TCP Three-Way Handshake</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== DNS CONTENT ========== -->
+    <div id="content-dns" class="tab-content active">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+            <!-- Section 1: Introduction & Analogy -->
+            <section class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold">The Concept</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900">What is DNS?</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        The <strong>Domain Name System (DNS)</strong> is essentially the <span class="text-blue-600 font-bold">phonebook of the Internet</span>.
+                    </p>
+                    <p class="text-slate-600">
+                        Computers communicate using numbers (IP addresses like <code class="bg-slate-200 px-1 py-0.5 rounded text-sm text-slate-800">192.0.2.1</code>), but humans prefer names (like <code class="bg-slate-200 px-1 py-0.5 rounded text-sm text-slate-800">google.com</code>). DNS bridges this gap by translating human-readable domain names into machine-readable IP addresses.
+                    </p>
+                    <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r">
+                        <p class="text-sm text-amber-800">
+                            <strong>Analogy:</strong> Just like you don't memorize your friend's phone number, you just tap their name in your contacts. Your phone does the lookup for you.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <img src="https://miro.medium.com/1*NwrOS_xMUNRdgTqtUb2uhw.jpeg" alt="Phonebook Analogy" class="relative rounded-lg shadow-2xl w-full object-cover h-80 bg-slate-200">
+                    <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">Phonebook Analogy</div>
+                </div>
+            </section>
+
+            <!-- Section 2: Interactive Resolution Simulator -->
+            <section class="space-y-8 bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 overflow-hidden relative">
+                <div class="flex justify-between items-end">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900">Interactive DNS Resolver</h2>
+                        <p class="text-slate-500 mt-2">Click "Resolve" to watch the packet travel through the internet.</p>
+                    </div>
+                    <div class="hidden md:block">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase tracking-wide">Live Simulation</span>
+                    </div>
+                </div>
+
+                <!-- Simulation Controls -->
+                <div class="flex max-w-lg space-x-2">
+                    <div class="relative flex-grow">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <span class="material-symbols-outlined text-slate-400">search</span>
+                        </div>
+                        <input type="text" value="www.google.com" disabled class="block w-full pl-10 pr-3 py-3 border border-slate-300 rounded-lg bg-slate-50 text-slate-500 font-mono text-sm shadow-sm">
+                    </div>
+                    <button onclick="startDnsSimulation()" id="resolveBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors shadow-lg flex items-center space-x-2">
+                        <span>Resolve</span>
+                        <span class="material-symbols-outlined text-sm">play_arrow</span>
+                    </button>
+                </div>
+
+                <!-- Visualization Area (SVG) -->
+                <div class="relative h-[400px] border border-slate-100 rounded-xl bg-slate-50 overflow-hidden" id="simCanvas">
+                    <svg width="100%" height="100%" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" class="absolute inset-0">
+                        <!-- Connections -->
+                        <path id="path1" d="M100 200 L 300 200" stroke="#e2e8f0" stroke-width="4" fill="none"></path>
+                        <path id="path2" d="M360 200 L 460 100" stroke="#e2e8f0" stroke-width="4" fill="none"></path>
+                        <path id="path3" d="M360 200 L 460 200" stroke="#e2e8f0" stroke-width="4" fill="none"></path>
+                        <path id="path4" d="M360 200 L 460 300" stroke="#e2e8f0" stroke-width="4" fill="none"></path>
+
+                        <!-- Nodes -->
+                        <!-- Client -->
+                        <g transform="translate(50, 160)">
+                            <rect x="0" y="0" width="100" height="80" rx="8" fill="white" stroke="#64748b" stroke-width="2"></rect>
+                            <text x="50" y="35" text-anchor="middle" font-size="24" font-family="Material Symbols Outlined" fill="#64748b">laptop_mac</text>
+                            <text x="50" y="60" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#475569" font-weight="bold">You</text>
+                        </g>
+
+                        <!-- Recursive Resolver -->
+                        <g transform="translate(300, 160)">
+                            <rect x="0" y="0" width="60" height="80" rx="8" fill="white" stroke="#64748b" stroke-width="2" id="node-resolver"></rect>
+                            <text x="30" y="35" text-anchor="middle" font-size="24" font-family="Material Symbols Outlined" fill="#64748b">dns</text>
+                            <text x="30" y="60" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#475569" font-weight="bold">Resolver</text>
+                            <text x="30" y="72" text-anchor="middle" font-size="8" font-family="sans-serif" fill="#94a3b8">(ISP)</text>
+                        </g>
+
+                        <!-- Root Server -->
+                        <g transform="translate(460, 60)">
+                            <circle cx="40" cy="40" r="35" fill="white" stroke="#64748b" stroke-width="2" id="node-root"></circle>
+                            <text x="40" y="45" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#475569" font-weight="bold">Root (.)</text>
+                        </g>
+
+                        <!-- TLD Server -->
+                        <g transform="translate(460, 160)">
+                            <circle cx="40" cy="40" r="35" fill="white" stroke="#64748b" stroke-width="2" id="node-tld"></circle>
+                            <text x="40" y="45" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#475569" font-weight="bold">TLD (.com)</text>
+                        </g>
+
+                        <!-- Auth Server -->
+                        <g transform="translate(460, 260)">
+                            <circle cx="40" cy="40" r="35" fill="white" stroke="#64748b" stroke-width="2" id="node-auth"></circle>
+                            <text x="40" y="35" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#475569" font-weight="bold">Auth NS</text>
+                            <text x="40" y="50" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#475569">(google.com)</text>
+                        </g>
+
+                        <!-- Packet (Animated) -->
+                        <g id="dns-packet" class="opacity-0" transform="translate(300, 160)">
+                            <circle cx="0" cy="0" r="8" fill="#3b82f6"></circle>
+                        </g>
+                    </svg>
+
+                    <!-- Status Overlay -->
+                    <div id="dnsSimStatus" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur px-6 py-2 rounded-full shadow border border-slate-200 text-sm font-semibold text-slate-700 transition-all">Click "Resolve" to start...</div>
+                </div>
+
+                <!-- Steps Description -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4" id="stepContainer">
+                    <div class="step-card p-4 rounded-lg border border-slate-200 bg-white">
+                        <span class="text-xs font-bold text-slate-400 uppercase">Step 1</span>
+                        <h3 class="font-bold text-sm mt-1">Check Cache</h3>
+                        <p class="text-xs text-slate-500 mt-1">Browser & OS check if they already know the IP.</p>
+                    </div>
+                    <div class="step-card p-4 rounded-lg border border-slate-200 bg-white">
+                        <span class="text-xs font-bold text-slate-400 uppercase">Step 2</span>
+                        <h3 class="font-bold text-sm mt-1">Ask Resolver</h3>
+                        <p class="text-xs text-slate-500 mt-1">ISP's recursive resolver takes over the search.</p>
+                    </div>
+                    <div class="step-card p-4 rounded-lg border border-slate-200 bg-white">
+                        <span class="text-xs font-bold text-slate-400 uppercase">Step 3</span>
+                        <h3 class="font-bold text-sm mt-1">Iterative Query</h3>
+                        <p class="text-xs text-slate-500 mt-1">Resolver asks Root → TLD → Authoritative servers.</p>
+                    </div>
+                    <div class="step-card p-4 rounded-lg border border-slate-200 bg-white">
+                        <span class="text-xs font-bold text-slate-400 uppercase">Step 4</span>
+                        <h3 class="font-bold text-sm mt-1">Response</h3>
+                        <p class="text-xs text-slate-500 mt-1">IP 142.250.x.x found! Saved to cache.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Technical Deep Dive (Accordion Style) -->
+            <section class="space-y-6">
+                <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">Technical Details</h2>
+                
+                <!-- 1. The Hierarchy -->
+                <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-bold text-lg text-slate-800 bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition-colors" onclick="toggleSection('tech-hierarchy')">
+                        <span>1. The DNS Hierarchy (Root, TLD, Auth)</span>
+                        <span class="material-symbols-outlined transform transition-transform" id="icon-tech-hierarchy" style="transform: rotate(180deg);">expand_more</span>
+                    </button>
+                    <div id="tech-hierarchy" class="px-6 py-6 space-y-4">
+                        <p class="text-slate-600">DNS is a distributed database implemented in a hierarchy of many name servers.</p>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <span class="bg-purple-100 text-purple-700 font-mono text-xs p-1 rounded mr-3 mt-1">Root (.)</span>
+                                    <p class="text-sm text-slate-600">The top of the tree. There are 13 logical root server IP addresses (A-M), but hundreds of physical servers via Anycast. They know where TLD servers are.</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="bg-indigo-100 text-indigo-700 font-mono text-xs p-1 rounded mr-3 mt-1">TLD (.com)</span>
+                                    <p class="text-sm text-slate-600">Top Level Domain servers. They manage specific extensions like .com, .org, .edu. They know which Authoritative server handles a specific domain.</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="bg-blue-100 text-blue-700 font-mono text-xs p-1 rounded mr-3 mt-1">Authoritative</span>
+                                    <p class="text-sm text-slate-600">The final destination. These servers hold the actual DNS records (A, MX, CNAME) for the specific domain.</p>
+                                </div>
+                            </div>
+                            <!-- Inline SVG Diagram for Hierarchy -->
+                            <div class="bg-slate-50 rounded p-4 border border-slate-100 flex justify-center">
+                                <svg width="300" height="200" viewBox="0 0 300 200">
+                                    <!-- Root -->
+                                    <circle cx="150" cy="30" r="20" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2"></circle>
+                                    <text x="150" y="35" text-anchor="middle" font-size="10" font-family="sans-serif">Root (.)</text>
+                                    
+                                    <!-- Lines -->
+                                    <line x1="150" y1="50" x2="80" y2="100" stroke="#cbd5e1" stroke-width="2"></line>
+                                    <line x1="150" y1="50" x2="220" y2="100" stroke="#cbd5e1" stroke-width="2"></line>
+                                    
+                                    <!-- TLDs -->
+                                    <circle cx="80" cy="100" r="20" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"></circle>
+                                    <text x="80" y="105" text-anchor="middle" font-size="10" font-family="sans-serif">.com</text>
+                                    
+                                    <circle cx="220" cy="100" r="20" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"></circle>
+                                    <text x="220" y="105" text-anchor="middle" font-size="10" font-family="sans-serif">.org</text>
+
+                                    <!-- Lines L2 -->
+                                    <line x1="80" y1="120" x2="40" y2="170" stroke="#cbd5e1" stroke-width="2"></line>
+                                    <line x1="80" y1="120" x2="120" y2="170" stroke="#cbd5e1" stroke-width="2"></line>
+                                    
+                                    <!-- Auth -->
+                                    <rect x="20" y="170" width="40" height="20" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"></rect>
+                                    <text x="40" y="183" text-anchor="middle" font-size="6" font-family="sans-serif">google.com</text>
+
+                                    <rect x="100" y="170" width="40" height="20" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"></rect>
+                                    <text x="120" y="183" text-anchor="middle" font-size="6" font-family="sans-serif">amazon.com</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Recursive vs Iterative -->
+                <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-bold text-lg text-slate-800 bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition-colors" onclick="toggleSection('tech-recursion')">
+                        <span>2. Recursive vs. Iterative Queries</span>
+                        <span class="material-symbols-outlined transform transition-transform" id="icon-tech-recursion" style="transform: rotate(180deg);">expand_more</span>
+                    </button>
+                    <div id="tech-recursion" class="px-6 py-6">
+                         <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-slate-50 p-4 rounded border border-slate-100">
+                                <h4 class="font-bold text-blue-800 flex items-center mb-2">
+                                    <span class="material-symbols-outlined mr-2">manage_search</span> Recursive
+                                </h4>
+                                <p class="text-sm text-slate-600 mb-2">"Hey, go find this for me and don't come back until you have the answer."</p>
+                                <p class="text-xs text-slate-500">Typical between: <strong>Client Device → ISP Resolver</strong></p>
+                                <div class="mt-4 bg-white p-2 rounded shadow-sm text-xs">
+                                    <strong>Analogy:</strong> Asking a Librarian to find a book. They go to the shelves, climb the ladder, and bring the book back to your desk.
+                                </div>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded border border-slate-100">
+                                <h4 class="font-bold text-green-800 flex items-center mb-2">
+                                    <span class="material-symbols-outlined mr-2">directions</span> Iterative
+                                </h4>
+                                <p class="text-sm text-slate-600 mb-2">"I don't know, but here is the address of someone who might know. Ask them."</p>
+                                <p class="text-xs text-slate-500">Typical between: <strong>Resolver → Root/TLD/Auth Servers</strong></p>
+                                <div class="mt-4 bg-white p-2 rounded shadow-sm text-xs">
+                                    <strong>Analogy:</strong> Asking a Librarian. They say "It's in section B." You go to section B. That librarian says "It's on shelf 3." You go to shelf 3.
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- 3. DNS Records -->
+                <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-bold text-lg text-slate-800 bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition-colors" onclick="toggleSection('tech-records')">
+                        <span>3. Common DNS Record Types</span>
+                        <span class="material-symbols-outlined transform transition-transform" id="icon-tech-records" style="transform: rotate(180deg);">expand_more</span>
+                    </button>
+                    <div id="tech-records" class="px-6 py-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="border rounded p-3 hover:bg-blue-50 transition-colors">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-lg text-slate-800">A</span>
+                                    <span class="text-xs font-mono bg-slate-200 px-1 rounded">Address</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Maps domain to IPv4.</p>
+                                <code class="block mt-2 text-xs bg-slate-100 p-1 rounded text-slate-500">example.com -> 1.2.3.4</code>
+                            </div>
+                            <div class="border rounded p-3 hover:bg-blue-50 transition-colors">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-lg text-slate-800">AAAA</span>
+                                    <span class="text-xs font-mono bg-slate-200 px-1 rounded">IPv6 Address</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Maps domain to IPv6.</p>
+                                <code class="block mt-2 text-xs bg-slate-100 p-1 rounded text-slate-500">example.com -> 2001:db8::1</code>
+                            </div>
+                            <div class="border rounded p-3 hover:bg-blue-50 transition-colors">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-lg text-slate-800">CNAME</span>
+                                    <span class="text-xs font-mono bg-slate-200 px-1 rounded">Alias</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Points one domain to another.</p>
+                                <code class="block mt-2 text-xs bg-slate-100 p-1 rounded text-slate-500">www -> example.com</code>
+                            </div>
+                            <div class="border rounded p-3 hover:bg-blue-50 transition-colors">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-lg text-slate-800">MX</span>
+                                    <span class="text-xs font-mono bg-slate-200 px-1 rounded">Mail Exchange</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Directs email to mail servers.</p>
+                                <code class="block mt-2 text-xs bg-slate-100 p-1 rounded text-slate-500">priority 10 mail.google.com</code>
+                            </div>
+                            <div class="border rounded p-3 hover:bg-blue-50 transition-colors">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-lg text-slate-800">NS</span>
+                                    <span class="text-xs font-mono bg-slate-200 px-1 rounded">Name Server</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Delegates a DNS zone to a server.</p>
+                                <code class="block mt-2 text-xs bg-slate-100 p-1 rounded text-slate-500">example.com -> ns1.aws.com</code>
+                            </div>
+                            <div class="border rounded p-3 hover:bg-blue-50 transition-colors">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-lg text-slate-800">TXT</span>
+                                    <span class="text-xs font-mono bg-slate-200 px-1 rounded">Text</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Arbitrary text. Used for verification (SPF, Google).</p>
+                                <code class="block mt-2 text-xs bg-slate-100 p-1 rounded text-slate-500">v=spf1 include:_spf.google.com ~all</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Interview Corner -->
+            <section class="bg-slate-900 rounded-2xl p-8 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <svg width="200" height="200" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="bg-amber-500 text-black px-2 py-1 rounded font-bold text-xs uppercase tracking-wider">Interview Prep</span>
+                        <h2 class="text-2xl font-bold">DNS Interview Questions</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+                            <button class="w-full text-left font-semibold text-amber-400 flex justify-between items-center focus:outline-none" onclick="toggleAnswer('dns-ans1')">
+                                Q: "What happens when you type google.com into your browser?"
+                                <span class="material-symbols-outlined text-sm" id="icon-dns-ans1">remove</span>
+                            </button>
+                            <div id="dns-ans1" class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-700 pt-3">
+                                <p><strong>Key Points to Hit:</strong></p>
+                                <ul class="list-disc ml-5 space-y-1 mt-2">
+                                    <li>Check <strong>Browser Cache</strong> then <strong>OS Cache</strong> (hosts file).</li>
+                                    <li>OS sends query to <strong>Resolver</strong> (ISP).</li>
+                                    <li>Explain the <strong>Recursive</strong> journey (Root → TLD → Auth).</li>
+                                    <li>Mention <strong>A Record</strong> is returned.</li>
+                                    <li>Bonus: Mention <strong>TCP handshake</strong> happens <em>after</em> DNS.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+                            <button class="w-full text-left font-semibold text-amber-400 flex justify-between items-center focus:outline-none" onclick="toggleAnswer('dns-ans2')">
+                                Q: "What is the difference between A and CNAME records?"
+                                <span class="material-symbols-outlined text-sm" id="icon-dns-ans2">remove</span>
+                            </button>
+                            <div id="dns-ans2" class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-700 pt-3">
+                                <p><strong>A Record:</strong> Maps a hostname to an IP address (e.g., app.com -> 1.2.3.4).</p>
+                                <p class="mt-2"><strong>CNAME (Canonical Name):</strong> Maps a hostname to <em>another hostname</em> (e.g., www.app.com -> app.com).</p>
+                                <p class="mt-2 text-xs text-slate-400"><em>Tip: Mention that looking up a CNAME requires a second lookup (to find the A record of the target), which adds slight latency.</em></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+                            <button class="w-full text-left font-semibold text-amber-400 flex justify-between items-center focus:outline-none" onclick="toggleAnswer('dns-ans3')">
+                                Q: "Why does DNS use UDP instead of TCP?"
+                                <span class="material-symbols-outlined text-sm" id="icon-dns-ans3">remove</span>
+                            </button>
+                            <div id="dns-ans3" class="mt-3 text-slate-300 text-sm leading-relaxed border-t border-slate-700 pt-3">
+                                <p><strong>Speed & Efficiency.</strong> UDP is connectionless and lightweight. DNS queries are small (historically < 512 bytes) and fit in a single packet. "Fire and forget."</p>
+                                <p class="mt-2"><strong>Caveat:</strong> DNS <em>does</em> use TCP for Zone Transfers (AXFR) or if the response size exceeds 512 bytes (though EDNS0 extends UDP limits).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ========== TCP CONTENT ========== -->
+    <div id="content-tcp" class="tab-content">
+        <main class="max-w-6xl mx-auto px-4 py-8 space-y-12">
+
+            <!-- Hero / Intro -->
+            <section class="text-center max-w-3xl mx-auto space-y-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">How Computers Say "Hello"</h2>
+                <p class="text-lg text-slate-600">
+                    Before data is exchanged, a reliable connection must be established. This process is called the 
+                    <span class="font-bold text-blue-600">TCP Three-Way Handshake</span>.
+                </p>
+            </section>
+
+            <!-- The Analogy Section -->
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-8 flex flex-col justify-center">
+                        <div class="uppercase tracking-wide text-sm text-blue-600 font-bold mb-2">The Real World Analogy</div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">The "Agreement" Handshake</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Imagine two business people, <strong>Alice</strong> (Client) and <strong>Bob</strong> (Server), meeting to sign a contract. They can't just start signing; they need to acknowledge each other's presence and readiness first.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="bg-blue-100 text-blue-700 font-bold px-2 py-1 rounded text-xs mt-1">STEP 1</span>
+                                <span class="text-slate-700"><strong>Alice extends her hand:</strong> "I am ready to deal." (SYN)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-green-100 text-green-700 font-bold px-2 py-1 rounded text-xs mt-1">STEP 2</span>
+                                <span class="text-slate-700"><strong>Bob shakes it and holds on:</strong> "I see your hand, and I am also ready." (SYN-ACK)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded text-xs mt-1">STEP 3</span>
+                                <span class="text-slate-700"><strong>Alice acknowledges Bob's grip:</strong> "Great, let's begin." (ACK)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="h-64 md:h-auto bg-slate-100 relative">
+                        <img src="https://loremflickr.com/800/600/business,handshake" alt="Business Handshake Analogy" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
+                            <p class="text-white font-medium">Reliability starts with agreement.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Deep Dive Interactive Diagram -->
+            <section id="technical-simulation" class="space-y-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">Technical Visualization</h3>
+                        <p class="text-slate-500">Click "Next Step" to trace the packets.</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="tcpResetBtn" class="px-4 py-2 text-slate-600 font-semibold hover:bg-slate-100 rounded-lg transition-colors">Reset</button>
+                        <button id="tcpNextBtn" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-all flex items-center gap-2">
+                            Start Handshake <span class="material-symbols-outlined text-sm">play_arrow</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- The Simulator Container -->
+                <div class="bg-slate-900 rounded-xl p-6 shadow-2xl border border-slate-700 overflow-hidden relative">
+                    
+                    <!-- Status Bar -->
+                    <div class="absolute top-4 left-0 right-0 text-center z-10">
+                        <span id="tcpStatusText" class="inline-block bg-slate-800 text-blue-400 px-4 py-1 rounded-full text-sm font-mono border border-slate-700">Status: <span class="text-white">CLOSED</span></span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- SVG Area -->
+                        <div class="lg:col-span-2 bg-slate-800/50 rounded-lg border border-slate-700/50 p-4 h-[500px] relative">
+                            <!-- Inline SVG Diagram -->
+                            <svg viewBox="0 0 500 450" class="w-full h-full">
+                                <!-- Definitions for markers -->
+                                <defs>
+                                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                        <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa"></polygon>
+                                    </marker>
+                                    <marker id="arrowhead-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                        <polygon points="0 0, 10 3.5, 0 7" fill="#c084fc"></polygon>
+                                    </marker>
+                                </defs>
+
+                                <!-- Client Column -->
+                                <g transform="translate(100, 20)">
+                                    <rect x="-40" y="0" width="80" height="40" rx="4" fill="#1e293b" stroke="#94a3b8" stroke-width="2"></rect>
+                                    <text x="0" y="25" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-weight="bold">CLIENT</text>
+                                    <!-- Timeline -->
+                                    <line x1="0" y1="40" x2="0" y2="400" stroke="#475569" stroke-width="2" stroke-dasharray="5,5"></line>
+                                </g>
+
+                                <!-- Server Column -->
+                                <g transform="translate(400, 20)">
+                                    <rect x="-40" y="0" width="80" height="40" rx="4" fill="#1e293b" stroke="#94a3b8" stroke-width="2"></rect>
+                                    <text x="0" y="25" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-weight="bold">SERVER</text>
+                                    <!-- Timeline -->
+                                    <line x1="0" y1="40" x2="0" y2="400" stroke="#475569" stroke-width="2" stroke-dasharray="5,5"></line>
+                                </g>
+
+                                <!-- Packet Groups (Initially Hidden) -->
+                                
+                                <!-- Step 1: SYN -->
+                                <g id="tcp-packet-1" class="tcp-packet" style="transform: translate(100px, 80px);">
+                                    <line x1="0" y1="0" x2="300" y2="100" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowhead)"></line>
+                                    <rect x="120" y="30" width="80" height="30" rx="4" fill="#1e40af" stroke="#60a5fa"></rect>
+                                    <text x="160" y="50" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="monospace">SYN (x)</text>
+                                </g>
+
+                                <!-- Step 2: SYN-ACK -->
+                                <g id="tcp-packet-2" class="tcp-packet" style="transform: translate(400px, 180px);">
+                                    <line x1="0" y1="0" x2="-300" y2="100" stroke="#c084fc" stroke-width="3" marker-end="url(#arrowhead-purple)"></line>
+                                    <rect x="-180" y="30" width="100" height="30" rx="4" fill="#6b21a8" stroke="#c084fc"></rect>
+                                    <text x="-130" y="50" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="monospace">SYN-ACK (y, x+1)</text>
+                                </g>
+
+                                <!-- Step 3: ACK -->
+                                <g id="tcp-packet-3" class="tcp-packet" style="transform: translate(100px, 280px);">
+                                    <line x1="0" y1="0" x2="300" y2="100" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowhead)"></line>
+                                    <rect x="120" y="30" width="80" height="30" rx="4" fill="#1e40af" stroke="#60a5fa"></rect>
+                                    <text x="160" y="50" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="monospace">ACK (y+1)</text>
+                                </g>
+
+                                <!-- Connection Established Indicator -->
+                                <g id="tcp-conn-established" class="tcp-packet">
+                                    <rect x="50" y="400" width="400" height="40" rx="20" fill="#22c55e" opacity="0.2"></rect>
+                                    <text x="250" y="425" text-anchor="middle" fill="#4ade80" font-weight="bold" font-family="sans-serif">CONNECTION ESTABLISHED</text>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- Explainer Panel -->
+                        <div class="flex flex-col justify-center space-y-4">
+                            <div id="tcp-step-desc-0" class="fade-in">
+                                <h4 class="text-slate-400 font-bold uppercase text-xs mb-2">Initial State</h4>
+                                <p class="text-slate-300 text-sm">
+                                    No connection exists. The Server is in <span class="font-mono text-yellow-400">LISTEN</span> mode, waiting for requests. The Client is <span class="font-mono text-red-400">CLOSED</span>.
+                                </p>
+                            </div>
+                            
+                            <div id="tcp-step-desc-1" class="hidden">
+                                <h4 class="text-blue-400 font-bold uppercase text-xs mb-2">Step 1: SYN</h4>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    The Client sends a <strong>SYN</strong> (Synchronize) packet to the Server to initiate a connection.
+                                </p>
+                                <div class="bg-slate-800 p-3 rounded border border-slate-700 font-mono text-xs text-blue-200">
+                                    <p>SEQ = <span class="text-white">1000</span> (Random X)</p>
+                                    <p>Flags = <span class="text-yellow-400">SYN</span></p>
+                                </div>
+                            </div>
+
+                            <div id="tcp-step-desc-2" class="hidden">
+                                <h4 class="text-purple-400 font-bold uppercase text-xs mb-2">Step 2: SYN-ACK</h4>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    The Server receives the SYN. It sends back a <strong>SYN-ACK</strong>. It acknowledges the client (x+1) and sends its own sequence number (y).
+                                </p>
+                                <div class="bg-slate-800 p-3 rounded border border-slate-700 font-mono text-xs text-purple-200">
+                                    <p>SEQ = <span class="text-white">5000</span> (Random Y)</p>
+                                    <p>ACK = <span class="text-green-400">1001</span> (X + 1)</p>
+                                    <p>Flags = <span class="text-yellow-400">SYN, ACK</span></p>
+                                </div>
+                            </div>
+
+                            <div id="tcp-step-desc-3" class="hidden">
+                                <h4 class="text-blue-400 font-bold uppercase text-xs mb-2">Step 3: ACK</h4>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    The Client receives the SYN-ACK. It sends a final <strong>ACK</strong> packet. The handshake is complete.
+                                </p>
+                                <div class="bg-slate-800 p-3 rounded border border-slate-700 font-mono text-xs text-blue-200">
+                                    <p>SEQ = <span class="text-white">1001</span> (X + 1)</p>
+                                    <p>ACK = <span class="text-green-400">5001</span> (Y + 1)</p>
+                                    <p>Flags = <span class="text-yellow-400">ACK</span></p>
+                                </div>
+                            </div>
+
+                             <div id="tcp-step-desc-4" class="hidden">
+                                <h4 class="text-green-400 font-bold uppercase text-xs mb-2">Complete</h4>
+                                <p class="text-slate-300 text-sm">
+                                    Both sides have synchronized their sequence numbers and acknowledged each other. Data transfer can now begin reliably.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interviewer Cheat Sheet -->
+            <section class="bg-indigo-50 rounded-2xl p-8 border border-indigo-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-indigo-600 text-3xl">psychology</span>
+                    <h3 class="text-2xl font-bold text-indigo-900">TCP Interview Q&A Cheat Sheet</h3>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Question 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-100">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-start gap-2">
+                            <span class="text-indigo-500 font-mono">Q:</span> 
+                            Why do we need 3 steps? Why not 2?
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            <strong>Two steps are insufficient</strong> because the Server needs to know that the Client <em>received</em> its SYN-ACK. <br><br>
+                            If we only had 2 steps (SYN -> SYN-ACK), the Server would establish a connection immediately after sending SYN-ACK. If that packet gets lost, the Client never knows the connection exists, but the Server wastes resources keeping it open. The 3rd step (ACK) confirms to the Server that the path is clear both ways.
+                        </p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-100">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-start gap-2">
+                            <span class="text-indigo-500 font-mono">Q:</span> 
+                            What is a SYN Flood attack?
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            A malicious client sends tons of <strong>SYN</strong> packets but <em>never</em> sends the final <strong>ACK</strong>. <br><br>
+                            The Server reserves memory (in a "SYN Queue") for each one, waiting for the ACK. Eventually, the server runs out of memory and crashes or blocks legitimate users. Modern servers use <strong>SYN Cookies</strong> to mitigate this.
+                        </p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-100">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-start gap-2">
+                            <span class="text-indigo-500 font-mono">Q:</span> 
+                            What are the initial Sequence Numbers?
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            They are <strong>random</strong> (not 0 or 1) for security reasons. Using predictable sequence numbers makes the connection vulnerable to <em>TCP Sequence Prediction Attacks</em>, where a hacker could inject malicious packets into the connection.
+                        </p>
+                    </div>
+                    
+                     <!-- Question 4 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-100">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-start gap-2">
+                            <span class="text-indigo-500 font-mono">Q:</span> 
+                            What happens if the 3rd ACK is lost?
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            The Server (still in SYN_RCVD state) will eventually <strong>timeout</strong> and retransmit the SYN-ACK packet, assuming the Client didn't get it. The Client (already in ESTABLISHED state) will typically just resend the ACK when it receives the duplicate SYN-ACK.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 font-medium">Curated by <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="text-blue-600 hover:underline">Rajat Kumar</a></p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="text-slate-400 hover:text-[#0077b5] transition">LinkedIn</a>
+                <span class="text-slate-300">|</span>
+                <a href="https://github.com/im-Rajat/" target="_blank" class="text-slate-400 hover:text-black transition">GitHub</a>
+            </div>
+            <p class="text-xs text-slate-300 mt-8">© 2026 Interactive Learning Series</p>
+        </div>
+    </footer>
+
+    <script>
+        // ========== TAB SWITCHING ==========
+        function switchTab(tabName) {
+            // Hide all content
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            // Show selected content
+            document.getElementById('content-' + tabName).classList.add('active');
+            document.getElementById('tab-' + tabName).classList.add('active');
+        }
+
+        // ========== DNS SIMULATION LOGIC ==========
+        async function startDnsSimulation() {
+            const btn = document.getElementById('resolveBtn');
+            const status = document.getElementById('dnsSimStatus');
+            const packet = document.getElementById('dns-packet');
+            const steps = document.querySelectorAll('.step-card');
+            
+            if(btn.disabled) return;
+            btn.disabled = true;
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+            
+            // Reset
+            steps.forEach(s => s.classList.remove('active'));
+            packet.classList.add('opacity-0');
+            
+            // Coordinates (matching SVG)
+            const coords = {
+                client: {x: 50, y: 160},
+                resolver: {x: 300, y: 160},
+                root: {x: 460, y: 60},
+                tld: {x: 460, y: 160},
+                auth: {x: 460, y: 260}
+            };
+
+            const animateMove = async (from, to, duration = 1000) => {
+                const startX = coords[from].x;
+                const startY = coords[from].y;
+                const endX = coords[to].x;
+                const endY = coords[to].y;
+                
+                packet.setAttribute('transform', `translate(${startX}, ${startY})`);
+                packet.classList.remove('opacity-0');
+                
+                const animation = packet.animate([
+                    { transform: `translate(${startX}px, ${startY}px)` },
+                    { transform: `translate(${endX}px, ${endY}px)` }
+                ], {
+                    duration: duration,
+                    easing: 'ease-in-out',
+                    fill: 'forwards'
+                });
+                
+                return animation.finished;
+            };
+
+            const highlightNode = (id) => {
+                const node = document.getElementById(id);
+                if(node) {
+                    node.setAttribute('stroke', '#3b82f6');
+                    node.setAttribute('fill', '#eff6ff');
+                    setTimeout(() => {
+                        node.setAttribute('stroke', '#64748b');
+                        node.setAttribute('fill', 'white');
+                    }, 800);
+                }
+            };
+
+            // Sequence
+            status.textContent = "Step 1: Asking ISP Resolver...";
+            steps[1].classList.add('active');
+            await animateMove('client', 'resolver');
+            highlightNode('node-resolver');
+
+            status.textContent = "Step 2: Resolver asks Root Server (.)";
+            steps[2].classList.add('active');
+            await animateMove('resolver', 'root');
+            highlightNode('node-root');
+            status.textContent = "Root says: 'Go ask .com servers'";
+            await animateMove('root', 'resolver');
+
+            status.textContent = "Step 3: Resolver asks TLD (.com)";
+            await animateMove('resolver', 'tld');
+            highlightNode('node-tld');
+            status.textContent = "TLD says: 'Go ask ns1.google.com'";
+            await animateMove('tld', 'resolver');
+
+            status.textContent = "Step 4: Resolver asks Auth Server";
+            await animateMove('resolver', 'auth');
+            highlightNode('node-auth');
+            status.textContent = "Auth says: 'IP is 142.250.190.46'";
+            await animateMove('auth', 'resolver');
+
+            status.textContent = "Step 5: Sending IP back to you!";
+            steps[3].classList.add('active');
+            await animateMove('resolver', 'client');
+            
+            status.textContent = "Resolution Complete! IP: 142.250.190.46";
+            status.classList.add('bg-green-100', 'text-green-800');
+            setTimeout(() => {
+                status.classList.remove('bg-green-100', 'text-green-800');
+                btn.disabled = false;
+                btn.classList.remove('opacity-50', 'cursor-not-allowed');
+                packet.classList.add('opacity-0');
+            }, 3000);
+        }
+
+        // ========== DNS UI INTERACTIONS ==========
+        function toggleSection(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                el.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.textContent = 'remove';
+            } else {
+                el.classList.add('hidden');
+                icon.textContent = 'add';
+            }
+        }
+
+        // ========== TCP SIMULATION LOGIC ==========
+        let tcpCurrentStep = 0;
+        const tcpTotalSteps = 4;
+        
+        const tcpNextBtn = document.getElementById('tcpNextBtn');
+        const tcpResetBtn = document.getElementById('tcpResetBtn');
+        const tcpStatusText = document.getElementById('tcpStatusText');
+        
+        // Element References
+        const tcpPackets = [
+            document.getElementById('tcp-packet-1'),
+            document.getElementById('tcp-packet-2'),
+            document.getElementById('tcp-packet-3'),
+            document.getElementById('tcp-conn-established')
+        ];
+
+        const tcpTextPanels = [
+            document.getElementById('tcp-step-desc-0'),
+            document.getElementById('tcp-step-desc-1'),
+            document.getElementById('tcp-step-desc-2'),
+            document.getElementById('tcp-step-desc-3'),
+            document.getElementById('tcp-step-desc-4')
+        ];
+
+        function updateTcpUI() {
+            // Update Text Panels
+            tcpTextPanels.forEach((panel, index) => {
+                if (index === tcpCurrentStep) {
+                    panel.classList.remove('hidden');
+                    panel.classList.add('fade-in');
+                } else {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('fade-in');
+                }
+            });
+
+            // Update SVG Animations
+            tcpPackets.forEach(p => p.style.opacity = 0);
+
+            if (tcpCurrentStep >= 1) tcpPackets[0].style.opacity = 1;
+            if (tcpCurrentStep >= 2) tcpPackets[1].style.opacity = 1;
+            if (tcpCurrentStep >= 3) tcpPackets[2].style.opacity = 1;
+            if (tcpCurrentStep >= 4) tcpPackets[3].style.opacity = 1;
+
+            // Update Status Text
+            if (tcpCurrentStep === 0) tcpStatusText.innerHTML = "Status: <span class='text-white'>CLOSED</span>";
+            if (tcpCurrentStep === 1) tcpStatusText.innerHTML = "Status: <span class='text-yellow-400'>SYN_SENT</span> (Client) / <span class='text-yellow-400'>LISTEN</span> (Server)";
+            if (tcpCurrentStep === 2) tcpStatusText.innerHTML = "Status: <span class='text-purple-300'>SYN_RCVD</span> (Server)";
+            if (tcpCurrentStep === 3) tcpStatusText.innerHTML = "Status: <span class='text-green-400'>ESTABLISHED</span> (Client)";
+            if (tcpCurrentStep === 4) tcpStatusText.innerHTML = "Status: <span class='text-green-400'>ESTABLISHED</span> (Both)";
+
+            // Button States
+            if (tcpCurrentStep === tcpTotalSteps) {
+                tcpNextBtn.disabled = true;
+                tcpNextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                tcpNextBtn.innerHTML = `Complete <span class="material-symbols-outlined text-sm">check</span>`;
+            } else {
+                tcpNextBtn.disabled = false;
+                tcpNextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                let btnText = "Start Handshake";
+                if(tcpCurrentStep > 0) btnText = "Next Step";
+                tcpNextBtn.innerHTML = `${btnText} <span class="material-symbols-outlined text-sm">play_arrow</span>`;
+            }
+            
+            if (tcpCurrentStep > 0) {
+                tcpResetBtn.disabled = false;
+            } else {
+                tcpResetBtn.disabled = true;
+            }
+        }
+
+        tcpNextBtn.addEventListener('click', () => {
+            if (tcpCurrentStep < tcpTotalSteps) {
+                tcpCurrentStep++;
+                updateTcpUI();
+            }
+        });
+
+        tcpResetBtn.addEventListener('click', () => {
+            tcpCurrentStep = 0;
+            updateTcpUI();
+        });
+
+        // Initialize TCP UI
+        updateTcpUI();
+    </script>
+
+</body>
+</html>
