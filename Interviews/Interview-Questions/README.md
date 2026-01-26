@@ -41,6 +41,7 @@
 - [Vertical vs. Horizontal Scaling](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Vertical-vs-Horizontal-Scaling.html)
 - [Normalization vs Denormalization](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Normalization-vs-Denormalization.html)
 - [Indexing](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Indexing.html)
+- [Shared Lock vs Exclusive Lock](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Shared-vs-Exclusive-Locks.html)
 
 ## Coding
 
