@@ -87,6 +87,13 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             width: 100%;
             height: 100%;
         }
+        /* Tab content - hide all by default, show only active */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
     </style>
     <!-- 
       Note: Images used are direct links to Wikimedia Commons via Special:FilePath 
@@ -287,9 +294,9 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
                 </div>
                 
                 <div class="flex border-b border-slate-200">
-                    <button onclick="switchTab('prevention')" id="btn-prevention" class="flex-1 py-4 text-sm font-semibold text-blue-600 border-b-2 border-blue-600 hover:bg-slate-50 transition-colors">Deadlock Prevention</button>
-                    <button onclick="switchTab('avoidance')" id="btn-avoidance" class="flex-1 py-4 text-sm font-medium text-slate-500 border-b-2 border-transparent hover:text-blue-600 hover:bg-slate-50 transition-colors">Deadlock Avoidance</button>
-                    <button onclick="switchTab('detection')" id="btn-detection" class="flex-1 py-4 text-sm font-medium text-slate-500 border-b-2 border-transparent hover:text-blue-600 hover:bg-slate-50 transition-colors">Detection &amp; Recovery</button>
+                    <button onclick="switchTab('prevention')" id="btn-prevention" class="flex-1 py-4 px-4 text-sm font-semibold text-blue-600 border-b-2 border-blue-600 hover:bg-slate-50 transition-colors">Deadlock Prevention</button>
+                    <button onclick="switchTab('avoidance')" id="btn-avoidance" class="flex-1 py-4 px-4 text-sm font-medium text-slate-500 border-b-2 border-transparent hover:text-blue-600 hover:bg-slate-50 transition-colors">Deadlock Avoidance</button>
+                    <button onclick="switchTab('detection')" id="btn-detection" class="flex-1 py-4 px-4 text-sm font-medium text-slate-500 border-b-2 border-transparent hover:text-blue-600 hover:bg-slate-50 transition-colors">Detection &amp; Recovery</button>
                 </div>
 
                 <div class="p-8">
