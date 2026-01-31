@@ -39,17 +39,17 @@
 
 ## DBMS
 
-- [ACID Properties](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/ACID-Properties.html)
-- [Vertical vs. Horizontal Scaling](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Vertical-vs-Horizontal-Scaling.html)
-- [Normalization vs Denormalization](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Normalization-vs-Denormalization.html)
-- [Indexing](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Indexing.html)
-- [Shared Lock vs Exclusive Lock](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Shared-vs-Exclusive-Locks.html)
-- [Conflict Serializability](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Conflict-Serializability.html)
-- [Concurrency Control Protocols](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Concurrency-Control-Protocols.html)
+- [ACID Properties](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/DBMS/html/ACID-Properties.html)
+- [Vertical vs. Horizontal Scaling](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/DBMS/html/Vertical-vs-Horizontal-Scaling.html)
+- [Normalization vs Denormalization](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/DBMS/html/Normalization-vs-Denormalization.html)
+- [Indexing](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/DBMS/html/Indexing.html)
+- [Shared Lock vs Exclusive Lock](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/DBMS/html/Shared-vs-Exclusive-Locks.html)
+- [Conflict Serializability](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/DBMS/html/Conflict-Serializability.html)
+- [Concurrency Control Protocols](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/DBMS/html/Concurrency-Control-Protocols.html)
 
 ## Coding
 
-- [Traverse Binary Tree (preorder, inorder, postorder) using both Recursive and Iterative approaches](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/binary-tree-traversal.html)
+- [Traverse Binary Tree (preorder, inorder, postorder) using both Recursive and Iterative approaches](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/Coding/html/binary-tree-traversal.html)
 - Given an array filter out duplicates
 - Binary Tree
 - Binary Search Tree
