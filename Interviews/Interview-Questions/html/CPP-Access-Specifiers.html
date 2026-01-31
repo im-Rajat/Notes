@@ -416,12 +416,6 @@ var l=["material-icons","material-symbols-outlined","material-symbols-rounded","
         </div>
     </section>
 
-    <!-- Download Button (Subtle) -->
-    <button onclick="downloadPage()" class="download-btn bg-slate-800 text-white text-xs px-3 py-2 rounded shadow flex items-center gap-1 hover:bg-slate-900" title="Download this page as HTML">
-        <span class="material-symbols-outlined text-[14px]">download</span>
-        Save Page
-    </button>
-
     <!-- Application Logic -->
     <script>
         // --- Logic for Interactive Code Compiler ---
@@ -571,20 +565,6 @@ var l=["material-icons","material-symbols-outlined","material-symbols-rounded","
                 feedback.classList.remove('hidden', 'text-green-400');
                 feedback.classList.add('text-red-400');
             }
-        }
-        
-        // --- Logic for Download ---
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], {type: 'text/html'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'cpp-access-specifiers-guide.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
 
         // Initialize
