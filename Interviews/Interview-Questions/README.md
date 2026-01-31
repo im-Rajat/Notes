@@ -15,6 +15,7 @@
 ## C/C++
 
 - [C Memory Layout & Storage Classes](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/c-memory-visualizer.html)
+- [C++ Access Specifiers](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/CPP-Access-Specifiers.html)
 
 ## Operating Systems
 
