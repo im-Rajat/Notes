@@ -23,6 +23,7 @@
 - [Mutex vs Semaphore](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Mutex-vs-Semaphore.html)
 - [Main Memory vs Secondary Memory](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Main-vs-Secondary-Memory.html)
 - [Deadlock and it's conditions](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/Deadlock-and-its-Conditions.html)
+- [What's the difference between x86 and x64 systems?](https://htmlpreview.github.io/?https://github.com/im-Rajat/Notes/blob/main/Interviews/Interview-Questions/html/x86-vs-x64-systems.html)
 
 ## Computer Networks
 

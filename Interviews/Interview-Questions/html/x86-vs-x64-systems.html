@@ -1,0 +1,763 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function m(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}function r(a){var c=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(c)return c.call(a);if(typeof a.length=="number")return{next:m(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var t=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,g){if(a==Array.prototype||a==Object.prototype)return a;a[c]=g.value;return a};
+function u(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var g=a[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var v=u(this);function x(a,c){if(c)a:{var g=v;a=a.split(".");for(var h=0;h<a.length-1;h++){var l=a[h];if(!(l in g))break a;g=g[l]}a=a[a.length-1];h=g[a];c=c(h);c!=h&&c!=null&&t(g,a,{configurable:!0,writable:!0,value:c})}}
+function y(a){if(!(a instanceof Object))throw new TypeError("Iterator result "+a+" is not an object");}function z(){this.o=!1;this.j=null;this.u=void 0;this.g=1;this.i=this.l=0;this.C=this.h=null}function A(a){if(a.o)throw new TypeError("Generator is already running");a.o=!0}z.prototype.v=function(a){this.u=a};function B(a,c){a.h={K:c,L:!0};a.g=a.l||a.i}z.prototype.getNextAddressJsc=function(){return this.g};z.prototype.getYieldResultJsc=function(){return this.u};
+z.prototype.return=function(a){this.h={return:a};this.g=this.i};z.prototype["return"]=z.prototype.return;z.prototype.N=function(a){this.h={B:a};this.g=this.i};z.prototype.jumpThroughFinallyBlocks=z.prototype.N;z.prototype.A=function(a,c){this.g=c;return{value:a}};z.prototype.yield=z.prototype.A;z.prototype.R=function(a,c){a=r(a);var g=a.next();y(g);if(g.done)this.u=g.value,this.g=c;else return this.j=a,this.A(g.value,c)};z.prototype.yieldAll=z.prototype.R;z.prototype.B=function(a){this.g=a};
+z.prototype.jumpTo=z.prototype.B;z.prototype.F=function(){this.g=0};z.prototype.jumpToEnd=z.prototype.F;z.prototype.H=function(a,c){this.l=a;c!=void 0&&(this.i=c)};z.prototype.setCatchFinallyBlocks=z.prototype.H;z.prototype.P=function(a){this.l=0;this.i=a||0};z.prototype.setFinallyBlock=z.prototype.P;z.prototype.G=function(a,c){this.g=a;this.l=c||0};z.prototype.leaveTryBlock=z.prototype.G;z.prototype.D=function(a){this.l=a||0;a=this.h.K;this.h=null;return a};z.prototype.enterCatchBlock=z.prototype.D;
+z.prototype.J=function(a,c,g){g?this.C[g]=this.h:this.C=[this.h];this.l=a||0;this.i=c||0};z.prototype.enterFinallyBlock=z.prototype.J;z.prototype.O=function(a,c){c=this.C.splice(c||0)[0];(c=this.h=this.h||c)?c.L?this.g=this.l||this.i:c.B!=void 0&&this.i<c.B?(this.g=c.B,this.h=null):this.g=this.i:this.g=a};z.prototype.leaveFinallyBlock=z.prototype.O;z.prototype.M=function(a){return new C(a)};z.prototype.forIn=z.prototype.M;
+function C(a){this.i=a;this.g=[];for(var c in a)this.g.push(c);this.g.reverse()}C.prototype.h=function(){for(;this.g.length>0;){var a=this.g.pop();if(a in this.i)return a}return null};C.prototype.getNext=C.prototype.h;function F(a){this.g=new z;this.h=a}function G(a,c){A(a.g);var g=a.g.j;if(g)return H(a,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return I(a)}
+function H(a,c,g,h){try{var l=c.call(a.g.j,g);y(l);if(!l.done)return a.g.o=!1,l;var n=l.value}catch(f){return a.g.j=null,B(a.g,f),I(a)}a.g.j=null;h.call(a.g,n);return I(a)}function I(a){for(;a.g.g;)try{var c=a.h(a.g);if(c)return a.g.o=!1,{value:c.value,done:!1}}catch(g){a.g.u=void 0,B(a.g,g)}a.g.o=!1;if(a.g.h){c=a.g.h;a.g.h=null;if(c.L)throw c.K;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){A(a.g);a.g.j?c=H(a,a.g.j.next,c,a.g.v):(a.g.v(c),c=I(a));return c};this.throw=function(c){A(a.g);a.g.j?c=H(a,a.g.j["throw"],c,a.g.v):(B(a.g,c),c=I(a));return c};this.return=function(c){return G(a,c)};this[Symbol.iterator]=function(){return this}}function K(a){function c(h){return a.next(h)}function g(h){return a.throw(h)}return new Promise(function(h,l){function n(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(n,l)}n(a.next())})}
+x("Symbol",function(a){function c(n){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(n||"")+"_"+l++,n)}function g(n,f){this.g=n;t(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");t(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return L(m(this))}});return a});function L(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+x("Promise",function(a){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var b=this.j();try{f(b.resolve,b.reject)}catch(d){b.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(b){b(f)})}if(a)return a;g.prototype.h=function(f){if(this.g==null){this.g=[];var b=this;this.i(function(){b.l()})}this.g.push(f)};var l=v.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var b=0;b<f.length;++b){var d=
+f[b];f[b]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(b,k))}}var b=this,d=!1;return{resolve:f(this.F),reject:f(this.l)}};c.prototype.F=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.H(f);else{a:switch(typeof f){case "object":var b=f!=null;break a;case "function":b=!0;break a;default:b=!1}b?this.D(f):this.o(f)}};
+c.prototype.D=function(f){var b=void 0;try{b=f.then}catch(d){this.l(d);return}typeof b=="function"?this.J(b,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,b){if(this.h!=0)throw Error("Cannot settle("+f+", "+b+"): Promise already settled in state"+this.h);this.h=f;this.i=b;this.h===2&&this.G();this.C()};c.prototype.G=function(){var f=this;l(function(){if(f.A()){var b=v.console;typeof b!=="undefined"&&b.error(f.i)}},1)};c.prototype.A=
+function(){if(this.u)return!1;var f=v.CustomEvent,b=v.Event,d=v.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof b==="function"?f=new b("unhandledrejection",{cancelable:!0}):(f=v.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.C=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)n.h(this.g[f]);this.g=null}};var n=new g;c.prototype.H=
+function(f){var b=this.j();f.I(b.resolve,b.reject)};c.prototype.J=function(f,b){var d=this.j();try{f.call(b,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,b){function d(p,w){return typeof p=="function"?function(D){try{e(p(D))}catch(E){k(E)}}:w}var e,k,q=new c(function(p,w){e=p;k=w});this.I(d(f,e),d(b,k));return q};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.I=function(f,b){function d(){switch(e.h){case 1:f(e.i);break;case 2:b(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?n.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(b,d){d(f)})};c.race=function(f){return new c(function(b,d){for(var e=r(f),k=e.next();!k.done;k=e.next())h(k.value).I(b,d)})};c.all=function(f){var b=r(f),d=b.next();return d.done?h([]):new c(function(e,k){function q(D){return function(E){p[D]=E;w--;w==0&&e(p)}}var p=[],w=0;do p.push(void 0),w++,h(d.value).I(q(p.length-1),k),d=b.next();while(!d.done)})};return c});
+function M(a,c){return Object.prototype.hasOwnProperty.call(a,c)}x("Object.is",function(a){return a?a:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(a){return a?a:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var n=h[g];if(n===c||Object.is(n,c))return!0}return!1}});
+x("String.prototype.includes",function(a){return a?a:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(a){function c(d){this.g=(b+=Math.random()+1).toString();if(d){d=r(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!M(d,f)){var e=new g;t(d,f,{value:e})}}function n(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!a||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new a([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(q){return!1}}())return a;var f="$jscomp_hidden_"+Math.random();n("freeze");n("preventExtensions");n("seal");var b=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!M(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&M(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&M(d,
+f)&&M(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&M(d,f)&&M(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(a){function c(){var b={};return b.m=b.next=b.head=b}function g(b,d){var e=b[1];return L(function(){if(e){for(;e.head!=b[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(b,d){var e=d&&typeof d;e=="object"||e=="function"?n.has(d)?e=n.get(d):(e=""+ ++f,n.set(d,e)):e="p_"+d;var k=b[0][e];if(k&&M(b[0],e))for(b=0;b<k.length;b++){var q=k[b];if(d!==d&&q.key!==q.key||d===q.key)return{id:e,list:k,index:b,entry:q}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(b){this[0]={};this[1]=c();this.size=0;if(b){b=r(b);for(var d;!(d=b.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var b=Object.seal({x:4}),d=new a(r([[b,"s"]]));if(d.get(b)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=b||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(q){return!1}}())return a;var n=new WeakMap;l.prototype.set=function(b,d){b=b===0?0:b;var e=h(this,b);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:b,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(b){b=h(this,b);return b.entry&&b.list?(b.list.splice(b.index,1),b.list.length||delete this[0][b.id],b.entry.m.next=b.entry.next,
+b.entry.next.m=b.entry.m,b.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(b){return!!h(this,b).entry};l.prototype.get=function(b){return(b=h(this,b).entry)&&b.value};l.prototype.entries=function(){return g(this,function(b){return[b.key,b.value]})};l.prototype.keys=function(){return g(this,function(b){return b.key})};l.prototype.values=function(){return g(this,function(b){return b.value})};l.prototype.forEach=
+function(b,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,b.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(a){function c(g){this.g=new Map;if(g){g=r(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new a(r([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),n=l.next();if(n.done||n.value[0]!=g||n.value[1]!=g)return!1;n=l.next();return n.done||n.value[0]==g||n.value[0].x!=4||
+n.value[1]!=n.value[0]?!1:l.next().done}catch(f){return!1}}())return a;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(n){return g.call(h,n,n,l)})};return c});(function(){function a(){return n?Promise.resolve(n):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(b){if(!b.ok)throw Error("HTTP error! status: "+b.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return b.json()}).then(function(b){if(!Array.isArray(b))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return n=b}).catch(function(b){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",b);f=null;throw b;})}function c(b){var d,e,k,q;return K(new J(new F(function(p){switch(p.g){case 1:d=(b.textContent||"").trim();if(!d||b.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return p.return();e=window.getComputedStyle(b);if(e.display==="none"||e.visibility==="hidden")return p.return();
+p.H(2);return p.A(a(),4);case 4:k=p.u;p.G(3);break;case 2:return p.D(),console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),p.return();case 3:(q=k.includes(d))?b.classList.contains("js-replaced-missing-icon")&&b.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&b.classList.contains("js-replaced-missing-icon")||(b.textContent="radio_button_unchecked",b.classList.add("js-replaced-missing-icon")),p.F()}})))}function g(b){b=b===void 0?
+document.body:b;b.querySelectorAll(l).forEach(function(d){c(d)})}function h(){a().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(b){var d=new Set;b=r(b);for(var e=b.next();!e.done;e=b.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(q){q.nodeType===Node.ELEMENT_NODE&&(q.matches(l)&&d.add(q),q.querySelectorAll(l).forEach(function(p){d.add(p)}))});else if(e.type==="attributes"&&e.attributeName===
+"class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(q){c(q)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(b){console.error("IconChecker: Font loading error. Scanning icons anyway.",b);requestAnimationFrame(function(){g(document.body)})})}
+var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(b){return"."+b}).join(","),n=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>x86 vs x64: The Architecture Explainer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'tech-blue': '#2563eb',
+                        'tech-dark': '#0f172a',
+                        'tech-accent': '#06b6d4',
+                        'amd-red': '#ef4444',
+                        'intel-blue': '#0071c5'
+                    },
+                    animation: {
+                        'flow': 'flow 2s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        flow: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(100%)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .perspective-container {
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b; 
+        }
+        .chip-svg text {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-4{bottom:1rem}.left-0{left:0px}.left-2{left:0.5rem}.right-0{right:0px}.right-4{right:1rem}.top-0{top:0px}.top-2{top:0.5rem}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.-mt-20{margin-top:-5rem}.mb-1{margin-bottom:0.25rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-5{margin-left:1.25rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-32{height:8rem}.h-36{height:9rem}.h-48{height:12rem}.h-64{height:16rem}.h-80{height:20rem}.h-\[400px\]{height:400px}.h-\[60vh\]{height:60vh}.h-full{height:100%}.h-px{height:1px}.h-12{height:3rem}.min-h-\[500px\]{min-height:500px}.w-1\/3{width:33.333333%}.w-32{width:8rem}.w-36{width:9rem}.w-72{width:18rem}.w-full{width:100%}.w-12{width:3rem}.min-w-max{min-width:max-content}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}.animate-fade-in-up{animation:fadeInUp 0.8s ease-out forwards}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-1{gap:0.25rem}.gap-16{gap:4rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-tr-lg{border-top-right-radius:0.5rem}.border{border-width:1px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-t-4{border-top-width:4px}.border-dashed{border-style:dashed}.border-amd-red\/50{border-color:rgb(239 68 68 / 0.5)}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.border-blue-400\/30{border-color:rgb(96 165 250 / 0.3)}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-900{--tw-border-opacity:1;border-color:rgb(15 23 42 / var(--tw-border-opacity, 1))}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.bg-amd-red{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-black\/70{background-color:rgb(0 0 0 / 0.7)}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-500\/20{background-color:rgb(59 130 246 / 0.2)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-blue-600\/90{background-color:rgb(37 99 235 / 0.9)}.bg-blue-900\/30{background-color:rgb(30 58 138 / 0.3)}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/30{background-color:rgb(30 41 59 / 0.3)}.bg-slate-800\/50{background-color:rgb(30 41 59 / 0.5)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/50{background-color:rgb(15 23 42 / 0.5)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-blue-400{--tw-gradient-from:#60a5fa var(--tw-gradient-from-position);--tw-gradient-to:rgb(96 165 250 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gray-900{--tw-gradient-from:#111827 var(--tw-gradient-from-position);--tw-gradient-to:rgb(17 24 39 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-800{--tw-gradient-from:#1e293b var(--tw-gradient-from-position);--tw-gradient-to:rgb(30 41 59 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-900\/60{--tw-gradient-from:rgb(15 23 42 / 0.6) var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-cyan-300{--tw-gradient-to:rgb(103 232 249 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #67e8f9 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-slate-900\/90{--tw-gradient-to:rgb(15 23 42 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(15 23 42 / 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-8{padding-bottom:2rem}.text-left{text-align:left}.text-center{text-align:center}.align-middle{vertical-align:middle}.font-mono{font-family:JetBrains Mono, monospace}.font-sans{font-family:Inter, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amd-red{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-100{--tw-text-opacity:1;color:rgb(254 249 195 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-20{opacity:0.2}.opacity-30{opacity:0.3}.opacity-70{opacity:0.7}.opacity-80{opacity:0.8}.opacity-90{opacity:0.9}.mix-blend-overlay{mix-blend-mode:overlay}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-blue-500\/30{--tw-shadow-color:rgb(59 130 246 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-500{transition-duration:500ms}.first\:border-l:first-child{border-left-width:1px}.hover\:border-amd-red:hover{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.hover\:border-slate-500:hover{--tw-border-opacity:1;border-color:rgb(100 116 139 / var(--tw-border-opacity, 1))}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:text-blue-400:hover{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 768px){.md\:w-1\/4{width:25%}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-start{align-items:flex-start}.md\:items-end{align-items:flex-end}.md\:px-8{padding-left:2rem;padding-right:2rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-7xl{font-size:4.5rem;line-height:1}}@media (min-width: 1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}</style></head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+<!-- Download Option -->
+<div class="fixed bottom-4 right-4 z-50">
+    <button onclick="downloadPage()" class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white px-3 py-2 rounded-lg text-xs border border-slate-700 shadow-lg transition-all opacity-70 hover:opacity-100">
+        <span class="material-symbols-outlined text-sm">download</span>
+        Download .html
+    </button>
+</div>
+
+<!-- Hero Section -->
+<header class="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <!-- Background Image (LoremFlickr for 'technology') -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://loremflickr.com/1920/1080/circuit,processor" alt="CPU Architecture Art" class="w-full h-full object-cover opacity-30 grayscale mix-blend-overlay">
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/90 to-slate-900"></div>
+        <!-- Decorative Grid Overlay -->
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#4f46e5 1px, transparent 1px); background-size: 30px 30px;"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-sm font-semibold mb-6 animate-fade-in-up">
+            <span class="material-symbols-outlined text-lg">memory</span>
+            Architecture Explained
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-300 to-white drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">
+            x86 <span class="text-slate-500 text-4xl align-middle mx-2">vs</span> x64
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+            Why does <span class="text-white font-mono bg-slate-800 px-2 rounded">x86</span> mean 32-bit? Why can't your old PC run new games? 
+            Explore the battle of bits, buses, and billions of bytes.
+        </p>
+    </div>
+</header>
+
+<!-- The Core Differences (Interactive Cards) -->
+<section class="py-16 px-4 md:px-8 max-w-7xl mx-auto -mt-20 relative z-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1: RAM Limit -->
+        <div class="perspective-container h-80 cursor-pointer flip-card group">
+            <div class="flip-card-inner relative w-full h-full shadow-2xl rounded-2xl">
+                <!-- Front -->
+                <div class="flip-card-front absolute w-full h-full glass-panel rounded-2xl p-8 flex flex-col items-center justify-center text-center border-t-4 border-red-500">
+                    <span class="material-symbols-outlined text-6xl text-red-400 mb-4">sd_storage</span>
+                    <h3 class="text-2xl font-bold mb-2">The RAM Limit</h3>
+                    <p class="text-slate-400">The most painful difference.</p>
+                    <div class="mt-6 text-sm text-slate-500 uppercase tracking-widest font-semibold group-hover:text-white transition-colors">Hover to Reveal</div>
+                </div>
+                <!-- Back -->
+                <div class="flip-card-back absolute w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 flex flex-col justify-center border border-slate-700">
+                    <div class="mb-4">
+                        <h4 class="text-red-400 font-bold uppercase text-xs tracking-wider mb-1">x86 (32-bit)</h4>
+                        <p class="text-2xl font-mono text-white">4 GB Max</p>
+                        <p class="text-xs text-slate-400">Often only ~3.2GB usable</p>
+                    </div>
+                    <div class="w-full h-px bg-slate-700 my-2"></div>
+                    <div>
+                        <h4 class="text-blue-400 font-bold uppercase text-xs tracking-wider mb-1">x64 (64-bit)</h4>
+                        <p class="text-2xl font-mono text-white">16 Exabytes</p>
+                        <p class="text-xs text-slate-400">Theoretical limit (18 billion GB)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: The Name Mystery -->
+        <div class="perspective-container h-80 cursor-pointer flip-card group">
+            <div class="flip-card-inner relative w-full h-full shadow-2xl rounded-2xl">
+                <!-- Front -->
+                <div class="flip-card-front absolute w-full h-full glass-panel rounded-2xl p-8 flex flex-col items-center justify-center text-center border-t-4 border-yellow-500">
+                    <span class="material-symbols-outlined text-6xl text-yellow-400 mb-4">help_center</span>
+                    <h3 class="text-2xl font-bold mb-2">The Name</h3>
+                    <p class="text-slate-400">Why is 32-bit called "x86"?</p>
+                    <div class="mt-6 text-sm text-slate-500 uppercase tracking-widest font-semibold group-hover:text-white transition-colors">Hover to Reveal</div>
+                </div>
+                <!-- Back -->
+                <div class="flip-card-back absolute w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 flex flex-col justify-center border border-slate-700">
+                    <p class="text-sm leading-relaxed text-slate-300">
+                        It comes from the model numbers of early Intel processors which all ended in "86":
+                    </p>
+                    <ul class="text-sm font-mono mt-3 space-y-1 text-yellow-100">
+                        <li>• 8086 (1978)</li>
+                        <li>• 80286 (1982)</li>
+                        <li>• 80<span class="text-yellow-400 font-bold">386</span> (First 32-bit!)</li>
+                        <li>• 80486 (1989)</li>
+                    </ul>
+                    <p class="text-xs mt-3 text-slate-500">
+                        "x64" is just short for x86-64, the 64-bit extension invented by AMD.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Registers -->
+        <div class="perspective-container h-80 cursor-pointer flip-card group">
+            <div class="flip-card-inner relative w-full h-full shadow-2xl rounded-2xl">
+                <!-- Front -->
+                <div class="flip-card-front absolute w-full h-full glass-panel rounded-2xl p-8 flex flex-col items-center justify-center text-center border-t-4 border-blue-500">
+                    <span class="material-symbols-outlined text-6xl text-blue-400 mb-4">speed</span>
+                    <h3 class="text-2xl font-bold mb-2">Speed &amp; Width</h3>
+                    <p class="text-slate-400">It's about the highway lanes.</p>
+                    <div class="mt-6 text-sm text-slate-500 uppercase tracking-widest font-semibold group-hover:text-white transition-colors">Hover to Reveal</div>
+                </div>
+                <!-- Back -->
+                <div class="flip-card-back absolute w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 flex flex-col justify-center border border-slate-700">
+                    <h4 class="font-bold text-lg mb-2 text-blue-300">General Purpose Registers</h4>
+                    <div class="grid grid-cols-2 gap-4 text-center mt-2">
+                        <div class="bg-slate-800 p-2 rounded border border-slate-600">
+                            <div class="text-2xl font-bold text-white">8</div>
+                            <div class="text-xs uppercase text-slate-500">x86 Count</div>
+                            <div class="text-[10px] text-slate-600 font-mono mt-1">32-bit width</div>
+                        </div>
+                        <div class="bg-blue-900/30 p-2 rounded border border-blue-500">
+                            <div class="text-2xl font-bold text-white">16</div>
+                            <div class="text-xs uppercase text-blue-400">x64 Count</div>
+                            <div class="text-[10px] text-blue-300 font-mono mt-1">64-bit width</div>
+                        </div>
+                    </div>
+                    <p class="text-xs mt-4 text-slate-400">
+                        More registers = CPU keeps more data close by = Faster processing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Simulator: The Data Highway -->
+<section class="py-20 bg-slate-800/50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">The "Data Highway" Simulator</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Visualize how width affects throughput. In 32-bit mode, the "highway" is narrow. 
+                In 64-bit mode, we double the lanes and the payload size.
+            </p>
+        </div>
+
+        <!-- Sim Controls -->
+        <div class="flex justify-center gap-4 mb-8">
+            <button id="btn-32" class="px-6 py-3 rounded-lg font-bold transition-all bg-slate-700 hover:bg-slate-600 text-slate-300 border border-slate-600" onclick="setMode(32)">
+                Switch to x86 (32-bit)
+            </button>
+            <button id="btn-64" class="px-6 py-3 rounded-lg font-bold transition-all bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/30 border border-blue-400" onclick="setMode(64)">
+                Switch to x64 (64-bit)
+            </button>
+        </div>
+
+        <!-- Sim Container -->
+        <div class="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-slate-700 h-[400px] flex">
+            <!-- Info Sidebar -->
+            <div class="w-1/3 md:w-1/4 bg-slate-900 p-6 flex flex-col justify-between border-r border-slate-800 z-10">
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 mb-1">Current Architecture</h3>
+                    <div id="sim-arch-title" class="text-3xl font-mono font-bold mb-6 text-blue-400">x64 (64-bit)</div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-xs text-slate-400">Addressable Space</div>
+                            <div id="sim-ram" class="text-lg font-bold text-white">16 Exabytes</div>
+                            <div class="h-1 bg-slate-700 mt-1 rounded-full overflow-hidden">
+                                <div id="sim-ram-bar" class="h-full w-full transition-all duration-500 bg-blue-500" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">Packet Size</div>
+                            <div id="sim-packet" class="text-lg font-bold text-white">64 bits</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-600">
+                    *Visualization slowed for human eye. Actual speed is billions of ops/sec.
+                </div>
+            </div>
+
+            <!-- Highway View -->
+            <div id="highway-container" class="flex-1 relative bg-gray-900 overflow-hidden">
+                <!-- Road Markings -->
+                <div id="lanes-container" class="absolute inset-0 flex justify-around opacity-20"><div class="border-r border-dashed border-slate-600 h-full w-full first:border-l"></div><div class="border-r border-dashed border-slate-600 h-full w-full first:border-l"></div><div class="border-r border-dashed border-slate-600 h-full w-full first:border-l"></div><div class="border-r border-dashed border-slate-600 h-full w-full first:border-l"></div><div class="border-r border-dashed border-slate-600 h-full w-full first:border-l"></div><div class="border-r border-dashed border-slate-600 h-full w-full first:border-l"></div><div class="border-r border-dashed border-slate-600 h-full w-full first:border-l"></div><div class="border-r border-dashed border-slate-600 h-full w-full first:border-l"></div></div>
+                <!-- Traffic Container -->
+                <div id="traffic-layer" class="absolute inset-0 w-full h-full"><div class="absolute top-0 flex items-center justify-center rounded shadow-lg text-[10px] font-bold text-white opacity-90 bg-blue-500 w-12 h-12" style="left: calc(6.25% - 24px); top: -50px;">64</div><div class="absolute top-0 flex items-center justify-center rounded shadow-lg text-[10px] font-bold text-white opacity-90 bg-blue-500 w-12 h-12" style="left: calc(31.25% - 24px); top: -50px;">64</div><div class="absolute top-0 flex items-center justify-center rounded shadow-lg text-[10px] font-bold text-white opacity-90 bg-blue-500 w-12 h-12" style="left: calc(56.25% - 24px); top: -50px;">64</div><div class="absolute top-0 flex items-center justify-center rounded shadow-lg text-[10px] font-bold text-white opacity-90 bg-blue-500 w-12 h-12" style="left: calc(68.75% - 24px); top: -50px;">64</div><div class="absolute top-0 flex items-center justify-center rounded shadow-lg text-[10px] font-bold text-white opacity-90 bg-blue-500 w-12 h-12" style="left: calc(6.25% - 24px); top: -50px;">64</div></div>
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The Library Analogy (Memory Addressing) -->
+<section class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="text-3xl font-bold mb-6">The Library Analogy</h2>
+            <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+                <p>
+                    Imagine your computer's memory (RAM) is a library where every byte of data needs a unique address card to be found.
+                </p>
+                <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-red-500">
+                    <h3 class="font-bold text-white mb-2">32-bit (x86) Library</h3>
+                    <p class="text-sm">
+                        The card catalog only has space for <strong>4.29 billion</strong> cards. That sounds like a lot, but it fills up fast (approx 4GB). Once full, the librarian physically cannot issue any more cards. Any extra books (RAM) you buy simply cannot be shelved.
+                    </p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-blue-500">
+                    <h3 class="font-bold text-white mb-2">64-bit (x64) Library</h3>
+                    <p class="text-sm">
+                        The catalog is upgraded to handle <strong>18 quintillion</strong> cards. You could build a library the size of earth, fill it with books, and still have empty catalog cards left over. We will effectively <em>never</em> hit this limit in our lifetime.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Comparison (Using LoremFlickr as requested for Real Life Analogies) -->
+        <div class="space-y-4">
+            <div class="relative group overflow-hidden rounded-xl shadow-2xl">
+                <div class="absolute top-2 left-2 bg-black/70 backdrop-blur px-3 py-1 rounded text-xs font-bold z-10 border border-white/20">32-bit Limit</div>
+                <!-- Real Life Analogy: Small cluttered library -->
+                <img src="https://loremflickr.com/800/400/library,books" alt="Small Library" class="w-full h-48 object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+            </div>
+            
+            <div class="flex justify-center">
+                <span class="material-symbols-outlined text-4xl text-slate-600">arrow_downward</span>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-xl shadow-2xl">
+                <div class="absolute top-2 left-2 bg-blue-600/90 backdrop-blur px-3 py-1 rounded text-xs font-bold z-10 border border-white/20">64-bit Limit</div>
+                <!-- Real Life Analogy: Huge warehouse -->
+                <img src="https://loremflickr.com/800/400/warehouse,server" alt="Infinite Warehouse" class="w-full h-64 object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Timeline (Strict Rule: Inline SVG for Technical Concepts) -->
+<section class="py-20 bg-slate-900 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">Evolution of the Chip</h2>
+        <div class="relative overflow-x-auto pb-8 custom-scrollbar">
+            <div class="flex gap-8 min-w-max px-4">
+                
+                <!-- 1978: 8086 -->
+                <div class="w-72 bg-slate-800 rounded-xl overflow-hidden flex-shrink-0 border border-slate-700 hover:border-slate-500 transition-colors">
+                    <div class="h-48 bg-slate-950 flex items-center justify-center p-4 relative">
+                        <!-- Inline SVG: DIP Package Chip -->
+                        <svg class="chip-svg w-full h-full" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Pins Top -->
+                            <g fill="#94a3b8">
+                                <rect x="20" y="0" width="10" height="20"></rect>
+                                <rect x="40" y="0" width="10" height="20"></rect>
+                                <rect x="60" y="0" width="10" height="20"></rect>
+                                <rect x="80" y="0" width="10" height="20"></rect>
+                                <rect x="100" y="0" width="10" height="20"></rect>
+                                <rect x="120" y="0" width="10" height="20"></rect>
+                                <rect x="140" y="0" width="10" height="20"></rect>
+                                <rect x="160" y="0" width="10" height="20"></rect>
+                            </g>
+                            <!-- Body -->
+                            <rect x="10" y="15" width="180" height="90" rx="5" fill="#1e293b" stroke="#334155" stroke-width="2"></rect>
+                            <!-- Pins Bottom -->
+                            <g fill="#94a3b8">
+                                <rect x="20" y="100" width="10" height="20"></rect>
+                                <rect x="40" y="100" width="10" height="20"></rect>
+                                <rect x="60" y="100" width="10" height="20"></rect>
+                                <rect x="80" y="100" width="10" height="20"></rect>
+                                <rect x="100" y="100" width="10" height="20"></rect>
+                                <rect x="120" y="100" width="10" height="20"></rect>
+                                <rect x="140" y="100" width="10" height="20"></rect>
+                                <rect x="160" y="100" width="10" height="20"></rect>
+                            </g>
+                            <!-- Text -->
+                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#e2e8f0" font-size="24" font-weight="bold">8086</text>
+                            <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" fill="#64748b" font-size="12">INTEL 1978</text>
+                            <!-- Notch -->
+                            <circle cx="25" cy="60" r="5" fill="#0f172a"></circle>
+                        </svg>
+                        <div class="absolute bottom-0 left-0 bg-slate-800 px-3 py-1 text-sm font-mono text-white border-t border-r border-slate-700 rounded-tr-lg">1978</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-white mb-1">Intel 8086</h3>
+                        <div class="text-xs font-mono text-slate-400 mb-3">16-bit Architecture</div>
+                        <p class="text-sm text-slate-300">The grandfather. It defined the "x86" instruction set foundation.</p>
+                    </div>
+                </div>
+
+                <!-- 1985: 386 -->
+                <div class="w-72 bg-slate-800 rounded-xl overflow-hidden flex-shrink-0 border border-slate-700 hover:border-slate-500 transition-colors">
+                    <div class="h-48 bg-slate-950 flex items-center justify-center p-4 relative">
+                         <!-- Inline SVG: Square PGA Package -->
+                        <svg class="chip-svg w-32 h-32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Gold Rim/Pins -->
+                            <rect x="5" y="5" width="90" height="90" fill="#b45309"></rect>
+                            <!-- Ceramic Body -->
+                            <rect x="10" y="10" width="80" height="80" fill="#171717" stroke="#404040" stroke-width="1"></rect>
+                            <!-- Text -->
+                            <text x="50" y="45" dominant-baseline="middle" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="bold">i386™</text>
+                            <text x="50" y="60" dominant-baseline="middle" text-anchor="middle" fill="#a3a3a3" font-size="8">DX-33</text>
+                            <!-- Triangle Marker -->
+                            <polygon points="15,85 25,85 15,75" fill="#ca8a04"></polygon>
+                        </svg>
+                        <div class="absolute bottom-0 left-0 bg-slate-800 px-3 py-1 text-sm font-mono text-white border-t border-r border-slate-700 rounded-tr-lg">1985</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-white mb-1">Intel 80386</h3>
+                        <div class="text-xs font-mono text-blue-400 mb-3">32-bit (x86) Born</div>
+                        <p class="text-sm text-slate-300">The first 32-bit chip. Defined the standard for the next 20 years. This is why "x86" = 32-bit.</p>
+                    </div>
+                </div>
+
+                <!-- 2003: Athlon 64 -->
+                <div class="w-72 bg-slate-800 rounded-xl overflow-hidden flex-shrink-0 border border-amd-red/50 hover:border-amd-red transition-colors relative">
+                    <div class="absolute top-0 right-0 p-2 z-10">
+                        <span class="bg-amd-red text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg">GAME CHANGER</span>
+                    </div>
+                    <div class="h-48 bg-slate-950 flex items-center justify-center p-4 relative">
+                        <!-- Inline SVG: Athlon 64 Style -->
+                        <svg class="chip-svg w-36 h-36" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <!-- PCB Substrate -->
+                            <rect x="10" y="10" width="100" height="100" fill="#065f46"></rect>
+                            <!-- Heat Spreader -->
+                            <rect x="30" y="30" width="60" height="60" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"></rect>
+                            <!-- Logo Approximation -->
+                            <path d="M45,50 L75,50 L70,70 L50,70 Z" fill="#475569"></path>
+                            <text x="60" y="62" dominant-baseline="middle" text-anchor="middle" fill="#f8fafc" font-size="8" font-weight="bold">64</text>
+                            <!-- Pins dots implied -->
+                            <circle cx="15" cy="15" r="1" fill="#fbbf24"></circle>
+                            <circle cx="105" cy="15" r="1" fill="#fbbf24"></circle>
+                            <circle cx="15" cy="105" r="1" fill="#fbbf24"></circle>
+                        </svg>
+                        <div class="absolute bottom-0 left-0 bg-slate-800 px-3 py-1 text-sm font-mono text-white border-t border-r border-slate-700 rounded-tr-lg">2003</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-white mb-1">AMD Athlon 64</h3>
+                        <div class="text-xs font-mono text-amd-red mb-3">x86-64 (x64) Born</div>
+                        <p class="text-sm text-slate-300">AMD beat Intel to 64-bit desktop computing. They extended x86 instead of replacing it.</p>
+                    </div>
+                </div>
+
+                <!-- Today -->
+                <div class="w-72 bg-slate-800 rounded-xl overflow-hidden flex-shrink-0 border border-slate-700 hover:border-slate-500 transition-colors">
+                    <div class="h-48 bg-slate-950 flex items-center justify-center p-4 relative">
+                         <!-- Inline SVG: Modern Die Shot Abstract -->
+                        <svg class="chip-svg w-full h-full" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <pattern id="circuitPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M10,0 V20 M0,10 H20" stroke="#1e293b" stroke-width="1"></path>
+                                    <rect x="5" y="5" width="10" height="10" fill="#0f172a"></rect>
+                                </pattern>
+                            </defs>
+                            <!-- Wafer/Die Background -->
+                            <rect width="200" height="150" fill="url(#circuitPattern)"></rect>
+                            
+                            <!-- Core blocks -->
+                            <rect x="20" y="20" width="70" height="50" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="2"></rect>
+                            <text x="55" y="45" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="10">CORE</text>
+                            
+                            <rect x="110" y="20" width="70" height="50" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="2"></rect>
+                            <text x="145" y="45" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="10">CORE</text>
+                            
+                            <rect x="20" y="80" width="70" height="50" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="2"></rect>
+                            <text x="55" y="105" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="10">CORE</text>
+                            
+                            <rect x="110" y="80" width="70" height="50" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="2"></rect>
+                            <text x="145" y="105" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="10">CORE</text>
+                            
+                            <!-- Glowing center -->
+                            <circle cx="100" cy="75" r="10" fill="#ec4899" class="animate-pulse">
+                                <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"></animate>
+                            </circle>
+                        </svg>
+                        <div class="absolute bottom-0 left-0 bg-slate-800 px-3 py-1 text-sm font-mono text-white border-t border-r border-slate-700 rounded-tr-lg">Today</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-white mb-1">The Standard</h3>
+                        <div class="text-xs font-mono text-green-400 mb-3">x64 Dominance</div>
+                        <p class="text-sm text-slate-300">Almost all modern Desktop CPUs (Intel Core, AMD Ryzen) use the x64 instruction set.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compatibility Checker -->
+<section class="py-16 px-4 bg-slate-800/30">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center"><span class="material-symbols-outlined align-middle text-4xl mr-2 text-yellow-400">warning</span> Compatibility Quiz</h2>
+        <div class="space-y-4" id="quiz-container">
+            <!-- Question 1 -->
+            <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <p class="font-semibold text-lg mb-4">1. You have a 64-bit Windows laptop. Can you run an old 32-bit game?</p>
+                <div class="flex gap-4">
+                    <button class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded transition" onclick="checkAnswer(this, true, 'Correct! x64 systems have a compatibility layer (WoW64) that lets them run 32-bit apps perfectly.')">Yes</button>
+                    <button class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded transition" onclick="checkAnswer(this, false, 'Incorrect. x64 is backwards compatible! It runs 32-bit apps using a subsystem.')">No</button>
+                </div>
+                <div class="feedback mt-3 text-sm hidden"></div>
+            </div>
+            <!-- Question 2 -->
+            <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <p class="font-semibold text-lg mb-4">2. You dug up an old PC with a 32-bit Windows XP. Can you install a 64-bit version of Photoshop?</p>
+                <div class="flex gap-4">
+                    <button class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded transition" onclick="checkAnswer(this, false, 'Incorrect. A 32-bit OS simply does not understand 64-bit instructions. It will fail instantly.')">Yes</button>
+                    <button class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded transition" onclick="checkAnswer(this, true, 'Correct! A 32-bit OS cannot run 64-bit software. You need to upgrade the OS (and maybe the CPU).')">No</button>
+                </div>
+                <div class="feedback mt-3 text-sm hidden"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Accordion -->
+<section class="py-16 max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+        <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
+            <button class="w-full p-4 text-left font-semibold flex justify-between items-center hover:bg-slate-750 focus:outline-none" onclick="toggleFaq(this)">
+                <span>Is x64 always faster than x86?</span>
+                <span class="material-symbols-outlined transform transition-transform">expand_more</span>
+            </button>
+            <div class="hidden p-4 text-slate-300 border-t border-slate-700 bg-slate-900/50">
+                <p>Generally, yes. Not just because of the bits, but because x64 CPUs have more registers (working memory slots) and newer instruction sets. However, for very simple, tiny programs, the difference might be negligible, and 64-bit pointers do use slightly more RAM.</p>
+            </div>
+        </div>
+        <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
+            <button class="w-full p-4 text-left font-semibold flex justify-between items-center hover:bg-slate-750 focus:outline-none" onclick="toggleFaq(this)">
+                <span>What is "Program Files (x86)"?</span>
+                <span class="material-symbols-outlined transform transition-transform">expand_more</span>
+            </button>
+            <div class="hidden p-4 text-slate-300 border-t border-slate-700 bg-slate-900/50">
+                <p>On 64-bit Windows, Microsoft separates applications to keep things organized.</p>
+                <ul class="list-disc ml-5 mt-2 space-y-1">
+                    <li><code class="bg-slate-700 px-1 rounded">Program Files</code> stores native 64-bit apps.</li>
+                    <li><code class="bg-slate-700 px-1 rounded">Program Files (x86)</code> stores older 32-bit apps running in compatibility mode.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
+            <button class="w-full p-4 text-left font-semibold flex justify-between items-center hover:bg-slate-750 focus:outline-none" onclick="toggleFaq(this)">
+                <span>What about ARM (Apple Silicon)?</span>
+                <span class="material-symbols-outlined transform transition-transform">expand_more</span>
+            </button>
+            <div class="hidden p-4 text-slate-300 border-t border-slate-700 bg-slate-900/50">
+                <p>ARM is a completely different architecture (RISC vs CISC). Modern ARM chips (like M1/M2/M3) are also 64-bit (ARM64), but they speak a different language than x64. They use translation layers (like Rosetta 2) to run x86/x64 apps.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-950 py-12 border-t border-slate-900">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-slate-500 text-sm">
+        
+        <!-- Curated By Section -->
+        <div class="flex flex-col items-center md:items-start">
+            <p class="font-semibold text-slate-400 mb-2">Curated by Rajat Kumar</p>
+            <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/imRajat/" target="_blank" class="flex items-center gap-1 hover:text-blue-400 transition-colors">
+                    <span class="material-symbols-outlined text-lg">work</span> LinkedIn
+                </a>
+                <a href="https://github.com/im-Rajat/" target="_blank" class="flex items-center gap-1 hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-lg">code</span> GitHub
+                </a>
+            </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="flex flex-col items-center md:items-end">
+            <p class="mb-2">Technical References</p>
+            <div class="flex gap-4">
+                <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank" class="hover:text-blue-400 flex items-center gap-1">
+                    Wikipedia: x86-64 <span class="material-symbols-outlined text-xs">open_in_new</span>
+                </a>
+                <a href="https://learn.microsoft.com/en-us/windows/win32/winprog64/running-32-bit-applications" target="_blank" class="hover:text-blue-400 flex items-center gap-1">
+                    MS Docs: WoW64 <span class="material-symbols-outlined text-xs">open_in_new</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-8 text-xs text-slate-600">
+        © 2026 Architecture Explainer. | Real-life analogy images via LoremFlickr. | Technical diagrams via Inline SVG.
+    </div>
+</footer>
+
+<script>
+    // --- Download Function ---
+    function downloadPage() {
+        // Get the full HTML content of the page
+        const htmlContent = document.documentElement.outerHTML;
+        
+        // Create a blob
+        const blob = new Blob([htmlContent], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        
+        // Create a temporary link and trigger download
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'x86-vs-x64-explainer.html';
+        document.body.appendChild(a);
+        a.click();
+        
+        // Cleanup
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    // --- Traffic Simulator Logic ---
+    let simInterval;
+    const container = document.getElementById('highway-container');
+    const trafficLayer = document.getElementById('traffic-layer');
+    const lanesContainer = document.getElementById('lanes-container');
+    
+    const config = {
+        32: { lanes: 4, speed: 3000, color: 'bg-red-500', size: 'w-8 h-8', label: '32' },
+        64: { lanes: 8, speed: 2000, color: 'bg-blue-500', size: 'w-12 h-12', label: '64' }
+    };
+
+    let currentMode = 64; // Default
+
+    function setMode(mode) {
+        currentMode = mode;
+        
+        // UI Updates
+        document.getElementById('btn-32').className = mode === 32 
+            ? "px-6 py-3 rounded-lg font-bold transition-all bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-500/30 border border-red-400"
+            : "px-6 py-3 rounded-lg font-bold transition-all bg-slate-700 hover:bg-slate-600 text-slate-300 border border-slate-600";
+            
+        document.getElementById('btn-64').className = mode === 64
+            ? "px-6 py-3 rounded-lg font-bold transition-all bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/30 border border-blue-400"
+            : "px-6 py-3 rounded-lg font-bold transition-all bg-slate-700 hover:bg-slate-600 text-slate-300 border border-slate-600";
+
+        document.getElementById('sim-arch-title').textContent = mode === 32 ? "x86 (32-bit)" : "x64 (64-bit)";
+        document.getElementById('sim-arch-title').className = `text-3xl font-mono font-bold mb-6 ${mode === 32 ? 'text-red-400' : 'text-blue-400'}`;
+        
+        document.getElementById('sim-ram').textContent = mode === 32 ? "4 Gigabytes" : "16 Exabytes";
+        document.getElementById('sim-ram-bar').style.width = mode === 32 ? "5%" : "100%";
+        document.getElementById('sim-ram-bar').className = `h-full w-full transition-all duration-500 ${mode === 32 ? 'bg-red-500' : 'bg-blue-500'}`;
+        
+        document.getElementById('sim-packet').textContent = mode === 32 ? "32 bits" : "64 bits";
+
+        // Reset Traffic
+        resetSimulation();
+    }
+
+    function resetSimulation() {
+        clearInterval(simInterval);
+        trafficLayer.innerHTML = '';
+        lanesContainer.innerHTML = '';
+        
+        // Draw Lanes
+        const laneCount = config[currentMode].lanes;
+        for(let i=0; i<laneCount; i++) {
+            const lane = document.createElement('div');
+            lane.className = 'border-r border-dashed border-slate-600 h-full w-full first:border-l';
+            lanesContainer.appendChild(lane);
+        }
+
+        // Start Spawning
+        simInterval = setInterval(spawnPacket, 400);
+    }
+
+    function spawnPacket() {
+        const laneCount = config[currentMode].lanes;
+        const laneIndex = Math.floor(Math.random() * laneCount);
+        const laneWidth = 100 / laneCount;
+        
+        const packet = document.createElement('div');
+        const conf = config[currentMode];
+        
+        packet.className = `absolute top-0 flex items-center justify-center rounded shadow-lg text-[10px] font-bold text-white opacity-90 ${conf.color} ${conf.size}`;
+        packet.innerText = conf.label;
+        
+        // Positioning
+        // Center within the lane
+        const leftPos = (laneIndex * laneWidth) + (laneWidth / 2);
+        // Offset to center the div
+        packet.style.left = `calc(${leftPos}% - ${currentMode === 64 ? '24px' : '16px'})`; 
+        packet.style.top = '-50px';
+        
+        trafficLayer.appendChild(packet);
+
+        // Animate
+        const duration = conf.speed;
+        const animation = packet.animate([
+            { transform: 'translateY(0)' },
+            { transform: `translateY(500px)` }
+        ], {
+            duration: duration,
+            easing: 'linear'
+        });
+
+        animation.onfinish = () => packet.remove();
+    }
+
+    // Initialize Simulation
+    setMode(64);
+
+
+    // --- Quiz Logic ---
+    function checkAnswer(btn, isCorrect, feedbackText) {
+        const parent = btn.parentElement.parentElement;
+        const feedbackEl = parent.querySelector('.feedback');
+        
+        // Reset styles for siblings
+        const buttons = parent.querySelectorAll('button');
+        buttons.forEach(b => {
+            b.disabled = true;
+            b.classList.add('opacity-50', 'cursor-not-allowed');
+        });
+
+        btn.classList.remove('bg-slate-700', 'hover:bg-slate-600', 'opacity-50');
+        
+        if (isCorrect) {
+            btn.classList.add('bg-green-600', 'text-white');
+            feedbackEl.innerHTML = `<span class="text-green-400 font-bold">✓</span> ${feedbackText}`;
+        } else {
+            btn.classList.add('bg-red-600', 'text-white');
+            feedbackEl.innerHTML = `<span class="text-red-400 font-bold">✗</span> ${feedbackText}`;
+        }
+        
+        feedbackEl.classList.remove('hidden');
+    }
+
+    // --- FAQ Toggle ---
+    function toggleFaq(btn) {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.material-symbols-outlined');
+        
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+        } else {
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+        }
+    }
+</script>
+
+
+</body></html>
