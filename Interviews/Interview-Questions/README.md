@@ -23,6 +23,7 @@
 - [Mutex vs Semaphore](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/Mutex-vs-Semaphore.html)
 - [Main Memory vs Secondary Memory](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/Main-vs-Secondary-Memory.html)
 - [Deadlock and it's conditions](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/Deadlock-and-its-Conditions.html)
+- [When we copy a 10gb file, it look 10 min, but when we delete it look 10 secons. Why?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/why-delete-is-fast.html)
 - [What's the difference between x86 and x64 systems?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/x86-vs-x64-systems.html)
 
 ## Computer Networks
