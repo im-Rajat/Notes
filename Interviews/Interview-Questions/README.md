@@ -1,7 +1,6 @@
 # Interview Questions
 
-<details open>
-<summary style="font-size: 1.35em; font-weight: bold; cursor: pointer;">System Design</summary>
+## System Design
 
 - [Difference between REST API and Web services?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/restapi-vs-webservices.html)
 - [Forward Proxy vs Reverse Proxy](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/proxy-explainer.html)
@@ -12,8 +11,6 @@
 - [How does BookMyShow make sure 2 people don't book the same seat at same time?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/bookmyshow-seat-booking.html)
     - [Also if both click at the exact same exact millisecond, who wins and get the seat?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/redis-race-condition.html)
 - [Explain how Netflix Hover work's](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/netflix-hover-explained.html)
-
-</details>
 
 ## C/C++
 
