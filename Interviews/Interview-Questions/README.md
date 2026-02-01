@@ -49,7 +49,5 @@
 
 ## Coding
 
-- [Traverse Binary Tree (preorder, inorder, postorder) using both Recursive and Iterative approaches](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Coding/html/binary-tree-traversal.html)
-- Given an array filter out duplicates
-- Binary Tree
-- Binary Search Tree
+- [Algorithms](https://im-rajat.github.io/Notes/Interviews/DSA-Problem-Solving/Algorithms)
+- [LeetCode Problems](https://im-rajat.github.io/Notes/Interviews/DSA-Problem-Solving/LeetCode-Problems)
