@@ -356,9 +356,6 @@ function(){de()}):de()})();}).call(this);
                     <a class="text-sm font-medium text-slate-600 hover:text-blue-600 hidden sm:block" href="#simulator">Simulator</a>
                     <a class="text-sm font-medium text-slate-600 hover:text-blue-600 hidden sm:block" href="#decision-guide">Decision Guide</a>
                     <a class="text-sm font-medium text-slate-600 hover:text-blue-600 hidden sm:block" href="#comparison">Comparison</a>
-                    <button onclick="downloadPage()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded border border-slate-300 flex items-center gap-1" title="Download dynamic view as HTML">
-                        <span class="material-symbols-outlined text-sm">download</span> .html
-                    </button>
                 </div>
             </div>
         </div>
@@ -926,20 +923,6 @@ function(){de()}):de()})();}).call(this);
                     <circle cx="140" cy="60" r="10" fill="currentColor" opacity="0.8"/>
                 </svg>
             `;
-        }
-
-        // --- Download Functionality ---
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'ecs-explorer-by-rajat.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         }
     </script>
 
