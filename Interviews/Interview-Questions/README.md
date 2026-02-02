@@ -8,7 +8,7 @@
 - [Why does WhatsApp instantly show ‘typing…’ even if your friend is on the other side of the world?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/whatsapp-speed-explained.html)
 - [Explain System Design in Simple Terms](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/system-design-guide.html)
 - [Traffic Flow from client to task](https://im-rajat.github.io/Notes/System-Design/html/aws-ecs-architecture-sim.html)
-- [Difference between tasks inside services and having a standalone task](https://im-rajat.github.io/Notes/System-Design/html/service-vs-standalone-task.html)
+- [Difference between tasks inside services and having a standalone task](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/service-vs-standalone-task.html)
 - [Your page loads in 80 ms in india but 600 ms in australia. Same backend. Same code. What would you use to fix this?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/cdn-latency-explorer.html)
 - [How does BookMyShow make sure 2 people don't book the same seat at same time?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/bookmyshow-seat-booking.html)
     - [Also if both click at the exact same exact millisecond, who wins and get the seat?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/redis-race-condition.html)
