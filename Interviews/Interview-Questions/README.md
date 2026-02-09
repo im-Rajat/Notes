@@ -26,6 +26,7 @@
 - [Main Memory vs Secondary Memory](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/Main-vs-Secondary-Memory.html)
 - [Deadlock and it's conditions](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/Deadlock-and-its-Conditions.html)
 - [When we copy a 10gb file, it look 10 min, but when we delete it look 10 secons. Why?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/why-delete-is-fast.html)
+- [How does a 75GB file become 20GB when zipped? And then magically turn back to 75GB again?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/how-compression-works.html)
 - [What's the difference between x86 and x64 systems?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/x86-vs-x64-systems.html)
 
 ## Computer Networks
@@ -49,6 +50,7 @@
 - [Shared Lock vs Exclusive Lock](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/DBMS/html/Shared-vs-Exclusive-Locks.html)
 - [Conflict Serializability](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/DBMS/html/Conflict-Serializability.html)
 - [Concurrency Control Protocols](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/DBMS/html/Concurrency-Control-Protocols.html)
+- [SQL Interview Questions](https://im-rajat.github.io/SQL/Interview-Questions)
 
 ## Coding
 
