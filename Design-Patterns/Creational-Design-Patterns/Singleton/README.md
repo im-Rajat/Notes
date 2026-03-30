@@ -126,3 +126,7 @@ int main() {
     return 0;
 }
 ```
+
+### References:
+
+- https://www.geeksforgeeks.org/system-design/singleton-pattern-c-design-patterns/
