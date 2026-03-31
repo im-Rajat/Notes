@@ -31,6 +31,7 @@
 - [Memory Segments: Stack vs Heap](https://i.imghippo.com/files/Cf7661EiM.png)
 - [Virtual Memory & Virtual Address Space](https://i.imghippo.com/files/YkMm9223CeQ.png)
 - [Paging](https://i.imghippo.com/files/xLy2146wNc.png)
+- [Thrashing](https://i.imghippo.com/files/jcEc7120IE.png)
 - [How Snapchat Detects Screenshots & Screen Recording?](https://i.imghippo.com/files/CuW2727fkI.png)
 
 ## Computer Networks
