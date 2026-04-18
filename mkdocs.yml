@@ -1,0 +1,15 @@
+site_name: Rajat's Notes
+site_url: https://im-rajat.github.io/Notes/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+# This tells MkDocs to scan your entire repository root
+docs_dir: '.'
+# Explicitly name the output directory so it doesn't get confused building inside itself
+site_dir: 'site'
