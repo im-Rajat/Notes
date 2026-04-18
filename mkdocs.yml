@@ -4,7 +4,7 @@ site_url: https://im-rajat.github.io/Notes/
 theme:
   name: material
   features:
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.sections
     - navigation.top
     - navigation.instant      # Prevents full page reloads
