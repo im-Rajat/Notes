@@ -4,11 +4,11 @@ site_url: https://im-rajat.github.io/Notes/
 theme:
   name: material
   features:
-    # - navigation.tabs
-    - navigation.sections
-    - navigation.top
+    - navigation.tabs
+    - navigation.sections     # Groups items under bold headers on the left
+    - navigation.top          # Adds a "Back to top" button on long pages
     - navigation.instant      # Prevents full page reloads
-    - navigation.indexes
+    - navigation.indexes      # Allows folders to act as clickable pages
     # - navigation.tracking     # Updates the URL hash as you scroll
     - search.suggest
     - search.highlight
