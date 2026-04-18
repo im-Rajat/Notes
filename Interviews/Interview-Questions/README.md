@@ -13,6 +13,9 @@
 - [How does BookMyShow make sure 2 people don't book the same seat at same time?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/bookmyshow-seat-booking.html)
     - [Also if both click at the exact same exact millisecond, who wins and get the seat?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/redis-race-condition.html)
 - [Explain how Netflix Hover work's](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/System-Design/html/netflix-hover-explained.html)
+- [How Snapchat Detects Screenshots & Screen Recording?](https://i.imghippo.com/files/CuW2727fkI.png)
+- [How Google Maps traffic without any cameras?](https://i.imghippo.com/files/qdu4097Duo.png)
+- [Why Array Indexing Starts at 0?](https://i.imghippo.com/files/FA2186mI.png)
 
 ## C/C++
 
@@ -31,7 +34,6 @@
 - [Memory Segments: Stack vs Heap](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/#1-memory-segments-stack-vs-heap)
 - [Virtual Memory & Virtual Address Space](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/#2-virtual-memory-virtual-address-space)
 - [Paging: The "Unit" of Management](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/#3-paging-the-unit-of-management)
-- [How Snapchat Detects Screenshots & Screen Recording?](https://i.imghippo.com/files/CuW2727fkI.png)
 
 ## Computer Networks
 
