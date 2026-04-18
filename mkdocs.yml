@@ -30,7 +30,16 @@ markdown_extensions:
   - tables
   - sane_lists
   - admonition
-  - pymdownx.superfences
-  - pymdownx.details
-  - pymdownx.tasklist:
+  - attr_list                 # Allows you to resize images directly in markdown: ![img](file.png){ width="300" }
+  - md_in_html                # Allows markdown to work inside raw HTML tags
+  - pymdownx.details          # Creates collapsible dropdown sections
+  - pymdownx.superfences      # Required for complex code blocks
+  - pymdownx.inlinehilite     # Allows syntax highlighting on single inline words
+  - pymdownx.tasklist:        # Checkboxes for to-do lists
       custom_checkbox: true
+  - pymdownx.highlight:       # The actual syntax highlighting engine
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.arithmatex:      # Renders complex math and Big-O notation
+      generic: true
