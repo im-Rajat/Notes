@@ -8,7 +8,7 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.instant      # Prevents full page reloads
-    - navigation.tracking     # Updates the URL hash as you scroll
+    # - navigation.tracking     # Updates the URL hash as you scroll
     - search.suggest
     - search.highlight
     - content.code.copy       # Critical for your C++/Java notes
