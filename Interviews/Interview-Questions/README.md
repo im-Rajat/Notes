@@ -28,9 +28,9 @@
 - [When we copy a 10gb file, it look 10 min, but when we delete it look 10 secons. Why?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/why-delete-is-fast.html)
 - [How does a 75GB file become 20GB when zipped? And then magically turn back to 75GB again?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/how-compression-works.html)
 - [What's the difference between x86 and x64 systems?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/x86-vs-x64-systems.html)
-- [Memory Segments: Stack vs Heap](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems#1-memory-segments-stack-vs-heap)
-- [Virtual Memory & Virtual Address Space](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems#2-virtual-memory--virtual-address-space)
-- [Paging: The "Unit" of Management](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems#3-paging-the-unit-of-managemente)
+- [Memory Segments: Stack vs Heap](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/#1-memory-segments-stack-vs-heap)
+- [Virtual Memory & Virtual Address Space](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/#2-virtual-memory-virtual-address-space)
+- [Paging: The "Unit" of Management](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/#3-paging-the-unit-of-management)
 - [How Snapchat Detects Screenshots & Screen Recording?](https://i.imghippo.com/files/CuW2727fkI.png)
 
 ## Computer Networks
