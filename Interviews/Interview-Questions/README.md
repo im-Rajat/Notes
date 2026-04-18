@@ -19,7 +19,7 @@
 - [C Memory Layout & Storage Classes](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/C-CPP/html/c-memory-visualizer.html)
 - [C++ Access Specifiers](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/C-CPP/html/CPP-Access-Specifiers.html)
 
-## Operating Systems
+## [Operating Systems](Operating-Systems/README.md)
 
 - [Process vs Thread](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/Process-vs-Thread.html)
 - [Mutex vs Semaphore](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/Mutex-vs-Semaphore.html)
@@ -28,10 +28,9 @@
 - [When we copy a 10gb file, it look 10 min, but when we delete it look 10 secons. Why?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/why-delete-is-fast.html)
 - [How does a 75GB file become 20GB when zipped? And then magically turn back to 75GB again?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/how-compression-works.html)
 - [What's the difference between x86 and x64 systems?](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems/html/x86-vs-x64-systems.html)
-- [Memory Segments: Stack vs Heap](https://i.imghippo.com/files/Cf7661EiM.png)
-- [Virtual Memory & Virtual Address Space](https://i.imghippo.com/files/YkMm9223CeQ.png)
-- [Paging](https://i.imghippo.com/files/xLy2146wNc.png)
-- [Thrashing](https://i.imghippo.com/files/jcEc7120IE.png)
+- [Memory Segments: Stack vs Heap](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems#1-memory-segments-stack-vs-heap)
+- [Virtual Memory & Virtual Address Space](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems#2-virtual-memory--virtual-address-space)
+- [Paging: The "Unit" of Management](https://im-rajat.github.io/Notes/Interviews/Interview-Questions/Operating-Systems#3-paging-the-unit-of-managemente)
 - [How Snapchat Detects Screenshots & Screen Recording?](https://i.imghippo.com/files/CuW2727fkI.png)
 
 ## Computer Networks

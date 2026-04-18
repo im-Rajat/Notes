@@ -15,6 +15,8 @@ The Heap is a **giant warehouse**. It’s where you put things when you don't kn
 * **The Catch:** It's messy. Over time, you get **fragmentation** (empty holes between used blocks). If you forget to free the memory, you get a **Memory Leak**.
 * **Speed:** Slower because the OS has to "look" for a free spot to fit your data.
 
+[Memory Segments: Stack vs Heap - Explanation using Image & Diagram](https://i.imghippo.com/files/Cf7661EiM.png)
+
 ---
 
 ## 2. Virtual Memory & Virtual Address Space
@@ -28,6 +30,8 @@ Every process thinks it has access to the entire memory of the computer (e.g., 0
 **Why do we do this?**
 1.  **Isolation:** App A cannot accidentally overwrite App B’s data because they live in different virtual worlds.
 2.  **Size:** You can run a 10GB game on 8GB of RAM because the OS only keeps the "active" parts in the physical RAM and hides the rest on the SSD/Hard Drive.
+
+[Virtual Memory & Virtual Address Space - Explanation using Image & Diagram](https://i.imghippo.com/files/YkMm9223CeQ.png)
 
 ---
 
@@ -43,6 +47,9 @@ What happens if your program asks for Page #10, but the OS hasn't put it in RAM 
 1.  The CPU triggers a **Page Fault**.
 2.  The OS pauses the program, goes to the Hard Drive, finds the data, and loads it into an empty Frame in RAM.
 3.  The Page Table is updated, and the program continues.
+
+[Paging - Explanation using Image & Diagram](https://i.imghippo.com/files/xLy2146wNc.png)
+[Thrashing - Explanation using Image & Diagram](https://i.imghippo.com/files/jcEc7120IE.png)
 
 ---
 
