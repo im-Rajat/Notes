@@ -1,13 +1,28 @@
 site_name: Rajat's Notes
 site_url: https://im-rajat.github.io/Notes/
+
 theme:
   name: material
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.instant      # Prevents full page reloads
+    - navigation.tracking     # Updates the URL hash as you scroll
     - search.suggest
     - search.highlight
+    - content.code.copy       # Critical for your C++/Java notes
+  
+  # Adds a Light/Dark mode toggle (Developers expect this)
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 docs_dir: 'docs'
 
