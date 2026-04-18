@@ -8,15 +8,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
+          
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
+            
       - run: pip install mkdocs-material 
+      
+      # This step creates the structure MkDocs demands dynamically during the pipeline run
+      - name: Hack to fix the folder structure dynamically
+        run: |
+          mkdir docs
+          rsync -av --exclude='docs' --exclude='.git' --exclude='.github' --exclude='mkdocs.yml' ./ docs/
+          
       - run: mkdocs gh-deploy --force

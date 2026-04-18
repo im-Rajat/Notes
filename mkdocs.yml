@@ -9,8 +9,4 @@ theme:
     - search.suggest
     - search.highlight
 
-# Scanning the root because you refused to make a docs folder
-docs_dir: '.'
-
-# Forcing the build folder entirely OUTSIDE the repository root to avoid the infinite loop error
-site_dir: '../mkdocs_build_site'
+docs_dir: 'docs'
