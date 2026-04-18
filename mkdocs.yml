@@ -10,3 +10,12 @@ theme:
     - search.highlight
 
 docs_dir: 'docs'
+
+markdown_extensions:
+  - tables
+  - sane_lists
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true

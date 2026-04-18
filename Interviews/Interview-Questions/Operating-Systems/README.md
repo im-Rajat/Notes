@@ -31,6 +31,7 @@ Every process thinks it has access to the entire memory of the computer (e.g., 0
 - **The "Lye":** The OS creates a map. Your program says, "Store this at address 0x100." The OS looks at its map and actually stores it at 0x854 in the real RAM.
 
 **Why do we do this?**
+
 - **Isolation:** App A cannot accidentally overwrite App B’s data because they live in different virtual worlds.
 - **Size:** You can run a 10GB game on 8GB of RAM because the OS only keeps the "active" parts in the physical RAM and hides the rest on the SSD/Hard Drive.
 
