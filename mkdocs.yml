@@ -4,14 +4,14 @@ site_url: https://im-rajat.github.io/Notes/
 theme:
   name: material
   features:
-    - navigation.tabs
+    - navigation.tabs         # Adds a top navigation bar for better organization
     - navigation.sections     # Groups items under bold headers on the left
     - navigation.top          # Adds a "Back to top" button on long pages
     - navigation.instant      # Prevents full page reloads
     - navigation.indexes      # Allows folders to act as clickable pages
     # - navigation.tracking     # Updates the URL hash as you scroll
-    - search.suggest
-    - search.highlight
+    - search.suggest          # Provides search suggestions as you type
+    - search.highlight        # Highlights search terms in the results
     - content.code.copy       # Critical for your C++/Java notes
   
   # Adds a Light/Dark mode toggle (Developers expect this)
@@ -28,9 +28,9 @@ theme:
 docs_dir: 'docs'
 
 markdown_extensions:
-  - tables
-  - sane_lists
-  - admonition
+  - tables                    # Enables GitHub-style tables
+  - sane_lists                # Fixes common list formatting issues
+  - admonition                # Adds support for note/warning/info blocks
   - attr_list                 # Allows you to resize images directly in markdown: ![img](file.png){ width="300" }
   - md_in_html                # Allows markdown to work inside raw HTML tags
   - pymdownx.details          # Creates collapsible dropdown sections
@@ -44,3 +44,8 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.arithmatex:      # Renders complex math and Big-O notation
       generic: true
+  - pymdownx.superfences:     # Custom code block for Mermaid diagrams
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
