@@ -13,7 +13,7 @@ theme:
     - search.suggest          # Provides search suggestions as you type
     - search.highlight        # Highlights search terms in the results
     - content.code.copy       # Critical for your C++/Java notes
-    - toc.integrate           # Shows the table of contents in the sidebar
+    # - toc.integrate           # Shows the table of contents in the sidebar
   
   # Adds a Light/Dark mode toggle (Developers expect this)
   palette:
