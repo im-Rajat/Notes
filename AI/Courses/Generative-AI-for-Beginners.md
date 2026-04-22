@@ -1,4 +1,4 @@
-# Generative AI for Beginners
+# [Generative AI for Beginners: Fundamentals, Tools & Prompts](https://udemy.com/course/generative-ai-for-beginners-fundamentals-tools-prompts/)
 
 **Creates New Content:** Generative AI is a type of artificial intelligence designed to make entirely new things.
 
@@ -51,3 +51,57 @@
 *   **Hallucinations (High Risk):** Sometimes, the AI will confidently give us information that is completely wrong or entirely made up.
 *   **Bias (Medium-High Risk):** The AI can reproduce biases and stereotypes that it picked up from the data we used to train it.
 *   **Knowledge Cutoffs (Medium Risk):** The AI doesn't know about events that happened after its training was completed, meaning it might not have the most up-to-date information for us.
+
+## How to Choose the Right AI Tool
+
+### **Question 1: What type of task are we doing?**
+
+*   **Creative writing:** We can use ChatGPT.
+*   **Document analysis:** We can use Claude.
+*   **Research:** We can use Perplexity.
+*   **Coding:** We can use DeepSeek.
+
+### **Question 2: Where is our work happening?**
+
+*   **In Microsoft Word:** We can use Copilot.
+*   **In Google Docs:** We can use Gemini.
+*   **Outside these ecosystems:** We can use a standalone tool.
+
+### **Question 3: Do we need accuracy or creativity?**
+
+*   **If accuracy matters most:** We should choose Perplexity or Claude.
+*   **If creativity matters most:** We should choose ChatGPT.
+*   **If we need real-time information:** We should choose Gemini or Perplexity.
+
+## What is a Prompt?
+
+*   **The Basic Instruction:** At its core, a prompt is simply the specific instruction or command we give to an AI.
+*   **No Mind Reading:** It is critical to understand that AI tools cannot think for themselves or guess what we actually need.
+*   **Highly Literal:** They will respond exactly based on what we tell them, how we phrase it, and the background context we provide.
+*   **Input Equals Output:** The quality of the answer we receive will always depend entirely on the quality of the prompt we write.
+
+## The Structure of an Effective Prompt
+
+*   **1\. Role (The Persona):** First, we need to set the perspective or expertise we want the AI to adopt.
+    *   _Example:_ "Act as an experienced HR professional..."
+*   **2\. Context (The Background):** Next, we provide necessary background information so the AI understands our specific situation.
+    *   _Example:_ "We are launching a new mobile app for busy parents..."
+*   **3\. Task (The Action):** Then, we specify the exact, concrete action we want the AI to complete for us.
+    *   _Example:_ "Create a 5-week onboarding plan for our new support agents."
+*   **4\. Output Format (The Structure):** We also need to define exactly how we want the final information presented to us.
+    *   _Example:_ "Present this as a table with three columns and five rows."
+*   **5\. Tone (The Voice):** Finally, we indicate the specific style or voice the AI should use when writing our response.
+    *   _Example:_ "Keep the tone conversational and encouraging, like a mentor."
+
+## Accuracy and Bias Risks in AI
+
+### **Risk 1: Hallucinations (Confident Errors)**
+
+*   **Made-up Information:** A hallucination happens when our AI confidently generates information that is completely wrong or totally made up.
+*   **The Hidden Danger:** The dangerous part is that the AI presents this false information with extreme confidence. It won't warn us by saying, "I might be wrong"—it just sounds authoritative.
+*   **Why It Happens:** We have to remember that our AI generates answers based on matching patterns, not by looking up verified facts. If a pattern looks plausible, the AI will generate it, even if it isn't true.
+
+### **Risk 2: Bias**
+
+*   **Inherited Human Flaws:** Our AI learns entirely from data created by humans, and that data naturally contains human biases, both obvious and subtle.
+*   **Mirroring the Data:** The AI itself doesn't actually have its own opinions or prejudices. Instead, it simply reproduces the patterns it learned from our training data, which unfortunately includes the biased ones.
