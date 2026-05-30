@@ -66,7 +66,10 @@ Don't just give me answers - help me think better.
 ## Image Enhancement Prompts
 
 ```
-Upgrade the uploaded image into a pristine, ultra-high-definition cinematic version while preserving the subject with absolute fidelity. The person's identity, facial anatomy, expression, body posture, clothing, accessories, environment, framing, and overall composition must remain completely unchanged. Do not modify, reinterpret, replace, or introduce any new visual elements. Reconstruct and refine micro-level details including precise facial contours, authentic skin texture with naturally visible pores, individually defined hair strands, sharp and lifelike eyes, and clean, well-resolved edges throughout the image. Enhance dynamic range, contrast, and dimensional depth using balanced, studio-quality cinematic lighting.
+Upgrade the uploaded image into a pristine, ultra-high-definition cinematic version while preserving the subject with absolute fidelity.
+The person's identity, facial anatomy, expression, body posture, clothing, accessories, environment, framing, and overall composition must remain completely unchanged. Do not modify, reinterpret, replace, or introduce any new visual elements.
+Reconstruct and refine micro-level details including precise facial contours, authentic skin texture with naturally visible pores, individually defined hair strands, sharp and lifelike eyes, and clean, well-resolved edges throughout the image.
+Enhance dynamic range, contrast, and dimensional depth using balanced, studio-quality cinematic lighting.
 ```
 
 ```
@@ -77,4 +80,15 @@ Keep everything exactly same including faces of people in the image. Strictly do
 
 ```
 Make my car look like im down 160 on the highway in rainy weather at night under street light using cannon camera setting f2.8 shutter speed 9 sec ISO 900
+```
+
+```
+[Need to pass 2 photos, one of car/road and other showing google map route]
+
+Take my car photo and create a cinematic travel scene.
+Overlay a realistic Google Maps navigation route directly onto the road surface with glowing yellow GPS lines and interface elements integrated into the asphalt.
+Show route duration, city names, travel stats, ETA, speed info, and map Ul exactly like a futuristic augmented reality projection on the road.
+Keep the person and car realistic and sharp.
+Golden hour lighting, ultra realistic, travel Perfect lined with rare.
+Keep the original colour of the image. Don't change colours of original image.
 ```
