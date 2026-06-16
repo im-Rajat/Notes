@@ -389,7 +389,7 @@ git merge forked/forked-update-git
 git push origin mainUpdateGit
 ```
 
-### Changing History
+### Changing History/Files
 
 - Amending use to modify changes without new commit, add change into last commit.
 - Command we use to add an item to a previous commit:
@@ -401,6 +401,8 @@ git push origin mainUpdateGit
 - `git rebase --interactive <branch>/<commit>`
 - `git rebase -i HEAD-2` : to back 2 step, redirect to editor
 - `git rebase -i --root` : redirect to editor
+- `git rebase origin/master` : It finds the exact moment our branch split from master. It temporarily lifts all our unique commits off the branch, updates our branch's starting point to the absolute latest tip of master, and then reapplies our commits one by one on top of that new base.
+- `git restore --source=origin/master --staged --worktree .` : To match current branch exactly with master while keeping the commits.
 
 ### Miscellaneous
 
