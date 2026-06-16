@@ -16,6 +16,7 @@
 - [Git Staging Environment](#git-staging-environment)
 - [Git Commit](#git-commit)
     - [Git Commit without Stage](#git-commit-without-stage)
+- [Commit Message Conventions](#commit-message-conventions)
 - [Git Branch](#git-branch)
     - [Git Branch Merge](#git-branch-merge)
 - [Git Pull from GitHub](#git-pull-from-github)
@@ -142,6 +143,31 @@
 - `git commit -a -m "Our commit message here"` : This command automatically stages and commits all changes in tracked files in our working directory.
 - This command only stages changes for files that are already being tracked by Git. It won't include changes in untracked files.
 - The `-a` option stands for "all" and automatically stages any changes to tracked files before committing.
+
+### Commit Message Conventions
+
+- Follow conventional commit format: `<type>(<scope>): <description>`
+- Use the appropriate type prefix for your commit messages:
+
+| Type | Purpose |
+| --- | --- |
+| **build** | Changes to the build system or external dependencies (CMake, Conan, Dockerfiles, build scripts) |
+| **chore** | Routine tasks that don't modify src or test files (updating .gitignore, configs, maintenance) |
+| **ci** | Changes to CI/CD configuration and scripts (GitHub Actions, Jenkins, pipelines) |
+| **docs** | Documentation only changes (README, comments, markdown files) |
+| **feat** | A new feature or capability added to the codebase |
+| **fix** | A bug fix |
+| **perf** | A code change that improves performance (no new functionality or bug fix) |
+| **refactor** | A code change that neither fixes a bug nor adds a feature (restructuring, renaming) |
+| **revert** | Reverts a previous commit |
+| **style** | Changes that don't affect code meaning (whitespace, formatting, missing semicolons) |
+| **test** | Adding or correcting tests (no production code change) |
+
+- Examples:
+    - `git commit -m "feat(auth): add login with Google"`
+    - `git commit -m "fix(api): handle null response from server"`
+    - `git commit -m "docs: update README with setup instructions"`
+    - `git commit -m "refactor: simplify error handling logic"`
 
 ### Git Branch
 
